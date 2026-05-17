@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Kontakt z OmniTask – Porozmawiajmy o automatyzacji Twojej firmy',
+  title: 'Kontakt – Automatyzacja RPA',
   description:
     'Skontaktuj się z zespołem OmniTask. Odpowiadamy na pytania dotyczące wdrożeń RPA, automatyzacji procesów i integracji systemów w Twojej firmie.',
   openGraph: {
-    title: 'Kontakt - OmniTask',
-    description: 'Skontaktuj się z nami. Pomożemy w automatyzacji i optymalizacji procesów Twojej firmy.',
+    title: 'Kontakt – OmniTask',
+    description: 'Porozmawiajmy o automatyzacji procesów w Twojej firmie. Bezpłatna konsultacja i wycena wdrożenia RPA.',
     url: 'https://www.omnitask.pl/kontakt',
     type: 'website',
   },

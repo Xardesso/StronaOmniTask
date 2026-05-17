@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog OmniTask – Automatyzacja, RPA i technologie dla biznesu',
+  title: 'Blog – Automatyzacja RPA i AI',
   description:
-    'Czytaj artykuły eksperckie o automatyzacji procesów, RPA, Power Automate i UiPath. Praktyczna wiedza dla firm chcących wdrożyć robotyzację.',
+    'Artykuły eksperckie o RPA, automatyzacji procesów i agentach AI. Praktyczne porady, case studies i trendy technologiczne. Czytaj i wdrażaj →',
   openGraph: {
-    title: 'Blog OmniTask',
-    description: 'Bądź na bieżąco z automatyzacją procesów biznesowych. Artykuły o RPA i AI.',
+    title: 'Blog OmniTask – Automatyzacja, RPA i AI',
+    description: 'Praktyczna wiedza o automatyzacji procesów. Artykuły eksperckie, porady i case studies z wdrożeń RPA i AI.',
     url: 'https://www.omnitask.pl/blog',
     type: 'website',
   },

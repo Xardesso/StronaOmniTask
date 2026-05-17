@@ -2,7 +2,7 @@
 
 import { useTranslation } from '@/i18n/context'
 import { useState, FormEvent } from 'react'
-import type { Metadata } from 'next'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default function QuoteRequestPage() {
   const { t } = useTranslation()
@@ -65,6 +65,8 @@ export default function QuoteRequestPage() {
         <h1>{t('quote.title')}</h1>
         <p>{t('quote.subtitle')}</p>
       </div>
+
+      <Breadcrumbs items={[{ label: t('nav.quote') }]} />
 
       <div className="quote-page">
         <div className="section__container">

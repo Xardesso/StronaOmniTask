@@ -1,9 +1,11 @@
 {
   "nav": {
     "home": "Strona główna",
+    "services": "Usługi",
     "quote": "Zapytanie ofertowe",
     "blog": "Blog",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "about": "O nas"
   },
   "hero": {
     "title": "Automatyzacja, RPA i Agenci AI dla Twojego biznesu",
@@ -195,10 +197,10 @@
     "button": "Bezpłatna konsultacja"
   },
   "clients": {
-    "title": "Zaufali nam"
+    "title": "Branże, w których działamy"
   },
   "quote": {
-    "title": "Zapytanie ofertowe",
+    "title": "Zapytanie ofertowe – Bezpłatna wycena automatyzacji RPA",
     "subtitle": "Opisz proces, który chcesz zautomatyzować. Nasz zespół przygotuje indywidualną wycenę w ciągu 24 godzin.",
     "name": "Imię i nazwisko",
     "email": "Adres e-mail",
@@ -217,8 +219,8 @@
     "message_placeholder": "Opisz proces, który chcesz zautomatyzować, ile osób go wykonuje, ile czasu zajmuje i jakie systemy są używane..."
   },
   "contact": {
-    "title": "Kontakt",
-    "subtitle": "Porozmawiajmy o automatyzacji Twoich procesów",
+    "title": "Kontakt – Porozmawiajmy o automatyzacji Twojej firmy",
+    "subtitle": "Skontaktuj się z nami, aby omówić możliwości automatyzacji procesów w Twojej firmie.",
     "phone_label": "Telefon",
     "phone": "+48 721 719 238",
     "email_label": "E-mail",
@@ -237,7 +239,16 @@
   "footer": {
     "description": "OmniTask. Automatyzacja i robotyzacja procesów biznesowych. Wdrażamy RPA, integrujemy systemy i optymalizujemy procesy.",
     "quick_links": "Szybkie linki",
+    "services": "Usługi",
+    "legal": "Informacje",
     "contact_info": "Dane kontaktowe",
-    "copyright": "© 2026 OmniTask. Wszelkie prawa zastrzeżone."
-  }
+    "copyright": "© 2026 OmniTask. Wszelkie prawa zastrzeżone.",
+    "privacy_policy": "Polityka prywatności",
+    "terms": "Regulamin",
+    "about": "O nas"
+  },
+  "breadcrumbs": {
+    "home": "Strona główna"
+  },
+  "roi_disclaimer": "*Średnie wyniki na podstawie dotychczasowych wdrożeń. Rzeczywiste rezultaty mogą się różnić w zależności od procesu."
 }

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Zapytanie ofertowe – Automatyzacja RPA | OmniTask',
+  title: 'Bezpłatna wycena automatyzacji RPA',
   description:
     'Skontaktuj się z nami i otrzymaj bezpłatną wycenę wdrożenia automatyzacji RPA. Opisz swój proces, a my zaproponujemy optymalne rozwiązanie.',
   openGraph: {
-    title: 'Bezpłatna Wycena Czasu i Kosztów - OmniTask',
-    description: 'Zamów bezpłatną analizę swojego procesu. Pokażemy, ile oszczędzisz roboczogodzin dzięki RPA.',
+    title: 'Bezpłatna Wycena – OmniTask',
+    description: 'Zamów bezpłatną analizę swojego procesu. Pokażemy, ile zaoszczędzisz dzięki automatyzacji RPA i agentom AI.',
     url: 'https://www.omnitask.pl/zapytanie-ofertowe',
     type: 'website',
   },

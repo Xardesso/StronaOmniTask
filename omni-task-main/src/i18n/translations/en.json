@@ -1,9 +1,11 @@
 {
   "nav": {
     "home": "Home",
+    "services": "Services",
     "quote": "Request a Quote",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "About Us"
   },
   "hero": {
     "title": "Automation, RPA & AI Agents for Your Business",
@@ -195,10 +197,10 @@
     "button": "Free Consultation"
   },
   "clients": {
-    "title": "Trusted By"
+    "title": "Industries We Serve"
   },
   "quote": {
-    "title": "Request a Quote",
+    "title": "Request a Quote – Free RPA Automation Estimate",
     "subtitle": "Describe the process you want to automate. Our team will prepare a custom quote within 24 hours.",
     "name": "Full Name",
     "email": "Email Address",
@@ -217,8 +219,8 @@
     "message_placeholder": "Describe the process you want to automate, how many people perform it, how long it takes, and what systems are used..."
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Let's talk about automating your processes",
+    "title": "Contact – Let's Talk About Automating Your Business",
+    "subtitle": "Get in touch to discuss automation opportunities for your company.",
     "phone_label": "Phone",
     "phone": "+48 721 719 238",
     "email_label": "Email",
@@ -237,7 +239,16 @@
   "footer": {
     "description": "OmniTask. Business process automation and robotization. We deploy RPA, integrate systems, and optimize processes.",
     "quick_links": "Quick Links",
+    "services": "Services",
+    "legal": "Information",
     "contact_info": "Contact Info",
-    "copyright": "© 2026 OmniTask. All rights reserved."
-  }
+    "copyright": "© 2026 OmniTask. All rights reserved.",
+    "privacy_policy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "about": "About Us"
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "roi_disclaimer": "*Average results based on past implementations. Actual results may vary depending on the process."
 }

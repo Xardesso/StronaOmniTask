@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslation } from '@/i18n/context'
 import { useEffect, useState } from 'react'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 interface Article {
   id: number
@@ -54,6 +55,8 @@ export default function BlogPage() {
         <h1>{t('blog.title')}</h1>
         <p>{t('blog.subtitle')}</p>
       </div>
+
+      <Breadcrumbs items={[{ label: t('nav.blog') }]} />
 
       <div className="blog-page">
         <div className="section__container">

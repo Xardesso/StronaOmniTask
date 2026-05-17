@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslation } from '@/i18n/context'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 export default function ContactPage() {
   const { t } = useTranslation()
@@ -54,6 +55,8 @@ export default function ContactPage() {
         <h1>{t('contact.title')}</h1>
         <p>{t('contact.subtitle')}</p>
       </div>
+
+      <Breadcrumbs items={[{ label: t('nav.contact') }]} />
 
       <div className="contact-page">
         <div className="section__container">

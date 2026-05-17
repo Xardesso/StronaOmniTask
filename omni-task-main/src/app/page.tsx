@@ -113,15 +113,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== CLIENT LOGOS ===== */}
-      <section className="clients-bar" id="clients">
+      {/* ===== INDUSTRIES WE SERVE ===== */}
+      <section className="clients-bar" id="industries">
         <div className="section__container">
           <p className="clients-bar__label">{t('clients.title')}</p>
           <div className="clients-bar__track">
             <div className="clients-bar__logos">
-              {['TechFin', 'LogiTrans', 'HRPro', 'DataFlow', 'SmartOps', 'CloudBase', 'ProSys', 'AutoNet'].map((name) => (
-                <div key={name} className="clients-bar__logo" title={name}>
-                  <span>{name}</span>
+              {[
+                { name: 'Finanse', icon: '🏦' },
+                { name: 'Logistyka', icon: '🚚' },
+                { name: 'HR', icon: '👥' },
+                { name: 'E-commerce', icon: '🛒' },
+                { name: 'Produkcja', icon: '🏭' },
+                { name: 'IT', icon: '💻' },
+                { name: 'Prawo', icon: '⚖️' },
+                { name: 'Medycyna', icon: '🏥' },
+              ].map((industry) => (
+                <div key={industry.name} className="clients-bar__logo" title={industry.name}>
+                  <span style={{ fontSize: '1.5rem' }}>{industry.icon}</span>
+                  <span>{industry.name}</span>
                 </div>
               ))}
             </div>
@@ -137,7 +147,7 @@ export default function HomePage() {
             <p>{t('services.subtitle')}</p>
           </div>
           <div className="services-grid services-grid--6">
-            <div className="service-card">
+            <Link href="/uslugi/rpa" className="service-card service-card--link" title={t('services.service1.title')}>
               <div className="service-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="2" y="2" width="20" height="20" rx="2" />
@@ -146,8 +156,9 @@ export default function HomePage() {
               </div>
               <h3>{t('services.service1.title')}</h3>
               <p>{t('services.service1.desc')}</p>
-            </div>
-            <div className="service-card">
+              <span className="service-card__cta">Dowiedz się więcej →</span>
+            </Link>
+            <Link href="/uslugi/automatyzacja-workflow" className="service-card service-card--link" title={t('services.service2.title')}>
               <div className="service-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
@@ -155,8 +166,9 @@ export default function HomePage() {
               </div>
               <h3>{t('services.service2.title')}</h3>
               <p>{t('services.service2.desc')}</p>
-            </div>
-            <div className="service-card">
+              <span className="service-card__cta">Dowiedz się więcej →</span>
+            </Link>
+            <Link href="/uslugi/integracja-systemow" className="service-card service-card--link" title={t('services.service3.title')}>
               <div className="service-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -166,7 +178,8 @@ export default function HomePage() {
               </div>
               <h3>{t('services.service3.title')}</h3>
               <p>{t('services.service3.desc')}</p>
-            </div>
+              <span className="service-card__cta">Dowiedz się więcej →</span>
+            </Link>
             <div className="service-card">
               <div className="service-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -179,7 +192,7 @@ export default function HomePage() {
               <h3>{t('services.service4.title')}</h3>
               <p>{t('services.service4.desc')}</p>
             </div>
-            <div className="service-card">
+            <Link href="/uslugi/agenci-ai" className="service-card service-card--link" title={t('services.service5.title')}>
               <div className="service-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0112 2z" />
@@ -188,7 +201,8 @@ export default function HomePage() {
               </div>
               <h3>{t('services.service5.title')}</h3>
               <p>{t('services.service5.desc')}</p>
-            </div>
+              <span className="service-card__cta">Dowiedz się więcej →</span>
+            </Link>
             <div className="service-card">
               <div className="service-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -280,6 +294,9 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--color-muted)', fontStyle: 'italic' }}>
+            {t('roi_disclaimer')}
+          </p>
         </div>
       </section>
 
@@ -394,33 +411,35 @@ export default function HomePage() {
       </section>
 
       {/* ===== TESTIMONIALS ===== */}
-      <section className="section" id="testimonials">
-        <div className="section__container">
-          <div className="section__header">
-            <h2>{t('testimonials.title')}</h2>
-            <p>{t('testimonials.subtitle')}</p>
-          </div>
-          <div className="testimonials-grid">
-            {testimonials.map((t, idx) => (
-              <div key={t.id || idx} className="testimonial-card">
-                <div className="testimonial-card__stars">{"★".repeat(t.rating || 5)}</div>
-                <blockquote className="testimonial-card__text">
-                  &ldquo;{t.text}&rdquo;
-                </blockquote>
-                <div className="testimonial-card__author">
-                  <div className="testimonial-card__avatar">
-                    {t.author ? t.author.charAt(0) : 'U'}
-                  </div>
-                  <div>
-                    <strong>{t.author}</strong>
-                    <span>{t.role}{t.company ? `, ${t.company}` : ''}</span>
+      {testimonials.length > 0 && (
+        <section className="section" id="testimonials">
+          <div className="section__container">
+            <div className="section__header">
+              <h2>{t('testimonials.title')}</h2>
+              <p>{t('testimonials.subtitle')}</p>
+            </div>
+            <div className="testimonials-grid">
+              {testimonials.map((testimonial, idx) => (
+                <div key={testimonial.id || idx} className="testimonial-card">
+                  <div className="testimonial-card__stars">{"★".repeat(testimonial.rating || 5)}</div>
+                  <blockquote className="testimonial-card__text">
+                    &ldquo;{testimonial.text}&rdquo;
+                  </blockquote>
+                  <div className="testimonial-card__author">
+                    <div className="testimonial-card__avatar">
+                      {testimonial.author ? testimonial.author.charAt(0) : 'U'}
+                    </div>
+                    <div>
+                      <strong>{testimonial.author}</strong>
+                      <span>{testimonial.role}{testimonial.company ? `, ${testimonial.company}` : ''}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ===== FAQ ===== */}
       <section className="section section--alt" id="faq">

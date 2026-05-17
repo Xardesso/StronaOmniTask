@@ -32,6 +32,8 @@ export const metadata: Metadata = {
     'robotic process automation',
     'automatyzacja workflow',
     'integracja systemów',
+    'agenci AI',
+    'multi-agent AI',
   ],
   metadataBase: new URL('https://www.omnitask.pl'),
   openGraph: {
@@ -41,13 +43,22 @@ export const metadata: Metadata = {
     siteName: 'OmniTask',
     title: 'OmniTask - Automatyzacja i robotyzacja procesów biznesowych',
     description:
-      'Wdrażamy RPA, automatyzację workflow i AI. Redukujemy koszty operacyjne o 70% i przyspieszamy procesy 5x.',
+      'Wdrażamy RPA, automatyzację workflow i agentów AI. Redukujemy koszty operacyjne i przyspieszamy procesy biznesowe Twojej firmy.',
+    images: [
+      {
+        url: 'https://www.omnitask.pl/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OmniTask – Automatyzacja, RPA i Agenci AI',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'OmniTask - Automatyzacja i robotyzacja procesów',
     description:
-      'Wdrażamy RPA, automatyzację workflow i AI. Redukujemy koszty operacyjne o 70%.',
+      'Eksperci od RPA, automatyzacji workflow i agentów AI. Bezpłatna konsultacja i wycena wdrożenia.',
+    images: ['https://www.omnitask.pl/og-image.png'],
   },
   robots: {
     index: true,
@@ -77,27 +88,124 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${inter.variable} ${outfit.variable}`} data-scroll-behavior="smooth">
       <head>
+        {/* Organization + LocalBusiness Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
+              '@type': ['Organization', 'LocalBusiness'],
+              '@id': 'https://www.omnitask.pl/#organization',
               name: 'OmniTask',
               url: 'https://www.omnitask.pl',
-              logo: 'https://www.omnitask.pl/Logo.png',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.omnitask.pl/Logo.png',
+              },
+              image: 'https://www.omnitask.pl/og-image.png',
+              description: 'Eksperci od automatyzacji procesów biznesowych RPA i agentów AI. Wdrażamy roboty software\'owe, integrujemy systemy i optymalizujemy procesy.',
+              sameAs: [
+                'https://www.facebook.com/profile.php?id=61574333642391',
+                'https://www.linkedin.com/company/omni-task',
+                'https://www.instagram.com/omnitask.pl/',
+              ],
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+48-600-000-000',
+                telephone: '+48721719238',
+                email: 'kontakt@omnitask.pl',
                 contactType: 'customer service',
                 availableLanguage: ['Polish', 'English', 'Ukrainian'],
               },
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'ul. Przykładowa 10',
-                addressLocality: 'Warszawa',
-                postalCode: '00-001',
                 addressCountry: 'PL',
+              },
+              priceRange: '$$',
+            }),
+          }}
+        />
+        {/* Service Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              serviceType: 'Automatyzacja procesów biznesowych',
+              provider: {
+                '@type': 'Organization',
+                name: 'OmniTask',
+                '@id': 'https://www.omnitask.pl/#organization',
+              },
+              areaServed: {
+                '@type': 'Country',
+                name: 'PL',
+              },
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Usługi automatyzacji i RPA',
+                itemListElement: [
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Robotyzacja procesów (RPA)',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Robotyzacja procesów (RPA)',
+                          description: 'Wdrażamy roboty software\'owe, które automatycznie wykonują powtarzalne zadania biznesowe.',
+                          url: 'https://www.omnitask.pl/uslugi/rpa',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Automatyzacja workflow',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Automatyzacja workflow',
+                          description: 'Projektujemy inteligentne przepływy pracy łączące systemy i aplikacje.',
+                          url: 'https://www.omnitask.pl/uslugi/automatyzacja-workflow',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Integracja systemów',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Integracja systemów',
+                          description: 'Łączymy systemy ERP, CRM i bazy danych w jeden ekosystem.',
+                          url: 'https://www.omnitask.pl/uslugi/integracja-systemow',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Agenci AI',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Agenci AI i systemy multi-agentowe',
+                          description: 'Budujemy autonomicznych agentów AI realizujących złożone cele biznesowe.',
+                          url: 'https://www.omnitask.pl/uslugi/agenci-ai',
+                        },
+                      },
+                    ],
+                  },
+                ],
               },
             }),
           }}
