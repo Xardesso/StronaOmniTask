@@ -84,7 +84,7 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div className="section" style={{ textAlign: 'center', paddingTop: '3rem' }}>
+          <section className="service-detail__cta">
             <h2>{t('cta.title')}</h2>
             <p>{t('cta.subtitle')}</p>
             <Link href="/zapytanie-ofertowe" className="btn btn--primary btn--lg" title={t('cta.button')}>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
-          </div>
+          </section>
         </div>
       </div>
     </>

@@ -601,6 +601,26 @@ img {
   line-height: 1.7;
 }
 
+/* ===== SERVICE DETAILS ===== */
+.service-detail__cta {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  margin: 3rem 0;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+}
+
+.service-detail__cta h2 {
+  margin-bottom: 1.25rem;
+}
+
+.service-detail__cta p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
 /* ===== STATS ===== */
 .stats-grid {
   display: grid;
