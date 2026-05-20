@@ -213,13 +213,13 @@ img {
 .navbar__mobile {
   display: none;
   max-height: 0;
-  overflow: hidden;
+  overflow-y: auto;
   transition: max-height var(--transition);
   background: #fff;
 }
 
 .navbar__mobile--open {
-  max-height: 400px;
+  max-height: calc(100vh - 70px);
 }
 
 .navbar__mobile-nav {
@@ -229,6 +229,7 @@ img {
 }
 
 .navbar__mobile-link {
+  display: block;
   padding: 0.75rem 0;
   font-size: 1rem;
   font-weight: 500;
@@ -240,6 +241,37 @@ img {
 .navbar__mobile-link:hover,
 .navbar__mobile-link--active {
   color: var(--color-accent);
+}
+
+.navbar__mobile-link--toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.navbar__mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border);
+  margin: 0.25rem 0 0.25rem 0.25rem;
+}
+
+.navbar__mobile-link--sub {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.6rem 0 0.6rem 0.75rem;
+}
+
+.navbar__mobile-link--sub:last-child {
+  border-bottom: none;
 }
 
 @media (max-width: 768px) {

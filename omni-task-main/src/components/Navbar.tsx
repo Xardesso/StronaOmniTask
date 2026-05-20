@@ -11,6 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const pathname = usePathname()
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -23,6 +24,7 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false)
     setServicesOpen(false)
+    setMobileServicesOpen(false)
   }, [pathname])
 
   useEffect(() => {
@@ -121,18 +123,51 @@ export default function Navbar() {
           {navLinks.map((link) => (
             link.dropdown ? (
               <div key={link.href}>
-                <Link
-                  href="/uslugi"
-                  className={`navbar__mobile-link ${pathname.startsWith('/uslugi') ? 'navbar__mobile-link--active' : ''}`}
-                  title={link.label}
+                <button
+                  type="button"
+                  className={`navbar__mobile-link navbar__mobile-link--toggle ${pathname.startsWith('/uslugi') ? 'navbar__mobile-link--active' : ''}`}
+                  onClick={() => setMobileServicesOpen((v) => !v)}
+                  aria-expanded={mobileServicesOpen}
+                  aria-controls="mobile-services-submenu"
                 >
-                  {link.label}
-                </Link>
-                {serviceLinks.map((svc) => (
-                  <Link key={svc.href} href={svc.href} className="navbar__mobile-link" style={{ paddingLeft: '2rem', fontSize: '0.9rem' }} title={svc.label}>
-                    {svc.label}
-                  </Link>
-                ))}
+                  <span>{link.label}</span>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    style={{
+                      transition: 'transform 0.2s',
+                      transform: mobileServicesOpen ? 'rotate(180deg)' : 'rotate(0)',
+                    }}
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                {mobileServicesOpen && (
+                  <div id="mobile-services-submenu" className="navbar__mobile-submenu">
+                    <Link
+                      href="/uslugi"
+                      className={`navbar__mobile-link navbar__mobile-link--sub ${pathname === '/uslugi' ? 'navbar__mobile-link--active' : ''}`}
+                      title={t('nav.services')}
+                    >
+                      Wszystkie usługi
+                    </Link>
+                    {serviceLinks.map((svc) => (
+                      <Link
+                        key={svc.href}
+                        href={svc.href}
+                        className={`navbar__mobile-link navbar__mobile-link--sub ${pathname === svc.href ? 'navbar__mobile-link--active' : ''}`}
+                        title={svc.label}
+                      >
+                        {svc.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               <Link
