@@ -69,18 +69,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/polityka-prywatnosci`,
-      lastModified: new Date('2026-05-17'),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/regulamin`,
-      lastModified: new Date('2026-05-17'),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
   ]
 
   // Dynamic blog pages - auto-updated when new articles are published

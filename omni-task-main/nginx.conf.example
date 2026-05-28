@@ -1,0 +1,66 @@
+# OmniTask – konfiguracja nginx
+# Cel SEO: pojedynczy redirect 301 z dowolnego wariantu (http/https, z/bez www)
+# bezpośrednio na kanoniczne https://www.omnitask.pl (bez podwójnego skoku).
+#
+# Wcześniej: http://omnitask.pl -> 301 -> https://omnitask.pl -> 308 -> https://www.omnitask.pl  (2 hops)
+# Po:        http://omnitask.pl -> 301 -> https://www.omnitask.pl                                (1 hop)
+#            https://omnitask.pl -> 301 -> https://www.omnitask.pl                               (1 hop)
+#            http://www.omnitask.pl -> 301 -> https://www.omnitask.pl                            (1 hop)
+
+# 1) http://omnitask.pl  oraz  http://www.omnitask.pl  -> jednym skokiem na kanoniczny https://www
+server {
+    listen 80;
+    listen [::]:80;
+    server_name omnitask.pl www.omnitask.pl;
+
+    # Pozwól na challenge ACME dla Let's Encrypt
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://www.omnitask.pl$request_uri;
+    }
+}
+
+# 2) https://omnitask.pl (apex, bez www) -> jednym skokiem na kanoniczny https://www
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name omnitask.pl;
+
+    ssl_certificate     /etc/letsencrypt/live/omnitask.pl/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/omnitask.pl/privkey.pem;
+
+    add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;
+
+    return 301 https://www.omnitask.pl$request_uri;
+}
+
+# 3) https://www.omnitask.pl -> reverse proxy do Next.js (port 4000)
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.omnitask.pl;
+
+    ssl_certificate     /etc/letsencrypt/live/omnitask.pl/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/omnitask.pl/privkey.pem;
+
+    add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;
+
+    client_max_body_size 25m;
+
+    location / {
+        proxy_pass http://127.0.0.1:4000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade            $http_upgrade;
+        proxy_set_header Connection         "upgrade";
+        proxy_set_header Host               $host;
+        proxy_set_header X-Real-IP          $remote_addr;
+        proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+        proxy_set_header X-Forwarded-Host   $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 60s;
+    }
+}
