@@ -3,6 +3,7 @@ import { getPublicUrl } from '@/lib/gcs'
 import BlogArticleClient from './BlogArticleClient'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import { buildHreflangAlternates } from '@/lib/i18n'
 
 export const revalidate = 3600
 
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     alternates: {
       canonical: `/blog/${slug}`,
+      languages: buildHreflangAlternates(`/blog/${slug}`),
     },
   }
 }

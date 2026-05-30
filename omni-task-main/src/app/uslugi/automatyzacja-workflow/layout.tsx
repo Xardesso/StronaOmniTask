@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Automatyzacja workflow',
+  title: 'Automatyzacja workflow – Zapier, Make, Power Automate',
   description:
     'Projektujemy i wdrażamy inteligentne przepływy pracy łączące systemy, aplikacje i ludzi. Zapier, Make, Power Automate. Bezpłatna konsultacja.',
   openGraph: {
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
     url: 'https://www.omnitask.pl/uslugi/automatyzacja-workflow',
     type: 'website',
   },
-  alternates: { canonical: '/uslugi/automatyzacja-workflow' },
+  alternates: { canonical: '/uslugi/automatyzacja-workflow',
+    languages: buildHreflangAlternates('/uslugi/automatyzacja-workflow'), },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

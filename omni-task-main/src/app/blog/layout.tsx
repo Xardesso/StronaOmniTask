@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog – Automatyzacja RPA i AI',
+  title: 'Blog o automatyzacji procesów, RPA i agentach AI',
   description:
     'Artykuły eksperckie o RPA, automatyzacji procesów i agentach AI. Praktyczne porady, case studies i trendy technologiczne. Czytaj i wdrażaj →',
   openGraph: {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/blog',
+    languages: buildHreflangAlternates('/blog'),
   },
 }
 

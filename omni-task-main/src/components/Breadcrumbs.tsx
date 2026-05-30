@@ -1,7 +1,8 @@
 'use client'
 
-import Link from 'next/link'
+import Link from './LocaleLink'
 import { useTranslation } from '@/i18n/context'
+import { SITE_URL, localizePath } from '@/lib/i18n'
 
 interface BreadcrumbItem {
   label: string
@@ -13,7 +14,7 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
 
   const allItems = [{ label: t('breadcrumbs.home'), href: '/' }, ...items]
 
@@ -59,7 +60,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
               position: index + 1,
               name: item.label,
               item: item.href
-                ? `https://www.omnitask.pl${item.href}`
+                ? `${SITE_URL}${localizePath(item.href, locale)}`
                 : undefined,
             })),
           }),

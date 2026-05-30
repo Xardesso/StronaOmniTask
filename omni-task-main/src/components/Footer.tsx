@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from './LocaleLink'
 import { useTranslation } from '@/i18n/context'
 
 export default function Footer() {
@@ -45,10 +45,10 @@ export default function Footer() {
           <div className="footer__col">
             <h3 className="footer__heading">{t('footer.services')}</h3>
             <ul className="footer__links">
-              <li><Link href="/uslugi/rpa" className="footer__link" title="RPA">Robotyzacja procesów (RPA)</Link></li>
-              <li><Link href="/uslugi/automatyzacja-workflow" className="footer__link" title="Automatyzacja workflow">Automatyzacja workflow</Link></li>
-              <li><Link href="/uslugi/integracja-systemow" className="footer__link" title="Integracja systemów">Integracja systemów</Link></li>
-              <li><Link href="/uslugi/agenci-ai" className="footer__link" title="Agenci AI">Agenci AI</Link></li>
+              <li><Link href="/uslugi/rpa" className="footer__link" title="RPA">{t('services.service1.title')}</Link></li>
+              <li><Link href="/uslugi/automatyzacja-workflow" className="footer__link" title={t('service_detail.labels.workflow')}>{t('service_detail.labels.workflow')}</Link></li>
+              <li><Link href="/uslugi/integracja-systemow" className="footer__link" title={t('service_detail.labels.integration')}>{t('service_detail.labels.integration')}</Link></li>
+              <li><Link href="/uslugi/agenci-ai" className="footer__link" title={t('service_detail.labels.ai')}>{t('service_detail.labels.ai')}</Link></li>
             </ul>
           </div>
 

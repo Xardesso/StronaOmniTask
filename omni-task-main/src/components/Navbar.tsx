@@ -1,10 +1,11 @@
 'use client'
 
-import Link from 'next/link'
+import Link from './LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import LanguageSelector from './LanguageSelector'
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
+import { stripLocale } from '@/lib/i18n'
 
 export default function Navbar() {
   const { t } = useTranslation()
@@ -13,6 +14,7 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const pathname = usePathname()
+  const cleanPath = stripLocale(pathname)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -38,10 +40,10 @@ export default function Navbar() {
   }, [])
 
   const serviceLinks = [
-    { href: '/uslugi/rpa', label: 'RPA' },
-    { href: '/uslugi/automatyzacja-workflow', label: 'Automatyzacja workflow' },
-    { href: '/uslugi/integracja-systemow', label: 'Integracja systemów' },
-    { href: '/uslugi/agenci-ai', label: 'Agenci AI' },
+    { href: '/uslugi/rpa', label: t('service_detail.labels.rpa') },
+    { href: '/uslugi/automatyzacja-workflow', label: t('service_detail.labels.workflow') },
+    { href: '/uslugi/integracja-systemow', label: t('service_detail.labels.integration') },
+    { href: '/uslugi/agenci-ai', label: t('service_detail.labels.ai') },
   ]
 
   const navLinks = [
@@ -65,7 +67,7 @@ export default function Navbar() {
             link.dropdown ? (
               <div key={link.href} className="navbar__dropdown" ref={dropdownRef}>
                 <button
-                  className={`navbar__link navbar__link--dropdown ${pathname.startsWith('/uslugi') ? 'navbar__link--active' : ''}`}
+                  className={`navbar__link navbar__link--dropdown ${cleanPath.startsWith('/uslugi') ? 'navbar__link--active' : ''}`}
                   onClick={() => setServicesOpen(!servicesOpen)}
                   aria-expanded={servicesOpen}
                   title={link.label}
@@ -77,9 +79,7 @@ export default function Navbar() {
                 </button>
                 {servicesOpen && (
                   <div className="navbar__dropdown-menu">
-                    <Link href="/uslugi" className="navbar__dropdown-item" title={t('nav.services')}>
-                      Wszystkie usługi
-                    </Link>
+                    <Link href="/uslugi" className="navbar__dropdown-item" title={t('nav.services')}>{t('nav.all_services')}</Link>
                     {serviceLinks.map((svc) => (
                       <Link key={svc.href} href={svc.href} className="navbar__dropdown-item" title={svc.label}>
                         {svc.label}
@@ -92,7 +92,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`navbar__link ${pathname === link.href ? 'navbar__link--active' : ''}`}
+                className={`navbar__link ${cleanPath === link.href ? 'navbar__link--active' : ''}`}
                 title={link.label}
               >
                 {link.label}
@@ -125,7 +125,7 @@ export default function Navbar() {
               <div key={link.href}>
                 <button
                   type="button"
-                  className={`navbar__mobile-link navbar__mobile-link--toggle ${pathname.startsWith('/uslugi') ? 'navbar__mobile-link--active' : ''}`}
+                  className={`navbar__mobile-link navbar__mobile-link--toggle ${cleanPath.startsWith('/uslugi') ? 'navbar__mobile-link--active' : ''}`}
                   onClick={() => setMobileServicesOpen((v) => !v)}
                   aria-expanded={mobileServicesOpen}
                   aria-controls="mobile-services-submenu"
@@ -151,16 +151,14 @@ export default function Navbar() {
                   <div id="mobile-services-submenu" className="navbar__mobile-submenu">
                     <Link
                       href="/uslugi"
-                      className={`navbar__mobile-link navbar__mobile-link--sub ${pathname === '/uslugi' ? 'navbar__mobile-link--active' : ''}`}
+                      className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === '/uslugi' ? 'navbar__mobile-link--active' : ''}`}
                       title={t('nav.services')}
-                    >
-                      Wszystkie usługi
-                    </Link>
+                    >{t('nav.all_services')}</Link>
                     {serviceLinks.map((svc) => (
                       <Link
                         key={svc.href}
                         href={svc.href}
-                        className={`navbar__mobile-link navbar__mobile-link--sub ${pathname === svc.href ? 'navbar__mobile-link--active' : ''}`}
+                        className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === svc.href ? 'navbar__mobile-link--active' : ''}`}
                         title={svc.label}
                       >
                         {svc.label}
@@ -173,7 +171,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`navbar__mobile-link ${pathname === link.href ? 'navbar__mobile-link--active' : ''}`}
+                className={`navbar__mobile-link ${cleanPath === link.href ? 'navbar__mobile-link--active' : ''}`}
                 title={link.label}
               >
                 {link.label}

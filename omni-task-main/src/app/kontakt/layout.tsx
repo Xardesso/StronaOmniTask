@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Kontakt – Automatyzacja RPA',
+  title: 'Kontakt – automatyzacja procesów RPA i AI dla firm',
   description:
     'Skontaktuj się z zespołem OmniTask. Odpowiadamy na pytania dotyczące wdrożeń RPA, automatyzacji procesów i integracji systemów w Twojej firmie.',
   openGraph: {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/kontakt',
+    languages: buildHreflangAlternates('/kontakt'),
   },
 }
 

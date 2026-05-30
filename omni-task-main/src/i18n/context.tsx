@@ -1,11 +1,18 @@
 'use client'
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react'
+import React, { createContext, useContext, useEffect, useCallback } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import pl from './translations/pl.json'
 import en from './translations/en.json'
 import ua from './translations/ua.json'
+import {
+  type Locale,
+  localeFromPathname,
+  localizePath,
+  HREFLANG_MAP,
+} from '@/lib/i18n'
 
-export type Locale = 'pl' | 'en' | 'ua'
+export type { Locale }
 
 type TranslationValue = string | { [key: string]: TranslationValue }
 type Translations = typeof pl
@@ -16,6 +23,8 @@ interface LanguageContextType {
   locale: Locale
   setLocale: (locale: Locale) => void
   t: (key: string) => string
+  // Zwraca surową wartość spod klucza (np. tablicę obiektów dla list/FAQ).
+  tRaw: <T = unknown>(key: string) => T
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -34,41 +43,56 @@ function getNestedValue(obj: Record<string, TranslationValue>, path: string): st
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('pl')
-  const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
+  // Lokalizacja jest sterowana adresem URL — dzięki temu /en/* i /ua/*
+  // renderują się w odpowiednim języku już po stronie serwera (SSR), co
+  // jest kluczowe dla SEO. Brak rozjazdu hydratacji, bo serwer i klient
+  // wyznaczają locale z tej samej ścieżki.
+  const locale = localeFromPathname(pathname)
+
+  // Ustaw atrybut lang na <html> zgodnie z aktywną lokalizacją (hreflang code).
   useEffect(() => {
-    const saved = localStorage.getItem('omnitask-lang') as Locale | null
-    if (saved && translationsMap[saved]) {
-      setLocaleState(saved)
-    } else if (saved) {
-      // Clear invalid saved locale (e.g. removed 'ua')
-      localStorage.removeItem('omnitask-lang')
-    }
-    setMounted(true)
-  }, [])
+    document.documentElement.lang = HREFLANG_MAP[locale]
+  }, [locale])
 
-  const setLocale = useCallback((newLocale: Locale) => {
-    setLocaleState(newLocale)
-    localStorage.setItem('omnitask-lang', newLocale)
-    document.documentElement.lang = newLocale
-  }, [])
-
-  // Always use 'pl' for SSR and first render to avoid hydration mismatch
-  const activeLocale = mounted ? locale : 'pl'
+  // Zmiana języka = nawigacja do zlokalizowanego adresu bieżącej strony.
+  const setLocale = useCallback(
+    (newLocale: Locale) => {
+      router.push(localizePath(pathname, newLocale))
+    },
+    [pathname, router]
+  )
 
   const t = useCallback(
     (key: string): string => {
       return getNestedValue(
-        translationsMap[activeLocale] as unknown as Record<string, TranslationValue>,
+        translationsMap[locale] as unknown as Record<string, TranslationValue>,
         key
       )
     },
-    [activeLocale]
+    [locale]
+  )
+
+  const tRaw = useCallback(
+    <T = unknown>(key: string): T => {
+      const keys = key.split('.')
+      let current: unknown = translationsMap[locale]
+      for (const k of keys) {
+        if (typeof current === 'object' && current !== null && k in (current as object)) {
+          current = (current as Record<string, unknown>)[k]
+        } else {
+          return key as unknown as T
+        }
+      }
+      return current as T
+    },
+    [locale]
   )
 
   return (
-    <LanguageContext.Provider value={{ locale: activeLocale, setLocale, t }}>
+    <LanguageContext.Provider value={{ locale, setLocale, t, tRaw }}>
       {children}
     </LanguageContext.Provider>
   )

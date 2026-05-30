@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import { useState, useEffect } from 'react'
 

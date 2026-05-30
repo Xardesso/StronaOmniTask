@@ -75,7 +75,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div className="contact-info__text">
-                  <h3>Obserwuj nas</h3>
+                  <h3>{t('contact.follow_us')}</h3>
                   <div className="contact-info__socials" style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
                     <a href="https://www.facebook.com/profile.php?id=61574333642391" target="_blank" rel="noopener noreferrer" title="Facebook">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -128,7 +128,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="contact-form-card">
-              <h2>Wyślij wiadomość</h2>
+              <h2>{t('contact.form_title')}</h2>
               {submitStatus === 'success' ? (
                 <div style={{ padding: '2rem', textAlign: 'center', background: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-success)', borderRadius: 'var(--radius-md)' }}>
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ margin: '0 auto 1rem' }}>
@@ -145,23 +145,23 @@ export default function ContactPage() {
                     </div>
                   )}
                   <div className="form-group">
-                    <label htmlFor="name">Imię i nazwisko</label>
+                    <label htmlFor="name">{t('quote.name')}</label>
                     <input type="text" id="name" name="name" required placeholder={t('quote.name_placeholder')} disabled={isSubmitting} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="email">Adres e-mail</label>
+                    <label htmlFor="email">{t('quote.email')}</label>
                     <input type="email" id="email" name="email" required placeholder={t('quote.email_placeholder')} disabled={isSubmitting} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="subject">Temat</label>
+                    <label htmlFor="subject">{t('contact.form_subject')}</label>
                     <input type="text" id="subject" name="subject" required disabled={isSubmitting} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="message">Treść wiadomości</label>
+                    <label htmlFor="message">{t('contact.form_message')}</label>
                     <textarea id="message" name="message" rows={5} required placeholder={t('quote.message_placeholder')} disabled={isSubmitting} />
                   </div>
                   <button type="submit" className="btn btn--primary btn--lg" style={{ width: '100%' }} disabled={isSubmitting}>
-                    {isSubmitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
+                    {isSubmitting ? t('contact.sending') : t('contact.form_title')}
                   </button>
                 </form>
               )}

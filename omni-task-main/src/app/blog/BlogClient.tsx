@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import Breadcrumbs from '@/components/Breadcrumbs'
 

@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Agenci AI i systemy multi-agentowe',
+  title: 'Agenci AI i systemy multi-agentowe dla biznesu',
   description:
     'Budujemy autonomicznych agentów AI i systemy multi-agentowe dla biznesu. Bezpłatna konsultacja.',
   openGraph: {
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
     url: 'https://www.omnitask.pl/uslugi/agenci-ai',
     type: 'website',
   },
-  alternates: { canonical: '/uslugi/agenci-ai' },
+  alternates: { canonical: '/uslugi/agenci-ai',
+    languages: buildHreflangAlternates('/uslugi/agenci-ai'), },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

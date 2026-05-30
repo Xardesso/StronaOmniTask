@@ -1,9 +1,15 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { LanguageProvider } from '@/i18n/context'
+import { buildHreflangAlternates, HREFLANG_MAP, DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n'
+
+// Renderujemy dynamicznie (SSR), aby ustawić poprawny <html lang> dla każdej
+// lokalizacji na podstawie nagłówka x-locale ustawianego w middleware.
+export const dynamic = 'force-dynamic'
 
 const inter = Inter({
   subsets: ['latin', 'latin-ext'],
@@ -19,8 +25,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: 'OmniTask – Automatyzacja RPA dla firm | Wdrożenia robotów',
-    template: '%s | OmniTask',
+    default: 'OmniTask – Inteligentna automatyzacja procesów: RPA i AI',
+    template: '%s',
   },
   description:
     'OmniTask to eksperci od automatyzacji procesów biznesowych RPA. Wdrażamy roboty, które eliminują powtarzalne zadania i redukują koszty operacyjne Twojej firmy.',
@@ -77,16 +83,20 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   alternates: {
     canonical: '/',
+    languages: buildHreflangAlternates('/'),
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const headerLocale = (await headers()).get('x-locale')
+  const locale: Locale = headerLocale && isLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE
+
   return (
-    <html lang="pl" className={`${inter.variable} ${outfit.variable}`} data-scroll-behavior="smooth">
+    <html lang={HREFLANG_MAP[locale]} className={`${inter.variable} ${outfit.variable}`} data-scroll-behavior="smooth">
       <head>
         {/* Organization + LocalBusiness Schema */}
         <script

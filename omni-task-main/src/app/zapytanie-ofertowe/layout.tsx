@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Bezpłatna wycena automatyzacji RPA',
+  title: 'Bezpłatna wycena automatyzacji RPA, workflow i AI',
   description:
     'Skontaktuj się z nami i otrzymaj bezpłatną wycenę wdrożenia automatyzacji RPA. Opisz swój proces, a my zaproponujemy optymalne rozwiązanie.',
   openGraph: {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/zapytanie-ofertowe',
+    languages: buildHreflangAlternates('/zapytanie-ofertowe'),
   },
 }
 

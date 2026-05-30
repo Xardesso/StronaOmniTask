@@ -5,7 +5,8 @@
     "quote": "Zapytanie ofertowe",
     "blog": "Blog",
     "contact": "Kontakt",
-    "about": "O nas"
+    "about": "O nas",
+    "all_services": "Wszystkie usługi"
   },
   "hero": {
     "title": "Automatyzacja, RPA i Agenci AI dla Twojego biznesu",
@@ -227,7 +228,12 @@
     "email": "kontakt@omnitask.pl",
     "hours_label": "Godziny pracy",
     "hours": "Pon - Pt: 8:00 - 17:00",
-    "map_title": "Nasza lokalizacja"
+    "map_title": "Nasza lokalizacja",
+    "follow_us": "Obserwuj nas",
+    "form_title": "Wyślij wiadomość",
+    "form_subject": "Temat",
+    "form_message": "Treść wiadomości",
+    "sending": "Wysyłanie..."
   },
   "blog": {
     "title": "Blog ekspercki – Automatyzacja, RPA i Agenci AI",
@@ -250,5 +256,206 @@
   "breadcrumbs": {
     "home": "Strona główna"
   },
-  "roi_disclaimer": "*Średnie wyniki na podstawie dotychczasowych wdrożeń. Rzeczywiste rezultaty mogą się różnić w zależności od procesu."
+  "roi_disclaimer": "*Średnie wyniki na podstawie dotychczasowych wdrożeń. Rzeczywiste rezultaty mogą się różnić w zależności od procesu.",
+  "services_page": {
+    "h1": "Nasze usługi – Automatyzacja i RPA",
+    "learn_more": "Dowiedz się więcej →"
+  },
+  "service_detail": {
+    "cta_button": "Bezpłatna wycena",
+    "faq_label": "Najczęściej zadawane pytania",
+    "labels": {
+      "rpa": "RPA",
+      "workflow": "Automatyzacja workflow",
+      "integration": "Integracja systemów",
+      "ai": "Agenci AI"
+    },
+    "rpa": {
+      "h1": "Robotyzacja procesów (RPA) – Automatyzacja powtarzalnych zadań",
+      "subtitle": "Wdrażamy roboty software'owe, które pracują 24/7, eliminują błędy i oszczędzają setki godzin pracy miesięcznie.",
+      "breadcrumb": "RPA",
+      "related_title": "Powiązane usługi",
+      "cta_title": "Chcesz zautomatyzować procesy w swojej firmie?",
+      "cta_subtitle": "Skontaktuj się z nami i otrzymaj bezpłatną analizę Twojego procesu z szacowanym ROI.",
+      "s1_title": "Czym jest Robotyzacja Procesów (RPA)?",
+      "s1_p1": "RPA (Robotic Process Automation) to technologia pozwalająca tworzyć software'owe roboty, które naśladują ludzkie działania w systemach komputerowych. Robot może logować się do aplikacji, klikać przyciski, kopiować dane między systemami, wypełniać formularze, wysyłać e-maile i generować raporty – wszystko to automatycznie, bez przerw i bez błędów.",
+      "s1_p2": "W OmniTask specjalizujemy się we wdrażaniu robotów RPA opartych o wiodące platformy: UiPath, Microsoft Power Automate oraz niestandardowe rozwiązania w Python. Każde wdrożenie poprzedzamy szczegółowym audytem procesu, aby zapewnić maksymalny zwrot z inwestycji.",
+      "s2_title": "Jakie procesy automatyzujemy z RPA?",
+      "features": [
+        { "title": "Przetwarzanie dokumentów", "desc": "Automatyczne odczytywanie, klasyfikacja i wprowadzanie danych z faktur, zamówień, umów i formularzy." },
+        { "title": "Obsługa zamówień", "desc": "Robot przyjmuje zamówienia, weryfikuje dane, tworzy pozycje w ERP i powiadamia odpowiednie działy." },
+        { "title": "Raportowanie", "desc": "Automatyczne generowanie raportów z wielu systemów, konsolidacja danych i wysyłka do interesariuszy." },
+        { "title": "Migracja danych", "desc": "Bezpieczne przenoszenie danych między systemami z walidacją i logowaniem każdej operacji." }
+      ],
+      "s3_title": "Korzyści z wdrożenia RPA",
+      "benefits": [
+        "Redukcja czasu wykonania procesu nawet o 80%",
+        "Eliminacja błędów ludzkich – roboty działają z dokładnością 99.9%",
+        "Praca 24/7 bez przerw, urlopów i zwolnień",
+        "Zwrot z inwestycji (ROI) zazwyczaj w ciągu 3–6 miesięcy",
+        "Skalowalność – łatwe dodawanie nowych robotów w miarę potrzeb",
+        "Pełna audytowalność – każda akcja robota jest logowana"
+      ],
+      "faq_title": "Najczęściej zadawane pytania o RPA",
+      "faq": [
+        { "q": "Ile trwa wdrożenie robota RPA?", "a": "Prosty robot może być gotowy w 2–4 tygodnie. Złożone procesy wymagające integracji wielu systemów zajmują 2–3 miesiące." },
+        { "q": "Czy potrzebuję zmian w istniejących systemach?", "a": "Nie. Roboty RPA działają na warstwie interfejsu użytkownika – nie wymagają żadnych modyfikacji w Twoich systemach." },
+        { "q": "Co się stanie, gdy proces się zmieni?", "a": "Roboty RPA wymagają aktualizacji przy zmianach interfejsu. Zapewniamy wsparcie i monitoring, aby szybko reagować." }
+      ]
+    },
+    "workflow": {
+      "h1": "Automatyzacja workflow – Inteligentne przepływy pracy",
+      "subtitle": "Łączymy systemy, aplikacje i ludzi w jeden spójny, zautomatyzowany proces biznesowy.",
+      "breadcrumb": "Automatyzacja workflow",
+      "related_title": "Powiązane usługi",
+      "cta_title": "Chcesz zautomatyzować przepływy pracy?",
+      "cta_subtitle": "Umów się na bezpłatną konsultację i pokaż nam swoje procesy.",
+      "s1_title": "Na czym polega automatyzacja workflow?",
+      "s1_p1": "Automatyzacja workflow to projektowanie i wdrażanie inteligentnych przepływów pracy, które łączą różne systemy, aplikacje i zespoły w jeden spójny, zautomatyzowany proces. Zamiast ręcznego przekazywania danych między aplikacjami, Twoje systemy komunikują się automatycznie.",
+      "s1_p2": "Wykorzystujemy platformy takie jak Zapier, Make (Integromat), Microsoft Power Automate oraz budujemy niestandardowe integracje, aby dopasować rozwiązanie do specyfiki Twojego biznesu.",
+      "s2_title": "Przykładowe zastosowania",
+      "features": [
+        { "title": "Automatyzacja onboardingu", "desc": "Nowy pracownik → automatyczne tworzenie kont, dostępów, wysyłka dokumentów i materiałów szkoleniowych." },
+        { "title": "Obsługa leadów", "desc": "Formularz kontaktowy → CRM → powiadomienie handlowca → automatyczny follow-up e-mail." },
+        { "title": "Procesy zatwierdzania", "desc": "Automatyczne routing wniosków do odpowiednich osób z eskalacją i powiadomieniami." },
+        { "title": "Synchronizacja danych", "desc": "Automatyczna synchronizacja danych między ERP, CRM, e-commerce i systemami magazynowymi." }
+      ],
+      "s3_title": "Korzyści z automatyzacji workflow",
+      "benefits": [
+        "Eliminacja ręcznego przekazywania danych między systemami",
+        "Redukcja czasu realizacji procesów o 60–80%",
+        "Pełna widoczność i śledzenie statusu każdego zadania",
+        "Automatyczne powiadomienia i eskalacje",
+        "Łatwa modyfikacja i rozbudowa przepływów"
+      ],
+      "faq_title": "",
+      "faq": []
+    },
+    "integration": {
+      "h1": "Integracja systemów – Łączymy ERP, CRM i bazy danych",
+      "subtitle": "Budujemy mosty między Twoimi systemami, tworząc jeden spójny ekosystem z automatyczną wymianą danych.",
+      "breadcrumb": "Integracja systemów",
+      "related_title": "Powiązane usługi",
+      "cta_title": "Potrzebujesz integracji systemów?",
+      "cta_subtitle": "Opisz swoje systemy, a my zaproponujemy optymalne połączenie.",
+      "s1_title": "Dlaczego integracja systemów jest kluczowa?",
+      "s1_p1": "Współczesne firmy używają dziesiątek aplikacji: ERP, CRM, e-mail, systemy magazynowe, platformy e-commerce, narzędzia HR. Bez integracji, pracownicy ręcznie przenoszą dane między systemami, co generuje błędy, opóźnienia i frustrację.",
+      "s1_p2": "Łączymy Twoje systemy przez API, webhooks, ETL i dedykowane middleware, aby dane przepływały automatycznie i w czasie rzeczywistym.",
+      "s2_title": "Co integrujemy?",
+      "features": [
+        { "title": "ERP ↔ CRM", "desc": "Automatyczna synchronizacja klientów, zamówień i faktur między systemami ERP i CRM." },
+        { "title": "E-commerce ↔ Magazyn", "desc": "Synchronizacja stanów magazynowych, zamówień i przesyłek w czasie rzeczywistym." },
+        { "title": "HR ↔ Payroll", "desc": "Automatyczne przekazywanie danych o etatach, urlopach i rozliczeniach." },
+        { "title": "Custom API", "desc": "Budujemy dedykowane integracje API dla systemów, które nie mają gotowych konektorów." }
+      ],
+      "s3_title": "Korzyści z integracji systemów",
+      "benefits": [
+        "Eliminacja ręcznego przepisywania danych",
+        "Dane zawsze aktualne we wszystkich systemach",
+        "Redukcja błędów i duplikatów",
+        "Szybszy przepływ informacji i decyzji",
+        "Jeden widok klienta (360°) dla zespołu sprzedaży"
+      ],
+      "faq_title": "",
+      "faq": []
+    },
+    "ai": {
+      "h1": "Agenci AI i systemy multi-agentowe dla biznesu",
+      "subtitle": "Budujemy autonomicznych agentów AI, którzy myślą, współpracują i realizują złożone cele biznesowe.",
+      "breadcrumb": "Agenci AI",
+      "related_title": "Powiązane usługi",
+      "cta_title": "Gotowy na agentów AI?",
+      "cta_subtitle": "Skontaktuj się z nami i sprawdź, jak agenci AI mogą zmienić Twój biznes.",
+      "s1_title": "Czym są agenci AI?",
+      "s1_p1": "Agenci AI to autonomiczne systemy, które potrafią samodzielnie podejmować decyzje, uczyć się z kontekstu i realizować złożone zadania bez stałego nadzoru człowieka. W odróżnieniu od botów RPA, agenci AI rozumieją język naturalny, analizują dane i adaptują się do nowych sytuacji.",
+      "s1_p2": "W OmniTask tworzymy systemy multi-agentowe, gdzie kilku specjalistycznych agentów współpracuje ze sobą, dzieli się informacjami i wspólnie realizuje złożone procesy biznesowe.",
+      "s2_title": "Zastosowania agentów AI",
+      "features": [
+        { "title": "Analiza dokumentów", "desc": "Agent czyta, klasyfikuje i wydobywa dane z dokumentów w dowolnym formacie." },
+        { "title": "Obsługa klienta", "desc": "Inteligentny agent odpowiada na pytania klientów, eskaluje złożone sprawy." },
+        { "title": "Monitoring konkurencji", "desc": "Agent śledzi rynek, ceny, trendy i generuje raporty strategiczne." },
+        { "title": "Audyt zgodności", "desc": "Agent porównuje przepisy z procedurami firmy i wskazuje luki." }
+      ],
+      "s3_title": "",
+      "benefits": [],
+      "faq_title": "",
+      "faq": []
+    }
+  },
+  "about_page": {
+    "h1": "O nas – Eksperci od automatyzacji procesów RPA i AI",
+    "subtitle": "Łączymy wiedzę techniczną z głębokim zrozumieniem procesów biznesowych, aby dostarczać realne wyniki.",
+    "mission_title": "Nasza misja",
+    "mission_p1": "OmniTask powstał z przekonania, że technologia powinna służyć ludziom, a nie odwrotnie. Naszą misją jest uwalnianie pracowników od monotonnych, powtarzalnych zadań, aby mogli skupić się na pracy kreatywnej i strategicznej.",
+    "mission_p2_pre": "Specjalizujemy się we wdrażaniu ",
+    "mission_link_rpa": "robotyzacji procesów (RPA)",
+    "mission_p2_mid1": ", ",
+    "mission_link_workflow": "automatyzacji workflow",
+    "mission_p2_mid2": ", ",
+    "mission_link_integration": "integracji systemów",
+    "mission_p2_mid3": " oraz budowie ",
+    "mission_link_ai": "autonomicznych agentów AI",
+    "mission_p2_end": ".",
+    "values_title": "Nasze wartości",
+    "values": [
+      { "title": "Podejście biznesowe", "desc": "Zaczynamy od zrozumienia Twoich celów, nie od technologii." },
+      { "title": "Mierzalne wyniki", "desc": "Każde wdrożenie mierzymy konkretnymi KPI: czas, koszt, dokładność." },
+      { "title": "Partnerstwo", "desc": "Traktujemy klientów jako partnerów. Twój sukces to nasz sukces." },
+      { "title": "Ciągły rozwój", "desc": "Śledzimy najnowsze trendy w AI i automatyzacji, aby dostarczać najlepsze rozwiązania." }
+    ],
+    "why_title": "Dlaczego warto z nami współpracować?",
+    "why_list": [
+      "Doświadczenie w automatyzacji procesów w różnych branżach",
+      "Zespół certyfikowanych specjalistów UiPath i Power Automate",
+      "Szybki czas wdrożenia – proste procesy nawet w 2 tygodnie",
+      "Wsparcie techniczne 24/7 i monitoring botów",
+      "Komunikacja w języku polskim, angielskim i ukraińskim"
+    ]
+  },
+  "meta": {
+    "uslugi": { "title": "Usługi automatyzacji procesów: RPA, AI i workflow", "description": "Kompleksowe usługi automatyzacji procesów: RPA, automatyzacja workflow, integracja systemów, agenci AI. Sprawdź jak możemy pomóc Twojej firmie." },
+    "rpa": { "title": "Robotyzacja procesów RPA – wdrożenia botów UiPath i Python", "description": "Wdrażamy roboty software'owe RPA, które automatycznie wykonują powtarzalne zadania biznesowe. UiPath, Power Automate, Python. Bezpłatna konsultacja." },
+    "workflow": { "title": "Automatyzacja workflow – Zapier, Make, Power Automate", "description": "Projektujemy i wdrażamy inteligentne przepływy pracy łączące systemy, aplikacje i ludzi. Zapier, Make, Power Automate. Bezpłatna konsultacja." },
+    "integration": { "title": "Integracja systemów IT – ERP, CRM, API i bazy danych", "description": "Łączymy ERP, CRM, e-mail i bazy danych w jeden ekosystem z automatyczną wymianą danych. API, ETL, middleware. Bezpłatna konsultacja." },
+    "ai": { "title": "Agenci AI i systemy multi-agentowe dla biznesu", "description": "Budujemy autonomicznych agentów AI i systemy multi-agentowe dla biznesu. Bezpłatna konsultacja." },
+    "about": { "title": "O nas – eksperci automatyzacji procesów RPA i AI", "description": "Poznaj zespół OmniTask – ekspertów od automatyzacji procesów RPA i agentów AI. Nasza misja, wartości i doświadczenie." },
+    "contact": { "title": "Kontakt – automatyzacja procesów RPA i AI dla firm", "description": "Skontaktuj się z OmniTask, aby omówić automatyzację procesów w Twojej firmie. Telefon, e-mail i formularz kontaktowy." },
+    "quote": { "title": "Bezpłatna wycena automatyzacji RPA, workflow i AI", "description": "Opisz proces, który chcesz zautomatyzować. Przygotujemy indywidualną wycenę RPA, workflow lub agentów AI w ciągu 24 godzin." },
+    "blog": { "title": "Blog o automatyzacji procesów, RPA i agentach AI", "description": "Praktyczna wiedza, trendy i realizacje z zakresu automatyzacji procesów (RPA) i agentów AI. Czytaj artykuły OmniTask." },
+    "home": { "title": "OmniTask – Inteligentna automatyzacja procesów: RPA i AI", "description": "OmniTask to eksperci od automatyzacji procesów biznesowych RPA. Wdrażamy roboty, które eliminują powtarzalne zadania i redukują koszty operacyjne." },
+    "privacy": { "title": "Polityka prywatności i ochrona danych (RODO)", "description": "Polityka prywatności OmniTask. Informacje o przetwarzaniu danych osobowych zgodnie z RODO." },
+    "terms": { "title": "Regulamin serwisu i świadczenia usług online", "description": "Regulamin korzystania z serwisu OmniTask.pl. Warunki świadczenia usług drogą elektroniczną." }
+  },
+  "legal": {
+    "note_label": "Uwaga:",
+    "note_text": "Niniejszy dokument stanowi szablon i powinien zostać zweryfikowany przez radcę prawnego przed publikacją w wersji produkcyjnej.",
+    "contact_email": "kontakt@omnitask.pl",
+    "privacy": {
+      "title": "Polityka Prywatności",
+      "subtitle": "Informacje o przetwarzaniu danych osobowych",
+      "last_updated": "Ostatnia aktualizacja: 17 maja 2026 r.",
+      "sections": [
+        { "title": "1. Administrator danych", "emailIntro": "Administratorem Twoich danych osobowych jest OmniTask z siedzibą w Polsce (dalej: „Administrator”). Kontakt: ", "emailAfter": "." },
+        { "title": "2. Jakie dane zbieramy", "intro": "Zbieramy dane, które sam nam podajesz w formularzach kontaktowych i zapytaniach ofertowych:", "items": ["Imię i nazwisko", "Adres e-mail", "Numer telefonu (opcjonalnie)", "Nazwa firmy (opcjonalnie)", "Treść wiadomości / opis procesu"] },
+        { "title": "3. Cel przetwarzania", "intro": "Twoje dane przetwarzamy w celu:", "items": ["Odpowiedzi na zapytania ofertowe i kontaktowe (art. 6 ust. 1 lit. b RODO)", "Realizacji newslettera – na podstawie zgody (art. 6 ust. 1 lit. a RODO)", "Dochodzenia lub obrony roszczeń (art. 6 ust. 1 lit. f RODO)"] },
+        { "title": "4. Okres przechowywania", "paragraphs": ["Dane przechowujemy przez okres niezbędny do realizacji celów przetwarzania, nie dłużej niż 3 lata od ostatniego kontaktu."] },
+        { "title": "5. Twoje prawa", "intro": "Masz prawo do:", "items": ["Dostępu do swoich danych", "Sprostowania danych", "Usunięcia danych („prawo do bycia zapomnianym”)", "Ograniczenia przetwarzania", "Przenoszenia danych", "Wniesienia sprzeciwu wobec przetwarzania", "Cofnięcia zgody w dowolnym momencie", "Wniesienia skargi do Prezesa UODO"] },
+        { "title": "6. Pliki cookies", "paragraphs": ["Strona wykorzystuje niezbędne pliki cookies do prawidłowego działania serwisu. Nie stosujemy cookies marketingowych ani śledzących."] },
+        { "title": "7. Kontakt", "emailIntro": "W sprawach dotyczących ochrony danych osobowych: ", "emailAfter": "" }
+      ]
+    },
+    "terms": {
+      "title": "Regulamin serwisu OmniTask.pl",
+      "subtitle": "Warunki korzystania z serwisu",
+      "last_updated": "Ostatnia aktualizacja: 17 maja 2026 r.",
+      "sections": [
+        { "title": "1. Postanowienia ogólne", "paragraphs": ["Niniejszy regulamin określa zasady korzystania z serwisu internetowego omnitask.pl, prowadzonego przez OmniTask (dalej: „Usługodawca”)."] },
+        { "title": "2. Usługi", "intro": "Za pośrednictwem serwisu Usługodawca świadczy usługi drogą elektroniczną, w tym:", "items": ["Udostępnianie informacji o usługach automatyzacji procesów", "Możliwość przesłania zapytania ofertowego", "Formularz kontaktowy", "Newsletter (po wyrażeniu zgody)"] },
+        { "title": "3. Wymagania techniczne", "paragraphs": ["Do korzystania z serwisu wymagana jest przeglądarka internetowa z obsługą JavaScript oraz aktywne połączenie z Internetem."] },
+        { "title": "4. Prawa własności intelektualnej", "paragraphs": ["Wszelkie treści zamieszczone w serwisie, w tym teksty, grafiki, logotypy i oprogramowanie, stanowią własność Usługodawcy i są chronione prawem autorskim."] },
+        { "title": "5. Odpowiedzialność", "paragraphs": ["Usługodawca dokłada starań, aby informacje zamieszczone w serwisie były aktualne i rzetelne, jednak nie ponosi odpowiedzialności za ewentualne błędy lub nieaktualność treści."] },
+        { "title": "6. Postanowienia końcowe", "paragraphs": ["Usługodawca zastrzega sobie prawo do zmiany regulaminu. Zmiany wchodzą w życie z chwilą ich publikacji w serwisie."] }
+      ]
+    }
+  }
 }

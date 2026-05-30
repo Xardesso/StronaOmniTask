@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Robotyzacja procesów RPA',
+  title: 'Robotyzacja procesów RPA – wdrożenia botów UiPath i Python',
   description:
     'Wdrażamy roboty software\'owe RPA, które automatycznie wykonują powtarzalne zadania biznesowe. UiPath, Power Automate, Python. Bezpłatna konsultacja.',
   openGraph: {
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
     url: 'https://www.omnitask.pl/uslugi/rpa',
     type: 'website',
   },
-  alternates: { canonical: '/uslugi/rpa' },
+  alternates: { canonical: '/uslugi/rpa',
+    languages: buildHreflangAlternates('/uslugi/rpa'), },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

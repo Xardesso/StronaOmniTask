@@ -5,7 +5,8 @@
     "quote": "Request a Quote",
     "blog": "Blog",
     "contact": "Contact",
-    "about": "About Us"
+    "about": "About Us",
+    "all_services": "All services"
   },
   "hero": {
     "title": "Automation, RPA & AI Agents for Your Business",
@@ -224,10 +225,15 @@
     "phone_label": "Phone",
     "phone": "+48 721 719 238",
     "email_label": "Email",
-    "email": "omnitask@kontakt.pl",
+    "email": "kontakt@omnitask.pl",
     "hours_label": "Working Hours",
     "hours": "Mon - Fri: 8:00 AM - 5:00 PM",
-    "map_title": "Our Location"
+    "map_title": "Our Location",
+    "follow_us": "Follow us",
+    "form_title": "Send a message",
+    "form_subject": "Subject",
+    "form_message": "Message",
+    "sending": "Sending..."
   },
   "blog": {
     "title": "Expert Blog – Automation, RPA & AI Agents",
@@ -250,5 +256,206 @@
   "breadcrumbs": {
     "home": "Home"
   },
-  "roi_disclaimer": "*Average results based on past implementations. Actual results may vary depending on the process."
+  "roi_disclaimer": "*Average results based on past implementations. Actual results may vary depending on the process.",
+  "services_page": {
+    "h1": "Our Services – Automation and RPA",
+    "learn_more": "Learn more →"
+  },
+  "service_detail": {
+    "cta_button": "Free quote",
+    "faq_label": "Frequently asked questions",
+    "labels": {
+      "rpa": "RPA",
+      "workflow": "Workflow automation",
+      "integration": "System integration",
+      "ai": "AI Agents"
+    },
+    "rpa": {
+      "h1": "Robotic Process Automation (RPA) – Automate repetitive tasks",
+      "subtitle": "We deploy software robots that work 24/7, eliminate errors and save hundreds of work hours every month.",
+      "breadcrumb": "RPA",
+      "related_title": "Related services",
+      "cta_title": "Want to automate processes in your company?",
+      "cta_subtitle": "Get in touch and receive a free analysis of your process with an estimated ROI.",
+      "s1_title": "What is Robotic Process Automation (RPA)?",
+      "s1_p1": "RPA (Robotic Process Automation) is a technology that lets you create software robots which mimic human actions in computer systems. A robot can log in to applications, click buttons, copy data between systems, fill in forms, send emails and generate reports – all automatically, without breaks and without errors.",
+      "s1_p2": "At OmniTask we specialize in deploying RPA robots built on leading platforms: UiPath, Microsoft Power Automate and custom solutions in Python. Every implementation starts with a detailed process audit to ensure maximum return on investment.",
+      "s2_title": "Which processes do we automate with RPA?",
+      "features": [
+        { "title": "Document processing", "desc": "Automatic reading, classification and data entry from invoices, orders, contracts and forms." },
+        { "title": "Order handling", "desc": "The robot receives orders, validates data, creates entries in the ERP and notifies the relevant departments." },
+        { "title": "Reporting", "desc": "Automatic generation of reports from multiple systems, data consolidation and delivery to stakeholders." },
+        { "title": "Data migration", "desc": "Secure transfer of data between systems with validation and logging of every operation." }
+      ],
+      "s3_title": "Benefits of implementing RPA",
+      "benefits": [
+        "Reduction of process execution time by up to 80%",
+        "Elimination of human errors – robots work with 99.9% accuracy",
+        "24/7 operation without breaks, holidays or sick leave",
+        "Return on investment (ROI) typically within 3–6 months",
+        "Scalability – easy to add new robots as needed",
+        "Full auditability – every robot action is logged"
+      ],
+      "faq_title": "Frequently asked questions about RPA",
+      "faq": [
+        { "q": "How long does an RPA robot deployment take?", "a": "A simple robot can be ready in 2–4 weeks. Complex processes requiring integration of many systems take 2–3 months." },
+        { "q": "Do I need changes in my existing systems?", "a": "No. RPA robots operate on the user interface layer – they do not require any modifications to your systems." },
+        { "q": "What happens when a process changes?", "a": "RPA robots require updates when the interface changes. We provide support and monitoring so we can react quickly." }
+      ]
+    },
+    "workflow": {
+      "h1": "Workflow automation – Intelligent work processes",
+      "subtitle": "We connect systems, applications and people into one coherent, automated business process.",
+      "breadcrumb": "Workflow automation",
+      "related_title": "Related services",
+      "cta_title": "Want to automate your workflows?",
+      "cta_subtitle": "Book a free consultation and show us your processes.",
+      "s1_title": "What is workflow automation?",
+      "s1_p1": "Workflow automation is the design and deployment of intelligent work processes that connect different systems, applications and teams into one coherent, automated process. Instead of manually passing data between applications, your systems communicate automatically.",
+      "s1_p2": "We use platforms such as Zapier, Make (Integromat), Microsoft Power Automate and build custom integrations to tailor the solution to the specifics of your business.",
+      "s2_title": "Example use cases",
+      "features": [
+        { "title": "Onboarding automation", "desc": "New employee → automatic creation of accounts and access, sending of documents and training materials." },
+        { "title": "Lead handling", "desc": "Contact form → CRM → sales rep notification → automated follow-up email." },
+        { "title": "Approval processes", "desc": "Automatic routing of requests to the right people with escalation and notifications." },
+        { "title": "Data synchronization", "desc": "Automatic data synchronization between ERP, CRM, e-commerce and warehouse systems." }
+      ],
+      "s3_title": "Benefits of workflow automation",
+      "benefits": [
+        "Elimination of manual data transfer between systems",
+        "Reduction of process completion time by 60–80%",
+        "Full visibility and status tracking of every task",
+        "Automatic notifications and escalations",
+        "Easy modification and expansion of workflows"
+      ],
+      "faq_title": "",
+      "faq": []
+    },
+    "integration": {
+      "h1": "System integration – We connect ERP, CRM and databases",
+      "subtitle": "We build bridges between your systems, creating one coherent ecosystem with automatic data exchange.",
+      "breadcrumb": "System integration",
+      "related_title": "Related services",
+      "cta_title": "Need system integration?",
+      "cta_subtitle": "Describe your systems and we will propose the optimal connection.",
+      "s1_title": "Why is system integration crucial?",
+      "s1_p1": "Modern companies use dozens of applications: ERP, CRM, email, warehouse systems, e-commerce platforms, HR tools. Without integration, employees manually move data between systems, which generates errors, delays and frustration.",
+      "s1_p2": "We connect your systems through API, webhooks, ETL and dedicated middleware so that data flows automatically and in real time.",
+      "s2_title": "What do we integrate?",
+      "features": [
+        { "title": "ERP ↔ CRM", "desc": "Automatic synchronization of customers, orders and invoices between ERP and CRM systems." },
+        { "title": "E-commerce ↔ Warehouse", "desc": "Real-time synchronization of stock levels, orders and shipments." },
+        { "title": "HR ↔ Payroll", "desc": "Automatic transfer of data on positions, leave and settlements." },
+        { "title": "Custom API", "desc": "We build dedicated API integrations for systems that do not have ready-made connectors." }
+      ],
+      "s3_title": "Benefits of system integration",
+      "benefits": [
+        "Elimination of manual data re-entry",
+        "Data always up to date across all systems",
+        "Reduction of errors and duplicates",
+        "Faster flow of information and decisions",
+        "A single 360° customer view for the sales team"
+      ],
+      "faq_title": "",
+      "faq": []
+    },
+    "ai": {
+      "h1": "AI Agents and multi-agent systems for business",
+      "subtitle": "We build autonomous AI agents that think, collaborate and achieve complex business goals.",
+      "breadcrumb": "AI Agents",
+      "related_title": "Related services",
+      "cta_title": "Ready for AI agents?",
+      "cta_subtitle": "Get in touch and see how AI agents can transform your business.",
+      "s1_title": "What are AI agents?",
+      "s1_p1": "AI agents are autonomous systems that can make decisions on their own, learn from context and carry out complex tasks without constant human supervision. Unlike RPA bots, AI agents understand natural language, analyze data and adapt to new situations.",
+      "s1_p2": "At OmniTask we build multi-agent systems where several specialized agents collaborate, share information and jointly carry out complex business processes.",
+      "s2_title": "Applications of AI agents",
+      "features": [
+        { "title": "Document analysis", "desc": "The agent reads, classifies and extracts data from documents in any format." },
+        { "title": "Customer service", "desc": "An intelligent agent answers customer questions and escalates complex cases." },
+        { "title": "Competitor monitoring", "desc": "The agent tracks the market, prices and trends and generates strategic reports." },
+        { "title": "Compliance audit", "desc": "The agent compares regulations with company procedures and points out gaps." }
+      ],
+      "s3_title": "",
+      "benefits": [],
+      "faq_title": "",
+      "faq": []
+    }
+  },
+  "about_page": {
+    "h1": "About us – Experts in RPA and AI process automation",
+    "subtitle": "We combine technical expertise with a deep understanding of business processes to deliver real results.",
+    "mission_title": "Our mission",
+    "mission_p1": "OmniTask was founded on the belief that technology should serve people, not the other way around. Our mission is to free employees from monotonous, repetitive tasks so they can focus on creative and strategic work.",
+    "mission_p2_pre": "We specialize in deploying ",
+    "mission_link_rpa": "robotic process automation (RPA)",
+    "mission_p2_mid1": ", ",
+    "mission_link_workflow": "workflow automation",
+    "mission_p2_mid2": ", ",
+    "mission_link_integration": "system integration",
+    "mission_p2_mid3": " and building ",
+    "mission_link_ai": "autonomous AI agents",
+    "mission_p2_end": ".",
+    "values_title": "Our values",
+    "values": [
+      { "title": "Business-first approach", "desc": "We start by understanding your goals, not the technology." },
+      { "title": "Measurable results", "desc": "We measure every implementation with specific KPIs: time, cost, accuracy." },
+      { "title": "Partnership", "desc": "We treat clients as partners. Your success is our success." },
+      { "title": "Continuous improvement", "desc": "We follow the latest trends in AI and automation to deliver the best solutions." }
+    ],
+    "why_title": "Why work with us?",
+    "why_list": [
+      "Experience in process automation across various industries",
+      "A team of certified UiPath and Power Automate specialists",
+      "Fast deployment time – simple processes in as little as 2 weeks",
+      "24/7 technical support and bot monitoring",
+      "Communication in Polish, English and Ukrainian"
+    ]
+  },
+  "meta": {
+    "uslugi": { "title": "Process automation services: RPA, AI and workflow", "description": "Comprehensive process automation services: RPA, workflow automation, system integration, AI agents. See how we can help your company." },
+    "rpa": { "title": "Robotic Process Automation (RPA) – UiPath & Python bots", "description": "We deploy RPA software robots that automatically perform repetitive business tasks. UiPath, Power Automate, Python. Free consultation." },
+    "workflow": { "title": "Workflow automation – Zapier, Make, Power Automate", "description": "We design and deploy intelligent workflows connecting systems, applications and people. Zapier, Make, Power Automate. Free consultation." },
+    "integration": { "title": "System integration – ERP, CRM, API and databases", "description": "We connect ERP, CRM, email and databases into one ecosystem with automatic data exchange. API, ETL, middleware. Free consultation." },
+    "ai": { "title": "AI agents and multi-agent systems for business", "description": "We build autonomous AI agents and multi-agent systems for business. Free consultation." },
+    "about": { "title": "About us – RPA and AI process automation experts", "description": "Meet the OmniTask team – experts in RPA process automation and AI agents. Our mission, values and experience." },
+    "contact": { "title": "Contact – RPA and AI process automation for business", "description": "Get in touch with OmniTask to discuss process automation in your company. Phone, email and contact form." },
+    "quote": { "title": "Free quote for RPA, workflow and AI automation", "description": "Describe the process you want to automate. We will prepare a tailored RPA, workflow or AI agent quote within 24 hours." },
+    "blog": { "title": "Blog on process automation, RPA and AI agents", "description": "Practical knowledge, trends and case studies on process automation (RPA) and AI agents. Read the OmniTask blog." },
+    "home": { "title": "OmniTask – Intelligent process automation: RPA and AI", "description": "OmniTask are experts in RPA business process automation. We deploy robots that eliminate repetitive tasks and reduce operational costs." },
+    "privacy": { "title": "Privacy policy and data protection (GDPR)", "description": "OmniTask privacy policy. Information on the processing of personal data in accordance with the GDPR." },
+    "terms": { "title": "Website and online services terms of service", "description": "Terms of use of the OmniTask.pl website. Conditions for providing services electronically." }
+  },
+  "legal": {
+    "note_label": "Note:",
+    "note_text": "This document is a template and should be reviewed by a legal advisor before publication in a production version.",
+    "contact_email": "kontakt@omnitask.pl",
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "Information on the processing of personal data",
+      "last_updated": "Last updated: 17 May 2026.",
+      "sections": [
+        { "title": "1. Data controller", "emailIntro": "The controller of your personal data is OmniTask, based in Poland (hereinafter: the “Controller”). Contact: ", "emailAfter": "." },
+        { "title": "2. What data we collect", "intro": "We collect the data you provide to us in contact forms and quote requests:", "items": ["Full name", "Email address", "Phone number (optional)", "Company name (optional)", "Message content / process description"] },
+        { "title": "3. Purpose of processing", "intro": "We process your data in order to:", "items": ["Respond to quote and contact requests (Art. 6(1)(b) GDPR)", "Deliver the newsletter – based on consent (Art. 6(1)(a) GDPR)", "Pursue or defend claims (Art. 6(1)(f) GDPR)"] },
+        { "title": "4. Retention period", "paragraphs": ["We store data for the period necessary to fulfil the purposes of processing, no longer than 3 years from the last contact."] },
+        { "title": "5. Your rights", "intro": "You have the right to:", "items": ["Access your data", "Rectify your data", "Erase your data (the “right to be forgotten”)", "Restrict processing", "Data portability", "Object to processing", "Withdraw consent at any time", "Lodge a complaint with the President of the Personal Data Protection Office (UODO)"] },
+        { "title": "6. Cookies", "paragraphs": ["The site uses essential cookies necessary for the proper functioning of the service. We do not use marketing or tracking cookies."] },
+        { "title": "7. Contact", "emailIntro": "For matters regarding the protection of personal data: ", "emailAfter": "" }
+      ]
+    },
+    "terms": {
+      "title": "OmniTask.pl Terms of Service",
+      "subtitle": "Conditions for using the website",
+      "last_updated": "Last updated: 17 May 2026.",
+      "sections": [
+        { "title": "1. General provisions", "paragraphs": ["These terms set out the rules for using the omnitask.pl website operated by OmniTask (hereinafter: the “Service Provider”)."] },
+        { "title": "2. Services", "intro": "Through the website, the Service Provider provides services electronically, including:", "items": ["Providing information about process automation services", "The option to submit a quote request", "A contact form", "Newsletter (after giving consent)"] },
+        { "title": "3. Technical requirements", "paragraphs": ["Using the website requires a web browser with JavaScript support and an active Internet connection."] },
+        { "title": "4. Intellectual property rights", "paragraphs": ["All content posted on the website, including texts, graphics, logos and software, is the property of the Service Provider and is protected by copyright."] },
+        { "title": "5. Liability", "paragraphs": ["The Service Provider makes every effort to keep the information on the website up to date and reliable, but is not responsible for any errors or outdated content."] },
+        { "title": "6. Final provisions", "paragraphs": ["The Service Provider reserves the right to change the terms. Changes take effect upon their publication on the website."] }
+      ]
+    }
+  }
 }

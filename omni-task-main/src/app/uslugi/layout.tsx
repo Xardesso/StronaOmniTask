@@ -1,7 +1,8 @@
+import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Usługi automatyzacji RPA i AI',
+  title: 'Usługi automatyzacji procesów: RPA, AI i workflow',
   description:
     'Kompleksowe usługi automatyzacji procesów: RPA, automatyzacja workflow, integracja systemów, agenci AI. Sprawdź jak możemy pomóc Twojej firmie.',
   openGraph: {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/uslugi',
+    languages: buildHreflangAlternates('/uslugi'),
   },
 }
 

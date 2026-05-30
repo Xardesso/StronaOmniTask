@@ -2,7 +2,7 @@
 
 import { useTranslation } from '@/i18n/context'
 import { useEffect } from 'react'
-import Link from 'next/link'
+import Link from '@/components/LocaleLink'
 
 interface Article {
   id: number
