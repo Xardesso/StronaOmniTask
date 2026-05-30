@@ -57,12 +57,6 @@ export default function LegalContent({ doc }: { doc: 'privacy' | 'terms' }) {
                 ) : null}
               </section>
             ))}
-
-            <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(59, 130, 246, 0.05)', borderRadius: 'var(--radius-md)', border: '1px solid rgba(59, 130, 246, 0.15)' }}>
-              <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--color-muted)' }}>
-                <strong>{t('legal.note_label')}</strong> {t('legal.note_text')}
-              </p>
-            </div>
           </div>
         </div>
       </div>
