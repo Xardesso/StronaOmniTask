@@ -1,13 +1,11 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="180.000000pt" height="180.000000pt" viewBox="0 0 180.000000 180.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,180.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M690 1449 c-238 -107 -283 -136 -300 -199 -14 -49 -70 -507 -70 -567
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.2" baseProfile="tiny-ps"
+     viewBox="0 0 500 500" width="500" height="500">
+  <title>OmniTask</title>
+  <circle cx="250" cy="250" r="250" fill="#ffffff"/>
+  <g transform="translate(90,410) scale(0.17778,-0.17778)" fill="#000000" stroke="none">
+    <path d="M690 1449 c-238 -107 -283 -136 -300 -199 -14 -49 -70 -507 -70 -567
 0 -36 7 -60 23 -84 25 -38 399 -356 435 -370 57 -22 99 -11 340 96 130 58 248
 117 263 131 35 33 44 69 68 269 12 94 26 203 31 243 15 113 13 151 -14 197
 -25 42 -362 332 -428 368 -64 34 -105 24 -348 -84z m331 -2 c19 -12 36 -32 38
@@ -20,5 +18,5 @@ fill="#000000" stroke="none">
 1 7 -6 7 -16z m-181 -376 c124 -104 245 -206 269 -228 l44 -39 -43 -19 c-24
 -10 -90 -39 -147 -65 -56 -25 -113 -46 -125 -46 -27 0 -39 9 -267 200 l-172
 145 5 79 c3 46 11 84 19 91 22 21 171 84 182 77 6 -3 111 -91 235 -195z"/>
-</g>
+  </g>
 </svg>
