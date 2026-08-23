@@ -2,9 +2,17 @@
 
 import Link from './LocaleLink'
 import { useTranslation } from '@/i18n/context'
+import { CALCOM_URL, CONTACT, FEATURE_REALIZACJE } from '@/lib/site-config'
 
-export default function Footer() {
-  const { t } = useTranslation()
+interface FooterPost {
+  slug: string
+  title: string
+  image: string | null
+  date: string
+}
+
+export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
+  const { t, locale } = useTranslation()
 
   return (
     <footer className="footer" id="main-footer">
@@ -13,7 +21,7 @@ export default function Footer() {
           {/* Column 1 - Brand */}
           <div className="footer__col">
             <div className="footer__brand">
-              <img src="/Logo.png" alt="OmniTask Logo" title="OmniTask Logo" className="footer__logo-img" style={{ height: '32px', width: 'auto' }} />
+              <img src="/Logo.png" alt="OmniTask Logo" title="OmniTask Logo" className="footer__logo-img" style={{ height: '46px', width: 'auto' }} />
             </div>
             <p className="footer__description">{t('footer.description')}</p>
             <div className="footer__socials">
@@ -29,42 +37,73 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 - Quick Links */}
-          <div className="footer__col">
-            <h3 className="footer__heading">{t('footer.quick_links')}</h3>
-            <ul className="footer__links">
-              <li><Link href="/" className="footer__link" title={t('nav.home')}>{t('nav.home')}</Link></li>
-              <li><Link href="/o-nas" className="footer__link" title={t('nav.about')}>{t('nav.about')}</Link></li>
-              <li><Link href="/zapytanie-ofertowe" className="footer__link" title={t('nav.quote')}>{t('nav.quote')}</Link></li>
-              <li><Link href="/blog" className="footer__link" title={t('nav.blog')}>{t('nav.blog')}</Link></li>
-              <li><Link href="/kontakt" className="footer__link" title={t('nav.contact')}>{t('nav.contact')}</Link></li>
-            </ul>
-          </div>
-
-          {/* Column 3 - Services */}
+          {/* Column 2 - Services */}
           <div className="footer__col">
             <h3 className="footer__heading">{t('footer.services')}</h3>
             <ul className="footer__links">
-              <li><Link href="/uslugi/rpa" className="footer__link" title="RPA">{t('services.service1.title')}</Link></li>
               <li><Link href="/uslugi/automatyzacja-workflow" className="footer__link" title={t('service_detail.labels.workflow')}>{t('service_detail.labels.workflow')}</Link></li>
+              {locale === 'pl' && <li><Link href="/uslugi/ksef" className="footer__link" title={t('service_detail.labels.ksef')}>{t('service_detail.labels.ksef')}</Link></li>}
               <li><Link href="/uslugi/integracja-systemow" className="footer__link" title={t('service_detail.labels.integration')}>{t('service_detail.labels.integration')}</Link></li>
+              {locale === 'pl' && <li><Link href="/uslugi/szkolenia-i-doradztwo" className="footer__link" title={t('service_detail.labels.szkolenia')}>{t('service_detail.labels.szkolenia')}</Link></li>}
+              <li><Link href="/uslugi/rpa" className="footer__link" title={t('service_detail.labels.rpa')}>{t('service_detail.labels.rpa')}</Link></li>
+              {locale === 'pl' && <li><Link href="/uslugi/opieka-i-hosting" className="footer__link" title={t('service_detail.labels.opieka')}>{t('service_detail.labels.opieka')}</Link></li>}
               <li><Link href="/uslugi/agenci-ai" className="footer__link" title={t('service_detail.labels.ai')}>{t('service_detail.labels.ai')}</Link></li>
             </ul>
           </div>
 
-          {/* Column 4 - Contact */}
+          {/* Column 3 - Firma */}
+          <div className="footer__col">
+            <h3 className="footer__heading">{t('footer.company')}</h3>
+            <ul className="footer__links">
+              <li><Link href="/o-nas" className="footer__link" title={t('nav.about')}>{t('nav.about')}</Link></li>
+              {FEATURE_REALIZACJE && locale === 'pl' && <li><Link href="/realizacje" className="footer__link" title={t('nav.projects')}>{t('nav.projects')}</Link></li>}
+              <li><Link href="/blog" className="footer__link" title={t('nav.blog')}>{t('nav.blog')}</Link></li>
+              {locale === 'pl' && <li><Link href="/faq" className="footer__link" title={t('nav.faq')}>{t('nav.faq')}</Link></li>}
+              <li><Link href="/kontakt" className="footer__link" title={t('nav.contact')}>{t('nav.contact')}</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4 - Recent Posts */}
+          {posts.length > 0 && (
+            <div className="footer__col">
+              <h3 className="footer__heading">{t('footer.recent_posts')}</h3>
+              <ul className="footer__posts">
+                {posts.map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`} className="footer__post" title={post.title}>
+                      <span className="footer__post-thumb">
+                        {post.image ? <img src={post.image} alt={post.title} loading="lazy" /> : null}
+                      </span>
+                      <span>
+                        <span className="footer__post-date">
+                          {new Date(post.date).toLocaleDateString(locale === 'ua' ? 'uk-UA' : locale === 'en' ? 'en-US' : 'pl-PL', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </span>
+                        <span className="footer__post-title">{post.title}</span>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Column 5 - Contact */}
           <div className="footer__col">
             <h3 className="footer__heading">{t('footer.contact_info')}</h3>
             <ul className="footer__contact">
               <li className="footer__contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                <a href={`tel:${t('contact.phone')}`} className="footer__link" title="Telefon">{t('contact.phone')}</a>
+                <a href={`tel:${CONTACT.phoneHref}`} className="footer__link" title="Telefon">{CONTACT.phone}</a>
               </li>
               <li className="footer__contact-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <a href={`mailto:${t('contact.email')}`} className="footer__link" title="Email">{t('contact.email')}</a>
+                <a href={`mailto:${CONTACT.email}`} className="footer__link" title="Email">{CONTACT.email}</a>
               </li>
+              <li className="footer__contact-item footer__contact-item--nip">{CONTACT.nip}</li>
             </ul>
+            <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary footer__cta" title={t('nav.book_call')}>
+              {t('nav.book_call')}
+            </a>
           </div>
         </div>
 

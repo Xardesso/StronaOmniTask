@@ -2,226 +2,184 @@
   "nav": {
     "home": "Strona główna",
     "services": "Usługi",
+    "funding": "Dofinansowanie",
+    "pricing": "Cennik",
+    "projects": "Realizacje",
     "quote": "Zapytanie ofertowe",
     "blog": "Blog",
     "contact": "Kontakt",
-    "about": "O nas",
-    "all_services": "Wszystkie usługi"
+    "about": "Poznaj mnie",
+    "faq": "FAQ",
+    "all_services": "Wszystkie usługi",
+    "book_call": "Umów rozmowę"
   },
   "hero": {
-    "title": "Automatyzacja, RPA i Agenci AI dla Twojego biznesu",
-    "subtitle": "Wdrażamy inteligentne rozwiązania RPA oraz autonomicznych agentów AI, którzy eliminują powtarzalne zadania, redukują koszty i przyspieszają pracę Twojej firmy. Pozwól technologii pracować za Ciebie.",
-    "cta_primary": "Bezpłatna konsultacja",
-    "cta_secondary": "Zobacz jak działamy"
+    "title": "Twoi ludzie przestają przepisywać dane między systemami",
+    "subtitle": "Automatyzuję powtarzalne procesy w firmach 5–50 osób. Wdrożenie w 2–4 tygodnie. Do 83% kosztu może pokryć program PARP.",
+    "checks": [
+      "Wdrożenie w 2–4 tygodnie",
+      "Stała cena, znana z góry",
+      "Do 83% dofinansowania z PARP",
+      "Rozmawiasz z osobą, która wdraża"
+    ],
+    "cta_primary": "Umów bezpłatną rozmowę",
+    "cta_secondary": "Zobacz cennik"
+  },
+  "trust": {
+    "title": "Pracuję na sprawdzonych, bezpiecznych narzędziach"
+  },
+  "problems": {
+    "title": "Czy to brzmi znajomo?",
+    "subtitle": "Jeśli poniższe sytuacje zdarzają się u Was co tydzień, jest duża szansa, że da się je zautomatyzować.",
+    "items": [
+      "Faktura przychodzi przez KSeF i mailem – ktoś musi wyłapać duplikat, żeby nie zaksięgować dwa razy.",
+      "Zapytanie z formularza czeka pół dnia, a klient w tym czasie pisze do trzech konkurentów.",
+      "Ktoś co miesiąc przepisuje te same dane z jednego systemu do drugiego.",
+      "Dokumenty krążą mailem i nikt nie wie, u kogo utknęła akceptacja."
+    ]
   },
   "services": {
-    "title": "Nasze usługi",
-    "subtitle": "Kompleksowa obsługa automatyzacji, RPA i agentów AI: od analizy procesów po wdrożenie.",
+    "title": "Co konkretnie automatyzuję",
+    "subtitle": "Od pojedynczego procesu po pełną obsługę KSeF i szkolenia z dofinansowaniem.",
     "service1": {
-      "title": "Robotyzacja procesów (RPA)",
-      "desc": "Wdrażamy roboty software'owe, które automatycznie wykonują powtarzalne zadania: od przetwarzania dokumentów po obsługę zamówień."
+      "title": "Automatyzacja workflow",
+      "desc": "Łączę systemy, aplikacje i ludzi w jeden przepływ pracy – bez ręcznego przepisywania danych."
     },
     "service2": {
-      "title": "Automatyzacja workflow",
-      "desc": "Projektujemy i wdrażamy inteligentne przepływy pracy, które łączą systemy, aplikacje i ludzi w jeden spójny proces."
+      "title": "Obsługa KSeF",
+      "desc": "Deduplikacja, przypisywanie do oddziałów i MPK – koniec ręcznego rozdzielania faktur."
     },
     "service3": {
       "title": "Integracja systemów",
-      "desc": "Łączymy Twoje systemy ERP, CRM, e-mail i bazy danych w jeden ekosystem z automatyczną wymianą danych."
+      "desc": "Łączę ERP, CRM, e-mail i magazyn w jeden ekosystem z automatyczną wymianą danych."
     },
     "service4": {
-      "title": "Audyt i optymalizacja",
-      "desc": "Analizujemy Twoje procesy biznesowe, identyfikujemy bottlenecki i proponujemy konkretne rozwiązania automatyzacji."
+      "title": "Szkolenia i doradztwo",
+      "desc": "Szkolenie zespołu z automatyzacji – do kupienia z dofinansowaniem z programu PARP."
     },
     "service5": {
-      "title": "Agenci AI i Multi-agent",
-      "desc": "Budujemy autonomicznych agentów AI i systemy multi-agentowe, które same podejmują decyzje i realizują złożone cele biznesowe."
+      "title": "Automatyzacja zadań (RPA)",
+      "desc": "Programowy robot przejmuje powtarzalne czynności w Waszych systemach."
     },
     "service6": {
-      "title": "Wsparcie i utrzymanie",
-      "desc": "Zapewniamy ciągłe wsparcie techniczne, monitoring botów i rozwój wdrożonych automatyzacji."
+      "title": "Opieka i hosting",
+      "desc": "Monitoruję i naprawiam wdrożone automatyzacje – bez opieki z czasem przestają działać."
+    },
+    "service7": {
+      "title": "Agenci AI",
+      "desc": "Buduję asystentów AI do analizy dokumentów, obsługi klienta i monitoringu danych."
     }
   },
+  "funding_home": {
+    "title": "Do 83% kosztu pokrywa program PARP",
+    "text": "Jestem zarejestrowany w Bazie Usług Rozwojowych. Szkolenia i doradztwo z automatyzacji możesz kupić z dofinansowaniem – mikro i mała firma do 81 000 zł, średnia do 162 000 zł. Program trwa do grudnia 2028.",
+    "compare_value_label": "Wartość usługi",
+    "compare_value": "18 000 zł",
+    "compare_discount_label": "Dofinansowanie 83%",
+    "compare_discount": "– 14 940 zł",
+    "compare_total_label": "Płacisz",
+    "compare_total": "3 060 zł",
+    "cta": "Sprawdź, czy się kwalifikujesz"
+  },
   "process": {
-    "title": "Jak działamy?",
-    "subtitle": "Sprawdzony proces wdrożenia automatyzacji w 4 krokach",
+    "title": "Jak pracuję",
+    "subtitle": "Sprawdzony proces wdrożenia w 4 krokach – bez niespodzianek po drodze.",
     "step1": {
       "number": "01",
-      "title": "Audyt procesów",
-      "desc": "Analizujemy Twoje procesy biznesowe, identyfikujemy te z największym potencjałem do automatyzacji i szacujemy ROI."
+      "title": "Rozmowa",
+      "desc": "30 minut. Pytam, co zjada Wam czas. Bez prezentacji."
     },
     "step2": {
       "number": "02",
-      "title": "Projektowanie rozwiązania",
-      "desc": "Przygotowujemy szczegółowy projekt automatyzacji, dobieramy technologie i definiujemy mierzalne cele."
+      "title": "Audyt",
+      "desc": "Mapuję proces, liczę godziny do odzyskania, podaję cenę."
     },
     "step3": {
       "number": "03",
-      "title": "Wdrożenie i testy",
-      "desc": "Budujemy, konfigurujemy i testujemy roboty. Pilotaż na środowisku testowym, a potem wdrożenie produkcyjne."
+      "title": "Wdrożenie",
+      "desc": "2–4 tygodnie. Testy na Waszych danych. Szkolenie zespołu."
     },
     "step4": {
       "number": "04",
-      "title": "Wsparcie i rozwój",
-      "desc": "Monitorujemy działanie botów, optymalizujemy procesy i rozszerzamy automatyzację na kolejne obszary."
+      "title": "Opieka",
+      "desc": "Monitoruję i naprawiam. Automatyzacja bez opieki przestaje działać."
     }
   },
-  "ai_agents": {
-    "title": "Ekosystem Agentów AI",
-    "subtitle": "Przyszłość to inteligentni agenci, którzy myślą i współpracują, a nie tylko wykonują instrukcje.",
-    "tech_selection": "Dla każdego wyzwania dobieramy odpowiednie narzędzie: RPA do powtarzalnych zadań lub Agentów AI do procesów wymagających inteligencji.",
-    "feature1_title": "Multi-Agent Systems",
-    "feature1_desc": "Tworzymy zespoły współpracujących agentów AI, gdzie każdy specjalizuje się w innym etapie procesu.",
-    "feature2_title": "Autonomia i Rozumowanie",
-    "feature2_desc": "Agenci analizują kontekst biznesowy i podejmują decyzje bez konieczności definiowania sztywnych reguł.",
-    "feature3_title": "Szybka Adaptacja",
-    "feature3_desc": "W przeciwieństwie do tradycyjnych botów, agenci AI uczą się i dostosowują do zmian w środowisku Twojej firmy."
-  },
-  "roi": {
-    "title": "Konkretne wyniki naszych działań",
-    "subtitle": "W zależności od procesu dobieramy najlepszą technologię: RPA, klasyczną robotyzację lub zaawansowanych agentów AI. Nasze wdrożenia przekładają się na mierzalne zyski.",
-    "stat1_value": "70%",
-    "stat1_label": "Redukcja kosztów operacyjnych",
-    "stat2_value": "5x",
-    "stat2_label": "Szybsze przetwarzanie danych",
-    "stat3_value": "99.9%",
-    "stat3_label": "Dokładność wykonania",
-    "stat4_value": "24/7",
-    "stat4_label": "Praca robotów non-stop"
-  },
-  "cases": {
-    "title": "Use Cases",
-    "subtitle": "Nietypowe zastosowania agentów AI, które mogą zmienić Twój biznes",
-    "case1": {
-      "industry": "Rekrutacja",
-      "title": "Multi-agenci AI do oceny CV",
-      "desc": "Zespół agentów AI współpracuje przy rekrutacji: pierwszy agent analizuje CV i dopasowuje kompetencje do wymagań, drugi ocenia doświadczenie i wykształcenie, trzeci generuje ranking kandydatów z uzasadnieniem. Cały proces trwa minuty zamiast dni.",
-      "result": "↓ 85% czasu selekcji kandydatów"
-    },
-    "case2": {
-      "industry": "E-commerce",
-      "title": "Agent AI do monitoringu konkurencji",
-      "desc": "Agent AI nieustannie skanuje strony konkurencji, marketplace'y i media społecznościowe. Śledzi zmiany cen, nowe produkty, kampanie reklamowe i trendy rynkowe. Codziennie dostarcza zwięzły raport strategiczny z rekomendacjami działań.",
-      "result": "↑ 30% trafności decyzji cenowych"
-    },
-    "case3": {
-      "industry": "Prawo",
-      "title": "Agent AI do audytu zgodności",
-      "desc": "Agent AI śledzi zmiany w przepisach i regulacjach branżowych, porównuje je z wewnętrznymi procedurami firmy i automatycznie wskazuje luki w zgodności. Generuje rekomendacje działań naprawczych dla zespołu prawnego.",
-      "result": "↑ 95% pokrycia regulacyjnego"
-    }
-  },
-  "tech": {
-    "title": "Technologie",
-    "subtitle": "Pracujemy z wiodącymi platformami automatyzacji"
-  },
-  "testimonials": {
-    "title": "Co mówią nasi klienci",
-    "subtitle": "Opinie firm, które nam zaufały",
-    "t1": {
-      "text": "Dzięki OmniTask zaoszczędziliśmy ponad 200 godzin pracy miesięcznie. Automatyzacja faktur była strzałem w dziesiątkę.",
-      "author": "Anna Kowalska",
-      "role": "CFO, TechFin Sp. z o.o."
-    },
-    "t2": {
-      "text": "Profesjonalne podejście od audytu po wdrożenie. Roboty działają bez zarzutu, a my możemy skupić się na strategii.",
-      "author": "Marek Nowak",
-      "role": "CEO, LogiTrans S.A."
-    },
-    "t3": {
-      "text": "Współpraca z OmniTask to najlepsza inwestycja jaką podjęliśmy w tym roku. ROI w 3 miesiące.",
-      "author": "Katarzyna Wiśniewska",
-      "role": "Dyrektor Operacyjny, HRPro"
-    }
+  "pricing_home": {
+    "title": "Cennik bez niespodzianek",
+    "subtitle": "Ceny od, bez „zapytaj o wycenę”. Pełny cennik z pakietem opieki i KSeF poniżej.",
+    "cta": "Zobacz pełny cennik"
   },
   "faq": {
     "title": "Najczęściej zadawane pytania",
-    "subtitle": "Odpowiadamy na pytania o automatyzację, RPA i agentów AI",
-    "q1": "Czym jest RPA (Robotic Process Automation)?",
-    "a1": "RPA to technologia pozwalająca tworzyć software'owe roboty, które naśladują ludzkie działania w systemach komputerowych. Robot może klikać, wpisywać dane, kopiować pliki, wysyłać maile. Działa dokładnie tak jak człowiek, ale szybciej i bez błędów.",
-    "q2": "Ile trwa wdrożenie automatyzacji?",
-    "a2": "Prosty bot można wdrożyć w 2-4 tygodnie. Złożone procesy wymagające integracji wielu systemów zajmują 2-3 miesiące. Zawsze zaczynamy od pilotażu, żeby szybko pokazać wartość.",
-    "q3": "Ile kosztuje automatyzacja procesów?",
-    "a3": "Koszt zależy od złożoności procesu. Proste automatyzacje zaczynają się od kilku tysięcy złotych. Zwrot z inwestycji (ROI) następuje zazwyczaj w ciągu 3-6 miesięcy.",
-    "q4": "Czy automatyzacja zastąpi moich pracowników?",
-    "a4": "Nie. Automatyzacja uwalnia pracowników od monotonnych, powtarzalnych zadań. Dzięki temu mogą skupić się na pracy kreatywnej, strategicznej i wymagającej ludzkiego osądu.",
-    "q5": "Jakie procesy można zautomatyzować?",
-    "a5": "Każdy powtarzalny, oparty na regułach proces: przetwarzanie dokumentów, obsługa zamówień, raportowanie, migracja danych, obsługa klienta, procesy HR, księgowe i wiele innych.",
-    "q6": "Czym są agenci AI i czym różnią się od zwykłych botów?",
-    "a6": "Agenci AI to autonomiczne systemy, które potrafią samodzielnie podejmować decyzje, uczyć się z kontekstu i realizować złożone zadania bez stałego nadzoru człowieka. W odróżnieniu od botów RPA, agenci AI rozumieją język naturalny, analizują dane i adaptują się do nowych sytuacji.",
-    "q7": "Co to jest system multi-agentowy?",
-    "a7": "System multi-agentowy to zespół kilku agentów AI, z których każdy specjalizuje się w innym zadaniu. Agenci współpracują ze sobą, dzielą się informacjami i wspólnie realizują złożone procesy. Przykładowo, jeden agent analizuje dokumenty, drugi weryfikuje dane, a trzeci generuje raport końcowy.",
-    "q8": "W jakich branżach sprawdzają się agenci AI?",
-    "a8": "Agenci AI znajdują zastosowanie praktycznie wszędzie: od rekrutacji i e-commerce, przez prawo i finanse, po logistykę i obsługę klienta. Wszędzie tam, gdzie potrzeba analizy dużych ilości danych, podejmowania decyzji lub obsługi powtarzalnych zapytań."
+    "subtitle": "Odpowiadam na pytania o automatyzację, ceny i dofinansowanie",
+    "q1": "Ile trwa wdrożenie automatyzacji?",
+    "a1": "Prosty proces wdrażam w 1–2 tygodnie. Bardziej złożony, z integracją kilku systemów, zajmuje 3–4 tygodnie. Zawsze zaczynam od procesu, który najszybciej pokaże wartość.",
+    "q2": "Ile to kosztuje?",
+    "a2": "Wdrożenie jednego procesu zaczyna się od 5 900 zł. Cena jest znana z góry, zanim zaczniemy – bez „zapytaj o wycenę”. Pełny cennik jest publicznie dostępny na stronie /cennik.",
+    "q3": "Czy mogę dostać dofinansowanie?",
+    "a3": "Szkolenia i doradztwo z automatyzacji można kupić z dofinansowaniem PARP – mikro i mała firma do 81 000 zł. Program finansuje szkolenia i doradztwo, nie samo wdrożenie techniczne.",
+    "q4": "Czy muszę wiedzieć, co to jest n8n albo RPA, żeby z Wami współpracować?",
+    "a4": "Nie. Rozmawiamy o Waszym procesie i o godzinach, które da się odzyskać. Narzędzia dobieram sam i biorę za nie odpowiedzialność.",
+    "q5": "Co się dzieje po wdrożeniu?",
+    "a5": "Automatyzacja bez opieki po jakimś czasie się psuje – systemy się zmieniają. Oferuję opiekę od 390 zł miesięcznie, żeby proces działał dalej.",
+    "q6": "Kto właściwie wdraża – firma czy jedna osoba?",
+    "a6": "Jedna osoba, od pierwszej rozmowy po wdrożenie i opiekę. Bez przekazywania Waszej sprawy między handlowcem a wykonawcą."
+  },
+  "about_home": {
+    "title": "Kto to wdraża",
+    "text": "Z zawodu jestem programistą — automatyzacja to mój codzienny warsztat, nie dodatek do oferty. Prowadziłem też mniejsze biznesy, więc znam z pierwszej ręki natłok dokumentów i danych, który potrafi wygenerować nawet niewielka firma.",
+    "link": "Poznaj mnie bliżej"
+  },
+  "cta": {
+    "title": "Sprawdźmy, co da się u Was zautomatyzować",
+    "subtitle": "30 minut rozmowy. Bez prezentacji, bez zobowiązań. Jeśli nie zobaczę sensownego procesu, powiem to wprost.",
+    "button": "Umów rozmowę"
+  },
+  "clients": {
+    "title": "Branże, w których działam"
+  },
+  "trusted_by": {
+    "title": "Firmy, które mi zaufały",
+    "subtitle": "Automatyzacja procesów u realnych klientów, nie tylko w prezentacji.",
+    "items": [
+      { "name": "Warsaw Residential Group", "initials": "WRG", "desc": "Zarządzanie najmem i nieruchomościami w Warszawie — automatyzacja obiegu umów najmu i rozliczeń z najemcami." },
+      { "name": "Metronq", "initials": "MQ", "desc": "Firma technologiczna działająca na danych — automatyzacja raportowania i integracja źródeł danych między systemami." },
+      { "name": "Nail the Deal", "initials": "NTD", "desc": "Zespół sprzedażowy zamykający transakcje na dużą skalę — automatyzacja follow-upów i przepływu ofert między etapami sprzedaży." }
+    ]
   },
   "newsletter": {
     "title": "Bądź na bieżąco z automatyzacją",
-    "subtitle": "Zapisz się do newslettera i otrzymuj porady, case studies oraz nowości ze świata RPA.",
+    "subtitle": "Zapisz się do newslettera i otrzymuj porady, case studies oraz nowości ze świata automatyzacji.",
     "placeholder": "Twój adres e-mail",
     "button": "Zapisz się",
     "success": "Dziękujemy za zapis!"
   },
   "about": {
-    "title": "Dlaczego OmniTask?",
-    "subtitle": "Jesteśmy zespołem specjalistów od automatyzacji, którzy łączą wiedzę techniczną z głębokim zrozumieniem procesów biznesowych.",
-    "stat1_value": "150+",
-    "stat1_label": "Wdrożonych automatyzacji",
-    "stat2_value": "98%",
-    "stat2_label": "Zadowolonych klientów",
-    "stat3_value": "50k+",
-    "stat3_label": "Zaoszczędzonych godzin",
-    "stat4_value": "3 mies.",
-    "stat4_label": "Średni czas zwrotu ROI"
-  },
-  "why": {
-    "title": "Co nas wyróżnia?",
-    "feature1": {
-      "title": "Podejście biznesowe",
-      "desc": "Nie wdrażamy technologii dla samej technologii. Zaczynamy od zrozumienia Twoich celów biznesowych i procesów."
-    },
-    "feature2": {
-      "title": "Szybki czas wdrożenia",
-      "desc": "Proste procesy automatyzujemy nawet w 2 tygodnie. Stosujemy metodykę zwinną, aby jak najszybciej dostarczyć wartość biznesową."
-    },
-    "feature3": {
-      "title": "Mierzalne wyniki",
-      "desc": "Każde wdrożenie mierzymy konkretnymi KPI: czas, koszt, dokładność. Pokazujemy realny ROI."
-    },
-    "feature4": {
-      "title": "Wsparcie 24/7",
-      "desc": "Monitorujemy roboty non-stop, reagujemy na awarie i dbamy o ciągłość działania automatyzacji."
-    }
-  },
-  "cta": {
-    "title": "Gotowy na automatyzację?",
-    "subtitle": "Umów się na bezpłatną konsultację. Przeanalizujemy Twoje procesy i pokażemy, ile możesz zaoszczędzić.",
-    "button": "Bezpłatna konsultacja"
-  },
-  "clients": {
-    "title": "Branże, w których działamy"
+    "title": "Dlaczego OmniTask?"
   },
   "quote": {
-    "title": "Zapytanie ofertowe – Bezpłatna wycena automatyzacji RPA",
-    "subtitle": "Opisz proces, który chcesz zautomatyzować. Nasz zespół przygotuje indywidualną wycenę w ciągu 24 godzin.",
+    "title": "Zapytanie ofertowe – bezpłatna wycena automatyzacji",
+    "subtitle": "Opisz proces, który chcesz zautomatyzować. Przygotuję indywidualną wycenę w ciągu 24 godzin.",
     "name": "Imię i nazwisko",
     "email": "Adres e-mail",
     "phone": "Numer telefonu",
     "company": "Nazwa firmy",
     "message": "Opis procesu do automatyzacji",
     "submit": "Wyślij zapytanie",
-    "success": "Dziękujemy! Twoje zapytanie zostało wysłane. Skontaktujemy się z Tobą w ciągu 24 godzin.",
+    "success": "Dziękuję! Twoje zapytanie zostało wysłane. Odezwę się w ciągu 24 godzin roboczych.",
     "error": "Wystąpił błąd. Spróbuj ponownie później.",
     "required": "To pole jest wymagane",
     "invalid_email": "Podaj prawidłowy adres e-mail",
     "name_placeholder": "Jan Kowalski",
-    "email_placeholder": "kontakt@omnitask.pl",
-    "phone_placeholder": "+48 721 721 238",
+    "email_placeholder": "kontakt@twojafirma.pl",
+    "phone_placeholder": "+48 600 000 000",
     "company_placeholder": "Twoja Firma Sp. z o.o.",
     "message_placeholder": "Opisz proces, który chcesz zautomatyzować, ile osób go wykonuje, ile czasu zajmuje i jakie systemy są używane..."
   },
   "contact": {
-    "title": "Kontakt – Porozmawiajmy o automatyzacji Twojej firmy",
-    "subtitle": "Skontaktuj się z nami, aby omówić możliwości automatyzacji procesów w Twojej firmie.",
+    "title": "Kontakt – porozmawiajmy o automatyzacji Twojej firmy",
+    "subtitle": "Napisz, zadzwoń albo od razu zarezerwuj termin rozmowy w kalendarzu.",
     "phone_label": "Telefon",
     "phone": "+48 721 719 238",
     "email_label": "E-mail",
@@ -229,200 +187,515 @@
     "hours_label": "Godziny pracy",
     "hours": "Pon - Pt: 8:00 - 17:00",
     "map_title": "Nasza lokalizacja",
-    "follow_us": "Obserwuj nas",
+    "follow_us": "Obserwuj",
     "form_title": "Wyślij wiadomość",
     "form_subject": "Temat",
     "form_message": "Treść wiadomości",
-    "sending": "Wysyłanie..."
+    "sending": "Wysyłanie...",
+    "book_title": "Wolisz od razu umówić termin?",
+    "book_subtitle": "30 minut, bez zobowiązań. Wybierz dogodny dla Ciebie termin w kalendarzu."
   },
   "blog": {
-    "title": "Blog ekspercki – Automatyzacja, RPA i Agenci AI",
-    "subtitle": "Praktyczna wiedza, aktualne trendy oraz inspirujące realizacje z zakresu transformacji cyfrowej biznesu. Przeczytaj nasze najnowsze artykuły i dowiedz się, jak robotyzacja procesów (RPA) i współpracujący agenci AI optymalizują pracę, skalują biznes oraz skutecznie redukują koszty operacyjne w firmach.",
+    "title": "Blog – automatyzacja, KSeF i dofinansowania dla firm",
+    "subtitle": "Praktyczna wiedza o automatyzacji procesów, obsłudze KSeF i dofinansowaniach dla małych i średnich firm.",
     "read_more": "Czytaj więcej",
     "no_articles": "Brak artykułów do wyświetlenia.",
-    "published": "Opublikowano"
+    "published": "Opublikowano",
+    "latest_title": "Najnowsze na blogu",
+    "see_all": "Zobacz wszystkie wpisy"
   },
   "footer": {
-    "description": "OmniTask. Automatyzacja i robotyzacja procesów biznesowych. Wdrażamy RPA, integrujemy systemy i optymalizujemy procesy.",
+    "description": "OmniTask. Automatyzuję powtarzalne procesy w firmach 5–50 osób: obieg dokumentów, KSeF, integracje systemów.",
     "quick_links": "Szybkie linki",
     "services": "Usługi",
+    "company": "Firma",
+    "recent_posts": "Ostatnie wpisy",
     "legal": "Informacje",
-    "contact_info": "Dane kontaktowe",
+    "contact_info": "Kontakt",
     "copyright": "© 2026 OmniTask. Wszelkie prawa zastrzeżone.",
     "privacy_policy": "Polityka prywatności",
     "terms": "Regulamin",
-    "about": "O nas"
+    "about": "O mnie"
   },
   "breadcrumbs": {
     "home": "Strona główna"
   },
-  "roi_disclaimer": "*Średnie wyniki na podstawie dotychczasowych wdrożeń. Rzeczywiste rezultaty mogą się różnić w zależności od procesu.",
+  "roi_disclaimer": "*Szacunki poglądowe. Rzeczywiste rezultaty zależą od konkretnego procesu.",
   "services_page": {
-    "h1": "Nasze usługi – Automatyzacja i RPA",
-    "learn_more": "Dowiedz się więcej →"
+    "h1": "Co konkretnie automatyzuję",
+    "learn_more": "Dowiedz się więcej →",
+    "cta_title": "Nie wiesz, od czego zacząć?",
+    "cta_subtitle": "Zacznijmy od audytu — zmapuję Wasze procesy i pokażę, gdzie jest największy potencjał."
   },
   "service_detail": {
     "cta_button": "Bezpłatna wycena",
     "faq_label": "Najczęściej zadawane pytania",
     "labels": {
-      "rpa": "RPA",
+      "rpa": "Automatyzacja zadań (RPA)",
       "workflow": "Automatyzacja workflow",
       "integration": "Integracja systemów",
-      "ai": "Agenci AI"
+      "ai": "Agenci AI",
+      "ksef": "Obsługa KSeF",
+      "szkolenia": "Szkolenia i doradztwo",
+      "opieka": "Opieka i hosting"
     },
     "rpa": {
-      "h1": "Robotyzacja procesów (RPA) – Automatyzacja powtarzalnych zadań",
-      "subtitle": "Wdrażamy roboty software'owe, które pracują 24/7, eliminują błędy i oszczędzają setki godzin pracy miesięcznie.",
-      "breadcrumb": "RPA",
+      "h1": "Automatyzacja powtarzalnych zadań (RPA) dla firm 5–50 osób",
+      "subtitle": "Programowy robot przejmuje żmudne, powtarzalne czynności w Waszych systemach — Wy zajmujecie się resztą.",
+      "breadcrumb": "Automatyzacja zadań",
       "related_title": "Powiązane usługi",
-      "cta_title": "Chcesz zautomatyzować procesy w swojej firmie?",
-      "cta_subtitle": "Skontaktuj się z nami i otrzymaj bezpłatną analizę Twojego procesu z szacowanym ROI.",
-      "s1_title": "Czym jest Robotyzacja Procesów (RPA)?",
-      "s1_p1": "RPA (Robotic Process Automation) to technologia pozwalająca tworzyć software'owe roboty, które naśladują ludzkie działania w systemach komputerowych. Robot może logować się do aplikacji, klikać przyciski, kopiować dane między systemami, wypełniać formularze, wysyłać e-maile i generować raporty – wszystko to automatycznie, bez przerw i bez błędów.",
-      "s1_p2": "W OmniTask specjalizujemy się we wdrażaniu robotów RPA opartych o wiodące platformy: UiPath, Microsoft Power Automate oraz niestandardowe rozwiązania w Python. Każde wdrożenie poprzedzamy szczegółowym audytem procesu, aby zapewnić maksymalny zwrot z inwestycji.",
-      "s2_title": "Jakie procesy automatyzujemy z RPA?",
-      "features": [
-        { "title": "Przetwarzanie dokumentów", "desc": "Automatyczne odczytywanie, klasyfikacja i wprowadzanie danych z faktur, zamówień, umów i formularzy." },
-        { "title": "Obsługa zamówień", "desc": "Robot przyjmuje zamówienia, weryfikuje dane, tworzy pozycje w ERP i powiadamia odpowiednie działy." },
-        { "title": "Raportowanie", "desc": "Automatyczne generowanie raportów z wielu systemów, konsolidacja danych i wysyłka do interesariuszy." },
-        { "title": "Migracja danych", "desc": "Bezpieczne przenoszenie danych między systemami z walidacją i logowaniem każdej operacji." }
+      "cta_title": "Chcesz zobaczyć, ile czasu odzyskacie?",
+      "cta_subtitle": "30 minut rozmowy o Waszym procesie, bez prezentacji i bez zobowiązań.",
+      "s1_title": "Na czym polega automatyzacja zadań",
+      "s1_p1": "Robot programowy naśladuje to, co dziś robi człowiek w Waszych systemach: loguje się, klika, kopiuje dane między aplikacjami, wypełnia formularze, wysyła e-maile i generuje raporty — dokładnie tak samo, tylko bez przerw i bez pomyłek.",
+      "s1_p2": "Nie zastępuje ludzi w pracy, która wymaga oceny sytuacji. Zdejmuje z nich powtarzalne, nudne czynności, które i tak nikogo nie rozwijają, a codziennie zjadają godziny.",
+      "dla_kogo_title": "Dla kogo",
+      "dla_kogo": [
+        { "title": "Biura rachunkowe", "desc": "Setki dokumentów miesięcznie do przepisania między systemem klienta a systemem księgowym. Każdy nowy klient to kolejne źródło danych do ręcznego uzgadniania, a sezon rozliczeń zamienia to w wąskie gardło całego zespołu." },
+        { "title": "Handel i e-commerce", "desc": "Zamówienia, faktury i stany magazynowe wymagające ręcznego uzgadniania każdego dnia. Im więcej sprzedajecie, tym więcej godzin to pochłania — automatyzacja jest jedynym sposobem, żeby wzrost sprzedaży nie oznaczał wzrostu etatów w administracji." },
+        { "title": "Firmy usługowe", "desc": "Powtarzalne raporty i zestawienia zjadające kilka godzin tygodniowo tej samej, dobrze opłacanej osoby. To czas, którego nikt nie odzyska, jeśli zostanie w kolejnym arkuszu Excela." }
       ],
-      "s3_title": "Korzyści z wdrożenia RPA",
+      "zastosowania_title": "Typowe zastosowania",
+      "zastosowania": [
+        { "title": "Przepisywanie danych między systemami", "desc": "Robot pobiera dane z jednego systemu i wprowadza je do drugiego ze stuprocentową dokładnością — zadanie, które ręcznie zajmuje zwykle 2–3 godziny dziennie." },
+        { "title": "Generowanie i wysyłka raportów", "desc": "Cotygodniowe zestawienia sprzedaży, kosztów czy magazynu składane automatycznie i wysyłane do wskazanych osób." },
+        { "title": "Weryfikacja i uzgadnianie dokumentów", "desc": "Robot porównuje dane z dwóch źródeł, np. zamówienie i fakturę, i zgłasza tylko rozbieżności." },
+        { "title": "Eksport i import danych między aplikacjami", "desc": "Migracja danych klientów, produktów czy zamówień bez ręcznego kopiowania arkuszy." },
+        { "title": "Powiadomienia i przypomnienia", "desc": "Automatyczny alert, gdy termin się zbliża albo dokument czeka na akceptację dłużej niż ustalony czas." }
+      ],
+      "wdrozenie_title": "Jak wygląda wdrożenie",
+      "wdrozenie": [
+        { "title": "Analiza procesu", "desc": "Oglądam, jak dziś wygląda praca krok po kroku, i liczę, ile realnie zajmuje." },
+        { "title": "Budowa robota", "desc": "Konfiguruję automatyzację na danych testowych, nie na produkcji." },
+        { "title": "Testy równoległe", "desc": "Robot i człowiek pracują obok siebie, aż wyniki się zgadzają." },
+        { "title": "Wdrożenie i szkolenie", "desc": "Uruchamiam automatyzację na produkcji i pokazuję zespołowi, jak ją monitorować." }
+      ],
+      "technologie_title": "Technologie",
+      "technologie_p": "Do automatyzacji na poziomie danych i interfejsu wykorzystuję n8n, Make oraz — tam gdzie potrzeba większej precyzji — dedykowane skrypty. Dobór narzędzia zależy od Waszych systemów, nie od mojej wygody.",
+      "technologie_list": ["n8n", "Make", "Python", "API"],
+      "s3_title": "Korzyści",
       "benefits": [
         "Redukcja czasu wykonania procesu nawet o 80%",
-        "Eliminacja błędów ludzkich – roboty działają z dokładnością 99.9%",
-        "Praca 24/7 bez przerw, urlopów i zwolnień",
-        "Zwrot z inwestycji (ROI) zazwyczaj w ciągu 3–6 miesięcy",
-        "Skalowalność – łatwe dodawanie nowych robotów w miarę potrzeb",
-        "Pełna audytowalność – każda akcja robota jest logowana"
+        "Zero błędów przy przepisywaniu danych",
+        "Praca 24/7, bez przerw i zwolnień",
+        "Zwrot z inwestycji zwykle w 3–6 miesięcy",
+        "Łatwe dodawanie kolejnych procesów w miarę potrzeb",
+        "Pełny log każdej wykonanej operacji"
       ],
-      "faq_title": "Najczęściej zadawane pytania o RPA",
+      "cena_label": "Ile to kosztuje?",
+      "cena_text": "Automatyzacja jednego procesu zaczyna się od 5 900 zł (pakiet START). Dokładną wycenę podaję po rozmowie o Waszym procesie.",
+      "faq_title": "Najczęściej zadawane pytania o automatyzację zadań",
       "faq": [
-        { "q": "Ile trwa wdrożenie robota RPA?", "a": "Prosty robot może być gotowy w 2–4 tygodnie. Złożone procesy wymagające integracji wielu systemów zajmują 2–3 miesiące." },
-        { "q": "Czy potrzebuję zmian w istniejących systemach?", "a": "Nie. Roboty RPA działają na warstwie interfejsu użytkownika – nie wymagają żadnych modyfikacji w Twoich systemach." },
-        { "q": "Co się stanie, gdy proces się zmieni?", "a": "Roboty RPA wymagają aktualizacji przy zmianach interfejsu. Zapewniamy wsparcie i monitoring, aby szybko reagować." }
+        { "q": "Czy muszę zmieniać swoje obecne systemy?", "a": "Nie. Automatyzacja działa na Waszych obecnych systemach — nie wymaga wymiany oprogramowania ani zgody dostawcy." },
+        { "q": "Co się stanie, jeśli system, z którym pracuje robot, się zmieni?", "a": "Automatyzację trzeba wtedy zaktualizować. Dlatego oferuję opiekę powdrożeniową — monitoruję zmiany i reaguję, zanim proces się zatrzyma." },
+        { "q": "Ile trwa wdrożenie?", "a": "Prosty proces jest gotowy w 1–2 tygodnie. Bardziej złożony, z kilkoma integracjami, zajmuje 3–4 tygodnie." },
+        { "q": "Czy muszę umieć programować, żeby z tego korzystać?", "a": "Nie. Po wdrożeniu proces działa sam, a zespół dostaje krótkie szkolenie, jak go monitorować." }
       ]
     },
     "workflow": {
-      "h1": "Automatyzacja workflow – Inteligentne przepływy pracy",
-      "subtitle": "Łączymy systemy, aplikacje i ludzi w jeden spójny, zautomatyzowany proces biznesowy.",
+      "h1": "Automatyzacja workflow – przepływy pracy bez ręcznego przepisywania",
+      "subtitle": "Łączę systemy, aplikacje i ludzi w jeden spójny, zautomatyzowany proces biznesowy.",
       "breadcrumb": "Automatyzacja workflow",
       "related_title": "Powiązane usługi",
       "cta_title": "Chcesz zautomatyzować przepływy pracy?",
-      "cta_subtitle": "Umów się na bezpłatną konsultację i pokaż nam swoje procesy.",
-      "s1_title": "Na czym polega automatyzacja workflow?",
-      "s1_p1": "Automatyzacja workflow to projektowanie i wdrażanie inteligentnych przepływów pracy, które łączą różne systemy, aplikacje i zespoły w jeden spójny, zautomatyzowany proces. Zamiast ręcznego przekazywania danych między aplikacjami, Twoje systemy komunikują się automatycznie.",
-      "s1_p2": "Wykorzystujemy platformy takie jak Zapier, Make (Integromat), Microsoft Power Automate oraz budujemy niestandardowe integracje, aby dopasować rozwiązanie do specyfiki Twojego biznesu.",
-      "s2_title": "Przykładowe zastosowania",
-      "features": [
-        { "title": "Automatyzacja onboardingu", "desc": "Nowy pracownik → automatyczne tworzenie kont, dostępów, wysyłka dokumentów i materiałów szkoleniowych." },
-        { "title": "Obsługa leadów", "desc": "Formularz kontaktowy → CRM → powiadomienie handlowca → automatyczny follow-up e-mail." },
-        { "title": "Procesy zatwierdzania", "desc": "Automatyczne routing wniosków do odpowiednich osób z eskalacją i powiadomieniami." },
-        { "title": "Synchronizacja danych", "desc": "Automatyczna synchronizacja danych między ERP, CRM, e-commerce i systemami magazynowymi." }
+      "cta_subtitle": "Umów się na bezpłatną rozmowę i pokaż mi swoje procesy.",
+      "s1_title": "Na czym polega automatyzacja workflow",
+      "s1_p1": "Automatyzacja workflow to projektowanie i wdrażanie przepływów pracy, które łączą różne systemy, aplikacje i zespoły w jeden spójny proces. Zamiast ręcznego przekazywania danych między aplikacjami, Wasze systemy komunikują się automatycznie.",
+      "s1_p2": "W praktyce oznacza to, że dane wpisane raz w jednym miejscu trafiają tam, gdzie są potrzebne — bez kopiowania, bez maili z załącznikiem i bez pytania „czy ktoś to już zrobił”.",
+      "dla_kogo_title": "Dla kogo",
+      "dla_kogo": [
+        { "title": "Firmy z kilkoma działami", "desc": "Sprzedaż, księgowość i magazyn pracują na osobnych systemach, które nie rozmawiają ze sobą. Każda zmiana w jednym miejscu wymaga ręcznego powielenia w drugim, a to tylko kwestia czasu, aż ktoś zapomni tego dopilnować." },
+        { "title": "Firmy usługowe z leadami z kilku źródeł", "desc": "Formularz, telefon i mail trafiają do różnych miejsc, część zapytań ginie po drodze. Klient, który nie dostanie odpowiedzi w rozsądnym czasie, po prostu pisze do konkurencji." },
+        { "title": "Firmy z procesami zatwierdzania", "desc": "Wnioski, umowy czy zamówienia krążą mailem i nikt nie wie, u kogo utknęła akceptacja. Odpowiedzialność rozmywa się między kilkoma skrzynkami, a proces trwa dłużej, niż powinien." }
       ],
-      "s3_title": "Korzyści z automatyzacji workflow",
+      "zastosowania_title": "Typowe zastosowania",
+      "zastosowania": [
+        { "title": "Automatyzacja onboardingu", "desc": "Nowy pracownik → automatyczne tworzenie kont, dostępów i wysyłka dokumentów, zamiast 2–3 godzin ręcznej pracy działu HR." },
+        { "title": "Obsługa leadów", "desc": "Formularz kontaktowy → CRM → powiadomienie handlowca → automatyczny follow-up e-mail, bez pół dnia oczekiwania klienta." },
+        { "title": "Procesy zatwierdzania", "desc": "Automatyczny routing wniosków do właściwej osoby, z eskalacją, jeśli nikt nie zareaguje w ustalonym czasie." },
+        { "title": "Synchronizacja danych", "desc": "Automatyczna synchronizacja klientów i zamówień między ERP, CRM i systemem magazynowym w czasie rzeczywistym." }
+      ],
+      "wdrozenie_title": "Jak wygląda wdrożenie",
+      "wdrozenie": [
+        { "title": "Mapowanie przepływu", "desc": "Rysuję, jak dane i decyzje faktycznie płyną dziś między osobami i systemami." },
+        { "title": "Projekt automatyzacji", "desc": "Ustalam, które kroki da się zautomatyzować, a które zostają przy człowieku." },
+        { "title": "Budowa i testy", "desc": "Konfiguruję przepływ i sprawdzam go na realnych przypadkach z Waszej firmy." },
+        { "title": "Wdrożenie i szkolenie", "desc": "Uruchamiam proces produkcyjnie i pokazuję zespołowi, jak go czytać i kontrolować." }
+      ],
+      "technologie_title": "Technologie",
+      "technologie_p": "Pracuję na n8n i Make, budując też niestandardowe integracje przez API tam, gdzie gotowy konektor nie wystarcza.",
+      "technologie_list": ["n8n", "Make", "Webhooks", "API"],
+      "s3_title": "Korzyści",
       "benefits": [
         "Eliminacja ręcznego przekazywania danych między systemami",
         "Redukcja czasu realizacji procesów o 60–80%",
-        "Pełna widoczność i śledzenie statusu każdego zadania",
+        "Pełna widoczność statusu każdego zadania",
         "Automatyczne powiadomienia i eskalacje",
-        "Łatwa modyfikacja i rozbudowa przepływów"
+        "Łatwa modyfikacja i rozbudowa przepływów w miarę wzrostu firmy"
       ],
+      "cena_label": "Ile to kosztuje?",
+      "cena_text": "Pojedynczy przepływ pracy wyceniam od 5 900 zł, pakiet 3–4 procesów od 14 900 zł.",
       "faq_title": "",
       "faq": []
     },
     "integration": {
-      "h1": "Integracja systemów – Łączymy ERP, CRM i bazy danych",
-      "subtitle": "Budujemy mosty między Twoimi systemami, tworząc jeden spójny ekosystem z automatyczną wymianą danych.",
+      "h1": "Integracja systemów – łączę ERP, CRM i bazy danych",
+      "subtitle": "Buduję mosty między Waszymi systemami, tworząc jeden spójny ekosystem z automatyczną wymianą danych.",
       "breadcrumb": "Integracja systemów",
       "related_title": "Powiązane usługi",
       "cta_title": "Potrzebujesz integracji systemów?",
-      "cta_subtitle": "Opisz swoje systemy, a my zaproponujemy optymalne połączenie.",
-      "s1_title": "Dlaczego integracja systemów jest kluczowa?",
-      "s1_p1": "Współczesne firmy używają dziesiątek aplikacji: ERP, CRM, e-mail, systemy magazynowe, platformy e-commerce, narzędzia HR. Bez integracji, pracownicy ręcznie przenoszą dane między systemami, co generuje błędy, opóźnienia i frustrację.",
-      "s1_p2": "Łączymy Twoje systemy przez API, webhooks, ETL i dedykowane middleware, aby dane przepływały automatycznie i w czasie rzeczywistym.",
-      "s2_title": "Co integrujemy?",
-      "features": [
-        { "title": "ERP ↔ CRM", "desc": "Automatyczna synchronizacja klientów, zamówień i faktur między systemami ERP i CRM." },
-        { "title": "E-commerce ↔ Magazyn", "desc": "Synchronizacja stanów magazynowych, zamówień i przesyłek w czasie rzeczywistym." },
-        { "title": "HR ↔ Payroll", "desc": "Automatyczne przekazywanie danych o etatach, urlopach i rozliczeniach." },
-        { "title": "Custom API", "desc": "Budujemy dedykowane integracje API dla systemów, które nie mają gotowych konektorów." }
+      "cta_subtitle": "Opisz swoje systemy, a zaproponuję optymalne połączenie.",
+      "s1_title": "Dlaczego integracja systemów jest kluczowa",
+      "s1_p1": "Firmy 5–50 osób zwykle używają kilku–kilkunastu aplikacji: ERP, CRM, e-mail, system magazynowy, platforma sprzedażowa. Bez integracji ktoś ręcznie przenosi dane między nimi, co generuje błędy, opóźnienia i frustrację.",
+      "s1_p2": "Łączę Wasze systemy przez API, webhooki i dedykowane middleware, żeby dane przepływały automatycznie i w czasie rzeczywistym — bez comiesięcznego eksportu do Excela.",
+      "dla_kogo_title": "Dla kogo",
+      "dla_kogo": [
+        { "title": "Firmy z ERP i osobnym CRM", "desc": "Dane klienta trzeba wpisywać dwa razy, bo systemy nie mają wspólnego źródła prawdy. Każde rozjechanie się danych to później godziny szukania, po której stronie jest błąd." },
+        { "title": "E-commerce ze sklepem i magazynem", "desc": "Stany magazynowe rozjeżdżają się między platformą sprzedażową a magazynem. Sprzedajecie towar, którego już nie ma, albo blokujecie klientom towar, który realnie jest dostępny." },
+        { "title": "Firmy rozwijające się szybko", "desc": "Liczba aplikacji rośnie szybciej niż zdolność zespołu do ręcznego ich łączenia. To, co dało się ogarnąć przy 5 osobach, zaczyna się sypać przy 20." }
       ],
-      "s3_title": "Korzyści z integracji systemów",
+      "zastosowania_title": "Co integruję",
+      "zastosowania": [
+        { "title": "ERP ↔ CRM", "desc": "Automatyczna synchronizacja klientów, zamówień i faktur — koniec z podwójnym wpisywaniem tych samych danych." },
+        { "title": "E-commerce ↔ Magazyn", "desc": "Synchronizacja stanów magazynowych, zamówień i przesyłek w czasie rzeczywistym." },
+        { "title": "HR ↔ Payroll", "desc": "Automatyczne przekazywanie danych o etatach, urlopach i rozliczeniach między systemami kadrowym i płacowym." },
+        { "title": "Integracje niestandardowe (Custom API)", "desc": "Buduję integracje dla systemów, które nie mają gotowego konektora — w oparciu o ich API." }
+      ],
+      "wdrozenie_title": "Jak wygląda wdrożenie",
+      "wdrozenie": [
+        { "title": "Audyt systemów", "desc": "Sprawdzam, jakie dane i w jakim formacie każdy system potrafi udostępnić." },
+        { "title": "Projekt integracji", "desc": "Ustalam kierunek przepływu danych i reguły, które muszą być zachowane." },
+        { "title": "Budowa i testy na kopii danych", "desc": "Integrację testuję na kopii Waszych danych, zanim trafi na produkcję." },
+        { "title": "Wdrożenie i monitoring", "desc": "Uruchamiam integrację produkcyjnie i obserwuję pierwsze cykle synchronizacji." }
+      ],
+      "technologie_title": "Technologie",
+      "technologie_p": "W zależności od systemów pracuję na ich natywnym API, webhookach, ETL oraz platformach integracyjnych n8n i Make.",
+      "technologie_list": ["API", "ETL", "n8n", "Make"],
+      "s3_title": "Korzyści",
       "benefits": [
         "Eliminacja ręcznego przepisywania danych",
         "Dane zawsze aktualne we wszystkich systemach",
         "Redukcja błędów i duplikatów",
         "Szybszy przepływ informacji i decyzji",
-        "Jeden widok klienta (360°) dla zespołu sprzedaży"
+        "Jeden spójny widok klienta dla całego zespołu"
       ],
+      "cena_label": "Ile to kosztuje?",
+      "cena_text": "Prosta integracja dwóch systemów mieści się w pakiecie START od 5 900 zł, integracje wielosystemowe w pakiecie CORE od 14 900 zł.",
       "faq_title": "",
       "faq": []
     },
     "ai": {
-      "h1": "Agenci AI i systemy multi-agentowe dla biznesu",
-      "subtitle": "Budujemy autonomicznych agentów AI, którzy myślą, współpracują i realizują złożone cele biznesowe.",
+      "h1": "Agenci AI dla biznesu",
+      "subtitle": "Buduję asystentów AI, którzy analizują dokumenty, odpowiadają na pytania klientów i pilnują danych za Was.",
       "breadcrumb": "Agenci AI",
       "related_title": "Powiązane usługi",
-      "cta_title": "Gotowy na agentów AI?",
-      "cta_subtitle": "Skontaktuj się z nami i sprawdź, jak agenci AI mogą zmienić Twój biznes.",
-      "s1_title": "Czym są agenci AI?",
-      "s1_p1": "Agenci AI to autonomiczne systemy, które potrafią samodzielnie podejmować decyzje, uczyć się z kontekstu i realizować złożone zadania bez stałego nadzoru człowieka. W odróżnieniu od botów RPA, agenci AI rozumieją język naturalny, analizują dane i adaptują się do nowych sytuacji.",
-      "s1_p2": "W OmniTask tworzymy systemy multi-agentowe, gdzie kilku specjalistycznych agentów współpracuje ze sobą, dzieli się informacjami i wspólnie realizuje złożone procesy biznesowe.",
-      "s2_title": "Zastosowania agentów AI",
-      "features": [
-        { "title": "Analiza dokumentów", "desc": "Agent czyta, klasyfikuje i wydobywa dane z dokumentów w dowolnym formacie." },
-        { "title": "Obsługa klienta", "desc": "Inteligentny agent odpowiada na pytania klientów, eskaluje złożone sprawy." },
-        { "title": "Monitoring konkurencji", "desc": "Agent śledzi rynek, ceny, trendy i generuje raporty strategiczne." },
-        { "title": "Audyt zgodności", "desc": "Agent porównuje przepisy z procedurami firmy i wskazuje luki." }
+      "cta_title": "Gotowy na agenta AI w swojej firmie?",
+      "cta_subtitle": "Sprawdźmy razem, który proces najbardziej skorzysta na agencie AI.",
+      "s1_title": "Czym jest agent AI w praktyce",
+      "s1_p1": "Agent AI to program, który — w odróżnieniu od zwykłego robota RPA — rozumie treść dokumentu czy pytania, a nie tylko klika w zadane miejsca. Potrafi przeczytać fakturę w dowolnym formacie, odpowiedzieć klientowi w naturalnym języku albo streścić długi dokument.",
+      "s1_p2": "Nie zastępuje eksperta w Waszej firmie. Odciąża go od pierwszego kontaktu z dużą ilością danych — dokumentów, wiadomości, zapytań — i przekazuje dalej tylko to, co faktycznie wymaga decyzji człowieka.",
+      "dla_kogo_title": "Dla kogo",
+      "dla_kogo": [
+        { "title": "Firmy z dużym ruchem zapytań", "desc": "Obsługa klienta odpowiada wielokrotnie na te same pytania zamiast zajmować się trudniejszymi sprawami. Prosta sprawa czeka w tej samej kolejce co sprawa skomplikowana." },
+        { "title": "Firmy przetwarzające dużo dokumentów", "desc": "Umowy, faktury i zgłoszenia w różnych formatach, które trzeba ręcznie odczytać i skategoryzować. Im więcej dokumentów wpływa, tym łatwiej coś przeoczyć albo pomylić." },
+        { "title": "Firmy monitorujące rynek", "desc": "Ceny konkurencji, przepisy branżowe czy dostępność towaru zmieniają się szybciej, niż ktoś zdąży to ręcznie sprawdzić. Decyzje zapadają wtedy na podstawie danych sprzed tygodnia." }
       ],
+      "zastosowania_title": "Zastosowania",
+      "zastosowania": [
+        { "title": "Analiza dokumentów", "desc": "Agent czyta, klasyfikuje i wydobywa dane z dokumentów w dowolnym formacie — bez sztywnego szablonu wejściowego." },
+        { "title": "Pierwsza linia obsługi klienta", "desc": "Agent odpowiada na standardowe pytania, a trudniejsze sprawy przekazuje od razu z pełnym kontekstem do człowieka." },
+        { "title": "Monitoring rynku i konkurencji", "desc": "Agent śledzi ceny, oferty i zmiany u konkurencji i przygotowuje krótkie podsumowanie zamiast surowych danych." },
+        { "title": "Audyt zgodności z procedurami", "desc": "Agent porównuje dokumenty czy działania z wewnętrznymi procedurami i wskazuje odstępstwa do sprawdzenia." }
+      ],
+      "wdrozenie_title": "Jak wygląda wdrożenie",
+      "wdrozenie": [
+        { "title": "Wybór procesu", "desc": "Znajdujemy zadanie, w którym rozumienie treści daje więcej niż sztywne reguły." },
+        { "title": "Budowa i baza wiedzy", "desc": "Konfiguruję agenta i, jeśli trzeba, zasilam go Waszą wiedzą firmową." },
+        { "title": "Testy na realnych przypadkach", "desc": "Sprawdzam odpowiedzi agenta na prawdziwych dokumentach i pytaniach, nie na przykładach demo." },
+        { "title": "Wdrożenie z nadzorem", "desc": "Agent startuje z możliwością łatwej korekty — nie zostawiam go bez kontroli od pierwszego dnia." }
+      ],
+      "technologie_title": "Technologie",
+      "technologie_p": "Buduję agentów w oparciu o modele językowe (m.in. rodziny GPT i Claude) osadzone w Waszym przepływie pracy przez n8n lub dedykowaną integrację API.",
+      "technologie_list": ["LLM API", "n8n", "Baza wiedzy", "RAG"],
       "s3_title": "",
       "benefits": [],
+      "cena_label": "Ile to kosztuje?",
+      "cena_text": "Prosty agent AI wpięty w jeden proces mieści się w pakiecie CORE od 14 900 zł, pełne wdrożenie z bazą wiedzy self-hosted — w pakiecie TRANSFORMACJA od 29 000 zł.",
       "faq_title": "",
       "faq": []
+    },
+    "szkolenia": {
+      "h1": "Szkolenia i doradztwo z automatyzacji — z dofinansowaniem PARP",
+      "subtitle": "Praktyczne szkolenie dla zespołu, które można kupić z dofinansowaniem do 83% kosztu.",
+      "breadcrumb": "Szkolenia i doradztwo",
+      "related_title": "Powiązane usługi",
+      "cta_title": "Chcesz przeszkolić zespół z automatyzacji?",
+      "cta_subtitle": "Sprawdźmy razem, jaki zakres szkolenia ma sens dla Waszej firmy — i czy kwalifikujecie się do dofinansowania.",
+      "s1_title": "Dla kogo są te szkolenia",
+      "s1_p1": "To nie jest ogólny kurs o „sztucznej inteligencji”. Uczę zespół rozpoznawać, który proces w codziennej pracy nadaje się do automatyzacji, i jak z automatyzacją pracować na co dzień — bez konieczności programowania.",
+      "s1_p2": "Jestem zarejestrowany w Bazie Usług Rozwojowych, więc szkolenie i doradztwo można kupić z dofinansowaniem z programu PARP — mikro i mała firma odzyskuje do 83% kosztu.",
+      "dla_kogo_title": "Dla kogo",
+      "dla_kogo": [
+        { "title": "Właściciele i kierownicy operacyjni", "desc": "Chcą wiedzieć, gdzie w firmie jest największy potencjał do automatyzacji, zanim zainwestują. Nie chcą kupować kota w worku od informatyka, którego nie znają i nie rozumieją." },
+        { "title": "Zespoły administracyjne i księgowe", "desc": "Pracują codziennie z dokumentami i danymi, które da się zautomatyzować. To oni najlepiej wiedzą, które zadanie realnie zjada im najwięcej czasu w tygodniu." },
+        { "title": "Firmy planujące wdrożenie", "desc": "Chcą najpierw zrozumieć proces, zanim zlecą budowę automatyzacji komuś z zewnątrz. Szkolenie kosztuje wyraźnie mniej niż nietrafione, źle zaplanowane wdrożenie." }
+      ],
+      "zastosowania_title": "Zakres szkolenia",
+      "zastosowania": [
+        { "title": "Rozpoznawanie procesów do automatyzacji", "desc": "Jak ocenić, które zadanie warto zautomatyzować, a które nie ma sensu — na przykładach z Waszej firmy." },
+        { "title": "Podstawy pracy z automatyzacją", "desc": "Jak czytać działający przepływ, gdzie sprawdzić błąd i kiedy wezwać wsparcie." },
+        { "title": "KSeF i obieg dokumentów", "desc": "Jak zorganizować pracę zespołu wokół automatycznego obiegu faktur." },
+        { "title": "Doradztwo wdrożeniowe", "desc": "Wspólnie planujemy kolejność wdrożeń, żeby najpierw zautomatyzować to, co przynosi najwięcej godzin." }
+      ],
+      "wdrozenie_title": "Jak to przebiega",
+      "wdrozenie": [
+        { "title": "Rozmowa wstępna", "desc": "Ustalamy potrzeby zespołu i sprawdzam kwalifikowalność do dofinansowania." },
+        { "title": "Program szkolenia", "desc": "Dopasowuję zakres do Waszych procesów, nie do gotowego szablonu." },
+        { "title": "Szkolenie i warsztat", "desc": "Zajęcia praktyczne na Waszych przykładach, nie na abstrakcyjnych case studies." },
+        { "title": "Materiały i doradztwo powdrożeniowe", "desc": "Zespół dostaje materiały do wykorzystania po szkoleniu i możliwość konsultacji." }
+      ],
+      "technologie_title": "Forma szkolenia",
+      "technologie_p": "Szkolenie prowadzę stacjonarnie lub online, w formie warsztatu na Waszych realnych procesach — zgodnie z zakresem zarejestrowanym w Bazie Usług Rozwojowych.",
+      "technologie_list": ["BUR", "Warsztat", "Materiały szkoleniowe"],
+      "s3_title": "Korzyści",
+      "benefits": [
+        "Zespół samodzielnie rozpoznaje procesy warte automatyzacji",
+        "Możliwość dofinansowania do 83% kosztu",
+        "Zajęcia na Waszych realnych przykładach, nie teorii",
+        "Doradztwo przy planowaniu kolejnych wdrożeń"
+      ],
+      "cena_label": "Ile to kosztuje?",
+      "cena_text": "Cena zależy od zakresu i liczby uczestników — sprawdzam ją razem z kwalifikowalnością do dofinansowania. Szczegóły na stronie /dofinansowanie.",
+      "faq_title": "Najczęściej zadawane pytania o szkolenia",
+      "faq": [
+        { "q": "Czy szkolenie na pewno załapie się na dofinansowanie?", "a": "Sprawdzam to indywidualnie na etapie rozmowy wstępnej — zależy od wielkości firmy i dostępnego limitu u operatora regionalnego." },
+        { "q": "Ile osób może wziąć udział?", "a": "Zależy od formuły — ustalamy to razem, dopasowując program do liczby uczestników i budżetu." },
+        { "q": "Czy to jest to samo co wdrożenie automatyzacji?", "a": "Nie. Program dofinansowania obejmuje szkolenia i doradztwo, a nie samo wdrożenie techniczne. Wdrożenie wyceniam osobno." }
+      ]
+    },
+    "opieka": {
+      "h1": "Opieka i hosting automatyzacji",
+      "subtitle": "Monitoruję, naprawiam i rozwijam wdrożone automatyzacje — zanim przestaną działać.",
+      "breadcrumb": "Opieka i hosting",
+      "related_title": "Powiązane usługi",
+      "cta_title": "Masz już automatyzację i potrzebujesz opieki?",
+      "cta_subtitle": "Sprawdzę, jak działa dziś, i zaproponuję odpowiedni poziom opieki.",
+      "s1_title": "Dlaczego automatyzacja potrzebuje opieki",
+      "s1_p1": "Automatyzacja nie jest wdrażana raz na zawsze. Systemy, z którymi współpracuje, zmieniają interfejsy i API, dostawcy aktualizują swoje platformy, a firma rośnie i dodaje nowe wyjątki od reguły. Bez opieki proces po jakimś czasie cicho się psuje — i nikt tego nie zauważa, dopóki nie zacznie brakować danych.",
+      "s1_p2": "Opieka to monitoring działania, szybka reakcja na awarie i utrzymanie serwera, na którym automatyzacja pracuje — żeby inwestycja we wdrożenie nie zmarnowała się po pół roku.",
+      "dla_kogo_title": "Dla kogo",
+      "dla_kogo": [
+        { "title": "Firmy z wdrożoną automatyzacją", "desc": "Niezależnie od tego, czy wdrażałem ją ja, czy ktoś inny — potrzebują kogoś, kto ją utrzyma na bieżąco. Automatyzacja bez właściciela to tylko kwestia czasu, aż przestanie działać po cichu." },
+        { "title": "Firmy bez własnego działu IT", "desc": "Nie mają nikogo na miejscu, kto zauważyłby awarię automatyzacji, zanim urośnie w realny problem. Zwykle dowiadują się o niej dopiero wtedy, gdy zaczyna brakować danych." },
+        { "title": "Firmy planujące rozwój procesu", "desc": "Chcą regularnie dodawać nowe scenariusze bez zlecania i wyceniania każdej zmiany od zera. Bank godzin w opiece wychodzi wyraźnie taniej niż osobna wycena każdej poprawki." }
+      ],
+      "zastosowania_title": "Co obejmuje opieka",
+      "zastosowania": [
+        { "title": "Monitoring działania", "desc": "Sprawdzam, czy automatyzacja faktycznie wykonała swoją pracę, a nie tylko czy serwer działa." },
+        { "title": "Reakcja na awarie", "desc": "Gdy API dostawcy się zmieni albo proces się zatrzyma, reaguję w uzgodnionym czasie (do 48h lub do 4h w opiece Pro)." },
+        { "title": "Hosting zarządzany", "desc": "Serwer w UE, aktualizacje i kopie zapasowe środowiska, na którym działa automatyzacja." },
+        { "title": "Rozwój procesu", "desc": "Bank godzin miesięcznie na nowe scenariusze i zmiany bez osobnej wyceny każdej z nich." }
+      ],
+      "wdrozenie_title": "Jak zaczynamy współpracę",
+      "wdrozenie": [
+        { "title": "Przegląd obecnej automatyzacji", "desc": "Sprawdzam, jak działa dziś, nawet jeśli wdrażał ją ktoś inny." },
+        { "title": "Dobór poziomu opieki", "desc": "Ustalamy, czy wystarczy monitoring, czy potrzebne jest SLA z szybszą reakcją." },
+        { "title": "Podłączenie monitoringu", "desc": "Uruchamiam stałe sprawdzanie, czy proces wykonuje się poprawnie." },
+        { "title": "Comiesięczny raport", "desc": "Dostajecie krótkie podsumowanie tego, co działo się z automatyzacją." }
+      ],
+      "technologie_title": "Środowisko",
+      "technologie_p": "Utrzymuję automatyzacje najczęściej na własnym, zarządzanym serwerze n8n w UE, z regularnymi kopiami zapasowymi.",
+      "technologie_list": ["n8n", "Serwer UE", "Monitoring", "Backup"],
+      "s3_title": "Korzyści",
+      "benefits": [
+        "Automatyzacja działa dalej mimo zmian w systemach zewnętrznych",
+        "Szybka reakcja zamiast tygodni przestoju",
+        "Dane i konfiguracja bezpieczne dzięki kopiom zapasowym",
+        "Jasny, stały koszt miesięczny zamiast nieprzewidzianych napraw"
+      ],
+      "cena_label": "Ile to kosztuje?",
+      "cena_text": "Hosting zarządzany od 390 zł/mc, Opieka Standard od 890 zł/mc, Opieka Pro (SLA 4h) od 1 890 zł/mc.",
+      "faq_title": "Najczęściej zadawane pytania o opiekę",
+      "faq": [
+        { "q": "Czy musicie wdrażać automatyzację, żeby objąć ją opieką?", "a": "Nie. Przejmuję opiekę też nad automatyzacjami wdrożonymi wcześniej przez kogoś innego, po ich przeglądzie." },
+        { "q": "Co się stanie, jeśli zrezygnuję z opieki?", "a": "Automatyzacja dalej działa, ale nikt nie zareaguje, gdy coś się zepsuje po zmianie w jednym z systemów." },
+        { "q": "Czym różni się Opieka Standard od Opieka Pro?", "a": "Standard to reakcja do 48h i monitoring. Pro to SLA 4h, priorytet w kolejce i comiesięczny raport." }
+      ]
     }
   },
-  "about_page": {
-    "h1": "O nas – Eksperci od automatyzacji procesów RPA i AI",
-    "subtitle": "Łączymy wiedzę techniczną z głębokim zrozumieniem procesów biznesowych, aby dostarczać realne wyniki.",
-    "mission_title": "Nasza misja",
-    "mission_p1": "OmniTask powstał z przekonania, że technologia powinna służyć ludziom, a nie odwrotnie. Naszą misją jest uwalnianie pracowników od monotonnych, powtarzalnych zadań, aby mogli skupić się na pracy kreatywnej i strategicznej.",
-    "mission_p2_pre": "Specjalizujemy się we wdrażaniu ",
-    "mission_link_rpa": "robotyzacji procesów (RPA)",
-    "mission_p2_mid1": ", ",
-    "mission_link_workflow": "automatyzacji workflow",
-    "mission_p2_mid2": ", ",
-    "mission_link_integration": "integracji systemów",
-    "mission_p2_mid3": " oraz budowie ",
-    "mission_link_ai": "autonomicznych agentów AI",
-    "mission_p2_end": ".",
-    "values_title": "Nasze wartości",
-    "values": [
-      { "title": "Podejście biznesowe", "desc": "Zaczynamy od zrozumienia Twoich celów, nie od technologii." },
-      { "title": "Mierzalne wyniki", "desc": "Każde wdrożenie mierzymy konkretnymi KPI: czas, koszt, dokładność." },
-      { "title": "Partnerstwo", "desc": "Traktujemy klientów jako partnerów. Twój sukces to nasz sukces." },
-      { "title": "Ciągły rozwój", "desc": "Śledzimy najnowsze trendy w AI i automatyzacji, aby dostarczać najlepsze rozwiązania." }
+  "ksef_page": {
+    "h1": "KSeF działa, ale ktoś nadal ręcznie przypisuje faktury",
+    "subtitle": "Automatyzuję obieg faktur po wdrożeniu Krajowego Systemu e-Faktur — deduplikacja, routing do oddziałów, kontrola limitów API.",
+    "breadcrumb": "Obsługa KSeF",
+    "problems_title": "Gdzie najczęściej się psuje",
+    "problems": [
+      { "title": "Duplikaty faktur", "desc": "Ta sama faktura przychodzi z KSeF i z maila — bez kontroli łatwo o podwójne zaksięgowanie i zawyżony VAT." },
+      { "title": "Firmy wielooddziałowe", "desc": "Księgowa ręcznie ustala, do którego oddziału i MPK należy dokument, dla każdej faktury z osobna." },
+      { "title": "Limity API", "desc": "Przy dużym wolumenie faktur sesje z KSeF się przerywają, a nikt nie monitoruje, czy wszystko poszło." },
+      { "title": "Przyjęcia magazynowe", "desc": "Towar przyjeżdża, dokumentu z KSeF jeszcze nie ma w systemie — przyjęcie stoi, magazyn czeka." },
+      { "title": "Wydatki pracownicze", "desc": "Brak procesu przypisania faktury do konkretnej osoby i budżetu — rozliczenie trwa tygodniami." },
+      { "title": "Kontrahenci wysyłają skany mimo KSeF", "desc": "Część kontrahentów nadal woli mailowy skan, mimo że faktura już czeka w systemie." }
     ],
-    "why_title": "Dlaczego warto z nami współpracować?",
-    "why_list": [
-      "Doświadczenie w automatyzacji procesów w różnych branżach",
-      "Zespół certyfikowanych specjalistów UiPath i Power Automate",
-      "Szybki czas wdrożenia – proste procesy nawet w 2 tygodnie",
-      "Wsparcie techniczne 24/7 i monitoring botów",
-      "Komunikacja w języku polskim, angielskim i ukraińskim"
+    "solutions_title": "Co robię",
+    "solutions": [
+      "Automatyczna deduplikacja — system rozpoznaje tę samą fakturę z dwóch źródeł i księguje ją raz.",
+      "Routing do oddziału i MPK na podstawie reguł, które ustalamy razem, zamiast ręcznej decyzji przy każdej fakturze.",
+      "Monitoring sesji i limitów API z alertem, zanim proces się przerwie w środku dnia.",
+      "Automatyczne powiązanie faktury z dokumentem przyjęcia magazynowego.",
+      "Przypisanie wydatku do osoby i budżetu od razu przy wpłynięciu faktury.",
+      "Jeden punkt wejścia na skany od kontrahentów, żeby nie omijały głównego procesu."
+    ],
+    "effects_title": "Jakich efektów można się spodziewać",
+    "effects_disclaimer": "Poniższe dane to widełki deklarowane przez dostawców oprogramowania księgowego dla automatyzacji obiegu faktur — nie są to nasze własne statystyki z konkretnych wdrożeń.",
+    "effect1_value": "30–50%",
+    "effect1_label": "skrócenie czasu obsługi pojedynczej faktury",
+    "effect2_value": "do 90%",
+    "effect2_label": "przy pełnej automatyzacji obiegu dokumentów",
+    "pricing_title": "Cennik",
+    "pricing_text": "Pakiet KSeF KONTROLA (deduplikacja, routing, monitoring) od 12 900 zł, opieka nad wdrożonym procesem od 890 zł miesięcznie.",
+    "faq_title": "Najczęściej zadawane pytania o KSeF",
+    "faq": [
+      { "q": "Czy to zastąpi mój system księgowy?", "a": "Nie. Automatyzacja pracuje wokół istniejącego systemu księgowego — porządkuje i kieruje dokumenty, zanim trafią do księgowania." },
+      { "q": "Obsługujecie firmy z wieloma oddziałami?", "a": "Tak, to jeden z głównych scenariuszy — reguły routingu do oddziału i MPK ustalamy indywidualnie." },
+      { "q": "Co z fakturami, które nadal przychodzą mailem?", "a": "Kierujemy je do tego samego procesu, żeby trafiały do tej samej kontroli duplikatów co faktury z KSeF." },
+      { "q": "Ile trwa wdrożenie?", "a": "Standardowo 2–4 tygodnie, zależnie od liczby oddziałów i reguł księgowych." },
+      { "q": "Czy dane z faktur są bezpieczne?", "a": "Tak — automatyzacja działa na Waszej infrastrukturze lub zarządzanym serwerze w UE, bez przekazywania danych do zewnętrznych podmiotów poza samym KSeF i Waszym systemem księgowym." },
+      { "q": "Co, jeśli Ministerstwo Finansów zmieni zasady KSeF?", "a": "Monitoruję zmiany w API KSeF w ramach opieki i aktualizuję automatyzację, zanim zmiana przerwie działanie procesu." }
+    ],
+    "cta": "Pokażę na Waszych fakturach z zeszłego miesiąca"
+  },
+  "dofinansowanie_page": {
+    "h1": "Automatyzacja z dofinansowaniem do 83%",
+    "subtitle": "Jestem zarejestrowany w Bazie Usług Rozwojowych. Szkolenia i doradztwo z automatyzacji można kupić z dofinansowaniem z programu PARP — program trwa do grudnia 2028.",
+    "limits_title": "Ile możesz dostać",
+    "how_title": "Jak to działa",
+    "how_steps": [
+      { "title": "Sprawdzasz kwalifikację", "desc": "Wielkość firmy i dostępny limit dofinansowania ustalamy razem na wstępnej rozmowie." },
+      { "title": "Zgłaszasz się do operatora", "desc": "Operator regionalny weryfikuje wniosek i przyznaje dofinansowanie zgodnie z limitem." },
+      { "title": "Wybierasz usługę w BUR", "desc": "Wybierasz zarejestrowaną usługę szkoleniową lub doradczą z mojej oferty w Bazie Usług Rozwojowych." },
+      { "title": "Płacisz swój wkład własny", "desc": "Standardowo 17% wartości usługi, resztę rozlicza operator." }
+    ],
+    "scope_title": "Co jest objęte dofinansowaniem",
+    "scope_items": [
+      "Przygotowanie organizacji do automatyzacji",
+      "Identyfikacja i analiza procesów do automatyzacji",
+      "Przygotowanie danych i podstawy pracy z AI",
+      "Doradztwo przy robotyzacji i integracji systemów",
+      "Bezpieczeństwo danych w procesach zautomatyzowanych",
+      "Zarządzanie zmianą w zespole",
+      "Doradztwo wdrożeniowe"
+    ],
+    "scope_disclaimer": "Program finansuje szkolenia i doradztwo, a nie samo wdrożenie techniczne automatyzacji. Wdrożenie wyceniam i rozliczam osobno — szczegóły na stronie /cennik.",
+    "operators_title": "Operatorzy według regionu",
+    "operators_note": "Lista operatorów regionalnych BUR i przypisanych makroregionów — potwierdzam aktualne dane na etapie rozmowy kwalifikacyjnej, ponieważ operatorzy i limity naborów zmieniają się w czasie.",
+    "calculator_title": "Policz swój wkład własny",
+    "services_title": "Moje usługi w Bazie Usług Rozwojowych",
+    "faq_title": "Najczęściej zadawane pytania o dofinansowanie",
+    "faq": [
+      { "q": "Kto kwalifikuje się do dofinansowania?", "a": "Mikro, małe i średnie firmy zarejestrowane w Polsce. Wysokość limitu zależy od wielkości firmy i liczby pracowników." },
+      { "q": "Do kiedy można skorzystać z programu?", "a": "Program w obecnej formie trwa do grudnia 2028, ale limity u poszczególnych operatorów wyczerpują się wcześniej." },
+      { "q": "Czy wdrożenie automatyzacji też jest objęte?", "a": "Nie. Dofinansowanie obejmuje szkolenia i doradztwo. Samo wdrożenie techniczne rozliczam według cennika wdrożeń." },
+      { "q": "Ile trwa procedura uzyskania dofinansowania?", "a": "Zależy od operatora regionalnego — zwykle kilka tygodni od zgłoszenia do decyzji." },
+      { "q": "Czy muszę zapłacić całość z góry?", "a": "Nie, standardowo płacisz tylko swój wkład własny — resztę rozlicza operator bezpośrednio z wykonawcą usługi." },
+      { "q": "Co jeśli moja firma już wyczerpała limit w tym roku?", "a": "Sprawdzam to indywidualnie — czasem sensowniej zaplanować szkolenie w kolejnym naborze niż płacić pełną cenę teraz." },
+      { "q": "Czy dofinansowanie dotyczy tylko szkoleń grupowych?", "a": "Nie, obejmuje też doradztwo indywidualne dopasowane do Waszych procesów." },
+      { "q": "Jak zacząć?", "a": "Napisz lub umów rozmowę — sprawdzę Waszą kwalifikowalność i zaproponuję zakres usługi zarejestrowanej w BUR." }
+    ],
+    "cta": "Sprawdzę za Ciebie, czy się kwalifikujesz"
+  },
+  "cennik_page": {
+    "h1": "Cennik automatyzacji procesów",
+    "subtitle": "Ceny podane wprost, bez „zapytaj o wycenę”. Poniżej znajdziesz koszt wdrożenia, opieki i wariant z dofinansowaniem.",
+    "tier1_title": "Wdrożenia",
+    "tier2_title": "Opieka (miesięcznie)",
+    "tier3_title": "Z dofinansowaniem PARP",
+    "tier3_text": "Szkolenia i doradztwo z mojej oferty w Bazie Usług Rozwojowych możesz kupić z dofinansowaniem do 83% kosztu.",
+    "tier3_cta": "Sprawdź szczegóły dofinansowania",
+    "why_title": "Dlaczego nie robię wdrożeń poniżej 4 900 zł",
+    "why_text": "Poniżej tej kwoty nie da się rzetelnie przeprowadzić audytu procesu, zbudować automatyzacji z obsługą błędów i przeszkolić zespołu. Tańsza oferta zwykle oznacza pominięcie jednego z tych elementów — a to ten element później się mści, gdy proces przestaje działać po miesiącu.",
+    "calculator_title": "Kalkulator zwrotu z inwestycji",
+    "calculator_people_label": "Liczba osób wykonujących proces",
+    "calculator_hours_label": "Godzin miesięcznie na osobę",
+    "calculator_rate_label": "Stawka godzinowa (zł)",
+    "calculator_result_yearly": "Oszczędność roczna",
+    "calculator_result_payback": "Orientacyjny czas zwrotu",
+    "faq_title": "Najczęściej zadawane pytania o cennik",
+    "faq": [
+      { "q": "Czy cena jest stała, czy może wzrosnąć w trakcie wdrożenia?", "a": "Cena ustalona na starcie jest stała. Jeśli w trakcie audytu okaże się, że zakres jest większy niż zakładaliśmy, informuję o tym przed rozpoczęciem prac, nie w trakcie." },
+      { "q": "Co jeśli proces okaże się trudniejszy niż zakładano?", "a": "Taką sytuację wyłapuje audyt przed wyceną — dlatego zalecam zacząć od niego, jeśli proces jest złożony lub obejmuje wiele systemów." },
+      { "q": "Czy opieka po wdrożeniu jest obowiązkowa?", "a": "Nie, ale bez niej automatyzacja z czasem przestaje działać przy każdej zmianie w systemach zewnętrznych — dlatego ją rekomenduję." },
+      { "q": "Czy wystawiasz fakturę VAT?", "a": "Tak, każde zlecenie jest rozliczane fakturą VAT." }
     ]
   },
+  "faq_page": {
+    "h1": "Najczęściej zadawane pytania",
+    "subtitle": "Wszystko, co warto wiedzieć przed pierwszą rozmową — pogrupowane tematycznie.",
+    "cat_general": "Ogólne o automatyzacji",
+    "cat_general_items": [
+      { "q": "Czym w praktyce jest automatyzacja procesów?", "a": "To zastąpienie ręcznie wykonywanych, powtarzalnych czynności — przepisywania danych, wysyłania powiadomień, sprawdzania dokumentów — programem, który robi to samo szybciej i bez błędów." },
+      { "q": "Jakie procesy da się zautomatyzować?", "a": "Każdy powtarzalny proces oparty na jasnych regułach: obieg faktur, obsługa zamówień, raportowanie, synchronizacja danych między systemami, onboarding pracowników." },
+      { "q": "Czy automatyzacja zastąpi moich pracowników?", "a": "Nie. Zdejmuje z nich powtarzalne czynności, żeby mogli zająć się pracą wymagającą oceny sytuacji i kontaktu z klientem." },
+      { "q": "Czy muszę wiedzieć, czym jest n8n albo RPA?", "a": "Nie. Rozmawiamy o Waszym procesie, narzędzia dobieram i za nie odpowiadam." },
+      { "q": "Co się dzieje, gdy system, z którym pracuje automatyzacja, się zmieni?", "a": "Automatyzację trzeba zaktualizować — dlatego oferuję opiekę powdrożeniową, która monitoruje takie zmiany." }
+    ],
+    "cat_cooperation": "O współpracy",
+    "cat_cooperation_items": [
+      { "q": "Kto faktycznie wykonuje wdrożenie?", "a": "Ja, od pierwszej rozmowy po wdrożenie i opiekę — bez przekazywania sprawy między handlowcem a wykonawcą." },
+      { "q": "Jak wygląda pierwszy kontakt?", "a": "30-minutowa rozmowa bez prezentacji — pytam, co dziś zajmuje najwięcej czasu, i mówię wprost, czy widzę tu sens automatyzacji." },
+      { "q": "Czy zaczynacie od razu od wdrożenia?", "a": "Zwykle od krótkiego audytu procesu — dzięki temu wycena jest dokładna, a nie szacunkowa." },
+      { "q": "Co jeśli mój proces jest nietypowy?", "a": "Większość „nietypowych” procesów da się rozbić na powtarzalne kroki — to właśnie sprawdzam podczas audytu." },
+      { "q": "Czy pracujecie zdalnie, czy trzeba się spotkać?", "a": "Większość wdrożeń prowadzę zdalnie. Spotkanie na miejscu ustalamy, jeśli proces tego wymaga." }
+    ],
+    "cat_pricing": "O cenach",
+    "cat_pricing_items": [
+      { "q": "Ile kosztuje wdrożenie?", "a": "Od 5 900 zł za pojedynczy proces. Pełny cennik jest publicznie dostępny na stronie /cennik." },
+      { "q": "Czy cena może wzrosnąć w trakcie realizacji?", "a": "Nie — cena ustalona przed startem jest stała." },
+      { "q": "Czy audyt jest płatny?", "a": "Tak, 2 400 zł, ale ta kwota jest odliczana od ceny wdrożenia, jeśli zdecydujecie się kontynuować." },
+      { "q": "Jak wygląda płatność za opiekę?", "a": "Miesięczny, stały koszt — od 390 zł za sam hosting, do 1 890 zł za Opiekę Pro z SLA 4h." }
+    ],
+    "cat_funding": "O dofinansowaniu",
+    "cat_funding_items": [
+      { "q": "Ile dofinansowania mogę dostać?", "a": "Mikro i mała firma do 81 000 zł, średnia firma do 162 000 zł — szczegóły na stronie /dofinansowanie." },
+      { "q": "Czy dofinansowanie obejmuje wdrożenie techniczne?", "a": "Nie, obejmuje szkolenia i doradztwo. Wdrożenie rozliczam osobno, według cennika." },
+      { "q": "Jak długo trwa program?", "a": "W obecnej formie do grudnia 2028, ale limity u operatorów regionalnych wyczerpują się wcześniej." },
+      { "q": "Jak sprawdzić, czy się kwalifikuję?", "a": "Napisz lub umów rozmowę — sprawdzę to razem z Tobą, bezpłatnie." }
+    ]
+  },
+  "about_page": {
+    "h1": "Marcin Łętowski — automatyzacja procesów",
+    "subtitle": "Z zawodu jestem programistą, ale prowadziłem też mniejsze biznesy — wiem od środka, ile czasu i uwagi zjada ręczna robota i natłok dokumentów w małej firmie. Dziś automatyzuję procesy zamiast w nich tkwić.",
+    "why_title": "Dlaczego robię to, co robię",
+    "why_p1": "Z zawodu jestem programistą — automatyzacja, Python i integracje systemów to mój codzienny warsztat, a nie dodatek do oferty dorobiony na potrzeby marketingu. Ale zanim zacząłem wdrażać automatyzacje dla innych, sam prowadziłem mniejsze biznesy i na własnej skórze poznałem, ile faktur, maili, umów i tabelek potrafi wygenerować nawet niewielka firma.",
+    "why_p2": "To połączenie ma znaczenie: rozumiem kod i systemy od strony technicznej, ale też wiem, jak wygląda codzienność właściciela firmy 5–50 osób — dane wpisywane po raz drugi i trzeci, bo żaden system nie rozmawia z pozostałymi, i wieczne „ktoś to ogarnie później”. Dlatego rozmawiając z Wami, nie muszę uczyć się Waszego biznesu od zera. Od razu rozmawiamy o konkretach: co zjada czas i co realnie da się z tego zdjąć.",
+    "how_title": "Jak pracuję",
+    "how_text": "Bezpośrednio, bez handlowców i bez przekazywania sprawy między działami. Jedna osoba — ja — prowadzi Was od pierwszej rozmowy, przez audyt i wdrożenie, po opiekę nad działającą automatyzacją. Wiecie, z kim rozmawiacie na każdym etapie.",
+    "not_doing_title": "Czego nie robię",
+    "not_doing_items": [
+      "Nie buduję stron internetowych ani sklepów",
+      "Nie wdrażam pełnych systemów ERP",
+      "Nie biorę projektów, których nie jestem w stanie dowieźć w deklarowanym terminie",
+      "Nie obiecuję dofinansowania, dopóki nie mam do tego formalnych uprawnień"
+    ],
+    "tech_title": "Na czym pracuję",
+    "tech_items": ["n8n", "Make", "KSeF API", "Modele językowe (LLM)", "Python"]
+  },
   "meta": {
-    "uslugi": { "title": "Usługi automatyzacji procesów: RPA, AI i workflow", "description": "Kompleksowe usługi automatyzacji procesów: RPA, automatyzacja workflow, integracja systemów, agenci AI. Sprawdź jak możemy pomóc Twojej firmie." },
-    "rpa": { "title": "Robotyzacja procesów RPA – wdrożenia botów UiPath i Python", "description": "Wdrażamy roboty software'owe RPA, które automatycznie wykonują powtarzalne zadania biznesowe. UiPath, Power Automate, Python. Bezpłatna konsultacja." },
-    "workflow": { "title": "Automatyzacja workflow – Zapier, Make, Power Automate", "description": "Projektujemy i wdrażamy inteligentne przepływy pracy łączące systemy, aplikacje i ludzi. Zapier, Make, Power Automate. Bezpłatna konsultacja." },
-    "integration": { "title": "Integracja systemów IT – ERP, CRM, API i bazy danych", "description": "Łączymy ERP, CRM, e-mail i bazy danych w jeden ekosystem z automatyczną wymianą danych. API, ETL, middleware. Bezpłatna konsultacja." },
-    "ai": { "title": "Agenci AI i systemy multi-agentowe dla biznesu", "description": "Budujemy autonomicznych agentów AI i systemy multi-agentowe dla biznesu. Bezpłatna konsultacja." },
-    "about": { "title": "O nas – eksperci automatyzacji procesów RPA i AI", "description": "Poznaj zespół OmniTask – ekspertów od automatyzacji procesów RPA i agentów AI. Nasza misja, wartości i doświadczenie." },
-    "contact": { "title": "Kontakt – automatyzacja procesów RPA i AI dla firm", "description": "Skontaktuj się z OmniTask, aby omówić automatyzację procesów w Twojej firmie. Telefon, e-mail i formularz kontaktowy." },
-    "quote": { "title": "Bezpłatna wycena automatyzacji RPA, workflow i AI", "description": "Opisz proces, który chcesz zautomatyzować. Przygotujemy indywidualną wycenę RPA, workflow lub agentów AI w ciągu 24 godzin." },
-    "blog": { "title": "Blog o automatyzacji procesów, RPA i agentach AI", "description": "Praktyczna wiedza, trendy i realizacje z zakresu automatyzacji procesów (RPA) i agentów AI. Czytaj artykuły OmniTask." },
-    "home": { "title": "OmniTask – Inteligentna automatyzacja procesów: RPA i AI", "description": "OmniTask to eksperci od automatyzacji procesów biznesowych RPA. Wdrażamy roboty, które eliminują powtarzalne zadania i redukują koszty operacyjne." },
+    "uslugi": { "title": "Automatyzacja procesów dla firm 5–50 osób | OmniTask", "description": "Automatyzacja workflow, obsługa KSeF, integracja systemów, agenci AI. Wdrożenie 2–4 tygodnie, stała cena, do 83% dofinansowania z PARP." },
+    "rpa": { "title": "Automatyzacja powtarzalnych zadań (RPA) dla firm | OmniTask", "description": "Programowy robot przejmuje powtarzalne zadania w Twoich systemach. Wdrożenie od 5 900 zł, 1–2 tygodnie. Bezpłatna rozmowa." },
+    "workflow": { "title": "Automatyzacja workflow – przepływy pracy bez ręcznej pracy", "description": "Łączę systemy, aplikacje i ludzi w jeden zautomatyzowany proces. Wdrożenie od 5 900 zł. Bezpłatna rozmowa o Twoim procesie." },
+    "integration": { "title": "Integracja systemów IT – ERP, CRM, API i bazy danych", "description": "Łączę ERP, CRM, e-mail i magazyn w jeden ekosystem z automatyczną wymianą danych. Bezpłatna rozmowa o integracji." },
+    "ai": { "title": "Agenci AI dla biznesu – analiza dokumentów i obsługa klienta", "description": "Buduję agentów AI, którzy analizują dokumenty, odpowiadają klientom i monitorują dane. Bezpłatna rozmowa." },
+    "ksef": { "title": "Automatyzacja faktur KSeF – koniec z ręcznym przypisywaniem", "description": "Duplikaty, przypisywanie do oddziałów, limity API. Automatyzuję obieg faktur po KSeF. Wdrożenie 2–4 tygodnie, od 12 900 zł." },
+    "szkolenia": { "title": "Szkolenia z automatyzacji z dofinansowaniem PARP | OmniTask", "description": "Szkolenie i doradztwo z automatyzacji procesów, do kupienia z dofinansowaniem do 83% kosztu. Zarejestrowane w Bazie Usług Rozwojowych." },
+    "opieka": { "title": "Opieka i hosting automatyzacji – od 390 zł miesięcznie", "description": "Monitoring, naprawy i hosting zarządzany dla wdrożonych automatyzacji. Reakcja do 48h lub 4h w wariancie Pro." },
+    "dofinansowanie": { "title": "Dofinansowanie na automatyzację do 83% | PARP i BUR | OmniTask", "description": "Mikro i mała firma może dostać do 81 000 zł na szkolenia i doradztwo z automatyzacji. Sprawdź, czy się kwalifikujesz." },
+    "cennik": { "title": "Cennik automatyzacji procesów – konkretne stawki | OmniTask", "description": "Wdrożenie od 5 900 zł, pakiet 3–4 procesów 14 900 zł, opieka od 390 zł/mc. Bez ukrytych kosztów. Kalkulator zwrotu z inwestycji." },
+    "faq": { "title": "Pytania i odpowiedzi o automatyzację, ceny i dofinansowanie", "description": "Odpowiedzi na najczęstsze pytania o automatyzację procesów, współpracę, ceny i dofinansowanie PARP." },
+    "about": { "title": "O mnie – Marcin Łętowski, automatyzacja procesów", "description": "Prowadziłem biuro nieruchomości, dziś automatyzuję procesy w firmach 5–50 osób. Poznaj moje podejście do pracy." },
+    "contact": { "title": "Kontakt – automatyzacja procesów dla firm", "description": "Skontaktuj się, aby omówić automatyzację procesów w Twojej firmie. Telefon, e-mail, formularz i kalendarz rozmów." },
+    "quote": { "title": "Bezpłatna wycena automatyzacji procesów", "description": "Opisz proces, który chcesz zautomatyzować. Przygotuję indywidualną wycenę w ciągu 24 godzin." },
+    "blog": { "title": "Blog o automatyzacji procesów, KSeF i dofinansowaniach", "description": "Praktyczna wiedza o automatyzacji, obsłudze KSeF i dofinansowaniach dla małych i średnich firm. Czytaj artykuły OmniTask." },
+    "home": { "title": "Automatyzacja procesów dla firm | OmniTask", "description": "Automatyzuję powtarzalne procesy w firmach 5–50 osób. Wdrożenie w 2–4 tygodnie, stała cena, do 83% dofinansowania z PARP." },
     "privacy": { "title": "Polityka prywatności i ochrona danych (RODO)", "description": "Polityka prywatności OmniTask. Informacje o przetwarzaniu danych osobowych zgodnie z RODO." },
     "terms": { "title": "Regulamin serwisu i świadczenia usług online", "description": "Regulamin korzystania z serwisu OmniTask.pl. Warunki świadczenia usług drogą elektroniczną." }
   },

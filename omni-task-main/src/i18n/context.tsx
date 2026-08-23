@@ -17,7 +17,16 @@ export type { Locale }
 type TranslationValue = string | { [key: string]: TranslationValue }
 type Translations = typeof pl
 
-const translationsMap: Record<Locale, Translations> = { pl, en, ua }
+// EN i UA są celowo "zredukowane" względem PL (patrz specyfikacja OMNITASK 2.0,
+// sekcja 2.2) — nie mają np. namespace'ów ksef_page/dofinansowanie_page, których
+// strony i tak nie istnieją w tych językach. Rzutowanie na Translations pozwala
+// TypeScriptowi zaakceptować niepełną strukturę; t()/tRaw() i tak bezpiecznie
+// obsługują brakujące klucze w runtime (zwracają ścieżkę zamiast się wywalać).
+const translationsMap: Record<Locale, Translations> = {
+  pl,
+  en: en as unknown as Translations,
+  ua: ua as unknown as Translations,
+}
 
 interface LanguageContextType {
   locale: Locale

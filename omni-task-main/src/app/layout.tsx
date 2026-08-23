@@ -1,45 +1,49 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
-import { Inter, Outfit } from 'next/font/google'
+import { Plus_Jakarta_Sans, Rajdhani } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { LanguageProvider } from '@/i18n/context'
 import { buildHreflangAlternates, HREFLANG_MAP, DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n'
+import { prisma } from '@/lib/prisma'
+import { getPublicUrl } from '@/lib/gcs'
 
 // Renderujemy dynamicznie (SSR), aby ustawić poprawny <html lang> dla każdej
 // lokalizacji na podstawie nagłówka x-locale ustawianego w middleware.
 export const dynamic = 'force-dynamic'
 
-const inter = Inter({
+const bodyFont = Plus_Jakarta_Sans({
   subsets: ['latin', 'latin-ext'],
   variable: '--font-body',
   display: 'swap',
 })
 
-const outfit = Outfit({
+const headingFont = Rajdhani({
   subsets: ['latin', 'latin-ext'],
+  weight: ['500', '600', '700'],
   variable: '--font-heading',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'OmniTask – Inteligentna automatyzacja procesów: RPA i AI',
+    default: 'Automatyzacja procesów dla firm | OmniTask',
     template: '%s',
   },
   description:
-    'OmniTask to eksperci od automatyzacji procesów biznesowych RPA. Wdrażamy roboty, które eliminują powtarzalne zadania i redukują koszty operacyjne Twojej firmy.',
+    'Automatyzuję powtarzalne procesy w firmach 5–50 osób. Wdrożenie w 2–4 tygodnie, stała cena, do 83% dofinansowania z programu PARP.',
   keywords: [
     'OmniTask',
     'automatyzacja procesów',
-    'robotyzacja procesów',
-    'RPA',
-    'robotic process automation',
+    'automatyzacja procesów w firmie',
+    'automatyzacja dla firm',
+    'wdrożenie automatyzacji',
+    'automatyzacja faktur KSeF',
+    'dofinansowanie automatyzacja',
     'automatyzacja workflow',
     'integracja systemów',
     'agenci AI',
-    'multi-agent AI',
   ],
   metadataBase: new URL('https://www.omnitask.pl'),
   openGraph: {
@@ -47,23 +51,23 @@ export const metadata: Metadata = {
     locale: 'pl_PL',
     url: 'https://www.omnitask.pl',
     siteName: 'OmniTask',
-    title: 'OmniTask - Automatyzacja i robotyzacja procesów biznesowych',
+    title: 'OmniTask – automatyzacja procesów dla firm 5–50 osób',
     description:
-      'Wdrażamy RPA, automatyzację workflow i agentów AI. Redukujemy koszty operacyjne i przyspieszamy procesy biznesowe Twojej firmy.',
+      'Odzyskaj 10–20 godzin miesięcznie bez zatrudniania nikogo. Wdrożenie w 2–4 tygodnie, stała cena, do 83% dofinansowania z PARP.',
     images: [
       {
         url: 'https://www.omnitask.pl/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'OmniTask – Automatyzacja, RPA i Agenci AI',
+        alt: 'OmniTask – automatyzacja procesów dla firm',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OmniTask - Automatyzacja i robotyzacja procesów',
+    title: 'OmniTask – automatyzacja procesów dla firm',
     description:
-      'Eksperci od RPA, automatyzacji workflow i agentów AI. Bezpłatna konsultacja i wycena wdrożenia.',
+      'Automatyzuję powtarzalne procesy w firmach 5–50 osób. Stała cena, do 83% dofinansowania z PARP.',
     images: ['https://www.omnitask.pl/og-image.png'],
   },
   robots: {
@@ -95,8 +99,26 @@ export default async function RootLayout({
   const headerLocale = (await headers()).get('x-locale')
   const locale: Locale = headerLocale && isLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE
 
+  let footerPosts: { slug: string; title: string; image: string | null; date: string }[] = []
+  try {
+    const raw = await prisma.article.findMany({
+      where: { is_public: true },
+      orderBy: { created_at: 'desc' },
+      take: 2,
+      select: { slug: true, title: true, image: true, created_at: true, date: true },
+    }) as any[]
+    footerPosts = raw.map((a) => ({
+      slug: a.slug,
+      title: a.title?.[locale] || a.title?.pl || '',
+      image: a.image ? (a.image.startsWith('http') ? a.image : getPublicUrl(a.image)) : null,
+      date: (a.date || a.created_at).toISOString(),
+    }))
+  } catch (e) {
+    console.error('Error fetching footer posts:', e)
+  }
+
   return (
-    <html lang={HREFLANG_MAP[locale]} className={`${inter.variable} ${outfit.variable}`} data-scroll-behavior="smooth">
+    <html lang={HREFLANG_MAP[locale]} className={`${bodyFont.variable} ${headingFont.variable}`} data-scroll-behavior="smooth">
       <head>
         {/* Organization + LocalBusiness Schema */}
         <script
@@ -225,7 +247,7 @@ export default async function RootLayout({
         <LanguageProvider>
           <Navbar />
           <main>{children}</main>
-          <Footer />
+          <Footer posts={footerPosts} />
         </LanguageProvider>
       </body>
     </html>

@@ -59,3 +59,43 @@ model NewsletterSubscriber {
   email     String   @unique
   createdAt DateTime @default(now())
 }
+
+// Realizacja (case study) — struktura gotowa od Etapu 1, treść dopiero po
+// pierwszym prawdziwym wdrożeniu. Patrz specyfikacja OMNITASK 2.0, sekcja 6.1.
+// Strona /realizacje pozostaje wyłączona (FEATURE_REALIZACJE=false), dopóki
+// nie ma tu żadnego rekordu z isPublic=true.
+model Realizacja {
+  id             Int      @id @default(autoincrement())
+  slug           String   @unique
+  title          Json
+  clientType     String
+  industry       String
+  hoursBefore    Int
+  hoursAfter     Int
+  paybackMonths  Decimal
+  challenge      Json
+  solution       Json
+  result         Json
+  quote          Json?
+  quoteAuthor    String?
+  image          String?
+  imageAlt       String?
+  isPublic       Boolean  @default(false)
+  publishedAt    DateTime?
+  createdAt      DateTime @default(now())
+}
+
+// Pozycja FAQ — struktura gotowa od Etapu 1. Aktualna treść /faq jest na razie
+// utrzymywana w plikach tłumaczeń (i18n/translations/*.json, klucz "faq_page"),
+// bo strona nie ma jeszcze panelu do zarządzania treścią. Ten model pozwala
+// docelowo przenieść pytania do bazy bez zmiany URL — patrz specyfikacja
+// OMNITASK 2.0, sekcja 6.2.
+model FaqItem {
+  id        Int      @id @default(autoincrement())
+  question  Json
+  answer    Json
+  category  String
+  order     Int      @default(0)
+  isPublic  Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

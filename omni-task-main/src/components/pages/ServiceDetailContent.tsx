@@ -5,9 +5,9 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL, localizePath } from '@/lib/i18n'
 
-export type ServiceKey = 'rpa' | 'workflow' | 'integration' | 'ai'
+export type ServiceKey = 'rpa' | 'workflow' | 'integration' | 'ai' | 'ksef' | 'szkolenia' | 'opieka'
 
-interface Feature {
+interface TitleDesc {
   title: string
   desc: string
 }
@@ -21,17 +21,25 @@ const SERVICES: { key: ServiceKey; slug: string }[] = [
   { key: 'workflow', slug: 'automatyzacja-workflow' },
   { key: 'integration', slug: 'integracja-systemow' },
   { key: 'ai', slug: 'agenci-ai' },
+  { key: 'ksef', slug: 'ksef' },
+  { key: 'szkolenia', slug: 'szkolenia-i-doradztwo' },
+  { key: 'opieka', slug: 'opieka-i-hosting' },
 ]
 
 export default function ServiceDetailContent({ serviceKey }: { serviceKey: ServiceKey }) {
   const { t, tRaw, locale } = useTranslation()
   const base = `service_detail.${serviceKey}`
 
-  const features = tRaw<Feature[]>(`${base}.features`) || []
-  const benefits = tRaw<string[]>(`${base}.benefits`) || []
-  const faq = tRaw<Faq[]>(`${base}.faq`) || []
+  const asArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : [])
+
+  const dlaKogo = asArray<TitleDesc>(tRaw(`${base}.dla_kogo`))
+  const zastosowania = asArray<TitleDesc>(tRaw(`${base}.zastosowania`))
+  const wdrozenie = asArray<TitleDesc>(tRaw(`${base}.wdrozenie`))
+  const technologieList = asArray<string>(tRaw(`${base}.technologie_list`))
+  const benefits = asArray<string>(tRaw(`${base}.benefits`))
+  const faq = asArray<Faq>(tRaw(`${base}.faq`))
   const slug = SERVICES.find((s) => s.key === serviceKey)!.slug
-  const related = SERVICES.filter((s) => s.key !== serviceKey)
+  const related = SERVICES.filter((s) => s.key !== serviceKey && s.key !== 'szkolenia' && s.key !== 'opieka').slice(0, 3)
   const canonicalUrl = `${SITE_URL}${localizePath(`/uslugi/${slug}`, locale)}`
 
   return (
@@ -58,17 +66,67 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
               <p>{t(`${base}.s1_p2`)}</p>
             </section>
 
-            {features.length > 0 && (
+            {dlaKogo.length > 0 && (
               <section className="service-detail__section">
-                <h2>{t(`${base}.s2_title`)}</h2>
+                <h2>{t(`${base}.dla_kogo_title`)}</h2>
                 <div className="features-grid">
-                  {features.map((item, i) => (
+                  {dlaKogo.map((item, i) => (
                     <div key={i} className="feature-card">
+                      <div className="feature-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>
+                      </div>
                       <div>
                         <h3>{item.title}</h3>
                         <p>{item.desc}</p>
                       </div>
                     </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {zastosowania.length > 0 && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.zastosowania_title`)}</h2>
+                <div className="features-grid">
+                  {zastosowania.map((item, i) => (
+                    <div key={i} className="feature-card">
+                      <div className="feature-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                      </div>
+                      <div>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {wdrozenie.length > 0 && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.wdrozenie_title`)}</h2>
+                <div className="steps-list">
+                  {wdrozenie.map((item, i) => (
+                    <div key={i} className="steps-list__item">
+                      <div>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {technologieList.length > 0 && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.technologie_title`)}</h2>
+                <p>{t(`${base}.technologie_p`)}</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginTop: '1rem' }}>
+                  {technologieList.map((tech, i) => (
+                    <span key={i} className="badge badge--accent">{tech}</span>
                   ))}
                 </div>
               </section>
@@ -84,6 +142,13 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
                 </ul>
               </section>
             )}
+
+            <section className="service-detail__section">
+              <div className="callout">
+                <strong>{t(`${base}.cena_label`)}</strong> {t(`${base}.cena_text`)}{' '}
+                <LocaleLink href="/cennik" title={t('nav.pricing')}>{t('services_page.learn_more')}</LocaleLink>
+              </div>
+            </section>
 
             {faq.length > 0 && (
               <section className="service-detail__section">
@@ -110,21 +175,23 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
               </LocaleLink>
             </section>
 
-            <section className="service-detail__related">
-              <h3>{t(`${base}.related_title`)}</h3>
-              <div className="service-detail__related-grid">
-                {related.map((s) => (
-                  <LocaleLink
-                    key={s.key}
-                    href={`/uslugi/${s.slug}`}
-                    className="service-detail__related-card"
-                    title={t(`service_detail.labels.${s.key}`)}
-                  >
-                    {t(`service_detail.labels.${s.key}`)} →
-                  </LocaleLink>
-                ))}
-              </div>
-            </section>
+            {related.length > 0 && (
+              <section className="service-detail__related">
+                <h3>{t(`${base}.related_title`)}</h3>
+                <div className="service-detail__related-grid">
+                  {related.map((s) => (
+                    <LocaleLink
+                      key={s.key}
+                      href={`/uslugi/${s.slug}`}
+                      className="service-detail__related-card"
+                      title={t(`service_detail.labels.${s.key}`)}
+                    >
+                      {t(`service_detail.labels.${s.key}`)} →
+                    </LocaleLink>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
         </div>
       </div>

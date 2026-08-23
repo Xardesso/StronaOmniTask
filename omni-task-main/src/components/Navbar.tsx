@@ -6,9 +6,11 @@ import LanguageSelector from './LanguageSelector'
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { stripLocale } from '@/lib/i18n'
+import { CALCOM_URL, FEATURE_BUR, FEATURE_REALIZACJE } from '@/lib/site-config'
+import ServiceIcon from './ServiceIcon'
 
 export default function Navbar() {
-  const { t } = useTranslation()
+  const { t, locale } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -39,27 +41,32 @@ export default function Navbar() {
     return () => document.removeEventListener('click', handleClickOutside)
   }, [])
 
-  const serviceLinks = [
-    { href: '/uslugi/rpa', label: t('service_detail.labels.rpa') },
-    { href: '/uslugi/automatyzacja-workflow', label: t('service_detail.labels.workflow') },
-    { href: '/uslugi/integracja-systemow', label: t('service_detail.labels.integration') },
-    { href: '/uslugi/agenci-ai', label: t('service_detail.labels.ai') },
+  const allServiceLinks = [
+    { href: '/uslugi/automatyzacja-workflow', slug: 'automatyzacja-workflow', label: t('service_detail.labels.workflow') },
+    { href: '/uslugi/ksef', slug: 'ksef', label: t('service_detail.labels.ksef'), highlight: true, plOnly: true },
+    { href: '/uslugi/integracja-systemow', slug: 'integracja-systemow', label: t('service_detail.labels.integration') },
+    { href: '/uslugi/szkolenia-i-doradztwo', slug: 'szkolenia-i-doradztwo', label: t('service_detail.labels.szkolenia'), plOnly: true },
+    { href: '/uslugi/rpa', slug: 'rpa', label: t('service_detail.labels.rpa') },
+    { href: '/uslugi/opieka-i-hosting', slug: 'opieka-i-hosting', label: t('service_detail.labels.opieka'), plOnly: true },
+    { href: '/uslugi/agenci-ai', slug: 'agenci-ai', label: t('service_detail.labels.ai') },
   ]
+  // KSeF, szkolenia i opieka nie mają sensu po angielsku/ukraińsku — brak realnego odbiorcy (spec 2.2).
+  const serviceLinks = allServiceLinks.filter((s) => !s.plOnly || locale === 'pl')
 
   const navLinks = [
-    { href: '/', label: t('nav.home') },
     { href: '/uslugi', label: t('nav.services'), dropdown: true },
-    { href: '/o-nas', label: t('nav.about') },
+    ...(FEATURE_BUR && locale === 'pl' ? [{ href: '/dofinansowanie', label: t('nav.funding') }] : []),
+    { href: '/cennik', label: t('nav.pricing') },
+    ...(FEATURE_REALIZACJE && locale === 'pl' ? [{ href: '/realizacje', label: t('nav.projects') }] : []),
     { href: '/blog', label: t('nav.blog') },
-    { href: '/kontakt', label: t('nav.contact') },
-    { href: '/zapytanie-ofertowe', label: t('nav.quote') },
+    { href: '/o-nas', label: t('nav.about') },
   ]
 
   return (
     <header className={`navbar ${scrolled || mobileOpen ? 'navbar--scrolled' : ''}`} id="main-navbar">
       <div className="navbar__container">
         <Link href="/" className="navbar__logo" title="OmniTask - Strona główna">
-          <img src={scrolled || mobileOpen ? "/Logo2.png" : "/Logo.png"} alt="OmniTask Logo" title="OmniTask Logo" className="navbar__logo-img" style={{ height: '42px', width: 'auto' }} />
+          <img src="/Logo2.png" alt="OmniTask Logo" title="OmniTask Logo" className="navbar__logo-img" style={{ height: '54px', width: 'auto' }} />
         </Link>
 
         <nav className="navbar__nav" id="desktop-nav">
@@ -78,13 +85,21 @@ export default function Navbar() {
                   </svg>
                 </button>
                 {servicesOpen && (
-                  <div className="navbar__dropdown-menu">
-                    <Link href="/uslugi" className="navbar__dropdown-item" title={t('nav.services')}>{t('nav.all_services')}</Link>
+                  <div className="navbar__dropdown-menu navbar__dropdown-menu--wide">
                     {serviceLinks.map((svc) => (
-                      <Link key={svc.href} href={svc.href} className="navbar__dropdown-item" title={svc.label}>
+                      <Link
+                        key={svc.href}
+                        href={svc.href}
+                        className={`navbar__dropdown-item ${svc.highlight ? 'navbar__dropdown-item--highlight' : ''}`}
+                        title={svc.label}
+                      >
+                        <span className="navbar__dropdown-item-icon"><ServiceIcon slug={svc.slug} size={18} /></span>
                         {svc.label}
                       </Link>
                     ))}
+                    <Link href="/uslugi" className="navbar__dropdown-item navbar__dropdown-item--all" title={t('nav.services')}>
+                      {t('nav.all_services')} →
+                    </Link>
                   </div>
                 )}
               </div>
@@ -103,6 +118,15 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <LanguageSelector />
+          <a
+            href={CALCOM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--primary navbar__cta"
+            title={t('nav.book_call')}
+          >
+            {t('nav.book_call')}
+          </a>
           <button
             className="navbar__hamburger"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -149,11 +173,6 @@ export default function Navbar() {
                 </button>
                 {mobileServicesOpen && (
                   <div id="mobile-services-submenu" className="navbar__mobile-submenu">
-                    <Link
-                      href="/uslugi"
-                      className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === '/uslugi' ? 'navbar__mobile-link--active' : ''}`}
-                      title={t('nav.services')}
-                    >{t('nav.all_services')}</Link>
                     {serviceLinks.map((svc) => (
                       <Link
                         key={svc.href}
@@ -164,6 +183,11 @@ export default function Navbar() {
                         {svc.label}
                       </Link>
                     ))}
+                    <Link
+                      href="/uslugi"
+                      className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === '/uslugi' ? 'navbar__mobile-link--active' : ''}`}
+                      title={t('nav.services')}
+                    >{t('nav.all_services')}</Link>
                   </div>
                 )}
               </div>
@@ -178,6 +202,15 @@ export default function Navbar() {
               </Link>
             )
           ))}
+          <a
+            href={CALCOM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--primary navbar__mobile-cta"
+            title={t('nav.book_call')}
+          >
+            {t('nav.book_call')}
+          </a>
         </nav>
       </div>
     </header>

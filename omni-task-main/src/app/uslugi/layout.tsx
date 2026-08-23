@@ -1,21 +1,7 @@
-import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/meta'
 
-export const metadata: Metadata = {
-  title: 'Usługi automatyzacji procesów: RPA, AI i workflow',
-  description:
-    'Kompleksowe usługi automatyzacji procesów: RPA, automatyzacja workflow, integracja systemów, agenci AI. Sprawdź jak możemy pomóc Twojej firmie.',
-  openGraph: {
-    title: 'Usługi automatyzacji – OmniTask',
-    description: 'Robotyzacja procesów, automatyzacja workflow, integracja systemów i agenci AI. Bezpłatna konsultacja.',
-    url: 'https://www.omnitask.pl/uslugi',
-    type: 'website',
-  },
-  alternates: {
-    canonical: '/uslugi',
-    languages: buildHreflangAlternates('/uslugi'),
-  },
-}
+export const metadata: Metadata = buildPageMetadata({ locale: 'pl', cleanPath: '/uslugi', metaKey: 'uslugi' })
 
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>

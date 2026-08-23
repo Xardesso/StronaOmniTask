@@ -81,7 +81,7 @@ export default function BlogClient({ articles }: { articles: Article[] }) {
                       <div style={{
                         width: '100%',
                         height: '100%',
-                        background: 'linear-gradient(135deg, #1a2f5a, #2a4a8a)',
+                        background: 'linear-gradient(135deg, #18185e, #384bff)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',

@@ -68,3 +68,34 @@ export function buildPageMetadata({
     },
   }
 }
+
+interface BuildPlOnlyMetaOptions {
+  // "Czysta" ścieżka, zawsze zaczynająca się od "/", np. "/uslugi/ksef".
+  cleanPath: string
+  metaKey: string
+}
+
+// Metadane dla stron istniejących wyłącznie po polsku (KSeF, dofinansowanie,
+// szkolenia, branże). W przeciwieństwie do buildPageMetadata NIE generuje
+// hreflang dla en/uk — nie ma tam odpowiednika tej strony (spec 5.2).
+export function buildPlOnlyMetadata({ cleanPath, metaKey }: BuildPlOnlyMetaOptions): Metadata {
+  const title = get('pl', `meta.${metaKey}.title`)
+  const description = get('pl', `meta.${metaKey}.description`)
+  const canonical = `${SITE_URL}${cleanPath}`
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: cleanPath,
+      languages: { 'x-default': canonical },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: 'website',
+      locale: 'pl_PL',
+    },
+  }
+}

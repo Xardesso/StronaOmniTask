@@ -1,26 +1,31 @@
 import HomeClient from './HomeClient'
 import { prisma } from '@/lib/prisma'
+import { getPublicUrl } from '@/lib/gcs'
 
 export const revalidate = 3600 // Revalidate every hour
 
 export default async function HomePage() {
-  let testimonials = []
-  
+  let articles: any[] = []
+
   try {
-    const rawTestimonials = await prisma.testimonial.findMany({
-      orderBy: { createdAt: 'desc' },
-      take: 3
+    const raw = await prisma.article.findMany({
+      where: { is_public: true },
+      orderBy: { created_at: 'desc' },
+      take: 3,
+      select: { id: true, slug: true, title: true, excerpt: true, image: true, image_alt: true },
     }) as any[]
-    
-    // Ensure all data passed to client component is serializable
-    testimonials = rawTestimonials.map(t => ({
-      ...t,
-      createdAt: t.createdAt ? t.createdAt.toISOString() : null,
-      updatedAt: t.updatedAt ? t.updatedAt.toISOString() : null,
+
+    articles = raw.map((a) => ({
+      id: a.id,
+      slug: a.slug,
+      title: a.title?.pl || '',
+      excerpt: a.excerpt?.pl || '',
+      image: a.image ? (a.image.startsWith('http') ? a.image : getPublicUrl(a.image)) : null,
+      image_alt: a.image_alt || null,
     }))
   } catch (e) {
-    console.error('Error fetching testimonials:', e)
+    console.error('Error fetching latest articles:', e)
   }
 
-  return <HomeClient testimonials={testimonials} />
+  return <HomeClient articles={articles} />
 }

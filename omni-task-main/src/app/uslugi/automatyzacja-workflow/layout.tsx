@@ -1,19 +1,7 @@
-import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/meta'
 
-export const metadata: Metadata = {
-  title: 'Automatyzacja workflow – Zapier, Make, Power Automate',
-  description:
-    'Projektujemy i wdrażamy inteligentne przepływy pracy łączące systemy, aplikacje i ludzi. Zapier, Make, Power Automate. Bezpłatna konsultacja.',
-  openGraph: {
-    title: 'Automatyzacja workflow – OmniTask',
-    description: 'Inteligentne przepływy pracy i automatyzacja procesów biznesowych. Zapier, Make, Power Automate.',
-    url: 'https://www.omnitask.pl/uslugi/automatyzacja-workflow',
-    type: 'website',
-  },
-  alternates: { canonical: '/uslugi/automatyzacja-workflow',
-    languages: buildHreflangAlternates('/uslugi/automatyzacja-workflow'), },
-}
+export const metadata: Metadata = buildPageMetadata({ locale: 'pl', cleanPath: '/uslugi/automatyzacja-workflow', metaKey: 'workflow' })
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>

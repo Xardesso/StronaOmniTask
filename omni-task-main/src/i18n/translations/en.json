@@ -2,214 +2,161 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "funding": "Funding",
+    "pricing": "Pricing",
+    "projects": "Case studies",
     "quote": "Request a Quote",
     "blog": "Blog",
     "contact": "Contact",
-    "about": "About Us",
-    "all_services": "All services"
+    "about": "Meet me",
+    "faq": "FAQ",
+    "all_services": "All services",
+    "book_call": "Book a call"
   },
   "hero": {
-    "title": "Automation, RPA & AI Agents for Your Business",
-    "subtitle": "We implement intelligent RPA solutions and autonomous AI agents that eliminate repetitive tasks, reduce costs, and accelerate your company's operations. Let technology work for you.",
-    "cta_primary": "Free Consultation",
-    "cta_secondary": "See How We Work"
+    "title": "Your people stop retyping data between systems",
+    "subtitle": "I automate repetitive processes for small and mid-size companies. Implementation in 2–4 weeks, at a fixed price agreed upfront.",
+    "checks": [
+      "Implementation in 2–4 weeks",
+      "Fixed price, known upfront",
+      "One person from first call to launch",
+      "Care plan after launch"
+    ],
+    "cta_primary": "Book a free call",
+    "cta_secondary": "See pricing"
+  },
+  "trust": {
+    "title": "Built on proven, secure tools"
+  },
+  "problems": {
+    "title": "Does this sound familiar?",
+    "subtitle": "If the situations below happen every week at your company, there is a good chance they can be automated.",
+    "items": [
+      "An invoice comes in twice, through two channels — someone has to catch the duplicate before it gets booked twice.",
+      "A lead sits in the inbox for half a day while the prospect messages three competitors instead.",
+      "Someone re-types the same data from one system into another, every month.",
+      "Documents circulate by email and nobody knows whose desk the approval is stuck on."
+    ]
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "End-to-end support for automation, RPA, and AI agents: from process analysis to deployment.",
+    "title": "What I actually automate",
+    "subtitle": "From a single process to full system integrations and AI agents.",
     "service1": {
-      "title": "Robotic Process Automation (RPA)",
-      "desc": "We deploy software robots that automatically perform repetitive tasks: from document processing to order management."
+      "title": "Workflow automation",
+      "desc": "I connect systems, apps and people into one flow — no more copying data by hand."
     },
     "service2": {
-      "title": "Workflow Automation",
-      "desc": "We design and implement intelligent workflows that connect systems, applications, and people into one seamless process."
+      "title": "Document workflow automation",
+      "desc": "Automatic deduplication and routing of incoming documents across departments."
     },
     "service3": {
-      "title": "System Integration",
-      "desc": "We connect your ERP, CRM, email, and databases into one ecosystem with automatic data exchange."
+      "title": "System integration",
+      "desc": "I connect ERP, CRM, email and your warehouse into one ecosystem with automatic data exchange."
     },
     "service4": {
-      "title": "Audit & Optimization",
-      "desc": "We analyze your business processes, identify bottlenecks, and propose specific automation solutions."
+      "title": "Training & consulting",
+      "desc": "Practical, hands-on training for your team on how to spot and run automations."
     },
     "service5": {
-      "title": "AI Agents & Multi-agent",
-      "desc": "We build autonomous AI agents and multi-agent systems that make independent decisions and achieve complex business goals."
+      "title": "Task automation (RPA)",
+      "desc": "A software robot takes over repetitive work inside your existing systems."
     },
     "service6": {
-      "title": "Support & Maintenance",
-      "desc": "We provide continuous technical support, bot monitoring, and development of deployed automations."
+      "title": "Care & hosting",
+      "desc": "I monitor and fix deployed automations — without care, they quietly break over time."
+    },
+    "service7": {
+      "title": "AI agents",
+      "desc": "I build AI assistants for document analysis, customer support and data monitoring."
     }
   },
   "process": {
-    "title": "How We Work",
-    "subtitle": "A proven 4-step automation implementation process",
+    "title": "How I work",
+    "subtitle": "A proven 4-step process — no surprises along the way.",
     "step1": {
       "number": "01",
-      "title": "Process Audit",
-      "desc": "We analyze your business processes, identify those with the greatest automation potential, and estimate ROI."
+      "title": "Call",
+      "desc": "30 minutes. I ask what's eating up your team's time. No slide decks."
     },
     "step2": {
       "number": "02",
-      "title": "Solution Design",
-      "desc": "We prepare a detailed automation blueprint, select technologies, and define measurable goals."
+      "title": "Audit",
+      "desc": "I map the process, estimate the hours you'd get back, and quote a fixed price."
     },
     "step3": {
       "number": "03",
-      "title": "Implementation & Testing",
-      "desc": "We build, configure, and test robots. Pilot on a test environment, then production deployment."
+      "title": "Implementation",
+      "desc": "2–4 weeks. Tested on your real data. Your team gets trained."
     },
     "step4": {
       "number": "04",
-      "title": "Support & Growth",
-      "desc": "We monitor bot performance, optimize processes, and expand automation to new areas."
+      "title": "Care",
+      "desc": "I monitor and fix issues. Automation left unattended eventually breaks."
     }
   },
-  "ai_agents": {
-    "title": "AI Agents Ecosystem",
-    "subtitle": "The future belongs to intelligent agents that think and collaborate, rather than just follow instructions.",
-    "tech_selection": "For every challenge, we select the right tool: RPA for repetitive tasks or AI Agents for processes requiring intelligence.",
-    "feature1_title": "Multi-Agent Systems",
-    "feature1_desc": "We create teams of collaborating AI agents, where each specialized agent handles a different stage of the process.",
-    "feature2_title": "Autonomy & Reasoning",
-    "feature2_desc": "Agents analyze the business context and make decisions without the need for rigid rules.",
-    "feature3_title": "Rapid Adaptation",
-    "feature3_desc": "Unlike traditional bots, AI agents learn and adapt to changes in your company's environment."
-  },
-  "roi": {
-    "title": "Real Results of Our Actions",
-    "subtitle": "Depending on the process, we select the best technology: RPA, classic robotization, or advanced AI agents. Our implementations translate into measurable profits.",
-    "stat1_value": "70%",
-    "stat1_label": "Operational cost reduction",
-    "stat2_value": "5x",
-    "stat2_label": "Faster data processing",
-    "stat3_value": "99.9%",
-    "stat3_label": "Execution accuracy",
-    "stat4_value": "24/7",
-    "stat4_label": "Non-stop robot operation"
-  },
-  "cases": {
-    "title": "Use Cases",
-    "subtitle": "Unconventional AI agent applications that can transform your business",
-    "case1": {
-      "industry": "Recruitment",
-      "title": "Multi-Agent AI for CV Screening",
-      "desc": "A team of AI agents collaborates on recruitment: the first agent analyzes CVs and matches skills to requirements, the second evaluates experience and education, the third generates a ranked shortlist with justifications. The entire process takes minutes instead of days.",
-      "result": "↓ 85% candidate screening time"
-    },
-    "case2": {
-      "industry": "E-commerce",
-      "title": "AI Agent for Competitor Monitoring",
-      "desc": "An AI agent continuously scans competitor websites, marketplaces, and social media. It tracks price changes, new products, ad campaigns, and market trends. Every day it delivers a concise strategic report with actionable recommendations.",
-      "result": "↑ 30% pricing decision accuracy"
-    },
-    "case3": {
-      "industry": "Legal",
-      "title": "AI Compliance Audit Agent",
-      "desc": "An AI agent tracks changes in laws and industry regulations, compares them against internal company procedures, and automatically identifies compliance gaps. It generates remediation recommendations for the legal team.",
-      "result": "↑ 95% regulatory coverage"
-    }
-  },
-  "tech": {
-    "title": "Technologies",
-    "subtitle": "We work with leading automation platforms"
-  },
-  "testimonials": {
-    "title": "What Our Clients Say",
-    "subtitle": "Reviews from companies that trusted us",
-    "t1": {
-      "text": "Thanks to OmniTask, we saved over 200 hours of work per month. Invoice automation was a bullseye.",
-      "author": "Anna Kowalska",
-      "role": "CFO, TechFin Sp. z o.o."
-    },
-    "t2": {
-      "text": "Professional approach from audit to deployment. Robots work flawlessly, and we can focus on strategy.",
-      "author": "Marek Nowak",
-      "role": "CEO, LogiTrans S.A."
-    },
-    "t3": {
-      "text": "Working with OmniTask was the best investment we made this year. ROI in 3 months.",
-      "author": "Katarzyna Wiśniewska",
-      "role": "Operations Director, HRPro"
-    }
+  "pricing_home": {
+    "title": "Pricing, no surprises",
+    "subtitle": "Prices starting from, never \"ask for a quote\". Full pricing with care plans below.",
+    "cta": "See full pricing"
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Answers to common questions about automation, RPA, and AI agents",
-    "q1": "What is RPA (Robotic Process Automation)?",
-    "a1": "RPA is a technology that creates software robots mimicking human actions in computer systems. A robot can click, enter data, copy files, send emails. It works just like a person, but faster and error-free.",
-    "q2": "How long does an automation implementation take?",
-    "a2": "A simple bot can be deployed in 2-4 weeks. Complex processes requiring multi-system integration take 2-3 months. We always start with a pilot to quickly demonstrate value.",
-    "q3": "How much does process automation cost?",
-    "a3": "Cost depends on process complexity. Simple automations start at several thousand PLN. Return on investment (ROI) typically occurs within 3-6 months.",
-    "q4": "Will automation replace my employees?",
-    "a4": "No. Automation frees employees from monotonous, repetitive tasks. This allows them to focus on creative, strategic work requiring human judgment.",
-    "q5": "What processes can be automated?",
-    "a5": "Any repetitive, rule-based process: document processing, order handling, reporting, data migration, customer service, HR processes, accounting, and many more.",
-    "q6": "What are AI agents and how do they differ from regular bots?",
-    "a6": "AI agents are autonomous systems that can independently make decisions, learn from context, and execute complex tasks without constant human oversight. Unlike RPA bots, AI agents understand natural language, analyze data, and adapt to new situations.",
-    "q7": "What is a multi-agent system?",
-    "a7": "A multi-agent system is a team of several AI agents, each specializing in a different task. Agents collaborate, share information, and jointly execute complex processes. For example, one agent analyzes documents, another verifies data, and a third generates the final report.",
-    "q8": "In which industries do AI agents work best?",
-    "a8": "AI agents find applications virtually everywhere: from recruitment and e-commerce, through law and finance, to logistics and customer service. Anywhere large-scale data analysis, decision-making, or handling repetitive queries is needed."
+    "title": "Frequently asked questions",
+    "subtitle": "Answers about automation, pricing and how we'd work together",
+    "q1": "How long does an implementation take?",
+    "a1": "A simple process takes 1–2 weeks. A more complex one, integrating several systems, takes 3–4 weeks. I always start with whatever proves value fastest.",
+    "q2": "How much does it cost?",
+    "a2": "Implementing a single process starts at a fixed price agreed before we start — never \"ask for a quote\". Full pricing is public on the /cennik page.",
+    "q3": "Do I need to understand the underlying tools?",
+    "a3": "No. We talk about your process and the hours you could get back. I pick the tools and take responsibility for them.",
+    "q4": "What happens after launch?",
+    "a4": "Automation left unattended eventually breaks as the systems around it change. I offer a monthly care plan to keep it running.",
+    "q5": "Who actually does the work — a company or one person?",
+    "a5": "One person, from the first call through implementation and ongoing care. Your project doesn't get handed off between a salesperson and a different implementer.",
+    "q6": "Can I see pricing before talking to you?",
+    "a6": "Yes — pricing is public. Book a free call once you've seen it, and we'll talk about your specific process."
   },
-  "newsletter": {
-    "title": "Stay Updated on Automation",
-    "subtitle": "Subscribe to our newsletter for tips, case studies, and RPA news.",
-    "placeholder": "Your email address",
-    "button": "Subscribe",
-    "success": "Thank you for subscribing!"
-  },
-  "about": {
-    "title": "Why OmniTask?",
-    "subtitle": "We are a team of automation specialists combining technical expertise with deep understanding of business processes.",
-    "stat1_value": "150+",
-    "stat1_label": "Deployed Automations",
-    "stat2_value": "98%",
-    "stat2_label": "Satisfied Clients",
-    "stat3_value": "50k+",
-    "stat3_label": "Hours Saved",
-    "stat4_value": "3 mo.",
-    "stat4_label": "Average ROI Time"
-  },
-  "why": {
-    "title": "What Sets Us Apart?",
-    "feature1": {
-      "title": "Business-First Approach",
-      "desc": "We don't implement technology for technology's sake. We start by understanding your business goals and processes."
-    },
-    "feature2": {
-      "title": "Fast Implementation Time",
-      "desc": "We automate simple processes in just 2 weeks. We apply agile methodology to deliver business value as quickly as possible."
-    },
-    "feature3": {
-      "title": "Measurable Results",
-      "desc": "Every implementation is measured by specific KPIs: time, cost, accuracy. We show real ROI."
-    },
-    "feature4": {
-      "title": "24/7 Support",
-      "desc": "We monitor robots non-stop, respond to issues, and ensure continuous automation operations."
-    }
+  "about_home": {
+    "title": "Who's behind this",
+    "text": "I'm a software developer by trade — automation is my everyday craft, not a bolt-on service. I've also run smaller businesses myself, so I know first-hand the flood of documents and data even a small company generates.",
+    "link": "Get to know me"
   },
   "cta": {
-    "title": "Ready to Automate?",
-    "subtitle": "Schedule a free consultation. We'll analyze your processes and show you how much you can save.",
-    "button": "Free Consultation"
+    "title": "Let's see what's worth automating at your company",
+    "subtitle": "30 minutes, no slide deck, no obligation. If I don't see a process worth automating, I'll tell you straight.",
+    "button": "Book a call"
   },
   "clients": {
-    "title": "Industries We Serve"
+    "title": "Industries I work with"
+  },
+  "trusted_by": {
+    "title": "Companies that have trusted me",
+    "subtitle": "Process automation for real clients, not just a slide deck.",
+    "items": [
+      { "name": "Warsaw Residential Group", "initials": "WRG", "desc": "Rental and property management in Warsaw — automated lease document flow and tenant billing." },
+      { "name": "Metronq", "initials": "MQ", "desc": "A data-driven technology company — automated reporting and integration between data sources." },
+      { "name": "Nail the Deal", "initials": "NTD", "desc": "A sales team closing deals at scale — automated follow-ups and offer flow between sales stages." }
+    ]
+  },
+  "newsletter": {
+    "title": "Stay up to date on automation",
+    "subtitle": "Subscribe for tips, case studies and news on process automation.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "Thanks for subscribing!"
+  },
+  "about": {
+    "title": "Why OmniTask?"
   },
   "quote": {
-    "title": "Request a Quote – Free RPA Automation Estimate",
-    "subtitle": "Describe the process you want to automate. Our team will prepare a custom quote within 24 hours.",
+    "title": "Request a Quote – free automation estimate",
+    "subtitle": "Describe the process you want to automate. I'll prepare a tailored quote within 24 hours.",
     "name": "Full Name",
     "email": "Email Address",
     "phone": "Phone Number",
     "company": "Company Name",
     "message": "Process Description",
     "submit": "Send Request",
-    "success": "Thank you! Your request has been sent. We'll contact you within 24 hours.",
+    "success": "Thank you! Your request has been sent. I'll get back to you within 24 business hours.",
     "error": "An error occurred. Please try again later.",
     "required": "This field is required",
     "invalid_email": "Please enter a valid email address",
@@ -220,209 +167,201 @@
     "message_placeholder": "Describe the process you want to automate, how many people perform it, how long it takes, and what systems are used..."
   },
   "contact": {
-    "title": "Contact – Let's Talk About Automating Your Business",
-    "subtitle": "Get in touch to discuss automation opportunities for your company.",
+    "title": "Contact – let's talk about automating your business",
+    "subtitle": "Write, call, or book a slot in the calendar directly.",
     "phone_label": "Phone",
     "phone": "+48 721 719 238",
     "email_label": "Email",
     "email": "kontakt@omnitask.pl",
     "hours_label": "Working Hours",
     "hours": "Mon - Fri: 8:00 AM - 5:00 PM",
-    "map_title": "Our Location",
-    "follow_us": "Follow us",
+    "map_title": "Location",
+    "follow_us": "Follow",
     "form_title": "Send a message",
     "form_subject": "Subject",
     "form_message": "Message",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "book_title": "Prefer to book directly?",
+    "book_subtitle": "30 minutes, no obligation. Pick a time that works for you."
   },
   "blog": {
-    "title": "Expert Blog – Automation, RPA & AI Agents",
-    "subtitle": "Practical knowledge, current trends, and inspiring case studies in digital business transformation. Read our latest articles to learn how Robotic Process Automation (RPA) and collaborative AI agents optimize workflows, scale businesses, and reduce operational costs across industries.",
+    "title": "Blog – automation for small and mid-size companies",
+    "subtitle": "Practical knowledge on process automation and running a lean back office.",
     "read_more": "Read More",
     "no_articles": "No articles to display.",
-    "published": "Published"
+    "published": "Published",
+    "latest_title": "Latest from the blog",
+    "see_all": "See all posts"
   },
   "footer": {
-    "description": "OmniTask. Business process automation and robotization. We deploy RPA, integrate systems, and optimize processes.",
+    "description": "OmniTask. I automate repetitive processes for companies with 5–50 employees: document workflows, approvals, system integrations.",
     "quick_links": "Quick Links",
     "services": "Services",
+    "company": "Company",
+    "recent_posts": "Recent Posts",
     "legal": "Information",
-    "contact_info": "Contact Info",
+    "contact_info": "Contact",
     "copyright": "© 2026 OmniTask. All rights reserved.",
     "privacy_policy": "Privacy Policy",
     "terms": "Terms of Service",
-    "about": "About Us"
+    "about": "About"
   },
   "breadcrumbs": {
     "home": "Home"
   },
-  "roi_disclaimer": "*Average results based on past implementations. Actual results may vary depending on the process.",
+  "roi_disclaimer": "*Illustrative estimates. Actual results depend on the specific process.",
   "services_page": {
-    "h1": "Our Services – Automation and RPA",
-    "learn_more": "Learn more →"
+    "h1": "What I actually automate",
+    "learn_more": "Learn more →",
+    "cta_title": "Not sure where to start?",
+    "cta_subtitle": "Let's start with an audit — I'll map your processes and show you where the biggest potential is."
   },
   "service_detail": {
     "cta_button": "Free quote",
     "faq_label": "Frequently asked questions",
     "labels": {
-      "rpa": "RPA",
+      "rpa": "Task automation (RPA)",
       "workflow": "Workflow automation",
       "integration": "System integration",
-      "ai": "AI Agents"
+      "ai": "AI Agents",
+      "ksef": "Invoice workflow automation",
+      "szkolenia": "Training & consulting",
+      "opieka": "Care & hosting"
     },
     "rpa": {
-      "h1": "Robotic Process Automation (RPA) – Automate repetitive tasks",
-      "subtitle": "We deploy software robots that work 24/7, eliminate errors and save hundreds of work hours every month.",
-      "breadcrumb": "RPA",
+      "h1": "Task automation (RPA) for 5–50 person companies",
+      "subtitle": "A software robot takes over tedious, repetitive work inside your systems — you focus on the rest.",
+      "breadcrumb": "Task automation",
       "related_title": "Related services",
-      "cta_title": "Want to automate processes in your company?",
-      "cta_subtitle": "Get in touch and receive a free analysis of your process with an estimated ROI.",
-      "s1_title": "What is Robotic Process Automation (RPA)?",
-      "s1_p1": "RPA (Robotic Process Automation) is a technology that lets you create software robots which mimic human actions in computer systems. A robot can log in to applications, click buttons, copy data between systems, fill in forms, send emails and generate reports – all automatically, without breaks and without errors.",
-      "s1_p2": "At OmniTask we specialize in deploying RPA robots built on leading platforms: UiPath, Microsoft Power Automate and custom solutions in Python. Every implementation starts with a detailed process audit to ensure maximum return on investment.",
-      "s2_title": "Which processes do we automate with RPA?",
-      "features": [
-        { "title": "Document processing", "desc": "Automatic reading, classification and data entry from invoices, orders, contracts and forms." },
-        { "title": "Order handling", "desc": "The robot receives orders, validates data, creates entries in the ERP and notifies the relevant departments." },
-        { "title": "Reporting", "desc": "Automatic generation of reports from multiple systems, data consolidation and delivery to stakeholders." },
-        { "title": "Data migration", "desc": "Secure transfer of data between systems with validation and logging of every operation." }
-      ],
-      "s3_title": "Benefits of implementing RPA",
+      "cta_title": "Want to see how much time you'd get back?",
+      "cta_subtitle": "30 minutes about your process, no slide deck, no obligation.",
+      "s1_title": "What task automation actually is",
+      "s1_p1": "A software robot mimics what a person does today in your systems: logging in, clicking, copying data between apps, filling in forms, sending emails and generating reports — the same work, just without breaks or mistakes.",
+      "s1_p2": "It doesn't replace people in work that requires judgment. It removes the repetitive, tedious tasks that don't develop anyone and quietly eat hours every day.",
       "benefits": [
-        "Reduction of process execution time by up to 80%",
-        "Elimination of human errors – robots work with 99.9% accuracy",
-        "24/7 operation without breaks, holidays or sick leave",
-        "Return on investment (ROI) typically within 3–6 months",
-        "Scalability – easy to add new robots as needed",
-        "Full auditability – every robot action is logged"
+        "Cuts process execution time by up to 80%",
+        "Zero errors when copying data",
+        "Runs 24/7, no breaks or sick days",
+        "Typically pays back in 3–6 months",
+        "Easy to add more processes over time",
+        "Full log of every action performed"
       ],
-      "faq_title": "Frequently asked questions about RPA",
+      "faq_title": "Frequently asked questions about task automation",
       "faq": [
-        { "q": "How long does an RPA robot deployment take?", "a": "A simple robot can be ready in 2–4 weeks. Complex processes requiring integration of many systems take 2–3 months." },
-        { "q": "Do I need changes in my existing systems?", "a": "No. RPA robots operate on the user interface layer – they do not require any modifications to your systems." },
-        { "q": "What happens when a process changes?", "a": "RPA robots require updates when the interface changes. We provide support and monitoring so we can react quickly." }
+        { "q": "Do I need to change my existing systems?", "a": "No. Automation works on top of your existing systems — no software swap or vendor approval needed." },
+        { "q": "What happens if a system the robot works with changes?", "a": "The automation needs updating. That's why I offer a care plan — I monitor changes and react before the process stops." },
+        { "q": "How long does it take to implement?", "a": "A simple process is ready in 1–2 weeks. Something more complex, with several integrations, takes 3–4 weeks." }
       ]
     },
     "workflow": {
-      "h1": "Workflow automation – Intelligent work processes",
-      "subtitle": "We connect systems, applications and people into one coherent, automated business process.",
+      "h1": "Workflow automation – no more manual handoffs",
+      "subtitle": "I connect systems, apps and people into one coherent, automated process.",
       "breadcrumb": "Workflow automation",
       "related_title": "Related services",
       "cta_title": "Want to automate your workflows?",
-      "cta_subtitle": "Book a free consultation and show us your processes.",
-      "s1_title": "What is workflow automation?",
-      "s1_p1": "Workflow automation is the design and deployment of intelligent work processes that connect different systems, applications and teams into one coherent, automated process. Instead of manually passing data between applications, your systems communicate automatically.",
-      "s1_p2": "We use platforms such as Zapier, Make (Integromat), Microsoft Power Automate and build custom integrations to tailor the solution to the specifics of your business.",
-      "s2_title": "Example use cases",
-      "features": [
-        { "title": "Onboarding automation", "desc": "New employee → automatic creation of accounts and access, sending of documents and training materials." },
-        { "title": "Lead handling", "desc": "Contact form → CRM → sales rep notification → automated follow-up email." },
-        { "title": "Approval processes", "desc": "Automatic routing of requests to the right people with escalation and notifications." },
-        { "title": "Data synchronization", "desc": "Automatic data synchronization between ERP, CRM, e-commerce and warehouse systems." }
-      ],
-      "s3_title": "Benefits of workflow automation",
+      "cta_subtitle": "Book a free call and show me your processes.",
+      "s1_title": "What workflow automation is",
+      "s1_p1": "Workflow automation is designing and implementing flows that connect different systems, apps and teams into one coherent, automated process. Instead of manually passing data between applications, your systems talk to each other automatically.",
+      "s1_p2": "In practice, data entered once in one place ends up wherever it's needed — no copy-pasting, no email attachments, no \"has someone already done this?\".",
       "benefits": [
-        "Elimination of manual data transfer between systems",
-        "Reduction of process completion time by 60–80%",
-        "Full visibility and status tracking of every task",
+        "Eliminates manual data handoffs between systems",
+        "Cuts process completion time by 60–80%",
+        "Full visibility into the status of every task",
         "Automatic notifications and escalations",
-        "Easy modification and expansion of workflows"
+        "Easy to extend as the company grows"
       ],
       "faq_title": "",
       "faq": []
     },
     "integration": {
-      "h1": "System integration – We connect ERP, CRM and databases",
-      "subtitle": "We build bridges between your systems, creating one coherent ecosystem with automatic data exchange.",
+      "h1": "System integration – connecting ERP, CRM and databases",
+      "subtitle": "I build bridges between your systems, creating one coherent ecosystem with automatic data exchange.",
       "breadcrumb": "System integration",
       "related_title": "Related services",
       "cta_title": "Need system integration?",
-      "cta_subtitle": "Describe your systems and we will propose the optimal connection.",
-      "s1_title": "Why is system integration crucial?",
-      "s1_p1": "Modern companies use dozens of applications: ERP, CRM, email, warehouse systems, e-commerce platforms, HR tools. Without integration, employees manually move data between systems, which generates errors, delays and frustration.",
-      "s1_p2": "We connect your systems through API, webhooks, ETL and dedicated middleware so that data flows automatically and in real time.",
-      "s2_title": "What do we integrate?",
-      "features": [
-        { "title": "ERP ↔ CRM", "desc": "Automatic synchronization of customers, orders and invoices between ERP and CRM systems." },
-        { "title": "E-commerce ↔ Warehouse", "desc": "Real-time synchronization of stock levels, orders and shipments." },
-        { "title": "HR ↔ Payroll", "desc": "Automatic transfer of data on positions, leave and settlements." },
-        { "title": "Custom API", "desc": "We build dedicated API integrations for systems that do not have ready-made connectors." }
-      ],
-      "s3_title": "Benefits of system integration",
+      "cta_subtitle": "Describe your systems and I'll propose the right connection.",
+      "s1_title": "Why system integration matters",
+      "s1_p1": "5–50 person companies typically run a handful of applications: ERP, CRM, email, warehouse, sales platform. Without integration, someone manually moves data between them, which creates errors, delays and frustration.",
+      "s1_p2": "I connect your systems through APIs, webhooks and dedicated middleware so data flows automatically, in real time — no more monthly export to a spreadsheet.",
       "benefits": [
-        "Elimination of manual data re-entry",
-        "Data always up to date across all systems",
-        "Reduction of errors and duplicates",
+        "Eliminates manual re-entry of data",
+        "Data stays current across every system",
+        "Fewer errors and duplicates",
         "Faster flow of information and decisions",
-        "A single 360° customer view for the sales team"
+        "One consistent customer view for the whole team"
       ],
       "faq_title": "",
       "faq": []
     },
     "ai": {
-      "h1": "AI Agents and multi-agent systems for business",
-      "subtitle": "We build autonomous AI agents that think, collaborate and achieve complex business goals.",
+      "h1": "AI agents for business",
+      "subtitle": "I build AI assistants that analyze documents, answer customer questions and keep an eye on your data.",
       "breadcrumb": "AI Agents",
       "related_title": "Related services",
-      "cta_title": "Ready for AI agents?",
-      "cta_subtitle": "Get in touch and see how AI agents can transform your business.",
-      "s1_title": "What are AI agents?",
-      "s1_p1": "AI agents are autonomous systems that can make decisions on their own, learn from context and carry out complex tasks without constant human supervision. Unlike RPA bots, AI agents understand natural language, analyze data and adapt to new situations.",
-      "s1_p2": "At OmniTask we build multi-agent systems where several specialized agents collaborate, share information and jointly carry out complex business processes.",
-      "s2_title": "Applications of AI agents",
-      "features": [
-        { "title": "Document analysis", "desc": "The agent reads, classifies and extracts data from documents in any format." },
-        { "title": "Customer service", "desc": "An intelligent agent answers customer questions and escalates complex cases." },
-        { "title": "Competitor monitoring", "desc": "The agent tracks the market, prices and trends and generates strategic reports." },
-        { "title": "Compliance audit", "desc": "The agent compares regulations with company procedures and points out gaps." }
-      ],
-      "s3_title": "",
+      "cta_title": "Ready for an AI agent at your company?",
+      "cta_subtitle": "Let's find out which process would benefit most from an AI agent.",
+      "s1_title": "What an AI agent actually does",
+      "s1_p1": "Unlike a plain RPA robot, an AI agent understands the content of a document or question rather than just clicking predefined spots. It can read an invoice in any format, answer a customer in natural language, or summarize a long document.",
+      "s1_p2": "It doesn't replace the expert in your company. It takes the first pass at a large volume of data — documents, messages, questions — and only passes forward what actually needs a human decision.",
       "benefits": [],
       "faq_title": "",
       "faq": []
     }
   },
-  "about_page": {
-    "h1": "About us – Experts in RPA and AI process automation",
-    "subtitle": "We combine technical expertise with a deep understanding of business processes to deliver real results.",
-    "mission_title": "Our mission",
-    "mission_p1": "OmniTask was founded on the belief that technology should serve people, not the other way around. Our mission is to free employees from monotonous, repetitive tasks so they can focus on creative and strategic work.",
-    "mission_p2_pre": "We specialize in deploying ",
-    "mission_link_rpa": "robotic process automation (RPA)",
-    "mission_p2_mid1": ", ",
-    "mission_link_workflow": "workflow automation",
-    "mission_p2_mid2": ", ",
-    "mission_link_integration": "system integration",
-    "mission_p2_mid3": " and building ",
-    "mission_link_ai": "autonomous AI agents",
-    "mission_p2_end": ".",
-    "values_title": "Our values",
-    "values": [
-      { "title": "Business-first approach", "desc": "We start by understanding your goals, not the technology." },
-      { "title": "Measurable results", "desc": "We measure every implementation with specific KPIs: time, cost, accuracy." },
-      { "title": "Partnership", "desc": "We treat clients as partners. Your success is our success." },
-      { "title": "Continuous improvement", "desc": "We follow the latest trends in AI and automation to deliver the best solutions." }
-    ],
-    "why_title": "Why work with us?",
-    "why_list": [
-      "Experience in process automation across various industries",
-      "A team of certified UiPath and Power Automate specialists",
-      "Fast deployment time – simple processes in as little as 2 weeks",
-      "24/7 technical support and bot monitoring",
-      "Communication in Polish, English and Ukrainian"
+  "cennik_page": {
+    "h1": "Automation pricing",
+    "subtitle": "Prices stated upfront, never \"ask for a quote\". Below you'll find implementation cost, care plans and the ROI calculator.",
+    "tier1_title": "Implementations",
+    "tier2_title": "Care plans (monthly)",
+    "tier3_title": "With funding support",
+    "tier3_text": "Some clients qualify for public co-funding on training and consulting.",
+    "tier3_cta": "Learn more",
+    "why_title": "Why I don't take implementations under a certain price",
+    "why_text": "Below that level there isn't enough room for a real process audit, error handling in the automation, and training your team. A cheaper offer usually means one of those got skipped — and that's the part that comes back to bite you when the process breaks after a month.",
+    "calculator_title": "ROI calculator",
+    "calculator_people_label": "People running the process",
+    "calculator_hours_label": "Hours per month, per person",
+    "calculator_rate_label": "Hourly rate (PLN)",
+    "calculator_result_yearly": "Yearly savings",
+    "calculator_result_payback": "Estimated payback time",
+    "faq_title": "Frequently asked questions about pricing",
+    "faq": [
+      { "q": "Is the price fixed, or can it grow during the project?", "a": "The price agreed at the start is fixed. If the audit reveals a bigger scope than assumed, I tell you before work starts, not during it." },
+      { "q": "What if the process turns out to be harder than expected?", "a": "That's exactly what the audit is for — I recommend starting there if the process is complex or spans several systems." },
+      { "q": "Is the care plan mandatory?", "a": "No, but without it automation tends to break over time as external systems change — so I do recommend it." },
+      { "q": "Do you issue a VAT invoice?", "a": "Yes, every engagement is billed with a VAT invoice." }
     ]
   },
+  "about_page": {
+    "h1": "About me",
+    "subtitle": "I'm a software developer by trade, but I've also run smaller businesses myself — I know first-hand how much time and attention manual work and document overload eat up in a small company.",
+    "why_title": "Why I do this",
+    "why_p1": "I'm a software developer by trade — automation, Python and system integrations are my everyday craft, not a service bolted on for marketing. But before I started building automations for other people, I ran smaller businesses myself, and learned first-hand how many invoices, emails, contracts and spreadsheets even a small company generates.",
+    "why_p2": "That combination matters: I understand the code and the systems, but I also know what daily life looks like for the owner of a 5–50 person company — data typed a second and third time because no system talks to the others, and the constant \"someone will sort it out later\". So when I talk to you, I don't need your business explained to me. We go straight to specifics: what's eating the time, and what can realistically come off your plate.",
+    "how_title": "How I work",
+    "how_text": "Directly, with no salespeople and no handoffs between departments. One person — me — takes you from the first call, through the audit and implementation, to ongoing care of the working automation. You know exactly who you're talking to at every stage.",
+    "not_doing_title": "What I don't do",
+    "not_doing_items": [
+      "I don't build websites or online stores",
+      "I don't implement full ERP systems",
+      "I don't take on projects I can't deliver on the agreed timeline",
+      "I don't promise funding support until I hold the formal registration for it"
+    ],
+    "tech_title": "What I work with",
+    "tech_items": ["n8n", "Make", "Language models (LLMs)", "Python", "APIs"]
+  },
   "meta": {
-    "uslugi": { "title": "Process automation services: RPA, AI and workflow", "description": "Comprehensive process automation services: RPA, workflow automation, system integration, AI agents. See how we can help your company." },
-    "rpa": { "title": "Robotic Process Automation (RPA) – UiPath & Python bots", "description": "We deploy RPA software robots that automatically perform repetitive business tasks. UiPath, Power Automate, Python. Free consultation." },
-    "workflow": { "title": "Workflow automation – Zapier, Make, Power Automate", "description": "We design and deploy intelligent workflows connecting systems, applications and people. Zapier, Make, Power Automate. Free consultation." },
-    "integration": { "title": "System integration – ERP, CRM, API and databases", "description": "We connect ERP, CRM, email and databases into one ecosystem with automatic data exchange. API, ETL, middleware. Free consultation." },
-    "ai": { "title": "AI agents and multi-agent systems for business", "description": "We build autonomous AI agents and multi-agent systems for business. Free consultation." },
-    "about": { "title": "About us – RPA and AI process automation experts", "description": "Meet the OmniTask team – experts in RPA process automation and AI agents. Our mission, values and experience." },
-    "contact": { "title": "Contact – RPA and AI process automation for business", "description": "Get in touch with OmniTask to discuss process automation in your company. Phone, email and contact form." },
-    "quote": { "title": "Free quote for RPA, workflow and AI automation", "description": "Describe the process you want to automate. We will prepare a tailored RPA, workflow or AI agent quote within 24 hours." },
-    "blog": { "title": "Blog on process automation, RPA and AI agents", "description": "Practical knowledge, trends and case studies on process automation (RPA) and AI agents. Read the OmniTask blog." },
-    "home": { "title": "OmniTask – Intelligent process automation: RPA and AI", "description": "OmniTask are experts in RPA business process automation. We deploy robots that eliminate repetitive tasks and reduce operational costs." },
+    "uslugi": { "title": "Process automation for 5–50 person companies | OmniTask", "description": "Workflow automation, document processing, system integration, AI agents. Implementation in 2–4 weeks, fixed price." },
+    "rpa": { "title": "Task automation (RPA) for companies | OmniTask", "description": "A software robot takes over repetitive tasks in your systems. Implementation from 1–2 weeks. Free call." },
+    "workflow": { "title": "Workflow automation – no more manual handoffs", "description": "I connect systems, apps and people into one automated process. Free call about your process." },
+    "integration": { "title": "System integration – ERP, CRM, API and databases", "description": "I connect ERP, CRM, email and warehouse into one ecosystem with automatic data exchange. Free call." },
+    "ai": { "title": "AI agents for business – document analysis & support", "description": "I build AI agents that analyze documents, answer customers and monitor data. Free call." },
+    "cennik": { "title": "Automation pricing – clear, upfront rates | OmniTask", "description": "Prices stated upfront, no hidden costs. See implementation and care-plan pricing plus an ROI calculator." },
+    "about": { "title": "About – OmniTask process automation", "description": "I used to run a small business myself, today I automate processes for companies like the one I ran. Meet my approach to work." },
+    "contact": { "title": "Contact – process automation for companies", "description": "Get in touch to discuss process automation for your company. Phone, email, form and a booking calendar." },
+    "quote": { "title": "Free automation quote request", "description": "Describe the process you want to automate. I'll prepare a tailored quote within 24 hours." },
+    "blog": { "title": "Blog on process automation for small companies", "description": "Practical knowledge on process automation for small and mid-size companies. Read the OmniTask blog." },
+    "home": { "title": "Process automation for companies | OmniTask", "description": "I automate repetitive processes for 5–50 person companies. Implementation in 2–4 weeks, fixed price." },
     "privacy": { "title": "Privacy policy and data protection (GDPR)", "description": "OmniTask privacy policy. Information on the processing of personal data in accordance with the GDPR." },
     "terms": { "title": "Website and online services terms of service", "description": "Terms of use of the OmniTask.pl website. Conditions for providing services electronically." }
   },

@@ -2,10 +2,37 @@
 
 import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { CALCOM_URL, FEATURE_BUR, FEATURE_REALIZACJE } from '@/lib/site-config'
+import { IMPLEMENTATION_TIERS } from '@/lib/pricing-data'
+import ServiceIcon from '@/components/ServiceIcon'
+import ToolIcon from '@/components/ToolIcon'
 
-export default function HomeClient({ testimonials = [] }: { testimonials?: any[] }) {
-  const { t } = useTranslation()
+const TRUST_LOGOS = [
+  { slug: 'n8n', label: 'n8n' },
+  { slug: 'make', label: 'Make' },
+  { slug: 'ksef', label: 'KSeF' },
+  { slug: 'comarch', label: 'Comarch' },
+  { slug: 'hubspot', label: 'HubSpot' },
+  { slug: 'google-cloud', label: 'Google Cloud' },
+]
+
+const SERVICES = [
+  { key: 'service1', slug: 'automatyzacja-workflow' },
+  { key: 'service2', slug: 'ksef', highlight: true },
+  { key: 'service3', slug: 'integracja-systemow' },
+  { key: 'service4', slug: 'szkolenia-i-doradztwo', highlight: true },
+  { key: 'service5', slug: 'rpa' },
+  { key: 'service6', slug: 'opieka-i-hosting' },
+  { key: 'service7', slug: 'agenci-ai' },
+]
+
+const HOME_TIERS = IMPLEMENTATION_TIERS.filter((t) => ['start', 'core', 'transformacja'].includes(t.slug))
+
+export default function HomeClient({ articles = [] }: { articles?: any[] }) {
+  const { t, tRaw, locale } = useTranslation()
+  // KSeF, szkolenia i opieka nie mają wersji EN/UA — spec 2.2.
+  const visibleServices = locale === 'pl' ? SERVICES : SERVICES.filter((s) => ['automatyzacja-workflow', 'integracja-systemow', 'rpa', 'agenci-ai'].includes(s.slug))
   const [faqOpen, setFaqOpen] = useState<number | null>(null)
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -48,80 +75,99 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
     }
   }
 
+  const checks = tRaw<string[]>('hero.checks')
+  const problemItems = tRaw<string[]>('problems.items')
+  const trustedByItemsRaw = tRaw<{ name: string; desc: string }[]>('trusted_by.items')
+  const trustedByItems = Array.isArray(trustedByItemsRaw) ? trustedByItemsRaw : []
+
   return (
     <>
-      {/* ===== HERO SECTION ===== */}
+      {/* ===== 1. HERO ===== */}
       <section className="hero" id="hero">
-        <div className="hero__bg-pattern" />
-        <div className="hero__geometric">
-          <div className="hero__geometric-rect" />
-          <div className="hero__geometric-rect" />
-          <div className="hero__geometric-rect" />
-        </div>
-        {/* Animated gears */}
-        <div className="hero__gears">
-          <div className="hero__gear hero__gear--1">
-            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <circle cx="50" cy="50" r="20" />
-              <path d="M50 5v15M50 80v15M5 50h15M80 50h15M18 18l10.6 10.6M71.4 71.4l10.6 10.6M18 82l10.6-10.6M71.4 28.6l10.6-10.6" />
-            </svg>
-          </div>
-          <div className="hero__gear hero__gear--2">
-            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <circle cx="50" cy="50" r="15" />
-              <path d="M50 10v12M50 78v12M10 50h12M78 50h12M22 22l8.5 8.5M69.5 69.5l8.5 8.5M22 78l8.5-8.5M69.5 30.5l8.5-8.5" />
-            </svg>
-          </div>
-        </div>
         <div className="hero__container">
-          <div className="hero__content animate-fade-in-up">
-            <span className="hero__label">🤖 RPA & Automation</span>
-            <h1 className="hero__title">
-              {t('hero.title')}
-            </h1>
-            <p className="hero__subtitle">{t('hero.subtitle')}</p>
-            <div className="hero__buttons">
-              <Link
-                href="/zapytanie-ofertowe"
-                className="btn btn--primary btn--lg"
-                title={t('hero.cta_primary')}
-              >
-                {t('hero.cta_primary')}
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link
-                href="#process"
-                className="btn btn--outline btn--lg"
-                title={t('hero.cta_secondary')}
-              >
-                {t('hero.cta_secondary')}
-              </Link>
+          <div className="hero__panel">
+            <div className="hero__panel-blob hero__panel-blob--1" />
+            <div className="hero__panel-blob hero__panel-blob--2" />
+
+            <div className="hero__content animate-fade-in-up">
+              <span className="eyebrow">Automatyzacja procesów</span>
+              <h1 className="hero__title">{t('hero.title')}</h1>
+              <p className="hero__subtitle">{t('hero.subtitle')}</p>
+
+              <ul className="hero__checks">
+                {Array.isArray(checks) && checks.map((item, i) => (
+                  <li key={i} className="hero__check-item">
+                    <span className="hero__check-icon">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M5 12l5 5L20 7" />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="hero__buttons">
+                <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t('hero.cta_primary')}>
+                  {t('hero.cta_primary')}
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <Link href="/cennik" className="btn btn--outline-dark btn--lg" title={t('hero.cta_secondary')}>
+                  {t('hero.cta_secondary')}
+                </Link>
+              </div>
+            </div>
+
+            <div className="hero__visual">
+              <div className="hero__diagram">
+                <div className="hero__diagram-step hero__diagram-step--before">
+                  <div className="hero__diagram-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                  </div>
+                  <div>
+                    <h4>Faktura z KSeF i mailem</h4>
+                    <p>Ktoś ręcznie sprawdza, czy to nie duplikat</p>
+                  </div>
+                </div>
+                <div className="hero__diagram-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12l7 7 7-7" /></svg>
+                </div>
+                <div className="hero__diagram-step hero__diagram-step--after">
+                  <div className="hero__diagram-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                  </div>
+                  <div>
+                    <h4>Automatyzacja</h4>
+                    <p>Deduplikacja i routing do oddziału bez udziału człowieka</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero__float-badge hero__float-badge--top">
+                2–4 tyg.
+                <span style={{ marginLeft: '0.4rem' }}>wdrożenie</span>
+              </div>
+              <div className="hero__float-badge hero__float-badge--bottom">
+                do 83%
+                <span style={{ marginLeft: '0.4rem' }}>dofinansowania</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===== INDUSTRIES WE SERVE ===== */}
-      <section className="clients-bar" id="industries">
+      {/* ===== 2. PASEK ZAUFANIA ===== */}
+      <section className="clients-bar" id="trust">
         <div className="section__container">
-          <p className="clients-bar__label">{t('clients.title')}</p>
+          <p className="clients-bar__label">{t('trust.title')}</p>
           <div className="clients-bar__track">
             <div className="clients-bar__logos">
-              {[
-                { name: 'Finanse', icon: '🏦' },
-                { name: 'Logistyka', icon: '🚚' },
-                { name: 'HR', icon: '👥' },
-                { name: 'E-commerce', icon: '🛒' },
-                { name: 'Produkcja', icon: '🏭' },
-                { name: 'IT', icon: '💻' },
-                { name: 'Prawo', icon: '⚖️' },
-                { name: 'Medycyna', icon: '🏥' },
-              ].map((industry) => (
-                <div key={industry.name} className="clients-bar__logo" title={industry.name}>
-                  <span style={{ fontSize: '1.5rem' }}>{industry.icon}</span>
-                  <span>{industry.name}</span>
+              {TRUST_LOGOS.map((tool) => (
+                <div key={tool.slug} className="clients-bar__logo" title={tool.label}>
+                  <span className="clients-bar__logo-icon"><ToolIcon slug={tool.slug} /></span>
+                  {tool.label}
                 </div>
               ))}
             </div>
@@ -129,87 +175,103 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
         </div>
       </section>
 
-      {/* ===== SERVICES SECTION ===== */}
-      <section className="section section--alt" id="services">
+      {/* ===== 3. PROBLEM ===== */}
+      <section className="section" id="problems">
         <div className="section__container">
           <div className="section__header">
-            <h2>{t('services.title')}</h2>
-            <p>{t('services.subtitle')}</p>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>Problem</span>
+            <h2>{t('problems.title')}</h2>
+            <p>{t('problems.subtitle')}</p>
           </div>
-          <div className="services-grid services-grid--6">
-            <Link href="/uslugi/rpa" className="service-card service-card--link" title={t('services.service1.title')}>
-              <div className="service-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="2" y="2" width="20" height="20" rx="2" />
-                  <path d="M7 10l3 3 7-7" />
-                </svg>
+          <div className="problem-grid">
+            {Array.isArray(problemItems) && problemItems.map((item, i) => (
+              <div key={i} className="problem-card">
+                <div className="problem-card__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                </div>
+                <p>{item}</p>
               </div>
-              <h3>{t('services.service1.title')}</h3>
-              <p>{t('services.service1.desc')}</p>
-              <span className="service-card__cta">Dowiedz się więcej →</span>
-            </Link>
-            <Link href="/uslugi/automatyzacja-workflow" className="service-card service-card--link" title={t('services.service2.title')}>
-              <div className="service-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg>
-              </div>
-              <h3>{t('services.service2.title')}</h3>
-              <p>{t('services.service2.desc')}</p>
-              <span className="service-card__cta">Dowiedz się więcej →</span>
-            </Link>
-            <Link href="/uslugi/integracja-systemow" className="service-card service-card--link" title={t('services.service3.title')}>
-              <div className="service-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <h3>{t('services.service3.title')}</h3>
-              <p>{t('services.service3.desc')}</p>
-              <span className="service-card__cta">Dowiedz się więcej →</span>
-            </Link>
-            <div className="service-card">
-              <div className="service-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  <line x1="8" y1="11" x2="14" y2="11" />
-                  <line x1="11" y1="8" x2="11" y2="14" />
-                </svg>
-              </div>
-              <h3>{t('services.service4.title')}</h3>
-              <p>{t('services.service4.desc')}</p>
-            </div>
-            <Link href="/uslugi/agenci-ai" className="service-card service-card--link" title={t('services.service5.title')}>
-              <div className="service-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2a4 4 0 014 4c0 1.95-1.4 3.58-3.25 3.93L12 22l-.75-12.07A4.001 4.001 0 0112 2z" />
-                  <path d="M9 6.5a2.5 2.5 0 015 0" />
-                </svg>
-              </div>
-              <h3>{t('services.service5.title')}</h3>
-              <p>{t('services.service5.desc')}</p>
-              <span className="service-card__cta">Dowiedz się więcej →</span>
-            </Link>
-            <div className="service-card">
-              <div className="service-card__icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
-                </svg>
-              </div>
-              <h3>{t('services.service6.title')}</h3>
-              <p>{t('services.service6.desc')}</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ===== PROCESS SECTION ===== */}
-      <section className="section" id="process">
+      {/* ===== 4. USŁUGI ===== */}
+      <section className="section section--alt" id="services">
         <div className="section__container">
           <div className="section__header">
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>Usługi</span>
+            <h2>{t('services.title')}</h2>
+            <p>{t('services.subtitle')}</p>
+          </div>
+          <div className="services-grid services-grid--6">
+            {visibleServices.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/uslugi/${s.slug}`}
+                className={`service-card service-card--link ${s.highlight ? 'service-card--highlight' : ''}`}
+                title={t(`services.${s.key}.title`)}
+              >
+                {s.highlight && <span className="badge badge--accent service-card__badge">Polecane</span>}
+                <div className="service-card__icon">
+                  <ServiceIcon slug={s.slug} size={28} />
+                </div>
+                <h3>{t(`services.${s.key}.title`)}</h3>
+                <p>{t(`services.${s.key}.desc`)}</p>
+                <span className="service-card__cta">{t('services_page.learn_more')}</span>
+              </Link>
+            ))}
+            {locale === 'pl' && (
+              <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="service-card service-card--cta">
+                <h3>{t('services_page.cta_title')}</h3>
+                <p>{t('services_page.cta_subtitle')}</p>
+                <span className="service-card__cta">{t('nav.book_call')} →</span>
+              </a>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 5. DOFINANSOWANIE (za flagą FEATURE_BUR, tylko PL — brak strony /en/dofinansowanie) ===== */}
+      {FEATURE_BUR && locale === 'pl' && (
+        <section className="section" id="funding">
+          <div className="section__container">
+            <div className="funding-section">
+              <div>
+                <h2>{t('funding_home.title')}</h2>
+                <p>{t('funding_home.text')}</p>
+                <Link href="/dofinansowanie" className="btn btn--primary btn--lg" title={t('funding_home.cta')}>
+                  {t('funding_home.cta')}
+                </Link>
+              </div>
+              <div className="funding-compare">
+                <div className="funding-compare__row">
+                  <span className="funding-compare__label">{t('funding_home.compare_value_label')}</span>
+                  <span>{t('funding_home.compare_value')}</span>
+                </div>
+                <div className="funding-compare__row">
+                  <span className="funding-compare__label">{t('funding_home.compare_discount_label')}</span>
+                  <span>{t('funding_home.compare_discount')}</span>
+                </div>
+                <div className="funding-compare__row funding-compare__row--total">
+                  <span>{t('funding_home.compare_total_label')}</span>
+                  <span>{t('funding_home.compare_total')}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== 6. JAK PRACUJĘ ===== */}
+      <section className="section section--alt" id="process">
+        <div className="section__container">
+          <div className="section__header">
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>Proces</span>
             <h2>{t('process.title')}</h2>
             <p>{t('process.subtitle')}</p>
           </div>
@@ -217,7 +279,6 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="process-step">
                 <div className="process-step__number">{t(`process.step${i}.number`)}</div>
-                <div className="process-step__connector" />
                 <div className="process-content">
                   <h3>{t(`process.step${i}.title`)}</h3>
                   <p>{t(`process.step${i}.desc`)}</p>
@@ -228,222 +289,59 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
         </div>
       </section>
 
-      {/* ===== AI AGENTS FEATURE SECTION ===== */}
-      <section className="section bg-agents" id="ai-agents">
-        <div className="section__container">
-          <div className="agents-layout">
-            <div className="agents-info">
-              <div className="hero__label">{t('ai_agents.title')}</div>
-              <h2 className="agents-title">{t('ai_agents.subtitle')}</h2>
-              <p className="agents-description">{t('ai_agents.tech_selection')}</p>
-              
-              <div className="agents-features">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="agent-feature-item">
-                    <div className="agent-feature-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path d="M5 12l5 5L20 7" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4>{t(`ai_agents.feature${i}_title`)}</h4>
-                      <p>{t(`ai_agents.feature${i}_desc`)}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="agents-visual">
-              <div className="agents-orb">
-                <div className="orb-core"></div>
-                <div className="orb-ring ring-1"></div>
-                <div className="orb-ring ring-2"></div>
-                <div className="orb-ring ring-3"></div>
-                <div className="orb-node node-1">AI</div>
-                <div className="orb-node node-2">Agent</div>
-                <div className="orb-node node-3">RPA</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== ROI SECTION ===== */}
-      <section className="section section--dark" id="roi">
-        <div className="section__container">
-          <div className="section__header">
-            <h2>{t('roi.title')}</h2>
-            <p>{t('roi.subtitle')}</p>
-          </div>
-          <div className="stats-grid">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="stat-card">
-                <span className="stat-card__value">{t(`roi.stat${i}_value`)}</span>
-                <span className="stat-card__label">{t(`roi.stat${i}_label`)}</span>
-              </div>
-            ))}
-          </div>
-          <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--color-muted)', fontStyle: 'italic' }}>
-            {t('roi_disclaimer')}
-          </p>
-        </div>
-      </section>
-
-      {/* ===== USE CASES ===== */}
-      <section className="section section--alt" id="cases">
-        <div className="section__container">
-          <div className="section__header">
-            <h2>{t('cases.title')}</h2>
-            <p>{t('cases.subtitle')}</p>
-          </div>
-          <div className="cases-grid">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="case-card">
-                <div className="case-card__badge">{t(`cases.case${i}.industry`)}</div>
-                <h3>{t(`cases.case${i}.title`)}</h3>
-                <p>{t(`cases.case${i}.desc`)}</p>
-                <div className="case-card__result">
-                  {t(`cases.case${i}.result`)}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TECHNOLOGIES ===== */}
-      <section className="section" id="tech">
-        <div className="section__container">
-          <div className="section__header">
-            <h2>{t('tech.title')}</h2>
-            <p>{t('tech.subtitle')}</p>
-          </div>
-          <div className="tech-grid">
-            {[
-              { name: 'UiPath', icon: 'https://icon.horse/icon/uipath.com' },
-              { name: 'Power Automate', icon: '/power-automate.svg' },
-              { name: 'Python', icon: 'https://icon.horse/icon/python.org' },
-              { name: 'Zapier', icon: 'https://icon.horse/icon/zapier.com' },
-              { name: 'Make', icon: 'https://icon.horse/icon/make.com' },
-              { name: 'Azure', icon: 'https://icon.horse/icon/azure.microsoft.com' },
-              { name: 'Google Cloud', icon: 'https://icon.horse/icon/cloud.google.com' },
-              { name: 'OpenAI', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg' },
-            ].map((tech) => (
-              <div key={tech.name} className="tech-card" title={tech.name}>
-                <div className="tech-card__icon" style={{ background: '#fff', padding: '0.25rem' }}>
-                  <img src={tech.icon} alt={`${tech.name} logo`} title={tech.name} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                </div>
-                <span className="tech-card__name">{tech.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== WHY US ===== */}
-      <section className="section section--alt" id="features">
-        <div className="section__container">
-          <div className="section__header">
-            <h2>{t('why.title')}</h2>
-          </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                </svg>
-              </div>
-              <div>
-                <h3>{t('why.feature1.title')}</h3>
-                <p>{t('why.feature1.desc')}</p>
-              </div>
-            </div>
-            <div className="feature-card">
-              <div className="feature-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-              </div>
-              <div>
-                <h3>{t('why.feature2.title')}</h3>
-                <p>{t('why.feature2.desc')}</p>
-              </div>
-            </div>
-            <div className="feature-card">
-              <div className="feature-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="12" y1="20" x2="12" y2="10" />
-                  <line x1="18" y1="20" x2="18" y2="4" />
-                  <line x1="6" y1="20" x2="6" y2="16" />
-                </svg>
-              </div>
-              <div>
-                <h3>{t('why.feature3.title')}</h3>
-                <p>{t('why.feature3.desc')}</p>
-              </div>
-            </div>
-            <div className="feature-card">
-              <div className="feature-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-              </div>
-              <div>
-                <h3>{t('why.feature4.title')}</h3>
-                <p>{t('why.feature4.desc')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TESTIMONIALS ===== */}
-      {testimonials.length > 0 && (
-        <section className="section" id="testimonials">
+      {/* ===== 7. REALIZACJE (za flagą, ukryte do pierwszego wdrożenia) ===== */}
+      {FEATURE_REALIZACJE && (
+        <section className="section" id="realizacje">
           <div className="section__container">
             <div className="section__header">
-              <h2>{t('testimonials.title')}</h2>
-              <p>{t('testimonials.subtitle')}</p>
-            </div>
-            <div className="testimonials-grid">
-              {testimonials.map((testimonial, idx) => (
-                <div key={testimonial.id || idx} className="testimonial-card">
-                  <div className="testimonial-card__stars">{"★".repeat(testimonial.rating || 5)}</div>
-                  <blockquote className="testimonial-card__text">
-                    &ldquo;{testimonial.text}&rdquo;
-                  </blockquote>
-                  <div className="testimonial-card__author">
-                    <div className="testimonial-card__avatar">
-                      {testimonial.author ? testimonial.author.charAt(0) : 'U'}
-                    </div>
-                    <div>
-                      <strong>{testimonial.author}</strong>
-                      <span>{testimonial.role}{testimonial.company ? `, ${testimonial.company}` : ''}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <h2>{t('nav.projects')}</h2>
             </div>
           </div>
         </section>
       )}
 
-      {/* ===== FAQ ===== */}
+      {/* ===== 9. CENNIK — skrót ===== */}
+      <section className="section" id="pricing">
+        <div className="section__container">
+          <div className="section__header">
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>Cennik</span>
+            <h2>{t('pricing_home.title')}</h2>
+            <p>{t('pricing_home.subtitle')}</p>
+          </div>
+          <div className="pricing-grid">
+            {HOME_TIERS.map((tier) => (
+              <div key={tier.slug} className="pricing-card">
+                <div className="pricing-card__header">
+                  {tier.featured && <span className="pricing-card__tag">Najczęściej wybierane</span>}
+                  <span className="pricing-card__name">{tier.name}</span>
+                  <div className="pricing-card__price">{tier.price}</div>
+                </div>
+                <div className="pricing-card__body">
+                  <p className="pricing-card__scope">{tier.scope}</p>
+                  <div className="pricing-card__time">{tier.time}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link href="/cennik" className="btn btn--dark btn--lg" title={t('pricing_home.cta')}>
+              {t('pricing_home.cta')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 10. FAQ ===== */}
       <section className="section section--alt" id="faq">
         <div className="section__container">
           <div className="section__header">
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>FAQ</span>
             <h2>{t('faq.title')}</h2>
             <p>{t('faq.subtitle')}</p>
           </div>
           <div className="faq-list">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div
-                key={i}
-                className={`faq-item ${faqOpen === i ? 'faq-item--open' : ''}`}
-              >
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className={`faq-item ${faqOpen === i ? 'faq-item--open' : ''}`}>
                 <button
                   className="faq-item__question"
                   onClick={() => toggleFaq(i)}
@@ -451,15 +349,7 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
                   aria-expanded={faqOpen === i}
                 >
                   <span>{t(`faq.q${i}`)}</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="faq-item__icon"
-                  >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="faq-item__icon">
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </button>
@@ -472,22 +362,71 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
         </div>
       </section>
 
-      {/* ===== CTA + NEWSLETTER ===== */}
+      {/* ===== 11. O MNIE — skrót ===== */}
+      <section className="section" id="about">
+        <div className="section__container">
+          <div className="founder" style={{ gridTemplateColumns: '220px 1fr' }}>
+            <div className="founder__photo" style={{ aspectRatio: '1/1' }}>ML</div>
+            <div>
+              <span className="eyebrow">O mnie</span>
+              <h2>{t('about_home.title')}</h2>
+              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
+                {t('about_home.text')}
+              </p>
+              <Link href="/o-nas" className="btn btn--dark" title={t('about_home.link')}>
+                {t('about_home.link')}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ===== 12. BLOG — najnowsze wpisy ===== */}
+      {articles.length > 0 && (
+        <section className="section section--alt" id="blog">
+          <div className="section__container">
+            <div className="section__header">
+              <h2>{t('blog.latest_title')}</h2>
+            </div>
+            <div className="blog-grid">
+              {articles.slice(0, 3).map((article: any) => (
+                <Link key={article.id} href={`/blog/${article.slug}`} className="blog-card" title={article.title}>
+                  <div className="blog-card__image">
+                    {article.image ? (
+                      <img src={article.image} alt={article.image_alt || article.title} loading="lazy" />
+                    ) : (
+                      <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, var(--color-primary), var(--color-primary-light))' }} />
+                    )}
+                  </div>
+                  <div className="blog-card__body">
+                    <h3 className="blog-card__title">{article.title}</h3>
+                    <p className="blog-card__excerpt">{article.excerpt}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+              <Link href="/blog" className="btn btn--outline-dark btn--lg" title={t('blog.see_all')}>
+                {t('blog.see_all')}
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ===== 13. CTA KOŃCOWE + NEWSLETTER ===== */}
       <section className="section section--dark cta-section" id="cta">
         <div className="cta-section__bg" />
         <div className="section__container" style={{ position: 'relative', zIndex: 1 }}>
           <h2>{t('cta.title')}</h2>
           <p>{t('cta.subtitle')}</p>
-          <Link
-            href="/zapytanie-ofertowe"
-            className="btn btn--primary btn--lg"
-            title={t('cta.button')}
-          >
+          <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t('cta.button')}>
             {t('cta.button')}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
 
           <div className="newsletter" id="newsletter">
             <h3>{t('newsletter.title')}</h3>
@@ -546,7 +485,7 @@ export default function HomeClient({ testimonials = [] }: { testimonials?: any[]
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [1, 2, 3, 4, 5, 6, 7, 8].map((i) => ({
+            mainEntity: [1, 2, 3, 4, 5, 6].map((i) => ({
               '@type': 'Question',
               name: t(`faq.q${i}`),
               acceptedAnswer: {
