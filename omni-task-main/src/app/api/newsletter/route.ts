@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { sendEmail } from '@/lib/mailer'
+import { escapeHtml, isHoneypotTripped, isSubmittedTooFast } from '@/lib/anti-spam'
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { email } = body
+    const { email, website, formStartedAt } = body
+
+    // Honeypot i minimalny czas wypełniania - odsiewa boty bez informowania ich o wykryciu.
+    if (isHoneypotTripped(website) || isSubmittedTooFast(formStartedAt)) {
+      return NextResponse.json({ success: true }, { status: 201 })
+    }
 
     if (!email?.trim()) {
       return NextResponse.json(
@@ -48,7 +54,7 @@ export async function POST(request: Request) {
       subject: 'Nowy subskrybent newslettera - OmniTask',
       html: `
         <h2>Nowy zapis na newsletter!</h2>
-        <p>Adres e-mail: <strong>${email}</strong> został dopisany do bazy subskrybentów.</p>
+        <p>Adres e-mail: <strong>${escapeHtml(email)}</strong> został dopisany do bazy subskrybentów.</p>
         <br/>
         <p><small>Wiadomość wygenerowana automatycznie ze strony OmniTask.</small></p>
       `

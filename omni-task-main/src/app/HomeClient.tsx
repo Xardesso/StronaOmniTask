@@ -3,10 +3,12 @@
 import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import { useState } from 'react'
-import { CALCOM_URL, FEATURE_BUR, FEATURE_REALIZACJE } from '@/lib/site-config'
+import { FEATURE_BUR, FEATURE_REALIZACJE, FOUNDER } from '@/lib/site-config'
 import { IMPLEMENTATION_TIERS } from '@/lib/pricing-data'
+import { formatMoneyFrom } from '@/lib/currency'
 import ServiceIcon from '@/components/ServiceIcon'
 import ToolIcon from '@/components/ToolIcon'
+import CtaButton from '@/components/CtaButton'
 
 const TRUST_LOGOS = [
   { slug: 'n8n', label: 'n8n' },
@@ -29,15 +31,34 @@ const SERVICES = [
 
 const HOME_TIERS = IMPLEMENTATION_TIERS.filter((t) => ['start', 'core', 'transformacja'].includes(t.slug))
 
+const PROBLEM_ICONS = [
+  // duplikat dokumentów
+  <path key="p1" d="M8 3h9l4 4v11a2 2 0 01-2 2H8a2 2 0 01-2-2V5a2 2 0 012-2z M4 8v11a2 2 0 002 2h9" />,
+  // czekanie / zegar
+  <>
+    <circle key="p2c" cx="12" cy="13" r="8" />
+    <path key="p2p" d="M12 9v4l3 2M9 2h6" />
+  </>,
+  // powtarzalne przepisywanie
+  <path key="p3" d="M17 2.1l4 4-4 4M3 12.1v-2a4 4 0 014-4h14M7 21.9l-4-4 4-4M21 11.9v2a4 4 0 01-4 4H3" />,
+  // dokumenty w zawieszeniu
+  <>
+    <path key="p4p" d="M4 4h16v13H8l-4 4V4z" />
+    <path key="p4q" d="M12 8v3M12 14h.01" />
+  </>,
+]
+
 export default function HomeClient({ articles = [] }: { articles?: any[] }) {
   const { t, tRaw, locale } = useTranslation()
   // KSeF, szkolenia i opieka nie mają wersji EN/UA — spec 2.2.
   const visibleServices = locale === 'pl' ? SERVICES : SERVICES.filter((s) => ['automatyzacja-workflow', 'integracja-systemow', 'rpa', 'agenci-ai'].includes(s.slug))
   const [faqOpen, setFaqOpen] = useState<number | null>(null)
   const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterWebsite, setNewsletterWebsite] = useState('')
   const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
+  const [newsletterStartedAt] = useState(() => Date.now())
 
   const toggleFaq = (index: number) => {
     setFaqOpen(faqOpen === index ? null : index)
@@ -55,7 +76,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
       const response = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: newsletterEmail })
+        body: JSON.stringify({ email: newsletterEmail, website: newsletterWebsite, formStartedAt: newsletterStartedAt })
       })
 
       const result = await response.json()
@@ -77,7 +98,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
 
   const checks = tRaw<string[]>('hero.checks')
   const problemItems = tRaw<string[]>('problems.items')
-  const trustedByItemsRaw = tRaw<{ name: string; desc: string }[]>('trusted_by.items')
+  const trustedByItemsRaw = tRaw<{ name: string; logo: string; industry: string; improved: string; result: string }[]>('trusted_by.items')
   const trustedByItems = Array.isArray(trustedByItemsRaw) ? trustedByItemsRaw : []
 
   return (
@@ -90,7 +111,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
             <div className="hero__panel-blob hero__panel-blob--2" />
 
             <div className="hero__content animate-fade-in-up">
-              <span className="eyebrow">Automatyzacja procesów</span>
+              <span className="eyebrow">{t('eyebrow.automation')}</span>
               <h1 className="hero__title">{t('hero.title')}</h1>
               <p className="hero__subtitle">{t('hero.subtitle')}</p>
 
@@ -108,12 +129,12 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
               </ul>
 
               <div className="hero__buttons">
-                <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t('hero.cta_primary')}>
+                <CtaButton className="btn btn--primary btn--lg" title={t('hero.cta_primary')}>
                   {t('hero.cta_primary')}
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </a>
+                </CtaButton>
                 <Link href="/cennik" className="btn btn--outline-dark btn--lg" title={t('hero.cta_secondary')}>
                   {t('hero.cta_secondary')}
                 </Link>
@@ -127,8 +148,8 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
                   </div>
                   <div>
-                    <h4>Faktura z KSeF i mailem</h4>
-                    <p>Ktoś ręcznie sprawdza, czy to nie duplikat</p>
+                    <h4>{t('hero.diagram_before_title')}</h4>
+                    <p>{t('hero.diagram_before_desc')}</p>
                   </div>
                 </div>
                 <div className="hero__diagram-arrow">
@@ -139,19 +160,19 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                   </div>
                   <div>
-                    <h4>Automatyzacja</h4>
-                    <p>Deduplikacja i routing do oddziału bez udziału człowieka</p>
+                    <h4>{t('hero.diagram_after_title')}</h4>
+                    <p>{t('hero.diagram_after_desc')}</p>
                   </div>
                 </div>
               </div>
 
               <div className="hero__float-badge hero__float-badge--top">
-                2–4 tyg.
-                <span style={{ marginLeft: '0.4rem' }}>wdrożenie</span>
+                {t('hero.badge_time_value')}
+                <span style={{ marginLeft: '0.4rem' }}>{t('hero.badge_time_label')}</span>
               </div>
               <div className="hero__float-badge hero__float-badge--bottom">
-                do 83%
-                <span style={{ marginLeft: '0.4rem' }}>dofinansowania</span>
+                {t('hero.badge_funding_value')}
+                <span style={{ marginLeft: '0.4rem' }}>{t('hero.badge_funding_label')}</span>
               </div>
             </div>
           </div>
@@ -175,11 +196,42 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
         </div>
       </section>
 
+      {/* ===== TRUSTED BY — firmy, z którymi współpracowałem ===== */}
+      {trustedByItems.length > 0 && (
+        <section className="section section--alt" id="trusted-by">
+          <div className="section__container">
+            <div className="section__header">
+              <span className="eyebrow" style={{ justifyContent: 'center' }}>{t('eyebrow.trust')}</span>
+              <h2>{t('trusted_by.title')}</h2>
+              <p>{t('trusted_by.subtitle')}</p>
+            </div>
+            <div className="trusted-by-grid">
+              {trustedByItems.map((item, i) => (
+                <div key={i} className="trusted-by-card">
+                  <div className="trusted-by-card__logo">
+                    <img src={item.logo} alt={item.name} loading="lazy" />
+                  </div>
+                  <p className="trusted-by-card__industry">{item.industry}</p>
+                  <div className="trusted-by-card__row">
+                    <span className="trusted-by-card__label">{t('trusted_by.label_improved')}</span>
+                    <span className="trusted-by-card__value">{item.improved}</span>
+                  </div>
+                  <div className="trusted-by-card__row">
+                    <span className="trusted-by-card__label">{t('trusted_by.label_result')}</span>
+                    <span className="trusted-by-card__value">{item.result}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ===== 3. PROBLEM ===== */}
       <section className="section" id="problems">
         <div className="section__container">
           <div className="section__header">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Problem</span>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>{t('eyebrow.problem')}</span>
             <h2>{t('problems.title')}</h2>
             <p>{t('problems.subtitle')}</p>
           </div>
@@ -187,10 +239,8 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
             {Array.isArray(problemItems) && problemItems.map((item, i) => (
               <div key={i} className="problem-card">
                 <div className="problem-card__icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="8" x2="12" y2="12" />
-                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    {PROBLEM_ICONS[i % PROBLEM_ICONS.length]}
                   </svg>
                 </div>
                 <p>{item}</p>
@@ -204,7 +254,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
       <section className="section section--alt" id="services">
         <div className="section__container">
           <div className="section__header">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Usługi</span>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>{t('eyebrow.services')}</span>
             <h2>{t('services.title')}</h2>
             <p>{t('services.subtitle')}</p>
           </div>
@@ -226,11 +276,11 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
               </Link>
             ))}
             {locale === 'pl' && (
-              <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="service-card service-card--cta">
+              <CtaButton className="service-card service-card--cta">
                 <h3>{t('services_page.cta_title')}</h3>
                 <p>{t('services_page.cta_subtitle')}</p>
                 <span className="service-card__cta">{t('nav.book_call')} →</span>
-              </a>
+              </CtaButton>
             )}
           </div>
         </div>
@@ -268,10 +318,10 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
       )}
 
       {/* ===== 6. JAK PRACUJĘ ===== */}
-      <section className="section section--alt" id="process">
+      <section className="section" id="process">
         <div className="section__container">
           <div className="section__header">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Proces</span>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>{t('eyebrow.process')}</span>
             <h2>{t('process.title')}</h2>
             <p>{t('process.subtitle')}</p>
           </div>
@@ -301,10 +351,10 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
       )}
 
       {/* ===== 9. CENNIK — skrót ===== */}
-      <section className="section" id="pricing">
+      <section className="section section--alt" id="pricing">
         <div className="section__container">
           <div className="section__header">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>Cennik</span>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>{t('eyebrow.pricing')}</span>
             <h2>{t('pricing_home.title')}</h2>
             <p>{t('pricing_home.subtitle')}</p>
           </div>
@@ -312,13 +362,19 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
             {HOME_TIERS.map((tier) => (
               <div key={tier.slug} className="pricing-card">
                 <div className="pricing-card__header">
-                  {tier.featured && <span className="pricing-card__tag">Najczęściej wybierane</span>}
+                  {tier.featured && <span className="pricing-card__tag">{t('cennik_page.featured_badge')}</span>}
                   <span className="pricing-card__name">{tier.name}</span>
-                  <div className="pricing-card__price">{tier.price}</div>
+                  <div className="pricing-card__price">{formatMoneyFrom(tier.priceValue, locale, !!tier.isFrom)}</div>
                 </div>
                 <div className="pricing-card__body">
                   <p className="pricing-card__scope">{tier.scope}</p>
                   <div className="pricing-card__time">{tier.time}</div>
+                  <ul className="pricing-card__list">
+                    {tier.features.slice(0, 3).map((f, i) => <li key={i}>{f}</li>)}
+                  </ul>
+                  <Link href="/cennik" className="btn btn--dark" title={t('pricing_home.card_cta')}>
+                    {t('pricing_home.card_cta')}
+                  </Link>
                 </div>
               </div>
             ))}
@@ -332,10 +388,10 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
       </section>
 
       {/* ===== 10. FAQ ===== */}
-      <section className="section section--alt" id="faq">
+      <section className="section" id="faq">
         <div className="section__container">
           <div className="section__header">
-            <span className="eyebrow" style={{ justifyContent: 'center' }}>FAQ</span>
+            <span className="eyebrow" style={{ justifyContent: 'center' }}>{t('eyebrow.faq')}</span>
             <h2>{t('faq.title')}</h2>
             <p>{t('faq.subtitle')}</p>
           </div>
@@ -363,12 +419,18 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
       </section>
 
       {/* ===== 11. O MNIE — skrót ===== */}
-      <section className="section" id="about">
+      <section className="section section--alt" id="about">
         <div className="section__container">
-          <div className="founder" style={{ gridTemplateColumns: '220px 1fr' }}>
-            <div className="founder__photo" style={{ aspectRatio: '1/1' }}>ML</div>
+          <div className="founder founder--compact">
+            <div className="founder__photo">
+              {FOUNDER.photo ? (
+                <img src={FOUNDER.photo} alt={FOUNDER.name} />
+              ) : (
+                FOUNDER.name.split(' ').map((n) => n[0]).join('')
+              )}
+            </div>
             <div>
-              <span className="eyebrow">O mnie</span>
+              <span className="eyebrow">{t('eyebrow.about')}</span>
               <h2>{t('about_home.title')}</h2>
               <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 {t('about_home.text')}
@@ -384,7 +446,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
 
       {/* ===== 12. BLOG — najnowsze wpisy ===== */}
       {articles.length > 0 && (
-        <section className="section section--alt" id="blog">
+        <section className="section" id="blog">
           <div className="section__container">
             <div className="section__header">
               <h2>{t('blog.latest_title')}</h2>
@@ -421,12 +483,12 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
         <div className="section__container" style={{ position: 'relative', zIndex: 1 }}>
           <h2>{t('cta.title')}</h2>
           <p>{t('cta.subtitle')}</p>
-          <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t('cta.button')}>
+          <CtaButton className="btn btn--primary btn--lg" title={t('cta.button')}>
             {t('cta.button')}
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </CtaButton>
 
           <div className="newsletter" id="newsletter">
             <h3>{t('newsletter.title')}</h3>
@@ -435,6 +497,17 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
               <p className="newsletter__success">{t('newsletter.success')}</p>
             ) : (
               <form className="newsletter__form" onSubmit={handleNewsletter}>
+                <div className="hp-field" aria-hidden="true">
+                  <label htmlFor="newsletter-website">Website</label>
+                  <input
+                    type="text"
+                    id="newsletter-website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={newsletterWebsite}
+                    onChange={(e) => setNewsletterWebsite(e.target.value)}
+                  />
+                </div>
                 <div style={{ flex: 1, position: 'relative' }}>
                   <input
                     type="email"

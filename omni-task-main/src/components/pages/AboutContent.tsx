@@ -4,7 +4,8 @@ import LocaleLink from '@/components/LocaleLink'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL, localizePath } from '@/lib/i18n'
-import { FOUNDER, CALCOM_URL } from '@/lib/site-config'
+import { FOUNDER } from '@/lib/site-config'
+import CtaButton from '@/components/CtaButton'
 
 export default function AboutContent() {
   const { t, tRaw, locale } = useTranslation()
@@ -70,10 +71,10 @@ export default function AboutContent() {
           <section className="service-detail__cta">
             <h2>{t('cta.title')}</h2>
             <p>{t('cta.subtitle')}</p>
-            <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t('cta.button')}>
+            <CtaButton className="btn btn--primary btn--lg" title={t('cta.button')}>
               {t('cta.button')}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-            </a>
+            </CtaButton>
           </section>
         </div>
       </div>

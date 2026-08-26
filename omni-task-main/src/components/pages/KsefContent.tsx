@@ -3,7 +3,7 @@
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL } from '@/lib/i18n'
-import { CALCOM_URL } from '@/lib/site-config'
+import CtaButton from '@/components/CtaButton'
 
 interface TitleDesc { title: string; desc: string }
 interface Faq { q: string; a: string }
@@ -101,12 +101,12 @@ export default function KsefContent() {
 
             <section className="service-detail__cta">
               <h2>{t(`${base}.cta`)}</h2>
-              <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t(`${base}.cta`)}>
+              <CtaButton className="btn btn--primary btn--lg" title={t(`${base}.cta`)}>
                 {t(`${base}.cta`)}
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </CtaButton>
             </section>
           </div>
         </div>
@@ -120,6 +120,7 @@ export default function KsefContent() {
             '@type': 'Service',
             name: t(`${base}.h1`),
             description: t(`${base}.subtitle`),
+            serviceType: t(`${base}.service_type`),
             provider: { '@type': 'Organization', name: 'OmniTask', '@id': `${SITE_URL}/#organization` },
             areaServed: { '@type': 'Country', name: 'PL' },
             url: `${SITE_URL}/uslugi/ksef`,

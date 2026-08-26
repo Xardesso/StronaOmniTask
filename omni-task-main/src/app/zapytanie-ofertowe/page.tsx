@@ -8,6 +8,7 @@ export default function QuoteRequestPage() {
   const { t } = useTranslation()
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [formStartedAt] = useState(() => Date.now())
 
   const validate = (formData: FormData): boolean => {
     const newErrors: Record<string, string> = {}
@@ -45,6 +46,8 @@ export default function QuoteRequestPage() {
           phone: formData.get('phone'),
           company: formData.get('company'),
           message: formData.get('message'),
+          website: formData.get('website'),
+          formStartedAt,
         }),
       })
 
@@ -84,6 +87,10 @@ export default function QuoteRequestPage() {
                 {status === 'error' && (
                   <div className="form-general-error">{t('quote.error')}</div>
                 )}
+                <div className="hp-field" aria-hidden="true">
+                  <label htmlFor="quote-website">Website</label>
+                  <input type="text" id="quote-website" name="website" tabIndex={-1} autoComplete="off" />
+                </div>
                 <div className="form-row">
                   <div className={`form-group ${errors.name ? 'form-group--error' : ''}`}>
                     <label htmlFor="quote-name">{t('quote.name')} *</label>

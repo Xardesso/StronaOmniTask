@@ -3,13 +3,14 @@
 import { useState } from 'react'
 import { useTranslation } from '@/i18n/context'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { CALCOM_URL } from '@/lib/site-config'
+import CtaButton from '@/components/CtaButton'
 
 export default function ContactPage() {
   const { t } = useTranslation()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+  const [formStartedAt] = useState(() => Date.now())
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -22,7 +23,9 @@ export default function ContactPage() {
       name: formData.get('name'),
       email: formData.get('email'),
       subject: formData.get('subject'),
-      message: formData.get('message')
+      message: formData.get('message'),
+      website: formData.get('website'),
+      formStartedAt,
     }
 
     try {
@@ -76,10 +79,10 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-info__text">
                   <h3 style={{ color: '#fff' }}>{t('contact.book_title')}</h3>
-                  <p style={{ marginBottom: '0.75rem' }}>{t('contact.book_subtitle')}</p>
-                  <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary" title={t('nav.book_call')}>
+                  <p style={{ marginBottom: '0.75rem', color: 'rgba(255,255,255,0.85)' }}>{t('contact.book_subtitle')}</p>
+                  <CtaButton className="btn btn--primary" title={t('nav.book_call')}>
                     {t('nav.book_call')}
-                  </a>
+                  </CtaButton>
                 </div>
               </div>
 
@@ -164,6 +167,10 @@ export default function ContactPage() {
                       {errorMessage}
                     </div>
                   )}
+                  <div className="hp-field" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+                  </div>
                   <div className="form-group">
                     <label htmlFor="name">{t('quote.name')}</label>
                     <input type="text" id="name" name="name" required placeholder={t('quote.name_placeholder')} disabled={isSubmitting} />

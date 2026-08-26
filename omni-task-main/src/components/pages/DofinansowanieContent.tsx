@@ -5,8 +5,9 @@ import LocaleLink from '@/components/LocaleLink'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL } from '@/lib/i18n'
-import { CALCOM_URL } from '@/lib/site-config'
 import { FUNDING_LIMITS, FUNDING_RATE } from '@/lib/pricing-data'
+import { formatPln } from '@/lib/currency'
+import CtaButton from '@/components/CtaButton'
 
 interface Step { title: string; desc: string }
 interface Faq { q: string; a: string }
@@ -84,18 +85,24 @@ export default function DofinansowanieContent() {
 
             <section className="service-detail__section">
               <h2>{t(`${base}.calculator_title`)}</h2>
-              <div className="calculator-card" style={{ maxWidth: '520px' }}>
-                <div className="calculator-card__field" style={{ marginBottom: '1.5rem' }}>
-                  <label htmlFor="funding-value">Wartość usługi (zł)</label>
-                  <input id="funding-value" type="number" min={0} value={value} onChange={(e) => setValue(Math.max(0, Number(e.target.value)))} />
+              <div className="calculator-card" style={{ maxWidth: '620px' }}>
+                <div className="calculator-card__row" style={{ gridTemplateColumns: '1fr' }}>
+                  <div className="calculator-card__field">
+                    <label htmlFor="funding-value">Wartość usługi</label>
+                    <div className="calculator-card__field-input">
+                      <input id="funding-value" type="number" min={0} value={value} onChange={(e) => setValue(Math.max(0, Number(e.target.value)))} />
+                      <span className="calculator-card__field-unit">zł</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="calculator-card__result">
                   <div className="calculator-card__result-item">
-                    <span className="calculator-card__result-value">{funding.toLocaleString('pl-PL')} zł</span>
+                    <span className="calculator-card__result-value">{formatPln(funding)}</span>
                     <span className="calculator-card__result-label">Dofinansowanie (83%)</span>
                   </div>
+                  <div className="calculator-card__result-divider" />
                   <div className="calculator-card__result-item">
-                    <span className="calculator-card__result-value">{ownContribution.toLocaleString('pl-PL')} zł</span>
+                    <span className="calculator-card__result-value">{formatPln(ownContribution)}</span>
                     <span className="calculator-card__result-label">Twój wkład własny</span>
                   </div>
                 </div>
@@ -129,10 +136,10 @@ export default function DofinansowanieContent() {
 
             <section className="service-detail__cta">
               <h2>{t(`${base}.cta`)}</h2>
-              <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" title={t(`${base}.cta`)}>
+              <CtaButton className="btn btn--primary btn--lg" title={t(`${base}.cta`)}>
                 {t(`${base}.cta`)}
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              </a>
+              </CtaButton>
             </section>
           </div>
         </div>

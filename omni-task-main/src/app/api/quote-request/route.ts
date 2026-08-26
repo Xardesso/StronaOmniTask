@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { sendEmail } from '@/lib/mailer'
+import { escapeHtml, isHoneypotTripped, isSubmittedTooFast } from '@/lib/anti-spam'
 
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, phone, company, message } = body
+    const { name, email, phone, company, message, website, formStartedAt } = body
+
+    // Honeypot i minimalny czas wypełniania - odsiewa boty bez informowania ich o wykryciu.
+    if (isHoneypotTripped(website) || isSubmittedTooFast(formStartedAt)) {
+      return NextResponse.json({ success: true }, { status: 201 })
+    }
 
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
       return NextResponse.json(
@@ -40,12 +46,12 @@ export async function POST(request: Request) {
       subject: 'Nowe Zapytanie Ofertowe - OmniTask',
       html: `
         <h2>Otrzymano nowe zapytanie ofertowe</h2>
-        <p><strong>Od:</strong> ${name} (${email})</p>
-        <p><strong>Telefon:</strong> ${phone || 'Brak'}</p>
-        <p><strong>Firma:</strong> ${company || 'Brak'}</p>
+        <p><strong>Od:</strong> ${escapeHtml(name)} (${escapeHtml(email)})</p>
+        <p><strong>Telefon:</strong> ${escapeHtml(phone) || 'Brak'}</p>
+        <p><strong>Firma:</strong> ${escapeHtml(company) || 'Brak'}</p>
         <br/>
         <p><strong>Treść wiadomości:</strong></p>
-        <p>${message.replace(/\n/g, '<br/>')}</p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br/>')}</p>
         <br/>
         <p><small>Wiadomość wygenerowana automatycznie ze strony OmniTask.</small></p>
       `

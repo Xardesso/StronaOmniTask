@@ -2,13 +2,73 @@
 
 import { useTranslation } from '@/i18n/context'
 
-interface LegalSection {
-  title: string
+interface LegalTable {
+  headers: string[]
+  rows: string[][]
+}
+
+interface LegalBlock {
+  title?: string
   intro?: string
   paragraphs?: string[]
   items?: string[]
+  table?: LegalTable
   emailIntro?: string
   emailAfter?: string
+}
+
+interface LegalSection extends LegalBlock {
+  title: string
+  subsections?: LegalBlock[]
+}
+
+function BlockBody({ block, email }: { block: LegalBlock; email: string }) {
+  return (
+    <>
+      {block.emailIntro !== undefined ? (
+        <p>
+          {block.emailIntro}
+          <a href={`mailto:${email}`} title={email}>{email}</a>
+          {block.emailAfter}
+        </p>
+      ) : null}
+
+      {block.intro ? <p>{block.intro}</p> : null}
+
+      {block.items && block.items.length > 0 ? (
+        <ul>
+          {block.items.map((item, j) => (
+            <li key={j}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
+
+      {block.paragraphs?.map((p, j) => (
+        <p key={j}>{p}</p>
+      ))}
+
+      {block.table ? (
+        <div className="table-wrap">
+          <table className="data-table">
+            <thead>
+              <tr>
+                {block.table.headers.map((h, j) => <th key={j}>{h}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {block.table.rows.map((row, ri) => (
+                <tr key={ri}>
+                  {row.map((cell, ci) => (
+                    ci === 0 ? <td key={ci}><strong>{cell}</strong></td> : <td key={ci}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
+    </>
+  )
 }
 
 export default function LegalContent({ doc }: { doc: 'privacy' | 'terms' }) {
@@ -33,28 +93,14 @@ export default function LegalContent({ doc }: { doc: 'privacy' | 'terms' }) {
             {sections.map((section, i) => (
               <section key={i}>
                 <h2>{section.title}</h2>
+                <BlockBody block={section} email={email} />
 
-                {section.emailIntro !== undefined ? (
-                  <p>
-                    {section.emailIntro}
-                    <a href={`mailto:${email}`} title={email}>{email}</a>
-                    {section.emailAfter}
-                  </p>
-                ) : null}
-
-                {section.paragraphs?.map((p, j) => (
-                  <p key={j}>{p}</p>
+                {section.subsections?.map((sub, si) => (
+                  <div key={si}>
+                    {sub.title ? <h3>{sub.title}</h3> : null}
+                    <BlockBody block={sub} email={email} />
+                  </div>
                 ))}
-
-                {section.intro ? <p>{section.intro}</p> : null}
-
-                {section.items && section.items.length > 0 ? (
-                  <ul>
-                    {section.items.map((item, j) => (
-                      <li key={j}>{item}</li>
-                    ))}
-                  </ul>
-                ) : null}
               </section>
             ))}
           </div>

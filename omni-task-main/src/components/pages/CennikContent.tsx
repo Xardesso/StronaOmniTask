@@ -5,27 +5,41 @@ import LocaleLink from '@/components/LocaleLink'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL } from '@/lib/i18n'
-import { IMPLEMENTATION_TIERS, AUDIT_TIER, CARE_TIERS } from '@/lib/pricing-data'
+import { IMPLEMENTATION_TIERS, KSEF_TIER, AUDIT_TIER, CARE_TIERS } from '@/lib/pricing-data'
 import { FEATURE_BUR } from '@/lib/site-config'
+import { convertPlnToUsd, formatMoney, formatMoneyFrom, formatMoneyMonthly, formatPln, formatUsd } from '@/lib/currency'
+import CtaButton from '@/components/CtaButton'
 
 interface Faq { q: string; a: string }
 
 export default function CennikContent() {
-  const { t, tRaw } = useTranslation()
+  const { t, tRaw, locale } = useTranslation()
   const base = 'cennik_page'
   const faq = tRaw<Faq[]>(`${base}.faq`) || []
 
-  const [people, setPeople] = useState(2)
   const [hours, setHours] = useState(20)
   const [rate, setRate] = useState(45)
-  const [cost, setCost] = useState(14900)
+  const [processCount, setProcessCount] = useState(1)
+
+  const selectedTier = useMemo(() => {
+    const bySlug = (slug: string) => IMPLEMENTATION_TIERS.find((tier) => tier.slug === slug)!
+    if (processCount <= 1) return bySlug('start')
+    if (processCount <= 4) return bySlug('core')
+    return bySlug('transformacja')
+  }, [processCount])
+  // W PLN liczymy wprost, dla innych lokalizacji przeliczamy na USD, żeby
+  // koszt wdrożenia i wpisana przez użytkownika stawka były w tej samej walucie.
+  const cost = useMemo(
+    () => (locale === 'pl' ? selectedTier.priceValue : convertPlnToUsd(selectedTier.priceValue)),
+    [selectedTier, locale]
+  )
 
   const { yearly, payback } = useMemo(() => {
-    const monthlySavings = people * hours * rate
+    const monthlySavings = hours * rate
     const yearlySavings = monthlySavings * 12
     const paybackMonths = monthlySavings > 0 ? cost / monthlySavings : 0
     return { yearly: Math.round(yearlySavings), payback: paybackMonths }
-  }, [people, hours, rate, cost])
+  }, [hours, rate, cost])
 
   return (
     <>
@@ -42,12 +56,12 @@ export default function CennikContent() {
           <section className="service-detail__section">
             <h2>{t(`${base}.tier1_title`)}</h2>
             <div className="pricing-grid">
-              {[...IMPLEMENTATION_TIERS, AUDIT_TIER].map((tier) => (
+              {IMPLEMENTATION_TIERS.map((tier) => (
                 <div key={tier.slug} className="pricing-card">
                   <div className="pricing-card__header">
-                    {tier.featured && <span className="pricing-card__tag">Najczęściej wybierane</span>}
+                    {tier.featured && <span className="pricing-card__tag">{t(`${base}.featured_badge`)}</span>}
                     <span className="pricing-card__name">{tier.name}</span>
-                    <div className="pricing-card__price">{tier.price}</div>
+                    <div className="pricing-card__price">{formatMoneyFrom(tier.priceValue, locale, !!tier.isFrom)}</div>
                   </div>
                   <div className="pricing-card__body">
                     <p className="pricing-card__scope">{tier.scope}</p>
@@ -55,12 +69,48 @@ export default function CennikContent() {
                     <ul className="pricing-card__list">
                       {tier.features.map((f, i) => <li key={i}>{f}</li>)}
                     </ul>
-                    <LocaleLink href="/zapytanie-ofertowe" className="btn btn--dark" title={t('service_detail.cta_button')}>
+                    <CtaButton className="btn btn--dark" title={t('service_detail.cta_button')}>
                       {t('service_detail.cta_button')}
-                    </LocaleLink>
+                    </CtaButton>
                   </div>
                 </div>
               ))}
+
+              <div className="pricing-card pricing-card--standalone">
+                <div className="pricing-card__header">
+                  <span className="pricing-card__name">{KSEF_TIER.name}</span>
+                  <div className="pricing-card__price">{formatMoneyFrom(KSEF_TIER.priceValue, locale, !!KSEF_TIER.isFrom)}</div>
+                </div>
+                <div className="pricing-card__body">
+                  <p className="pricing-card__scope">{KSEF_TIER.scope}</p>
+                  <div className="pricing-card__time">{KSEF_TIER.time}</div>
+                  <ul className="pricing-card__list">
+                    {KSEF_TIER.features.map((f, i) => <li key={i}>{f}</li>)}
+                  </ul>
+                  <CtaButton className="btn btn--dark" title={t('service_detail.cta_button')}>
+                    {t('service_detail.cta_button')}
+                  </CtaButton>
+                </div>
+              </div>
+            </div>
+
+            <div className="audit-banner">
+              <div className="audit-banner__text">
+                <span className="badge badge--accent">Nie wiesz, od czego zacząć?</span>
+                <h3>{AUDIT_TIER.name}</h3>
+                <p>{AUDIT_TIER.scope} {AUDIT_TIER.time}.</p>
+                <p className="audit-banner__exit-note">{AUDIT_TIER.exitNote}</p>
+                <ul className="audit-banner__list">
+                  {AUDIT_TIER.features.map((f, i) => <li key={i}>{f}</li>)}
+                </ul>
+              </div>
+              <div className="audit-banner__price">
+                <div className="audit-banner__value">{formatMoney(AUDIT_TIER.priceValue, locale)}</div>
+                <p className="audit-banner__deduction">{AUDIT_TIER.deductionNote}</p>
+                <CtaButton className="btn btn--primary" title={t('service_detail.cta_button')}>
+                  {t('service_detail.cta_button')}
+                </CtaButton>
+              </div>
             </div>
           </section>
 
@@ -76,7 +126,7 @@ export default function CennikContent() {
                     <tr key={c.name}>
                       <td><strong>{c.name}</strong></td>
                       <td>{c.scope}</td>
-                      <td>{c.price}</td>
+                      <td>{formatMoneyMonthly(c.priceValue, locale)}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -105,26 +155,39 @@ export default function CennikContent() {
             <div className="calculator-card">
               <div className="calculator-card__row">
                 <div className="calculator-card__field">
-                  <label htmlFor="calc-people">{t(`${base}.calculator_people_label`)}</label>
-                  <input id="calc-people" type="number" min={1} value={people} onChange={(e) => setPeople(Math.max(1, Number(e.target.value)))} />
-                </div>
-                <div className="calculator-card__field">
                   <label htmlFor="calc-hours">{t(`${base}.calculator_hours_label`)}</label>
-                  <input id="calc-hours" type="number" min={1} value={hours} onChange={(e) => setHours(Math.max(1, Number(e.target.value)))} />
+                  <div className="calculator-card__field-input">
+                    <input id="calc-hours" type="number" min={1} value={hours} onChange={(e) => setHours(Math.max(1, Number(e.target.value)))} />
+                    <span className="calculator-card__field-unit">godz.</span>
+                  </div>
                 </div>
                 <div className="calculator-card__field">
                   <label htmlFor="calc-rate">{t(`${base}.calculator_rate_label`)}</label>
-                  <input id="calc-rate" type="number" min={1} value={rate} onChange={(e) => setRate(Math.max(1, Number(e.target.value)))} />
+                  <div className="calculator-card__field-input">
+                    <input id="calc-rate" type="number" min={1} value={rate} onChange={(e) => setRate(Math.max(1, Number(e.target.value)))} />
+                    <span className="calculator-card__field-unit">{locale === 'pl' ? 'zł/h' : '$/h'}</span>
+                  </div>
                 </div>
+                <div className="calculator-card__field">
+                  <label htmlFor="calc-processes">{t(`${base}.calculator_processes_label`)}</label>
+                  <div className="calculator-card__field-input">
+                    <input id="calc-processes" type="number" min={1} value={processCount} onChange={(e) => setProcessCount(Math.max(1, Number(e.target.value)))} />
+                    <span className="calculator-card__field-unit">proc.</span>
+                  </div>
+                </div>
+              </div>
+              <div className="calculator-card__tier-hint">
+                {t(`${base}.calculator_tier_hint`)} <strong>{selectedTier.name}</strong> ({formatMoneyFrom(selectedTier.priceValue, locale, !!selectedTier.isFrom)})
               </div>
               <div className="calculator-card__result">
                 <div className="calculator-card__result-item">
-                  <span className="calculator-card__result-value">{yearly.toLocaleString('pl-PL')} zł</span>
+                  <span className="calculator-card__result-value">{locale === 'pl' ? formatPln(yearly) : formatUsd(yearly)}</span>
                   <span className="calculator-card__result-label">{t(`${base}.calculator_result_yearly`)}</span>
                 </div>
+                <div className="calculator-card__result-divider" />
                 <div className="calculator-card__result-item">
                   <span className="calculator-card__result-value">{payback > 0 ? payback.toFixed(1) : '–'} mies.</span>
-                  <span className="calculator-card__result-label">{t(`${base}.calculator_result_payback`)} (przy wdrożeniu za {cost.toLocaleString('pl-PL')} zł)</span>
+                  <span className="calculator-card__result-label">{t(`${base}.calculator_result_payback`)} ({locale === 'pl' ? `wdrożenie za ${formatPln(cost)}` : `implementation at ${formatUsd(cost)}`})</span>
                 </div>
               </div>
             </div>
@@ -150,10 +213,10 @@ export default function CennikContent() {
           <section className="service-detail__cta">
             <h2>{t('cta.title')}</h2>
             <p>{t('cta.subtitle')}</p>
-            <LocaleLink href="/zapytanie-ofertowe" className="btn btn--primary btn--lg" title={t('cta.button')}>
+            <CtaButton className="btn btn--primary btn--lg" title={t('cta.button')}>
               {t('cta.button')}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-            </LocaleLink>
+            </CtaButton>
           </section>
         </div>
       </div>
@@ -168,11 +231,11 @@ export default function CennikContent() {
             description: t(`${base}.subtitle`),
             provider: { '@type': 'Organization', name: 'OmniTask', '@id': `${SITE_URL}/#organization` },
             url: `${SITE_URL}/cennik`,
-            offers: IMPLEMENTATION_TIERS.map((tier) => ({
+            offers: [...IMPLEMENTATION_TIERS, KSEF_TIER].map((tier) => ({
               '@type': 'Offer',
               name: tier.name,
-              price: tier.price,
-              priceCurrency: 'PLN',
+              price: locale === 'pl' ? tier.priceValue : convertPlnToUsd(tier.priceValue),
+              priceCurrency: locale === 'pl' ? 'PLN' : 'USD',
             })),
           }),
         }}

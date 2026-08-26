@@ -67,8 +67,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [locale])
 
   // Zmiana języka = nawigacja do zlokalizowanego adresu bieżącej strony.
+  // Ciasteczko zapamiętuje świadomy wybór, żeby middleware nie próbował
+  // później "poprawiać" języka na podstawie Accept-Language przeglądarki.
   const setLocale = useCallback(
     (newLocale: Locale) => {
+      document.cookie = `omnitask_locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`
       router.push(localizePath(pathname, newLocale))
     },
     [pathname, router]

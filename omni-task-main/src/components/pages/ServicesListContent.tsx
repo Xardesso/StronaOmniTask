@@ -4,6 +4,7 @@ import LocaleLink from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import ServiceIcon from '@/components/ServiceIcon'
+import CtaButton from '@/components/CtaButton'
 
 const ALL_SERVICES = [
   { slug: 'automatyzacja-workflow', titleKey: 'services.service1.title', descKey: 'services.service1.desc' },
@@ -11,7 +12,7 @@ const ALL_SERVICES = [
   { slug: 'integracja-systemow', titleKey: 'services.service3.title', descKey: 'services.service3.desc' },
   { slug: 'szkolenia-i-doradztwo', titleKey: 'services.service4.title', descKey: 'services.service4.desc', plOnly: true, highlight: true },
   { slug: 'rpa', titleKey: 'services.service5.title', descKey: 'services.service5.desc' },
-  { slug: 'opieka-i-hosting', titleKey: 'services.service6.title', descKey: 'services.service6.desc', plOnly: true },
+  { slug: 'opieka-i-hosting', titleKey: 'services.service6.title', descKey: 'services.service6.desc' },
   { slug: 'agenci-ai', titleKey: 'services.service7.title', descKey: 'services.service7.desc' },
 ]
 
@@ -55,12 +56,12 @@ export default function ServicesListContent() {
           <section className="service-detail__cta">
             <h2>{t('services_page.cta_title')}</h2>
             <p>{t('services_page.cta_subtitle')}</p>
-            <LocaleLink href="/zapytanie-ofertowe" className="btn btn--primary btn--lg" title={t('cta.button')}>
+            <CtaButton className="btn btn--primary btn--lg" title={t('cta.button')}>
               {t('cta.button')}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </LocaleLink>
+            </CtaButton>
           </section>
         </div>
       </div>

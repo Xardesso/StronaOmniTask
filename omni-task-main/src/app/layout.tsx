@@ -5,6 +5,8 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { LanguageProvider } from '@/i18n/context'
+import { CtaModalProvider } from '@/components/CtaModal'
+import { CookieConsentProvider } from '@/components/CookieConsent'
 import { buildHreflangAlternates, HREFLANG_MAP, DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n'
 import { prisma } from '@/lib/prisma'
 import { getPublicUrl } from '@/lib/gcs'
@@ -132,10 +134,11 @@ export default async function RootLayout({
               url: 'https://www.omnitask.pl',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://www.omnitask.pl/Logo.png',
+                url: 'https://www.omnitask.pl/logo-pl.png',
               },
               image: 'https://www.omnitask.pl/og-image.png',
-              description: 'Eksperci od automatyzacji procesów biznesowych RPA i agentów AI. Wdrażamy roboty software\'owe, integrujemy systemy i optymalizujemy procesy.',
+              description: 'Automatyzacja procesów w firmie - wdrożenia n8n, integracja systemów (ERP, CRM, KSeF), robotyzacja procesów (RPA) i agenci AI dla firm 5-50 osób. Stała cena, wdrożenie w 2-4 tygodnie.',
+              knowsAbout: ['automatyzacja procesów', 'KSeF', 'n8n', 'integracja systemów', 'robotyzacja procesów RPA', 'agenci AI', 'Make.com'],
               sameAs: [
                 'https://www.facebook.com/profile.php?id=61574333642391',
                 'https://www.linkedin.com/company/omni-task',
@@ -164,6 +167,8 @@ export default async function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Service',
               serviceType: 'Automatyzacja procesów biznesowych',
+              name: 'Automatyzacja procesów dla firm',
+              description: 'Automatyzacja procesów w firmie: wdrożenie n8n, integracja systemów, automatyzacja faktur KSeF, robotyzacja procesów (RPA) i agenci AI.',
               provider: {
                 '@type': 'Organization',
                 name: 'OmniTask',
@@ -175,7 +180,7 @@ export default async function RootLayout({
               },
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
-                name: 'Usługi automatyzacji i RPA',
+                name: 'Usługi automatyzacji procesów',
                 itemListElement: [
                   {
                     '@type': 'OfferCatalog',
@@ -185,8 +190,8 @@ export default async function RootLayout({
                         '@type': 'Offer',
                         itemOffered: {
                           '@type': 'Service',
-                          name: 'Robotyzacja procesów (RPA)',
-                          description: 'Wdrażamy roboty software\'owe, które automatycznie wykonują powtarzalne zadania biznesowe.',
+                          name: 'Robotyzacja procesów biznesowych (RPA)',
+                          description: 'Wdrażam roboty software\'owe, które automatycznie wykonują powtarzalne zadania biznesowe zamiast człowieka.',
                           url: 'https://www.omnitask.pl/uslugi/rpa',
                         },
                       },
@@ -194,14 +199,14 @@ export default async function RootLayout({
                   },
                   {
                     '@type': 'OfferCatalog',
-                    name: 'Automatyzacja workflow',
+                    name: 'Automatyzacja workflow (n8n, Make)',
                     itemListElement: [
                       {
                         '@type': 'Offer',
                         itemOffered: {
                           '@type': 'Service',
-                          name: 'Automatyzacja workflow',
-                          description: 'Projektujemy inteligentne przepływy pracy łączące systemy i aplikacje.',
+                          name: 'Automatyzacja workflow z n8n i Make',
+                          description: 'Projektuję i wdrażam automatyzacje w n8n oraz Make.com, łączące systemy i aplikacje w jeden przepływ pracy.',
                           url: 'https://www.omnitask.pl/uslugi/automatyzacja-workflow',
                         },
                       },
@@ -215,9 +220,24 @@ export default async function RootLayout({
                         '@type': 'Offer',
                         itemOffered: {
                           '@type': 'Service',
-                          name: 'Integracja systemów',
-                          description: 'Łączymy systemy ERP, CRM i bazy danych w jeden ekosystem.',
+                          name: 'Integracja systemów ERP, CRM i API',
+                          description: 'Łączę systemy ERP, CRM, e-commerce i bazy danych w jeden ekosystem z automatyczną wymianą danych.',
                           url: 'https://www.omnitask.pl/uslugi/integracja-systemow',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Obsługa KSeF',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Automatyzacja obiegu faktur KSeF',
+                          description: 'Automatyzuję obieg faktur po wdrożeniu KSeF: deduplikacja, routing do oddziałów i integracja z systemem księgowym.',
+                          url: 'https://www.omnitask.pl/uslugi/ksef',
                         },
                       },
                     ],
@@ -230,9 +250,39 @@ export default async function RootLayout({
                         '@type': 'Offer',
                         itemOffered: {
                           '@type': 'Service',
-                          name: 'Agenci AI i systemy multi-agentowe',
-                          description: 'Budujemy autonomicznych agentów AI realizujących złożone cele biznesowe.',
+                          name: 'Agenci AI dla biznesu',
+                          description: 'Buduję agentów AI, którzy analizują dokumenty, obsługują klientów i monitorują dane firmy.',
                           url: 'https://www.omnitask.pl/uslugi/agenci-ai',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Szkolenia i doradztwo z automatyzacji',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Szkolenia z automatyzacji z dofinansowaniem PARP',
+                          description: 'Szkolenie i doradztwo z automatyzacji procesów, zarejestrowane w Bazie Usług Rozwojowych, do kupienia z dofinansowaniem do 83% kosztu.',
+                          url: 'https://www.omnitask.pl/uslugi/szkolenia-i-doradztwo',
+                        },
+                      },
+                    ],
+                  },
+                  {
+                    '@type': 'OfferCatalog',
+                    name: 'Opieka i hosting automatyzacji',
+                    itemListElement: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'Service',
+                          name: 'Opieka i hosting n8n',
+                          description: 'Monitoring, naprawy i zarządzany hosting n8n dla wdrożonych automatyzacji.',
+                          url: 'https://www.omnitask.pl/uslugi/opieka-i-hosting',
                         },
                       },
                     ],
@@ -245,9 +295,13 @@ export default async function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <LanguageProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer posts={footerPosts} />
+          <CookieConsentProvider>
+            <CtaModalProvider>
+              <Navbar />
+              <main>{children}</main>
+              <Footer posts={footerPosts} />
+            </CtaModalProvider>
+          </CookieConsentProvider>
         </LanguageProvider>
       </body>
     </html>

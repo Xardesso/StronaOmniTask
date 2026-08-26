@@ -44,6 +44,26 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M15.5 9.5A5.5 5.5 0 005 11a4 4 0 00.5 8h10a4.5 4.5 0 001-8.9 5.5 5.5 0 00-1-.6z" />
     </>
   ),
+  building: (
+    <>
+      <path d="M5 21V5a1 1 0 011-1h6a1 1 0 011 1v16" />
+      <path d="M13 21v-9a1 1 0 011-1h4a1 1 0 011 1v9" />
+      <path d="M9 8h.01M9 12h.01M9 16h.01" />
+    </>
+  ),
+  chart: (
+    <>
+      <path d="M4 20h16" />
+      <path d="M7 20V10M12 20V4M17 20v-7" />
+    </>
+  ),
+  handshake: (
+    <>
+      <circle cx="12" cy="9" r="6" />
+      <path d="M9 9.5l2 2 4-4" />
+      <path d="M8 14.5L5 21l7-3 7 3-3-6.5" />
+    </>
+  ),
 }
 
 export default function ToolIcon({ slug, size = 20 }: { slug: string; size?: number }) {

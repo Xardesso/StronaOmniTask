@@ -18,13 +18,11 @@ export const CONTACT = {
   phone: '+48 721 719 238',
   phoneHref: '+48721719238',
   email: 'kontakt@omnitask.pl',
-  // TODO: uzupełnić po stronie właściciela — dane wymagane m.in. w stopce i na /kontakt.
-  nip: '[NIP do uzupełnienia]',
-  regon: '[REGON do uzupełnienia]',
+  nip: '665-306-59-82',
+  regon: '528314936',
 }
 
 export const FOUNDER = {
   name: 'Marcin Łętowski',
-  // TODO: podmienić na realną nazwę pliku zdjęcia (np. w /public), gdy zostanie dostarczone.
-  photo: null as string | null,
+  photo: '/founder.jpg' as string | null,
 }

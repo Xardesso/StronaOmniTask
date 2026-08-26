@@ -1,13 +1,7 @@
-import { buildHreflangAlternates } from '@/lib/i18n'
 import type { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/meta'
 
-export const metadata: Metadata = {
-  title: 'Polityka prywatności i ochrona danych (RODO)',
-  description: 'Polityka prywatności OmniTask. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.',
-  robots: { index: true, follow: true },
-  alternates: { canonical: '/polityka-prywatnosci',
-    languages: buildHreflangAlternates('/polityka-prywatnosci'), },
-}
+export const metadata: Metadata = buildPageMetadata({ locale: 'pl', cleanPath: '/polityka-prywatnosci', metaKey: 'privacy' })
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>

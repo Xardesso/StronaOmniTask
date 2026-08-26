@@ -26,7 +26,7 @@ const STATIC_PATHS: {
   { path: '/uslugi/agenci-ai', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/uslugi/ksef', changeFrequency: 'monthly', priority: 0.8, plOnly: true },
   { path: '/uslugi/szkolenia-i-doradztwo', changeFrequency: 'monthly', priority: 0.8, plOnly: true },
-  { path: '/uslugi/opieka-i-hosting', changeFrequency: 'monthly', priority: 0.8, plOnly: true },
+  { path: '/uslugi/opieka-i-hosting', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/o-nas', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/zapytanie-ofertowe', changeFrequency: 'monthly', priority: 0.6, plOnly: true },
   { path: '/kontakt', changeFrequency: 'monthly', priority: 0.7 },

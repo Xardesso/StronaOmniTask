@@ -6,8 +6,9 @@ import LanguageSelector from './LanguageSelector'
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { stripLocale } from '@/lib/i18n'
-import { CALCOM_URL, FEATURE_BUR, FEATURE_REALIZACJE } from '@/lib/site-config'
+import { FEATURE_BUR, FEATURE_REALIZACJE } from '@/lib/site-config'
 import ServiceIcon from './ServiceIcon'
+import CtaButton from './CtaButton'
 
 export default function Navbar() {
   const { t, locale } = useTranslation()
@@ -47,7 +48,7 @@ export default function Navbar() {
     { href: '/uslugi/integracja-systemow', slug: 'integracja-systemow', label: t('service_detail.labels.integration') },
     { href: '/uslugi/szkolenia-i-doradztwo', slug: 'szkolenia-i-doradztwo', label: t('service_detail.labels.szkolenia'), plOnly: true },
     { href: '/uslugi/rpa', slug: 'rpa', label: t('service_detail.labels.rpa') },
-    { href: '/uslugi/opieka-i-hosting', slug: 'opieka-i-hosting', label: t('service_detail.labels.opieka'), plOnly: true },
+    { href: '/uslugi/opieka-i-hosting', slug: 'opieka-i-hosting', label: t('service_detail.labels.opieka') },
     { href: '/uslugi/agenci-ai', slug: 'agenci-ai', label: t('service_detail.labels.ai') },
   ]
   // KSeF, szkolenia i opieka nie mają sensu po angielsku/ukraińsku — brak realnego odbiorcy (spec 2.2).
@@ -58,6 +59,7 @@ export default function Navbar() {
     ...(FEATURE_BUR && locale === 'pl' ? [{ href: '/dofinansowanie', label: t('nav.funding') }] : []),
     { href: '/cennik', label: t('nav.pricing') },
     ...(FEATURE_REALIZACJE && locale === 'pl' ? [{ href: '/realizacje', label: t('nav.projects') }] : []),
+    { href: '/kontakt', label: t('nav.contact') },
     { href: '/blog', label: t('nav.blog') },
     { href: '/o-nas', label: t('nav.about') },
   ]
@@ -66,7 +68,13 @@ export default function Navbar() {
     <header className={`navbar ${scrolled || mobileOpen ? 'navbar--scrolled' : ''}`} id="main-navbar">
       <div className="navbar__container">
         <Link href="/" className="navbar__logo" title="OmniTask - Strona główna">
-          <img src="/Logo2.png" alt="OmniTask Logo" title="OmniTask Logo" className="navbar__logo-img" style={{ height: '54px', width: 'auto' }} />
+          <img
+            src={locale === 'pl' ? '/logo-pl.png' : '/logo-en.png'}
+            alt="OmniTask Logo"
+            title="OmniTask Logo"
+            className="navbar__logo-img"
+            style={{ height: '54px', width: 'auto' }}
+          />
         </Link>
 
         <nav className="navbar__nav" id="desktop-nav">
@@ -118,15 +126,9 @@ export default function Navbar() {
 
         <div className="navbar__actions">
           <LanguageSelector />
-          <a
-            href={CALCOM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn--primary navbar__cta"
-            title={t('nav.book_call')}
-          >
+          <CtaButton className="btn btn--primary navbar__cta" title={t('nav.book_call')}>
             {t('nav.book_call')}
-          </a>
+          </CtaButton>
           <button
             className="navbar__hamburger"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -202,15 +204,13 @@ export default function Navbar() {
               </Link>
             )
           ))}
-          <a
-            href={CALCOM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <CtaButton
             className="btn btn--primary navbar__mobile-cta"
             title={t('nav.book_call')}
+            onBeforeOpen={() => setMobileOpen(false)}
           >
             {t('nav.book_call')}
-          </a>
+          </CtaButton>
         </nav>
       </div>
     </header>

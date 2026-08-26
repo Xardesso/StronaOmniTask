@@ -13,9 +13,19 @@
     "all_services": "Wszystkie usługi",
     "book_call": "Umów rozmowę"
   },
+  "eyebrow": {
+    "automation": "Automatyzacja procesów",
+    "trust": "Zaufanie",
+    "problem": "Problem",
+    "services": "Usługi",
+    "process": "Proces",
+    "pricing": "Cennik",
+    "faq": "FAQ",
+    "about": "O mnie"
+  },
   "hero": {
     "title": "Twoi ludzie przestają przepisywać dane między systemami",
-    "subtitle": "Automatyzuję powtarzalne procesy w firmach 5–50 osób. Wdrożenie w 2–4 tygodnie. Do 83% kosztu może pokryć program PARP.",
+    "subtitle": "Automatyzacja procesów w firmie i automatyzacja pracy dla małych i średnich firm (5–50 osób). Wdrożenie w 2–4 tygodnie, stała cena, do 83% kosztu może pokryć program PARP.",
     "checks": [
       "Wdrożenie w 2–4 tygodnie",
       "Stała cena, znana z góry",
@@ -23,7 +33,15 @@
       "Rozmawiasz z osobą, która wdraża"
     ],
     "cta_primary": "Umów bezpłatną rozmowę",
-    "cta_secondary": "Zobacz cennik"
+    "cta_secondary": "Zobacz cennik",
+    "diagram_before_title": "Faktura z KSeF i mailem",
+    "diagram_before_desc": "Ktoś ręcznie sprawdza, czy to nie duplikat",
+    "diagram_after_title": "Automatyzacja",
+    "diagram_after_desc": "Deduplikacja i routing do oddziału bez udziału człowieka",
+    "badge_time_value": "2–4 tyg.",
+    "badge_time_label": "wdrożenie",
+    "badge_funding_value": "do 83%",
+    "badge_funding_label": "dofinansowania"
   },
   "trust": {
     "title": "Pracuję na sprawdzonych, bezpiecznych narzędziach"
@@ -43,31 +61,31 @@
     "subtitle": "Od pojedynczego procesu po pełną obsługę KSeF i szkolenia z dofinansowaniem.",
     "service1": {
       "title": "Automatyzacja workflow",
-      "desc": "Łączę systemy, aplikacje i ludzi w jeden przepływ pracy – bez ręcznego przepisywania danych."
+      "desc": "Łączę systemy, aplikacje i ludzi w jeden przepływ pracy. Dane wpisane raz trafiają tam, gdzie trzeba - bez kopiowania, maili i pytania „czy ktoś to już zrobił”. Sprawdza się np. przy obiegu wniosków zakupowych, akceptacji faktur czy onboardingu nowego pracownika."
     },
     "service2": {
       "title": "Obsługa KSeF",
-      "desc": "Deduplikacja, przypisywanie do oddziałów i MPK – koniec ręcznego rozdzielania faktur."
+      "desc": "Deduplikacja, przypisywanie do oddziałów i MPK. Koniec ręcznego rozdzielania faktur i ryzyka podwójnego księgowania tej samej pozycji. Obejmuje też monitoring sesji API i alert, zanim proces przerwie się w środku dnia."
     },
     "service3": {
       "title": "Integracja systemów",
-      "desc": "Łączę ERP, CRM, e-mail i magazyn w jeden ekosystem z automatyczną wymianą danych."
+      "desc": "Łączę ERP, CRM, e-mail i magazyn w jeden ekosystem z automatyczną wymianą danych - bez comiesięcznego eksportu do Excela. Dane aktualizują się w obu systemach niemal w czasie rzeczywistym, więc sprzedaż i księgowość widzą to samo."
     },
     "service4": {
       "title": "Szkolenia i doradztwo",
-      "desc": "Szkolenie zespołu z automatyzacji – do kupienia z dofinansowaniem z programu PARP."
+      "desc": "Uczę zespół rozpoznawać procesy warte automatyzacji. Do kupienia z dofinansowaniem z programu PARP - do 83% kosztu. Warsztat kończy się listą konkretnych procesów w Waszej firmie, gotową do wdrożenia."
     },
     "service5": {
       "title": "Automatyzacja zadań (RPA)",
-      "desc": "Programowy robot przejmuje powtarzalne czynności w Waszych systemach."
+      "desc": "Programowy robot przejmuje powtarzalne czynności w Waszych systemach - klika, kopiuje i wypełnia dokładnie tak jak człowiek, tylko bez przerw. Dobrze sprawdza się tam, gdzie system nie ma API, np. w starszych aplikacjach księgowych."
     },
     "service6": {
       "title": "Opieka i hosting",
-      "desc": "Monitoruję i naprawiam wdrożone automatyzacje – bez opieki z czasem przestają działać."
+      "desc": "Monitoruję i naprawiam wdrożone automatyzacje. Bez opieki z czasem cicho przestają działać, gdy zmieni się system, z którym współpracują. W ramach opieki dostajesz też miesięczny raport, co działało i ile czasu to zaoszczędziło."
     },
     "service7": {
       "title": "Agenci AI",
-      "desc": "Buduję asystentów AI do analizy dokumentów, obsługi klienta i monitoringu danych."
+      "desc": "Buduję asystentów AI do analizy dokumentów, obsługi klienta i monitoringu danych - biorą na siebie pierwszy kontakt z dużą ilością informacji. Odpowiadają na podstawie Waszej dokumentacji, a trudniejsze sprawy przekazują dalej do człowieka."
     }
   },
   "funding_home": {
@@ -108,7 +126,8 @@
   "pricing_home": {
     "title": "Cennik bez niespodzianek",
     "subtitle": "Ceny od, bez „zapytaj o wycenę”. Pełny cennik z pakietem opieki i KSeF poniżej.",
-    "cta": "Zobacz pełny cennik"
+    "cta": "Zobacz pełny cennik",
+    "card_cta": "Zobacz szczegóły"
   },
   "faq": {
     "title": "Najczęściej zadawane pytania",
@@ -128,7 +147,7 @@
   },
   "about_home": {
     "title": "Kto to wdraża",
-    "text": "Z zawodu jestem programistą — automatyzacja to mój codzienny warsztat, nie dodatek do oferty. Prowadziłem też mniejsze biznesy, więc znam z pierwszej ręki natłok dokumentów i danych, który potrafi wygenerować nawet niewielka firma.",
+    "text": "Z zawodu jestem programistą - zajmuję się automatyzacją procesów i integracją systemów na co dzień, nie od święta. Sam też prowadziłem mniejsze biznesy, więc wiem z pierwszej ręki, ile faktur, maili i tabelek potrafi wygenerować nawet niewielka firma. Dlatego nie muszę uczyć się Waszego biznesu od zera - od razu rozmawiamy o konkretach.",
     "link": "Poznaj mnie bliżej"
   },
   "cta": {
@@ -136,16 +155,29 @@
     "subtitle": "30 minut rozmowy. Bez prezentacji, bez zobowiązań. Jeśli nie zobaczę sensownego procesu, powiem to wprost.",
     "button": "Umów rozmowę"
   },
+  "cta_modal": {
+    "title": "Jak wolisz się skontaktować?",
+    "subtitle": "Wybierz to, co jest dla Ciebie najwygodniejsze.",
+    "close": "Zamknij",
+    "phone_title": "Zadzwoń",
+    "book_title": "Umów spotkanie",
+    "book_desc": "Wybierz dogodny termin w kalendarzu",
+    "describe_title": "Opisz swój proces",
+    "describe_desc": "Wiesz już, co chcesz zautomatyzować? Napisz, a się odezwiemy"
+  },
   "clients": {
     "title": "Branże, w których działam"
   },
   "trusted_by": {
-    "title": "Firmy, które mi zaufały",
-    "subtitle": "Automatyzacja procesów u realnych klientów, nie tylko w prezentacji.",
+    "title": "Ostatnio pracowałem m.in. dla",
+    "subtitle": "Kilka wybranych firm - automatyzacja procesów u realnych klientów, nie tylko w prezentacji. Część mniejszych wdrożeń zostaje anonimowa na życzenie klienta.",
+    "label_industry": "Branża",
+    "label_improved": "Co zautomatyzowałem",
+    "label_result": "Efekt",
     "items": [
-      { "name": "Warsaw Residential Group", "initials": "WRG", "desc": "Zarządzanie najmem i nieruchomościami w Warszawie — automatyzacja obiegu umów najmu i rozliczeń z najemcami." },
-      { "name": "Metronq", "initials": "MQ", "desc": "Firma technologiczna działająca na danych — automatyzacja raportowania i integracja źródeł danych między systemami." },
-      { "name": "Nail the Deal", "initials": "NTD", "desc": "Zespół sprzedażowy zamykający transakcje na dużą skalę — automatyzacja follow-upów i przepływu ofert między etapami sprzedaży." }
+      { "name": "Warsaw Residential Group", "logo": "/clients/warsaw-residential-group.svg", "industry": "Pośrednictwo w sprzedaży i najmie nieruchomości w Warszawie", "improved": "Obieg umów pośrednictwa i kompletowanie załączników wymaganych ustawą AML przy każdej transakcji", "result": "Dokumentacja AML jest kompletna przy każdej transakcji, zamiast donoszenia brakujących załączników w pośpiechu przed kontrolą" },
+      { "name": "Metronq", "logo": "/clients/metronq.png", "industry": "System do automatycznej wyceny zleceń obróbki CNC", "improved": "Automatyczne wystawianie faktur w KSeF na podstawie danych z płatności Stripe", "result": "Faktura trafia do KSeF w kilka minut od wpłaty klienta, bez ręcznego przepisywania danych z panelu Stripe" },
+      { "name": "Nail the Deal", "logo": "/clients/nail-the-deal.png", "industry": "System do wyceny prac budowlanych", "improved": "Synchronizacja średnich stawek rynkowych za prace budowlane, które zasilają domyślny cennik w systemie", "result": "Nowy klient od razu widzi realistyczny cennik startowy, zamiast wpisywać stawki z sufitu" }
     ]
   },
   "newsletter": {
@@ -205,7 +237,7 @@
     "see_all": "Zobacz wszystkie wpisy"
   },
   "footer": {
-    "description": "OmniTask. Automatyzuję powtarzalne procesy w firmach 5–50 osób: obieg dokumentów, KSeF, integracje systemów.",
+    "description": "OmniTask – automatyzuję powtarzalne procesy w firmach, żeby zespół przestał tracić czas na ręczne przepisywanie danych. Stała cena, wdrożenie w 2–4 tygodnie, opieka po uruchomieniu.",
     "quick_links": "Szybkie linki",
     "services": "Usługi",
     "company": "Firma",
@@ -215,7 +247,23 @@
     "copyright": "© 2026 OmniTask. Wszelkie prawa zastrzeżone.",
     "privacy_policy": "Polityka prywatności",
     "terms": "Regulamin",
+    "cookie_settings": "Ustawienia cookies",
     "about": "O mnie"
+  },
+  "cookie_consent": {
+    "title": "Ta strona używa plików cookies",
+    "description": "Cookies niezbędne są zawsze aktywne. Analityczne i marketingowe uruchamiamy wyłącznie po Twojej zgodzie.",
+    "customize": "Ustawienia",
+    "reject": "Odrzuć",
+    "accept_all": "Zaakceptuj wszystkie",
+    "settings_title": "Ustawienia cookies",
+    "necessary_label": "Niezbędne",
+    "necessary_desc": "Konieczne do prawidłowego działania serwisu (np. utrzymanie sesji, zapamiętanie języka i decyzji o cookies). Zawsze aktywne.",
+    "analytics_label": "Analityczne",
+    "analytics_desc": "Pomagają nam zrozumieć, jak korzystasz z serwisu (Google Analytics 4).",
+    "marketing_label": "Marketingowe",
+    "marketing_desc": "Służą mierzeniu skuteczności kampanii reklamowych.",
+    "save": "Zapisz ustawienia"
   },
   "breadcrumbs": {
     "home": "Strona główna"
@@ -225,10 +273,10 @@
     "h1": "Co konkretnie automatyzuję",
     "learn_more": "Dowiedz się więcej →",
     "cta_title": "Nie wiesz, od czego zacząć?",
-    "cta_subtitle": "Zacznijmy od audytu — zmapuję Wasze procesy i pokażę, gdzie jest największy potencjał."
+    "cta_subtitle": "Zacznijmy od audytu - zmapuję Wasze procesy i pokażę, gdzie jest największy potencjał."
   },
   "service_detail": {
-    "cta_button": "Bezpłatna wycena",
+    "cta_button": "Umów rozmowę",
     "faq_label": "Najczęściej zadawane pytania",
     "labels": {
       "rpa": "Automatyzacja zadań (RPA)",
@@ -241,29 +289,30 @@
     },
     "rpa": {
       "h1": "Automatyzacja powtarzalnych zadań (RPA) dla firm 5–50 osób",
-      "subtitle": "Programowy robot przejmuje żmudne, powtarzalne czynności w Waszych systemach — Wy zajmujecie się resztą.",
+      "subtitle": "Robotyzacja procesów biznesowych (RPA) dla małych firm - programowy robot przejmuje żmudne, powtarzalne czynności w Waszych systemach, Wy zajmujecie się resztą.",
+      "service_type": "Robotyzacja procesów biznesowych (RPA)",
       "breadcrumb": "Automatyzacja zadań",
       "related_title": "Powiązane usługi",
       "cta_title": "Chcesz zobaczyć, ile czasu odzyskacie?",
       "cta_subtitle": "30 minut rozmowy o Waszym procesie, bez prezentacji i bez zobowiązań.",
       "s1_title": "Na czym polega automatyzacja zadań",
-      "s1_p1": "Robot programowy naśladuje to, co dziś robi człowiek w Waszych systemach: loguje się, klika, kopiuje dane między aplikacjami, wypełnia formularze, wysyła e-maile i generuje raporty — dokładnie tak samo, tylko bez przerw i bez pomyłek.",
+      "s1_p1": "Robot programowy naśladuje to, co dziś robi człowiek w Waszych systemach: loguje się, klika, kopiuje dane między aplikacjami, wypełnia formularze, wysyła e-maile i generuje raporty - dokładnie tak samo, tylko bez przerw i bez pomyłek.",
       "s1_p2": "Nie zastępuje ludzi w pracy, która wymaga oceny sytuacji. Zdejmuje z nich powtarzalne, nudne czynności, które i tak nikogo nie rozwijają, a codziennie zjadają godziny.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Biura rachunkowe", "desc": "Setki dokumentów miesięcznie do przepisania między systemem klienta a systemem księgowym. Każdy nowy klient to kolejne źródło danych do ręcznego uzgadniania, a sezon rozliczeń zamienia to w wąskie gardło całego zespołu." },
-        { "title": "Handel i e-commerce", "desc": "Zamówienia, faktury i stany magazynowe wymagające ręcznego uzgadniania każdego dnia. Im więcej sprzedajecie, tym więcej godzin to pochłania — automatyzacja jest jedynym sposobem, żeby wzrost sprzedaży nie oznaczał wzrostu etatów w administracji." },
+        { "title": "Handel i e-commerce", "desc": "Zamówienia, faktury i stany magazynowe wymagające ręcznego uzgadniania każdego dnia. Im więcej sprzedajecie, tym więcej godzin to pochłania - automatyzacja jest jedynym sposobem, żeby wzrost sprzedaży nie oznaczał wzrostu etatów w administracji." },
         { "title": "Firmy usługowe", "desc": "Powtarzalne raporty i zestawienia zjadające kilka godzin tygodniowo tej samej, dobrze opłacanej osoby. To czas, którego nikt nie odzyska, jeśli zostanie w kolejnym arkuszu Excela." }
       ],
       "zastosowania_title": "Typowe zastosowania",
       "zastosowania": [
-        { "title": "Przepisywanie danych między systemami", "desc": "Robot pobiera dane z jednego systemu i wprowadza je do drugiego ze stuprocentową dokładnością — zadanie, które ręcznie zajmuje zwykle 2–3 godziny dziennie." },
+        { "title": "Przepisywanie danych między systemami", "desc": "Robot pobiera dane z jednego systemu i wprowadza je do drugiego ze stuprocentową dokładnością - zadanie, które ręcznie zajmuje zwykle 2–3 godziny dziennie." },
         { "title": "Generowanie i wysyłka raportów", "desc": "Cotygodniowe zestawienia sprzedaży, kosztów czy magazynu składane automatycznie i wysyłane do wskazanych osób." },
         { "title": "Weryfikacja i uzgadnianie dokumentów", "desc": "Robot porównuje dane z dwóch źródeł, np. zamówienie i fakturę, i zgłasza tylko rozbieżności." },
         { "title": "Eksport i import danych między aplikacjami", "desc": "Migracja danych klientów, produktów czy zamówień bez ręcznego kopiowania arkuszy." },
         { "title": "Powiadomienia i przypomnienia", "desc": "Automatyczny alert, gdy termin się zbliża albo dokument czeka na akceptację dłużej niż ustalony czas." }
       ],
-      "wdrozenie_title": "Jak wygląda wdrożenie",
+      "wdrozenie_title": "Jak wygląda wdrożenie RPA",
       "wdrozenie": [
         { "title": "Analiza procesu", "desc": "Oglądam, jak dziś wygląda praca krok po kroku, i liczę, ile realnie zajmuje." },
         { "title": "Budowa robota", "desc": "Konfiguruję automatyzację na danych testowych, nie na produkcji." },
@@ -271,7 +320,7 @@
         { "title": "Wdrożenie i szkolenie", "desc": "Uruchamiam automatyzację na produkcji i pokazuję zespołowi, jak ją monitorować." }
       ],
       "technologie_title": "Technologie",
-      "technologie_p": "Do automatyzacji na poziomie danych i interfejsu wykorzystuję n8n, Make oraz — tam gdzie potrzeba większej precyzji — dedykowane skrypty. Dobór narzędzia zależy od Waszych systemów, nie od mojej wygody.",
+      "technologie_p": "Do automatyzacji na poziomie danych i interfejsu wykorzystuję n8n, Make oraz - tam gdzie potrzeba większej precyzji - dedykowane skrypty. Dobór narzędzia zależy od Waszych systemów, nie od mojej wygody.",
       "technologie_list": ["n8n", "Make", "Python", "API"],
       "s3_title": "Korzyści",
       "benefits": [
@@ -286,22 +335,23 @@
       "cena_text": "Automatyzacja jednego procesu zaczyna się od 5 900 zł (pakiet START). Dokładną wycenę podaję po rozmowie o Waszym procesie.",
       "faq_title": "Najczęściej zadawane pytania o automatyzację zadań",
       "faq": [
-        { "q": "Czy muszę zmieniać swoje obecne systemy?", "a": "Nie. Automatyzacja działa na Waszych obecnych systemach — nie wymaga wymiany oprogramowania ani zgody dostawcy." },
-        { "q": "Co się stanie, jeśli system, z którym pracuje robot, się zmieni?", "a": "Automatyzację trzeba wtedy zaktualizować. Dlatego oferuję opiekę powdrożeniową — monitoruję zmiany i reaguję, zanim proces się zatrzyma." },
+        { "q": "Czy muszę zmieniać swoje obecne systemy?", "a": "Nie. Automatyzacja działa na Waszych obecnych systemach - nie wymaga wymiany oprogramowania ani zgody dostawcy." },
+        { "q": "Co się stanie, jeśli system, z którym pracuje robot, się zmieni?", "a": "Automatyzację trzeba wtedy zaktualizować. Dlatego oferuję opiekę powdrożeniową - monitoruję zmiany i reaguję, zanim proces się zatrzyma." },
         { "q": "Ile trwa wdrożenie?", "a": "Prosty proces jest gotowy w 1–2 tygodnie. Bardziej złożony, z kilkoma integracjami, zajmuje 3–4 tygodnie." },
         { "q": "Czy muszę umieć programować, żeby z tego korzystać?", "a": "Nie. Po wdrożeniu proces działa sam, a zespół dostaje krótkie szkolenie, jak go monitorować." }
       ]
     },
     "workflow": {
-      "h1": "Automatyzacja workflow – przepływy pracy bez ręcznego przepisywania",
-      "subtitle": "Łączę systemy, aplikacje i ludzi w jeden spójny, zautomatyzowany proces biznesowy.",
+      "h1": "Automatyzacja workflow z n8n i Make – wdrożenie bez ręcznego przepisywania",
+      "subtitle": "Jako n8n specjalista i konsultant Make.com łączę systemy, aplikacje i ludzi w jeden spójny, zautomatyzowany proces biznesowy.",
+      "service_type": "Automatyzacja workflow z n8n i Make.com",
       "breadcrumb": "Automatyzacja workflow",
       "related_title": "Powiązane usługi",
       "cta_title": "Chcesz zautomatyzować przepływy pracy?",
       "cta_subtitle": "Umów się na bezpłatną rozmowę i pokaż mi swoje procesy.",
       "s1_title": "Na czym polega automatyzacja workflow",
-      "s1_p1": "Automatyzacja workflow to projektowanie i wdrażanie przepływów pracy, które łączą różne systemy, aplikacje i zespoły w jeden spójny proces. Zamiast ręcznego przekazywania danych między aplikacjami, Wasze systemy komunikują się automatycznie.",
-      "s1_p2": "W praktyce oznacza to, że dane wpisane raz w jednym miejscu trafiają tam, gdzie są potrzebne — bez kopiowania, bez maili z załącznikiem i bez pytania „czy ktoś to już zrobił”.",
+      "s1_p1": "Automatyzacja workflow to projektowanie i wdrażanie przepływów pracy w narzędziach no-code takich jak n8n i Make.com, które łączą różne systemy, aplikacje i zespoły w jeden spójny proces. Zamiast ręcznego przekazywania danych między aplikacjami, Wasze systemy komunikują się automatycznie.",
+      "s1_p2": "W praktyce oznacza to, że dane wpisane raz w jednym miejscu trafiają tam, gdzie są potrzebne - bez kopiowania, bez maili z załącznikiem i bez pytania „czy ktoś to już zrobił”.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z kilkoma działami", "desc": "Sprzedaż, księgowość i magazyn pracują na osobnych systemach, które nie rozmawiają ze sobą. Każda zmiana w jednym miejscu wymaga ręcznego powielenia w drugim, a to tylko kwestia czasu, aż ktoś zapomni tego dopilnować." },
@@ -323,7 +373,7 @@
         { "title": "Wdrożenie i szkolenie", "desc": "Uruchamiam proces produkcyjnie i pokazuję zespołowi, jak go czytać i kontrolować." }
       ],
       "technologie_title": "Technologie",
-      "technologie_p": "Pracuję na n8n i Make, budując też niestandardowe integracje przez API tam, gdzie gotowy konektor nie wystarcza.",
+      "technologie_p": "Pracuję głównie na n8n - open-source'owej, elastycznej alternatywie dla Zapier - oraz Make.com, budując też niestandardowe integracje przez API tam, gdzie gotowy konektor nie wystarcza. Jako n8n specjalista dobieram narzędzie do Waszych systemów, nie na odwrót.",
       "technologie_list": ["n8n", "Make", "Webhooks", "API"],
       "s3_title": "Korzyści",
       "benefits": [
@@ -334,20 +384,25 @@
         "Łatwa modyfikacja i rozbudowa przepływów w miarę wzrostu firmy"
       ],
       "cena_label": "Ile to kosztuje?",
-      "cena_text": "Pojedynczy przepływ pracy wyceniam od 5 900 zł, pakiet 3–4 procesów od 14 900 zł.",
-      "faq_title": "",
-      "faq": []
+      "cena_text": "Wdrożenie n8n dla pojedynczego przepływu pracy wyceniam od 5 900 zł, pakiet 2–4 procesów od 14 900 zł. Ostateczna cena wdrożenia n8n zależy od liczby integracji i złożoności reguł.",
+      "faq_title": "Najczęściej zadawane pytania o wdrożenie n8n",
+      "faq": [
+        { "q": "Ile kosztuje wdrożenie n8n w firmie?", "a": "Cena wdrożenia n8n zależy od liczby procesów i integracji - pojedynczy przepływ pracy zaczyna się od 5 900 zł. Dokładną wycenę podaję po rozmowie o Waszych systemach." },
+        { "q": "Czym n8n różni się od Zapier?", "a": "n8n to open-source'owa alternatywa dla Zapier - można go hostować samodzielnie (self-hosted), co obniża koszt przy dużej liczbie operacji i daje pełną kontrolę nad danymi." },
+        { "q": "Czy potrzebuję n8n specjalisty, czy da się to zrobić samemu?", "a": "Proste automatyzacje da się złożyć samodzielnie. Jako n8n konsultant wchodzę do gry, gdy proces obejmuje kilka systemów, wymaga obsługi błędów albo integracji bez gotowego konektora." }
+      ]
     },
     "integration": {
       "h1": "Integracja systemów – łączę ERP, CRM i bazy danych",
-      "subtitle": "Buduję mosty między Waszymi systemami, tworząc jeden spójny ekosystem z automatyczną wymianą danych.",
+      "subtitle": "Integracja systemów informatycznych i integracja API - buduję mosty między Waszymi systemami, tworząc jeden spójny ekosystem z automatyczną wymianą danych.",
+      "service_type": "Integracja systemów IT (ERP, CRM, API)",
       "breadcrumb": "Integracja systemów",
       "related_title": "Powiązane usługi",
       "cta_title": "Potrzebujesz integracji systemów?",
       "cta_subtitle": "Opisz swoje systemy, a zaproponuję optymalne połączenie.",
       "s1_title": "Dlaczego integracja systemów jest kluczowa",
-      "s1_p1": "Firmy 5–50 osób zwykle używają kilku–kilkunastu aplikacji: ERP, CRM, e-mail, system magazynowy, platforma sprzedażowa. Bez integracji ktoś ręcznie przenosi dane między nimi, co generuje błędy, opóźnienia i frustrację.",
-      "s1_p2": "Łączę Wasze systemy przez API, webhooki i dedykowane middleware, żeby dane przepływały automatycznie i w czasie rzeczywistym — bez comiesięcznego eksportu do Excela.",
+      "s1_p1": "Firmy 5–50 osób zwykle używają kilku–kilkunastu aplikacji: ERP, CRM, e-mail, system magazynowy, platforma sprzedażowa. Bez integracji systemów ktoś ręcznie przenosi dane między nimi, co generuje błędy, opóźnienia i frustrację.",
+      "s1_p2": "Łączę Wasze systemy przez API, webhooki i dedykowane middleware, żeby dane przepływały automatycznie i w czasie rzeczywistym - bez comiesięcznego eksportu do Excela. W praktyce najczęściej oznacza to integrację Comarch Optima, Subiekt GT, Baselinker, wFirma lub Fakturownia z resztą Waszych narzędzi.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z ERP i osobnym CRM", "desc": "Dane klienta trzeba wpisywać dwa razy, bo systemy nie mają wspólnego źródła prawdy. Każde rozjechanie się danych to później godziny szukania, po której stronie jest błąd." },
@@ -356,10 +411,12 @@
       ],
       "zastosowania_title": "Co integruję",
       "zastosowania": [
-        { "title": "ERP ↔ CRM", "desc": "Automatyczna synchronizacja klientów, zamówień i faktur — koniec z podwójnym wpisywaniem tych samych danych." },
+        { "title": "ERP ↔ CRM", "desc": "Automatyczna synchronizacja klientów, zamówień i faktur - koniec z podwójnym wpisywaniem tych samych danych." },
         { "title": "E-commerce ↔ Magazyn", "desc": "Synchronizacja stanów magazynowych, zamówień i przesyłek w czasie rzeczywistym." },
+        { "title": "Integracja Comarch Optima, Subiekt GT i Baselinker", "desc": "Integracja Comarch Optima przez API, integracja Subiekt GT oraz automatyzacja Baselinker - zamówienia, faktury i stany magazynowe w jednym miejscu, bez ręcznego eksportu." },
+        { "title": "Integracja wFirma i Fakturownia", "desc": "Automatyczne przekazywanie faktur, płatności i danych klientów między wFirma lub Fakturownia a resztą Waszych systemów." },
         { "title": "HR ↔ Payroll", "desc": "Automatyczne przekazywanie danych o etatach, urlopach i rozliczeniach między systemami kadrowym i płacowym." },
-        { "title": "Integracje niestandardowe (Custom API)", "desc": "Buduję integracje dla systemów, które nie mają gotowego konektora — w oparciu o ich API." }
+        { "title": "Integracje niestandardowe (Custom API)", "desc": "Buduję integracje dla systemów, które nie mają gotowego konektora - w oparciu o ich API." }
       ],
       "wdrozenie_title": "Jak wygląda wdrożenie",
       "wdrozenie": [
@@ -381,19 +438,24 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Prosta integracja dwóch systemów mieści się w pakiecie START od 5 900 zł, integracje wielosystemowe w pakiecie CORE od 14 900 zł.",
-      "faq_title": "",
-      "faq": []
+      "faq_title": "Najczęściej zadawane pytania o integrację systemów",
+      "faq": [
+        { "q": "Czy zintegrujecie Comarch Optima z moim sklepem internetowym?", "a": "Tak - integracja Comarch Optima przez API to jedna z najczęstszych integracji, które wdrażam, zarówno z platformami e-commerce, jak i z Baselinker czy CRM." },
+        { "q": "Pracuję na Subiekcie GT - da się to zintegrować?", "a": "Tak, integracja Subiekt GT jest możliwa - łączę go z magazynem, sklepem internetowym lub systemem księgowym w zależności od potrzeb." },
+        { "q": "Czym różni się synchronizacja danych między systemami od zwykłego eksportu do Excela?", "a": "Synchronizacja danych działa automatycznie i w czasie rzeczywistym - nie trzeba nikogo, kto raz w tygodniu ręcznie eksportuje i wgrywa plik." }
+      ]
     },
     "ai": {
-      "h1": "Agenci AI dla biznesu",
-      "subtitle": "Buduję asystentów AI, którzy analizują dokumenty, odpowiadają na pytania klientów i pilnują danych za Was.",
+      "h1": "Agenci AI dla biznesu - wdrożenie sztucznej inteligencji w firmie",
+      "subtitle": "Buduję asystentów AI i chatboty dla firm, które analizują dokumenty (OCR faktur AI), odpowiadają na pytania klientów i pilnują danych za Was.",
+      "service_type": "Wdrożenie agentów AI i automatyzacja z AI",
       "breadcrumb": "Agenci AI",
       "related_title": "Powiązane usługi",
       "cta_title": "Gotowy na agenta AI w swojej firmie?",
       "cta_subtitle": "Sprawdźmy razem, który proces najbardziej skorzysta na agencie AI.",
       "s1_title": "Czym jest agent AI w praktyce",
-      "s1_p1": "Agent AI to program, który — w odróżnieniu od zwykłego robota RPA — rozumie treść dokumentu czy pytania, a nie tylko klika w zadane miejsca. Potrafi przeczytać fakturę w dowolnym formacie, odpowiedzieć klientowi w naturalnym języku albo streścić długi dokument.",
-      "s1_p2": "Nie zastępuje eksperta w Waszej firmie. Odciąża go od pierwszego kontaktu z dużą ilością danych — dokumentów, wiadomości, zapytań — i przekazuje dalej tylko to, co faktycznie wymaga decyzji człowieka.",
+      "s1_p1": "Agent AI to program, który - w odróżnieniu od zwykłego robota RPA - rozumie treść dokumentu czy pytania, a nie tylko klika w zadane miejsca. Potrafi przeczytać fakturę w dowolnym formacie (OCR faktur), odpowiedzieć klientowi w naturalnym języku jako asystent AI albo streścić długi dokument. To realne wdrożenie sztucznej inteligencji w firmie, nie demo na pokaz.",
+      "s1_p2": "Nie zastępuje eksperta w Waszej firmie. Odciąża go od pierwszego kontaktu z dużą ilością danych - dokumentów, wiadomości, zapytań - i przekazuje dalej tylko to, co faktycznie wymaga decyzji człowieka.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z dużym ruchem zapytań", "desc": "Obsługa klienta odpowiada wielokrotnie na te same pytania zamiast zajmować się trudniejszymi sprawami. Prosta sprawa czeka w tej samej kolejce co sprawa skomplikowana." },
@@ -402,8 +464,8 @@
       ],
       "zastosowania_title": "Zastosowania",
       "zastosowania": [
-        { "title": "Analiza dokumentów", "desc": "Agent czyta, klasyfikuje i wydobywa dane z dokumentów w dowolnym formacie — bez sztywnego szablonu wejściowego." },
-        { "title": "Pierwsza linia obsługi klienta", "desc": "Agent odpowiada na standardowe pytania, a trudniejsze sprawy przekazuje od razu z pełnym kontekstem do człowieka." },
+        { "title": "OCR faktur AI i analiza dokumentów", "desc": "Agent czyta, klasyfikuje i wydobywa dane z faktur oraz innych dokumentów w dowolnym formacie - bez sztywnego szablonu wejściowego." },
+        { "title": "Chatbot i asystent AI dla firmy", "desc": "Agent odpowiada na standardowe pytania klientów jako chatbot dla firmy, a trudniejsze sprawy przekazuje od razu z pełnym kontekstem do człowieka." },
         { "title": "Monitoring rynku i konkurencji", "desc": "Agent śledzi ceny, oferty i zmiany u konkurencji i przygotowuje krótkie podsumowanie zamiast surowych danych." },
         { "title": "Audyt zgodności z procedurami", "desc": "Agent porównuje dokumenty czy działania z wewnętrznymi procedurami i wskazuje odstępstwa do sprawdzenia." }
       ],
@@ -412,7 +474,7 @@
         { "title": "Wybór procesu", "desc": "Znajdujemy zadanie, w którym rozumienie treści daje więcej niż sztywne reguły." },
         { "title": "Budowa i baza wiedzy", "desc": "Konfiguruję agenta i, jeśli trzeba, zasilam go Waszą wiedzą firmową." },
         { "title": "Testy na realnych przypadkach", "desc": "Sprawdzam odpowiedzi agenta na prawdziwych dokumentach i pytaniach, nie na przykładach demo." },
-        { "title": "Wdrożenie z nadzorem", "desc": "Agent startuje z możliwością łatwej korekty — nie zostawiam go bez kontroli od pierwszego dnia." }
+        { "title": "Wdrożenie z nadzorem", "desc": "Agent startuje z możliwością łatwej korekty - nie zostawiam go bez kontroli od pierwszego dnia." }
       ],
       "technologie_title": "Technologie",
       "technologie_p": "Buduję agentów w oparciu o modele językowe (m.in. rodziny GPT i Claude) osadzone w Waszym przepływie pracy przez n8n lub dedykowaną integrację API.",
@@ -420,20 +482,25 @@
       "s3_title": "",
       "benefits": [],
       "cena_label": "Ile to kosztuje?",
-      "cena_text": "Prosty agent AI wpięty w jeden proces mieści się w pakiecie CORE od 14 900 zł, pełne wdrożenie z bazą wiedzy self-hosted — w pakiecie TRANSFORMACJA od 29 000 zł.",
-      "faq_title": "",
-      "faq": []
+      "cena_text": "Prosty agent AI wpięty w jeden proces mieści się w pakiecie CORE od 14 900 zł, pełne wdrożenie z bazą wiedzy self-hosted - w pakiecie TRANSFORMACJA od 29 000 zł.",
+      "faq_title": "Najczęściej zadawane pytania o agentów AI",
+      "faq": [
+        { "q": "Czy agent AI zastąpi mój zespół obsługi klienta?", "a": "Nie. Agent AI przejmuje pierwszy kontakt i standardowe pytania, a trudniejsze sprawy przekazuje z pełnym kontekstem do człowieka - to wsparcie zespołu, nie jego zastąpienie." },
+        { "q": "Czym różni się agent AI od zwykłego chatbota dla firmy?", "a": "Prosty chatbot działa na sztywnych regułach i scenariuszach. Agent AI rozumie treść pytania czy dokumentu i potrafi odpowiedzieć poza z góry zaprogramowanym scenariuszem." },
+        { "q": "Czy wdrożenie sztucznej inteligencji jest bezpieczne dla małej firmy?", "a": "Tak, przy odpowiedniej konfiguracji. Dane wrażliwe mogą zostać na Waszej infrastrukturze, a agent startuje z nadzorem, więc nie podejmuje decyzji bez kontroli od pierwszego dnia." }
+      ]
     },
     "szkolenia": {
-      "h1": "Szkolenia i doradztwo z automatyzacji — z dofinansowaniem PARP",
-      "subtitle": "Praktyczne szkolenie dla zespołu, które można kupić z dofinansowaniem do 83% kosztu.",
+      "h1": "Szkolenia i doradztwo z automatyzacji - z dofinansowaniem PARP",
+      "subtitle": "Praktyczne szkolenie dla zespołu i audyt procesów w firmie, które można kupić z dofinansowaniem do 83% kosztu.",
+      "service_type": "Szkolenia z automatyzacji i audyt procesów w firmie",
       "breadcrumb": "Szkolenia i doradztwo",
       "related_title": "Powiązane usługi",
       "cta_title": "Chcesz przeszkolić zespół z automatyzacji?",
-      "cta_subtitle": "Sprawdźmy razem, jaki zakres szkolenia ma sens dla Waszej firmy — i czy kwalifikujecie się do dofinansowania.",
+      "cta_subtitle": "Sprawdźmy razem, jaki zakres szkolenia ma sens dla Waszej firmy - i czy kwalifikujecie się do dofinansowania.",
       "s1_title": "Dla kogo są te szkolenia",
-      "s1_p1": "To nie jest ogólny kurs o „sztucznej inteligencji”. Uczę zespół rozpoznawać, który proces w codziennej pracy nadaje się do automatyzacji, i jak z automatyzacją pracować na co dzień — bez konieczności programowania.",
-      "s1_p2": "Jestem zarejestrowany w Bazie Usług Rozwojowych, więc szkolenie i doradztwo można kupić z dofinansowaniem z programu PARP — mikro i mała firma odzyskuje do 83% kosztu.",
+      "s1_p1": "To nie jest ogólny kurs o „sztucznej inteligencji”. Uczę zespół rozpoznawać, który proces w codziennej pracy nadaje się do automatyzacji, i jak z automatyzacją pracować na co dzień - bez konieczności programowania.",
+      "s1_p2": "Jestem zarejestrowany w Bazie Usług Rozwojowych, więc szkolenie i doradztwo można kupić z dofinansowaniem z programu PARP - mikro i mała firma odzyskuje do 83% kosztu.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Właściciele i kierownicy operacyjni", "desc": "Chcą wiedzieć, gdzie w firmie jest największy potencjał do automatyzacji, zanim zainwestują. Nie chcą kupować kota w worku od informatyka, którego nie znają i nie rozumieją." },
@@ -442,7 +509,8 @@
       ],
       "zastosowania_title": "Zakres szkolenia",
       "zastosowania": [
-        { "title": "Rozpoznawanie procesów do automatyzacji", "desc": "Jak ocenić, które zadanie warto zautomatyzować, a które nie ma sensu — na przykładach z Waszej firmy." },
+        { "title": "Audyt i mapowanie procesów w firmie", "desc": "Wspólnie przechodzimy audyt procesów, które dziś zjadają najwięcej czasu, i mapujemy je krok po kroku, zanim zaczniemy działać." },
+        { "title": "Rozpoznawanie procesów do automatyzacji", "desc": "Jak ocenić, które zadanie warto zautomatyzować, a które nie ma sensu - na przykładach z Waszej firmy." },
         { "title": "Podstawy pracy z automatyzacją", "desc": "Jak czytać działający przepływ, gdzie sprawdzić błąd i kiedy wezwać wsparcie." },
         { "title": "KSeF i obieg dokumentów", "desc": "Jak zorganizować pracę zespołu wokół automatycznego obiegu faktur." },
         { "title": "Doradztwo wdrożeniowe", "desc": "Wspólnie planujemy kolejność wdrożeń, żeby najpierw zautomatyzować to, co przynosi najwięcej godzin." }
@@ -455,7 +523,7 @@
         { "title": "Materiały i doradztwo powdrożeniowe", "desc": "Zespół dostaje materiały do wykorzystania po szkoleniu i możliwość konsultacji." }
       ],
       "technologie_title": "Forma szkolenia",
-      "technologie_p": "Szkolenie prowadzę stacjonarnie lub online, w formie warsztatu na Waszych realnych procesach — zgodnie z zakresem zarejestrowanym w Bazie Usług Rozwojowych.",
+      "technologie_p": "Szkolenie prowadzę stacjonarnie lub online, w formie warsztatu na Waszych realnych procesach - zgodnie z zakresem zarejestrowanym w Bazie Usług Rozwojowych.",
       "technologie_list": ["BUR", "Warsztat", "Materiały szkoleniowe"],
       "s3_title": "Korzyści",
       "benefits": [
@@ -465,27 +533,28 @@
         "Doradztwo przy planowaniu kolejnych wdrożeń"
       ],
       "cena_label": "Ile to kosztuje?",
-      "cena_text": "Cena zależy od zakresu i liczby uczestników — sprawdzam ją razem z kwalifikowalnością do dofinansowania. Szczegóły na stronie /dofinansowanie.",
+      "cena_text": "Cena zależy od zakresu i liczby uczestników - sprawdzam ją razem z kwalifikowalnością do dofinansowania. Szczegóły na stronie /dofinansowanie.",
       "faq_title": "Najczęściej zadawane pytania o szkolenia",
       "faq": [
-        { "q": "Czy szkolenie na pewno załapie się na dofinansowanie?", "a": "Sprawdzam to indywidualnie na etapie rozmowy wstępnej — zależy od wielkości firmy i dostępnego limitu u operatora regionalnego." },
-        { "q": "Ile osób może wziąć udział?", "a": "Zależy od formuły — ustalamy to razem, dopasowując program do liczby uczestników i budżetu." },
+        { "q": "Czy szkolenie na pewno załapie się na dofinansowanie?", "a": "Sprawdzam to indywidualnie na etapie rozmowy wstępnej - zależy od wielkości firmy i dostępnego limitu u operatora regionalnego." },
+        { "q": "Ile osób może wziąć udział?", "a": "Zależy od formuły - ustalamy to razem, dopasowując program do liczby uczestników i budżetu." },
         { "q": "Czy to jest to samo co wdrożenie automatyzacji?", "a": "Nie. Program dofinansowania obejmuje szkolenia i doradztwo, a nie samo wdrożenie techniczne. Wdrożenie wyceniam osobno." }
       ]
     },
     "opieka": {
-      "h1": "Opieka i hosting automatyzacji",
-      "subtitle": "Monitoruję, naprawiam i rozwijam wdrożone automatyzacje — zanim przestaną działać.",
+      "h1": "Opieka i hosting n8n – automatyzacja pod stałym nadzorem",
+      "subtitle": "Monitoruję, naprawiam i rozwijam wdrożone automatyzacje na self-hostowanym serwerze n8n w UE, zgodnym z RODO - zanim przestaną działać.",
+      "service_type": "Hosting n8n i opieka nad automatyzacją (self-hosted, RODO)",
       "breadcrumb": "Opieka i hosting",
       "related_title": "Powiązane usługi",
       "cta_title": "Masz już automatyzację i potrzebujesz opieki?",
       "cta_subtitle": "Sprawdzę, jak działa dziś, i zaproponuję odpowiedni poziom opieki.",
       "s1_title": "Dlaczego automatyzacja potrzebuje opieki",
-      "s1_p1": "Automatyzacja nie jest wdrażana raz na zawsze. Systemy, z którymi współpracuje, zmieniają interfejsy i API, dostawcy aktualizują swoje platformy, a firma rośnie i dodaje nowe wyjątki od reguły. Bez opieki proces po jakimś czasie cicho się psuje — i nikt tego nie zauważa, dopóki nie zacznie brakować danych.",
-      "s1_p2": "Opieka to monitoring działania, szybka reakcja na awarie i utrzymanie serwera, na którym automatyzacja pracuje — żeby inwestycja we wdrożenie nie zmarnowała się po pół roku.",
+      "s1_p1": "Automatyzacja nie jest wdrażana raz na zawsze. Systemy, z którymi współpracuje, zmieniają interfejsy i API, dostawcy aktualizują swoje platformy, a firma rośnie i dodaje nowe wyjątki od reguły. Bez opieki proces po jakimś czasie cicho się psuje - i nikt tego nie zauważa, dopóki nie zacznie brakować danych.",
+      "s1_p2": "Opieka to monitoring działania, szybka reakcja na awarie i utrzymanie serwera, na którym automatyzacja pracuje - żeby inwestycja we wdrożenie nie zmarnowała się po pół roku.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
-        { "title": "Firmy z wdrożoną automatyzacją", "desc": "Niezależnie od tego, czy wdrażałem ją ja, czy ktoś inny — potrzebują kogoś, kto ją utrzyma na bieżąco. Automatyzacja bez właściciela to tylko kwestia czasu, aż przestanie działać po cichu." },
+        { "title": "Firmy z wdrożoną automatyzacją", "desc": "Niezależnie od tego, czy wdrażałem ją ja, czy ktoś inny - potrzebują kogoś, kto ją utrzyma na bieżąco. Automatyzacja bez właściciela to tylko kwestia czasu, aż przestanie działać po cichu." },
         { "title": "Firmy bez własnego działu IT", "desc": "Nie mają nikogo na miejscu, kto zauważyłby awarię automatyzacji, zanim urośnie w realny problem. Zwykle dowiadują się o niej dopiero wtedy, gdy zaczyna brakować danych." },
         { "title": "Firmy planujące rozwój procesu", "desc": "Chcą regularnie dodawać nowe scenariusze bez zlecania i wyceniania każdej zmiany od zera. Bank godzin w opiece wychodzi wyraźnie taniej niż osobna wycena każdej poprawki." }
       ],
@@ -493,7 +562,7 @@
       "zastosowania": [
         { "title": "Monitoring działania", "desc": "Sprawdzam, czy automatyzacja faktycznie wykonała swoją pracę, a nie tylko czy serwer działa." },
         { "title": "Reakcja na awarie", "desc": "Gdy API dostawcy się zmieni albo proces się zatrzyma, reaguję w uzgodnionym czasie (do 48h lub do 4h w opiece Pro)." },
-        { "title": "Hosting zarządzany", "desc": "Serwer w UE, aktualizacje i kopie zapasowe środowiska, na którym działa automatyzacja." },
+        { "title": "Hosting n8n zarządzany", "desc": "Self-hostowany serwer n8n w UE, zgodny z RODO, aktualizacje i kopie zapasowe środowiska, na którym działa automatyzacja." },
         { "title": "Rozwój procesu", "desc": "Bank godzin miesięcznie na nowe scenariusze i zmiany bez osobnej wyceny każdej z nich." }
       ],
       "wdrozenie_title": "Jak zaczynamy współpracę",
@@ -504,8 +573,8 @@
         { "title": "Comiesięczny raport", "desc": "Dostajecie krótkie podsumowanie tego, co działo się z automatyzacją." }
       ],
       "technologie_title": "Środowisko",
-      "technologie_p": "Utrzymuję automatyzacje najczęściej na własnym, zarządzanym serwerze n8n w UE, z regularnymi kopiami zapasowymi.",
-      "technologie_list": ["n8n", "Serwer UE", "Monitoring", "Backup"],
+      "technologie_p": "Utrzymuję automatyzacje najczęściej na własnym, self-hostowanym serwerze n8n w UE, zgodnie z RODO, z regularnymi kopiami zapasowymi.",
+      "technologie_list": ["n8n", "Self-hosted", "RODO", "Backup"],
       "s3_title": "Korzyści",
       "benefits": [
         "Automatyzacja działa dalej mimo zmian w systemach zewnętrznych",
@@ -519,75 +588,82 @@
       "faq": [
         { "q": "Czy musicie wdrażać automatyzację, żeby objąć ją opieką?", "a": "Nie. Przejmuję opiekę też nad automatyzacjami wdrożonymi wcześniej przez kogoś innego, po ich przeglądzie." },
         { "q": "Co się stanie, jeśli zrezygnuję z opieki?", "a": "Automatyzacja dalej działa, ale nikt nie zareaguje, gdy coś się zepsuje po zmianie w jednym z systemów." },
-        { "q": "Czym różni się Opieka Standard od Opieka Pro?", "a": "Standard to reakcja do 48h i monitoring. Pro to SLA 4h, priorytet w kolejce i comiesięczny raport." }
+        { "q": "Czym różni się Opieka Standard od Opieka Pro?", "a": "Standard to reakcja do 48h i monitoring. Pro to SLA 4h, priorytet w kolejce i comiesięczny raport." },
+        { "q": "Czy hosting n8n jest zgodny z RODO?", "a": "Tak - automatyzacje utrzymuję na self-hostowanym serwerze w UE, bez przekazywania danych do podmiotów spoza uzgodnionego łańcucha przetwarzania." }
       ]
     }
   },
   "ksef_page": {
-    "h1": "KSeF działa, ale ktoś nadal ręcznie przypisuje faktury",
-    "subtitle": "Automatyzuję obieg faktur po wdrożeniu Krajowego Systemu e-Faktur — deduplikacja, routing do oddziałów, kontrola limitów API.",
+    "h1": "Automatyzacja faktur KSeF – integracja, deduplikacja, obieg dokumentów",
+    "subtitle": "Automatyzuję obieg faktur i integrację KSeF z systemem księgowym (Comarch Optima, Symfonia, wFirma) - deduplikacja, routing do oddziałów i centrów kosztów, kontrola limitów API.",
+    "service_type": "Automatyzacja obiegu faktur KSeF",
     "breadcrumb": "Obsługa KSeF",
-    "problems_title": "Gdzie najczęściej się psuje",
+    "problems_title": "KSeF problemy: gdzie najczęściej się psuje",
     "problems": [
-      { "title": "Duplikaty faktur", "desc": "Ta sama faktura przychodzi z KSeF i z maila — bez kontroli łatwo o podwójne zaksięgowanie i zawyżony VAT." },
-      { "title": "Firmy wielooddziałowe", "desc": "Księgowa ręcznie ustala, do którego oddziału i MPK należy dokument, dla każdej faktury z osobna." },
-      { "title": "Limity API", "desc": "Przy dużym wolumenie faktur sesje z KSeF się przerywają, a nikt nie monitoruje, czy wszystko poszło." },
-      { "title": "Przyjęcia magazynowe", "desc": "Towar przyjeżdża, dokumentu z KSeF jeszcze nie ma w systemie — przyjęcie stoi, magazyn czeka." },
-      { "title": "Wydatki pracownicze", "desc": "Brak procesu przypisania faktury do konkretnej osoby i budżetu — rozliczenie trwa tygodniami." },
+      { "title": "Duplikaty faktur i podwójne księgowanie", "desc": "Ta sama faktura przychodzi z KSeF i z maila - bez kontroli łatwo o podwójne zaksięgowanie i zawyżony VAT." },
+      { "title": "Firmy wielooddziałowe i centra kosztów", "desc": "Księgowa ręcznie ustala, do którego oddziału i centrum kosztów (MPK) należy dokument, dla każdej faktury z osobna." },
+      { "title": "Limity API KSeF", "desc": "Przy dużym wolumenie faktur sesje z KSeF się przerywają, a nikt nie monitoruje, czy wszystko poszło." },
+      { "title": "Przyjęcia magazynowe", "desc": "Towar przyjeżdża, dokumentu z KSeF jeszcze nie ma w systemie - przyjęcie stoi, magazyn czeka." },
+      { "title": "Wydatki pracownicze", "desc": "Brak procesu przypisania faktury do konkretnej osoby i budżetu - rozliczenie trwa tygodniami." },
+      { "title": "Biura rachunkowe z wieloma klientami", "desc": "Każdy klient to osobny NIP i osobne konto w KSeF - bez automatyzacji obsługa kilkudziesięciu firm oznacza ręczne logowanie się do każdego z osobna." },
       { "title": "Kontrahenci wysyłają skany mimo KSeF", "desc": "Część kontrahentów nadal woli mailowy skan, mimo że faktura już czeka w systemie." }
     ],
     "solutions_title": "Co robię",
     "solutions": [
-      "Automatyczna deduplikacja — system rozpoznaje tę samą fakturę z dwóch źródeł i księguje ją raz.",
-      "Routing do oddziału i MPK na podstawie reguł, które ustalamy razem, zamiast ręcznej decyzji przy każdej fakturze.",
-      "Monitoring sesji i limitów API z alertem, zanim proces się przerwie w środku dnia.",
+      "Automatyczne pobieranie faktur z KSeF i księgowanie ich wprost w Comarch Optima, Symfonii lub wFirma - bez ręcznego przepisywania pozycji.",
+      "Automatyczna deduplikacja - system rozpoznaje tę samą fakturę z dwóch źródeł i księguje ją raz.",
+      "Elektroniczny obieg faktur i dokumentów kosztowych z automatyczną akceptacją, zamiast ręcznego obiegu mailem.",
+      "Routing do oddziału i centrum kosztów (MPK) na podstawie reguł, które ustalamy razem, zamiast ręcznej decyzji przy każdej fakturze.",
+      "Monitoring sesji i limitów API KSeF z alertem, zanim proces się przerwie w środku dnia.",
       "Automatyczne powiązanie faktury z dokumentem przyjęcia magazynowego.",
       "Przypisanie wydatku do osoby i budżetu od razu przy wpłynięciu faktury.",
       "Jeden punkt wejścia na skany od kontrahentów, żeby nie omijały głównego procesu."
     ],
     "effects_title": "Jakich efektów można się spodziewać",
-    "effects_disclaimer": "Poniższe dane to widełki deklarowane przez dostawców oprogramowania księgowego dla automatyzacji obiegu faktur — nie są to nasze własne statystyki z konkretnych wdrożeń.",
+    "effects_disclaimer": "Poniższe dane to widełki deklarowane przez dostawców oprogramowania księgowego dla automatyzacji obiegu faktur - nie są to nasze własne statystyki z konkretnych wdrożeń.",
     "effect1_value": "30–50%",
     "effect1_label": "skrócenie czasu obsługi pojedynczej faktury",
     "effect2_value": "do 90%",
     "effect2_label": "przy pełnej automatyzacji obiegu dokumentów",
     "pricing_title": "Cennik",
-    "pricing_text": "Pakiet KSeF KONTROLA (deduplikacja, routing, monitoring) od 12 900 zł, opieka nad wdrożonym procesem od 890 zł miesięcznie.",
+    "pricing_text": "Pakiet KSeF KONTROLA (deduplikacja, routing, monitoring) od 12 900 zł, opieka nad wdrożonym procesem od 890 zł miesięcznie. Wdrożenie KSeF w firmie trwa standardowo 2–4 tygodnie.",
     "faq_title": "Najczęściej zadawane pytania o KSeF",
     "faq": [
-      { "q": "Czy to zastąpi mój system księgowy?", "a": "Nie. Automatyzacja pracuje wokół istniejącego systemu księgowego — porządkuje i kieruje dokumenty, zanim trafią do księgowania." },
-      { "q": "Obsługujecie firmy z wieloma oddziałami?", "a": "Tak, to jeden z głównych scenariuszy — reguły routingu do oddziału i MPK ustalamy indywidualnie." },
+      { "q": "Czy to zastąpi mój system księgowy?", "a": "Nie. Automatyzacja pracuje wokół istniejącego systemu księgowego - porządkuje i kieruje dokumenty, zanim trafią do księgowania." },
+      { "q": "Integrujecie KSeF z Comarch Optima, Symfonią lub wFirma?", "a": "Tak - integracja KSeF z systemem księgowym to jedna z najczęstszych automatyzacji, które wdrażam. Faktury trafiają do Comarch Optima, Symfonii lub wFirma automatycznie, bez ręcznego przepisywania pozycji." },
+      { "q": "Obsługujecie biura rachunkowe z wieloma klientami w KSeF?", "a": "Tak - to częsty scenariusz. Automatyzuję pobieranie faktur z KSeF dla wielu NIP-ów naraz, żeby księgowa nie musiała ręcznie przełączać się między kontami klientów." },
+      { "q": "Obsługujecie firmy z wieloma oddziałami?", "a": "Tak, to jeden z głównych scenariuszy - reguły routingu do oddziału i centrum kosztów (MPK) ustalamy indywidualnie." },
       { "q": "Co z fakturami, które nadal przychodzą mailem?", "a": "Kierujemy je do tego samego procesu, żeby trafiały do tej samej kontroli duplikatów co faktury z KSeF." },
-      { "q": "Ile trwa wdrożenie?", "a": "Standardowo 2–4 tygodnie, zależnie od liczby oddziałów i reguł księgowych." },
-      { "q": "Czy dane z faktur są bezpieczne?", "a": "Tak — automatyzacja działa na Waszej infrastrukturze lub zarządzanym serwerze w UE, bez przekazywania danych do zewnętrznych podmiotów poza samym KSeF i Waszym systemem księgowym." },
+      { "q": "Ile trwa wdrożenie KSeF w firmie?", "a": "Standardowo 2–4 tygodnie, zależnie od liczby oddziałów i reguł księgowych." },
+      { "q": "Czy dane z faktur są bezpieczne?", "a": "Tak - automatyzacja działa na Waszej infrastrukturze lub zarządzanym serwerze w UE, bez przekazywania danych do zewnętrznych podmiotów poza samym KSeF i Waszym systemem księgowym." },
       { "q": "Co, jeśli Ministerstwo Finansów zmieni zasady KSeF?", "a": "Monitoruję zmiany w API KSeF w ramach opieki i aktualizuję automatyzację, zanim zmiana przerwie działanie procesu." }
     ],
     "cta": "Pokażę na Waszych fakturach z zeszłego miesiąca"
   },
   "dofinansowanie_page": {
-    "h1": "Automatyzacja z dofinansowaniem do 83%",
-    "subtitle": "Jestem zarejestrowany w Bazie Usług Rozwojowych. Szkolenia i doradztwo z automatyzacji można kupić z dofinansowaniem z programu PARP — program trwa do grudnia 2028.",
+    "h1": "Automatyzacja z dofinansowaniem do 83% – PARP i BUR",
+    "subtitle": "Jestem zarejestrowany w Bazie Usług Rozwojowych (BUR) - prowadzę szkolenia z kompetencji automatyzacji dla transformacji cyfrowej firmy. Szkolenia i doradztwo z automatyzacji oraz AI można kupić z dofinansowaniem z programu PARP - program trwa do grudnia 2028.",
     "limits_title": "Ile możesz dostać",
-    "how_title": "Jak to działa",
+    "how_title": "Jak uzyskać dofinansowanie na szkolenia",
     "how_steps": [
       { "title": "Sprawdzasz kwalifikację", "desc": "Wielkość firmy i dostępny limit dofinansowania ustalamy razem na wstępnej rozmowie." },
-      { "title": "Zgłaszasz się do operatora", "desc": "Operator regionalny weryfikuje wniosek i przyznaje dofinansowanie zgodnie z limitem." },
+      { "title": "Zgłaszasz się do operatora BUR", "desc": "Operator BUR właściwy dla Twojego regionu weryfikuje wniosek i przyznaje dofinansowanie zgodnie z limitem." },
       { "title": "Wybierasz usługę w BUR", "desc": "Wybierasz zarejestrowaną usługę szkoleniową lub doradczą z mojej oferty w Bazie Usług Rozwojowych." },
-      { "title": "Płacisz swój wkład własny", "desc": "Standardowo 17% wartości usługi, resztę rozlicza operator." }
+      { "title": "Płacisz swój wkład własny", "desc": "Standardowo 17% wartości usługi, resztę rozlicza operator BUR." }
     ],
     "scope_title": "Co jest objęte dofinansowaniem",
     "scope_items": [
-      "Przygotowanie organizacji do automatyzacji",
+      "Przygotowanie organizacji do automatyzacji i cyfryzacji firmy",
       "Identyfikacja i analiza procesów do automatyzacji",
-      "Przygotowanie danych i podstawy pracy z AI",
+      "Szkolenia AI dla firm i przygotowanie danych do pracy z AI",
       "Doradztwo przy robotyzacji i integracji systemów",
       "Bezpieczeństwo danych w procesach zautomatyzowanych",
       "Zarządzanie zmianą w zespole",
       "Doradztwo wdrożeniowe"
     ],
-    "scope_disclaimer": "Program finansuje szkolenia i doradztwo, a nie samo wdrożenie techniczne automatyzacji. Wdrożenie wyceniam i rozliczam osobno — szczegóły na stronie /cennik.",
-    "operators_title": "Operatorzy według regionu",
-    "operators_note": "Lista operatorów regionalnych BUR i przypisanych makroregionów — potwierdzam aktualne dane na etapie rozmowy kwalifikacyjnej, ponieważ operatorzy i limity naborów zmieniają się w czasie.",
+    "scope_disclaimer": "Program finansuje szkolenia i doradztwo, a nie samo wdrożenie techniczne automatyzacji. Wdrożenie wyceniam i rozliczam osobno - szczegóły na stronie /cennik.",
+    "operators_title": "Operatorzy BUR według regionu",
+    "operators_note": "Lista operatorów regionalnych BUR i przypisanych makroregionów - potwierdzam aktualne dane na etapie rozmowy kwalifikacyjnej, ponieważ operatorzy i limity naborów zmieniają się w czasie.",
     "calculator_title": "Policz swój wkład własny",
     "services_title": "Moje usługi w Bazie Usług Rozwojowych",
     "faq_title": "Najczęściej zadawane pytania o dofinansowanie",
@@ -595,80 +671,84 @@
       { "q": "Kto kwalifikuje się do dofinansowania?", "a": "Mikro, małe i średnie firmy zarejestrowane w Polsce. Wysokość limitu zależy od wielkości firmy i liczby pracowników." },
       { "q": "Do kiedy można skorzystać z programu?", "a": "Program w obecnej formie trwa do grudnia 2028, ale limity u poszczególnych operatorów wyczerpują się wcześniej." },
       { "q": "Czy wdrożenie automatyzacji też jest objęte?", "a": "Nie. Dofinansowanie obejmuje szkolenia i doradztwo. Samo wdrożenie techniczne rozliczam według cennika wdrożeń." },
-      { "q": "Ile trwa procedura uzyskania dofinansowania?", "a": "Zależy od operatora regionalnego — zwykle kilka tygodni od zgłoszenia do decyzji." },
-      { "q": "Czy muszę zapłacić całość z góry?", "a": "Nie, standardowo płacisz tylko swój wkład własny — resztę rozlicza operator bezpośrednio z wykonawcą usługi." },
-      { "q": "Co jeśli moja firma już wyczerpała limit w tym roku?", "a": "Sprawdzam to indywidualnie — czasem sensowniej zaplanować szkolenie w kolejnym naborze niż płacić pełną cenę teraz." },
+      { "q": "Ile trwa procedura uzyskania dofinansowania?", "a": "Zależy od operatora regionalnego - zwykle kilka tygodni od zgłoszenia do decyzji." },
+      { "q": "Czy muszę zapłacić całość z góry?", "a": "Nie, standardowo płacisz tylko swój wkład własny - resztę rozlicza operator bezpośrednio z wykonawcą usługi." },
+      { "q": "Co jeśli moja firma już wyczerpała limit w tym roku?", "a": "Sprawdzam to indywidualnie - czasem sensowniej zaplanować szkolenie w kolejnym naborze niż płacić pełną cenę teraz." },
       { "q": "Czy dofinansowanie dotyczy tylko szkoleń grupowych?", "a": "Nie, obejmuje też doradztwo indywidualne dopasowane do Waszych procesów." },
-      { "q": "Jak zacząć?", "a": "Napisz lub umów rozmowę — sprawdzę Waszą kwalifikowalność i zaproponuję zakres usługi zarejestrowanej w BUR." }
+      { "q": "Czy dofinansowanie obejmuje też szkolenia z AI dla firm?", "a": "Tak - szkolenia AI dofinansowanie obejmuje na tych samych zasadach co pozostałe usługi w mojej ofercie BUR: przygotowanie danych do pracy z AI, dobór narzędzi i bezpieczne wdrożenie w zespole." },
+      { "q": "Jak zacząć?", "a": "Napisz lub umów rozmowę - sprawdzę Waszą kwalifikowalność i zaproponuję zakres usługi zarejestrowanej w BUR." }
     ],
     "cta": "Sprawdzę za Ciebie, czy się kwalifikujesz"
   },
   "cennik_page": {
-    "h1": "Cennik automatyzacji procesów",
-    "subtitle": "Ceny podane wprost, bez „zapytaj o wycenę”. Poniżej znajdziesz koszt wdrożenia, opieki i wariant z dofinansowaniem.",
+    "h1": "Cennik automatyzacji procesów – ile kosztuje wdrożenie",
+    "subtitle": "Ceny podane wprost, bez „zapytaj o wycenę”. Sprawdź, ile kosztuje automatyzacja procesów w Twojej firmie - koszt wdrożenia, opieki i wariant z dofinansowaniem.",
     "tier1_title": "Wdrożenia",
+    "featured_badge": "Najczęściej wybierane",
     "tier2_title": "Opieka (miesięcznie)",
     "tier3_title": "Z dofinansowaniem PARP",
     "tier3_text": "Szkolenia i doradztwo z mojej oferty w Bazie Usług Rozwojowych możesz kupić z dofinansowaniem do 83% kosztu.",
     "tier3_cta": "Sprawdź szczegóły dofinansowania",
-    "why_title": "Dlaczego nie robię wdrożeń poniżej 4 900 zł",
-    "why_text": "Poniżej tej kwoty nie da się rzetelnie przeprowadzić audytu procesu, zbudować automatyzacji z obsługą błędów i przeszkolić zespołu. Tańsza oferta zwykle oznacza pominięcie jednego z tych elementów — a to ten element później się mści, gdy proces przestaje działać po miesiącu.",
+    "why_title": "Dlaczego nie robię wdrożeń poniżej 5 900 zł",
+    "why_text": "Poniżej tej kwoty nie da się rzetelnie przeprowadzić audytu procesu, zbudować automatyzacji z obsługą błędów i przeszkolić zespołu. Tańsza oferta zwykle oznacza pominięcie jednego z tych elementów - a to ten element później się mści, gdy proces przestaje działać po miesiącu.",
     "calculator_title": "Kalkulator zwrotu z inwestycji",
-    "calculator_people_label": "Liczba osób wykonujących proces",
-    "calculator_hours_label": "Godzin miesięcznie na osobę",
+    "calculator_hours_label": "Godzin miesięcznie na ten proces",
     "calculator_rate_label": "Stawka godzinowa (zł)",
+    "calculator_tier_label": "Pakiet wdrożenia",
+    "calculator_processes_label": "Liczba procesów do automatyzacji",
+    "calculator_tier_hint": "Przy takiej liczbie procesów pasuje pakiet",
     "calculator_result_yearly": "Oszczędność roczna",
     "calculator_result_payback": "Orientacyjny czas zwrotu",
     "faq_title": "Najczęściej zadawane pytania o cennik",
     "faq": [
       { "q": "Czy cena jest stała, czy może wzrosnąć w trakcie wdrożenia?", "a": "Cena ustalona na starcie jest stała. Jeśli w trakcie audytu okaże się, że zakres jest większy niż zakładaliśmy, informuję o tym przed rozpoczęciem prac, nie w trakcie." },
-      { "q": "Co jeśli proces okaże się trudniejszy niż zakładano?", "a": "Taką sytuację wyłapuje audyt przed wyceną — dlatego zalecam zacząć od niego, jeśli proces jest złożony lub obejmuje wiele systemów." },
-      { "q": "Czy opieka po wdrożeniu jest obowiązkowa?", "a": "Nie, ale bez niej automatyzacja z czasem przestaje działać przy każdej zmianie w systemach zewnętrznych — dlatego ją rekomenduję." },
+      { "q": "Co jeśli proces okaże się trudniejszy niż zakładano?", "a": "Taką sytuację wyłapuje audyt przed wyceną - dlatego zalecam zacząć od niego, jeśli proces jest złożony lub obejmuje wiele systemów." },
+      { "q": "Czy opieka po wdrożeniu jest obowiązkowa?", "a": "Nie, ale bez niej automatyzacja z czasem przestaje działać przy każdej zmianie w systemach zewnętrznych - dlatego ją rekomenduję." },
       { "q": "Czy wystawiasz fakturę VAT?", "a": "Tak, każde zlecenie jest rozliczane fakturą VAT." }
     ]
   },
   "faq_page": {
     "h1": "Najczęściej zadawane pytania",
-    "subtitle": "Wszystko, co warto wiedzieć przed pierwszą rozmową — pogrupowane tematycznie.",
+    "subtitle": "Wszystko, co warto wiedzieć przed pierwszą rozmową - pogrupowane tematycznie.",
     "cat_general": "Ogólne o automatyzacji",
     "cat_general_items": [
-      { "q": "Czym w praktyce jest automatyzacja procesów?", "a": "To zastąpienie ręcznie wykonywanych, powtarzalnych czynności — przepisywania danych, wysyłania powiadomień, sprawdzania dokumentów — programem, który robi to samo szybciej i bez błędów." },
+      { "q": "Czym w praktyce jest automatyzacja procesów?", "a": "To zastąpienie ręcznie wykonywanych, powtarzalnych czynności - przepisywania danych, wysyłania powiadomień, sprawdzania dokumentów - programem, który robi to samo szybciej i bez błędów." },
       { "q": "Jakie procesy da się zautomatyzować?", "a": "Każdy powtarzalny proces oparty na jasnych regułach: obieg faktur, obsługa zamówień, raportowanie, synchronizacja danych między systemami, onboarding pracowników." },
       { "q": "Czy automatyzacja zastąpi moich pracowników?", "a": "Nie. Zdejmuje z nich powtarzalne czynności, żeby mogli zająć się pracą wymagającą oceny sytuacji i kontaktu z klientem." },
       { "q": "Czy muszę wiedzieć, czym jest n8n albo RPA?", "a": "Nie. Rozmawiamy o Waszym procesie, narzędzia dobieram i za nie odpowiadam." },
-      { "q": "Co się dzieje, gdy system, z którym pracuje automatyzacja, się zmieni?", "a": "Automatyzację trzeba zaktualizować — dlatego oferuję opiekę powdrożeniową, która monitoruje takie zmiany." }
+      { "q": "Co się dzieje, gdy system, z którym pracuje automatyzacja, się zmieni?", "a": "Automatyzację trzeba zaktualizować - dlatego oferuję opiekę powdrożeniową, która monitoruje takie zmiany." }
     ],
     "cat_cooperation": "O współpracy",
     "cat_cooperation_items": [
-      { "q": "Kto faktycznie wykonuje wdrożenie?", "a": "Ja, od pierwszej rozmowy po wdrożenie i opiekę — bez przekazywania sprawy między handlowcem a wykonawcą." },
-      { "q": "Jak wygląda pierwszy kontakt?", "a": "30-minutowa rozmowa bez prezentacji — pytam, co dziś zajmuje najwięcej czasu, i mówię wprost, czy widzę tu sens automatyzacji." },
-      { "q": "Czy zaczynacie od razu od wdrożenia?", "a": "Zwykle od krótkiego audytu procesu — dzięki temu wycena jest dokładna, a nie szacunkowa." },
-      { "q": "Co jeśli mój proces jest nietypowy?", "a": "Większość „nietypowych” procesów da się rozbić na powtarzalne kroki — to właśnie sprawdzam podczas audytu." },
+      { "q": "Kto faktycznie wykonuje wdrożenie?", "a": "Ja, od pierwszej rozmowy po wdrożenie i opiekę - bez przekazywania sprawy między handlowcem a wykonawcą." },
+      { "q": "Jak wygląda pierwszy kontakt?", "a": "30-minutowa rozmowa bez prezentacji - pytam, co dziś zajmuje najwięcej czasu, i mówię wprost, czy widzę tu sens automatyzacji." },
+      { "q": "Czy zaczynacie od razu od wdrożenia?", "a": "Zwykle od krótkiego audytu procesu - dzięki temu wycena jest dokładna, a nie szacunkowa." },
+      { "q": "Co jeśli mój proces jest nietypowy?", "a": "Większość „nietypowych” procesów da się rozbić na powtarzalne kroki - to właśnie sprawdzam podczas audytu." },
       { "q": "Czy pracujecie zdalnie, czy trzeba się spotkać?", "a": "Większość wdrożeń prowadzę zdalnie. Spotkanie na miejscu ustalamy, jeśli proces tego wymaga." }
     ],
     "cat_pricing": "O cenach",
     "cat_pricing_items": [
       { "q": "Ile kosztuje wdrożenie?", "a": "Od 5 900 zł za pojedynczy proces. Pełny cennik jest publicznie dostępny na stronie /cennik." },
-      { "q": "Czy cena może wzrosnąć w trakcie realizacji?", "a": "Nie — cena ustalona przed startem jest stała." },
+      { "q": "Czy cena może wzrosnąć w trakcie realizacji?", "a": "Nie - cena ustalona przed startem jest stała." },
       { "q": "Czy audyt jest płatny?", "a": "Tak, 2 400 zł, ale ta kwota jest odliczana od ceny wdrożenia, jeśli zdecydujecie się kontynuować." },
-      { "q": "Jak wygląda płatność za opiekę?", "a": "Miesięczny, stały koszt — od 390 zł za sam hosting, do 1 890 zł za Opiekę Pro z SLA 4h." }
+      { "q": "Jak wygląda płatność za opiekę?", "a": "Miesięczny, stały koszt - od 390 zł za sam hosting, do 1 890 zł za Opiekę Pro z SLA 4h." }
     ],
     "cat_funding": "O dofinansowaniu",
     "cat_funding_items": [
-      { "q": "Ile dofinansowania mogę dostać?", "a": "Mikro i mała firma do 81 000 zł, średnia firma do 162 000 zł — szczegóły na stronie /dofinansowanie." },
+      { "q": "Ile dofinansowania mogę dostać?", "a": "Mikro i mała firma do 81 000 zł, średnia firma do 162 000 zł - szczegóły na stronie /dofinansowanie." },
       { "q": "Czy dofinansowanie obejmuje wdrożenie techniczne?", "a": "Nie, obejmuje szkolenia i doradztwo. Wdrożenie rozliczam osobno, według cennika." },
       { "q": "Jak długo trwa program?", "a": "W obecnej formie do grudnia 2028, ale limity u operatorów regionalnych wyczerpują się wcześniej." },
-      { "q": "Jak sprawdzić, czy się kwalifikuję?", "a": "Napisz lub umów rozmowę — sprawdzę to razem z Tobą, bezpłatnie." }
+      { "q": "Jak sprawdzić, czy się kwalifikuję?", "a": "Napisz lub umów rozmowę - sprawdzę to razem z Tobą, bezpłatnie." }
     ]
   },
   "about_page": {
-    "h1": "Marcin Łętowski — automatyzacja procesów",
-    "subtitle": "Z zawodu jestem programistą, ale prowadziłem też mniejsze biznesy — wiem od środka, ile czasu i uwagi zjada ręczna robota i natłok dokumentów w małej firmie. Dziś automatyzuję procesy zamiast w nich tkwić.",
+    "h1": "Marcin Łętowski - automatyzacja procesów",
+    "subtitle": "Z zawodu jestem programistą, ale prowadziłem też mniejsze biznesy - wiem od środka, ile czasu i uwagi zjada ręczna robota i natłok dokumentów w małej firmie. Dziś automatyzuję procesy zamiast w nich tkwić.",
     "why_title": "Dlaczego robię to, co robię",
-    "why_p1": "Z zawodu jestem programistą — automatyzacja, Python i integracje systemów to mój codzienny warsztat, a nie dodatek do oferty dorobiony na potrzeby marketingu. Ale zanim zacząłem wdrażać automatyzacje dla innych, sam prowadziłem mniejsze biznesy i na własnej skórze poznałem, ile faktur, maili, umów i tabelek potrafi wygenerować nawet niewielka firma.",
-    "why_p2": "To połączenie ma znaczenie: rozumiem kod i systemy od strony technicznej, ale też wiem, jak wygląda codzienność właściciela firmy 5–50 osób — dane wpisywane po raz drugi i trzeci, bo żaden system nie rozmawia z pozostałymi, i wieczne „ktoś to ogarnie później”. Dlatego rozmawiając z Wami, nie muszę uczyć się Waszego biznesu od zera. Od razu rozmawiamy o konkretach: co zjada czas i co realnie da się z tego zdjąć.",
+    "why_p1": "Z zawodu jestem programistą - zajmuję się automatyzacją procesów i integracją systemów na co dzień, nie od święta. Ale zanim zacząłem wdrażać automatyzacje dla innych, sam prowadziłem mniejsze biznesy i na własnej skórze poznałem, ile faktur, maili, umów i tabelek potrafi wygenerować nawet niewielka firma.",
+    "why_p2": "To połączenie ma znaczenie: rozumiem kod i systemy od strony technicznej, ale też wiem, jak wygląda codzienność właściciela firmy 5–50 osób - dane wpisywane po raz drugi i trzeci, bo żaden system nie rozmawia z pozostałymi, i wieczne „ktoś to ogarnie później”. Dlatego rozmawiając z Wami, nie muszę uczyć się Waszego biznesu od zera. Od razu rozmawiamy o konkretach: co zjada czas i co realnie da się z tego zdjąć.",
     "how_title": "Jak pracuję",
-    "how_text": "Bezpośrednio, bez handlowców i bez przekazywania sprawy między działami. Jedna osoba — ja — prowadzi Was od pierwszej rozmowy, przez audyt i wdrożenie, po opiekę nad działającą automatyzacją. Wiecie, z kim rozmawiacie na każdym etapie.",
+    "how_text": "Bezpośrednio, bez handlowców i bez przekazywania sprawy między działami. Jedna osoba - ja - prowadzi Was od pierwszej rozmowy, przez audyt i wdrożenie, po opiekę nad działającą automatyzacją. Wiecie, z kim rozmawiacie na każdym etapie.",
     "not_doing_title": "Czego nie robię",
     "not_doing_items": [
       "Nie buduję stron internetowych ani sklepów",
@@ -680,54 +760,225 @@
     "tech_items": ["n8n", "Make", "KSeF API", "Modele językowe (LLM)", "Python"]
   },
   "meta": {
-    "uslugi": { "title": "Automatyzacja procesów dla firm 5–50 osób | OmniTask", "description": "Automatyzacja workflow, obsługa KSeF, integracja systemów, agenci AI. Wdrożenie 2–4 tygodnie, stała cena, do 83% dofinansowania z PARP." },
-    "rpa": { "title": "Automatyzacja powtarzalnych zadań (RPA) dla firm | OmniTask", "description": "Programowy robot przejmuje powtarzalne zadania w Twoich systemach. Wdrożenie od 5 900 zł, 1–2 tygodnie. Bezpłatna rozmowa." },
-    "workflow": { "title": "Automatyzacja workflow – przepływy pracy bez ręcznej pracy", "description": "Łączę systemy, aplikacje i ludzi w jeden zautomatyzowany proces. Wdrożenie od 5 900 zł. Bezpłatna rozmowa o Twoim procesie." },
-    "integration": { "title": "Integracja systemów IT – ERP, CRM, API i bazy danych", "description": "Łączę ERP, CRM, e-mail i magazyn w jeden ekosystem z automatyczną wymianą danych. Bezpłatna rozmowa o integracji." },
-    "ai": { "title": "Agenci AI dla biznesu – analiza dokumentów i obsługa klienta", "description": "Buduję agentów AI, którzy analizują dokumenty, odpowiadają klientom i monitorują dane. Bezpłatna rozmowa." },
-    "ksef": { "title": "Automatyzacja faktur KSeF – koniec z ręcznym przypisywaniem", "description": "Duplikaty, przypisywanie do oddziałów, limity API. Automatyzuję obieg faktur po KSeF. Wdrożenie 2–4 tygodnie, od 12 900 zł." },
-    "szkolenia": { "title": "Szkolenia z automatyzacji z dofinansowaniem PARP | OmniTask", "description": "Szkolenie i doradztwo z automatyzacji procesów, do kupienia z dofinansowaniem do 83% kosztu. Zarejestrowane w Bazie Usług Rozwojowych." },
-    "opieka": { "title": "Opieka i hosting automatyzacji – od 390 zł miesięcznie", "description": "Monitoring, naprawy i hosting zarządzany dla wdrożonych automatyzacji. Reakcja do 48h lub 4h w wariancie Pro." },
-    "dofinansowanie": { "title": "Dofinansowanie na automatyzację do 83% | PARP i BUR | OmniTask", "description": "Mikro i mała firma może dostać do 81 000 zł na szkolenia i doradztwo z automatyzacji. Sprawdź, czy się kwalifikujesz." },
-    "cennik": { "title": "Cennik automatyzacji procesów – konkretne stawki | OmniTask", "description": "Wdrożenie od 5 900 zł, pakiet 3–4 procesów 14 900 zł, opieka od 390 zł/mc. Bez ukrytych kosztów. Kalkulator zwrotu z inwestycji." },
-    "faq": { "title": "Pytania i odpowiedzi o automatyzację, ceny i dofinansowanie", "description": "Odpowiedzi na najczęstsze pytania o automatyzację procesów, współpracę, ceny i dofinansowanie PARP." },
-    "about": { "title": "O mnie – Marcin Łętowski, automatyzacja procesów", "description": "Prowadziłem biuro nieruchomości, dziś automatyzuję procesy w firmach 5–50 osób. Poznaj moje podejście do pracy." },
-    "contact": { "title": "Kontakt – automatyzacja procesów dla firm", "description": "Skontaktuj się, aby omówić automatyzację procesów w Twojej firmie. Telefon, e-mail, formularz i kalendarz rozmów." },
-    "quote": { "title": "Bezpłatna wycena automatyzacji procesów", "description": "Opisz proces, który chcesz zautomatyzować. Przygotuję indywidualną wycenę w ciągu 24 godzin." },
-    "blog": { "title": "Blog o automatyzacji procesów, KSeF i dofinansowaniach", "description": "Praktyczna wiedza o automatyzacji, obsłudze KSeF i dofinansowaniach dla małych i średnich firm. Czytaj artykuły OmniTask." },
-    "home": { "title": "Automatyzacja procesów dla firm | OmniTask", "description": "Automatyzuję powtarzalne procesy w firmach 5–50 osób. Wdrożenie w 2–4 tygodnie, stała cena, do 83% dofinansowania z PARP." },
-    "privacy": { "title": "Polityka prywatności i ochrona danych (RODO)", "description": "Polityka prywatności OmniTask. Informacje o przetwarzaniu danych osobowych zgodnie z RODO." },
-    "terms": { "title": "Regulamin serwisu i świadczenia usług online", "description": "Regulamin korzystania z serwisu OmniTask.pl. Warunki świadczenia usług drogą elektroniczną." }
+    "uslugi": { "title": "Automatyzacja procesów w firmie – n8n, KSeF, RPA, integracje i agenci AI | OmniTask", "description": "Odzyskaj 10–20 godzin miesięcznie: automatyzuję workflow, faktury KSeF, integracje systemów i buduję agentów AI. Wdrożenie w 2–4 tygodnie, stała cena, bez niespodzianek." },
+    "rpa": { "title": "Robotyzacja procesów RPA dla firm – robot software'owy od 5 900 zł | OmniTask", "description": "Twój zespół przestaje klikać to samo po dziesięć razy dziennie. Programowy robot przejmuje powtarzalne zadania w 1–2 tygodnie. Sprawdź, czy Twój proces się do tego nadaje." },
+    "workflow": { "title": "Automatyzacja workflow w n8n dla firm – wdrożenie i integracje | OmniTask", "description": "Koniec z kopiowaniem danych między systemami i zgadywaniem, kto co już zrobił. Wdrażam automatyzacje w n8n, które łączą Wasze narzędzia w jeden przepływ. Od 5 900 zł." },
+    "integration": { "title": "Integracja systemów ERP, CRM, Comarch Optima i Baselinker | OmniTask", "description": "Sprzedaż i księgowość w końcu widzą te same liczby. Łączę ERP, CRM, Comarch Optima, Subiekt GT, Baselinker, wFirma i Fakturownię - bez comiesięcznego eksportu do Excela." },
+    "ai": { "title": "Agenci AI dla firm – automatyzacja obsługi klienta i dokumentów | OmniTask", "description": "Agent AI czyta faktury, odpowiada klientom i pilnuje danych, zanim zdążysz o to poprosić. Wdrażam sztuczną inteligencję w firmie bez budowania działu IT." },
+    "ksef": { "title": "Automatyzacja faktur KSeF – integracja z Comarch i Symfonią | OmniTask", "description": "Koniec z ręcznym pilnowaniem duplikatów faktur i limitów API KSeF. Automatyzuję obieg dokumentów i integrację z Comarch Optima, Symfonią i wFirma. Wdrożenie od 12 900 zł." },
+    "szkolenia": { "title": "Szkolenia z automatyzacji procesów z dofinansowaniem PARP do 83% | OmniTask", "description": "Nauczę Wasz zespół rozpoznawać, co faktycznie warto zautomatyzować - z dofinansowaniem pokrywającym nawet 83% kosztu. Wychodzicie z gotową listą procesów do wdrożenia." },
+    "opieka": { "title": "Hosting n8n i opieka nad automatyzacją self-hosted, zgodnie z RODO | OmniTask", "description": "Automatyzacja, której nikt nie pilnuje, po cichu się psuje. Monitoruję, naprawiam i utrzymuję serwer n8n w UE - reakcja do 48h lub 4h w wariancie Pro. Już od 390 zł/mc." },
+    "dofinansowanie": { "title": "Dofinansowanie na automatyzację i szkolenia AI z PARP i BUR | OmniTask", "description": "Nawet 81 000 zł na szkolenia i doradztwo z automatyzacji, zanim zapłacisz z własnej kieszeni. Usługa zarejestrowana w Bazie Usług Rozwojowych. Sprawdź, czy się kwalifikujesz." },
+    "cennik": { "title": "Ile kosztuje automatyzacja procesów w firmie? Cennik i kalkulator ROI | OmniTask", "description": "Ceny podane wprost, bez „zapytaj o wycenę”: wdrożenie od 5 900 zł, pakiet CORE 14 900 zł, opieka od 390 zł/mc. Policz kalkulatorem, ile realnie zaoszczędzisz." },
+    "faq": { "title": "FAQ – najczęstsze pytania o automatyzację procesów i ceny | OmniTask", "description": "Ile to trwa, ile kosztuje i czy trzeba znać się na n8n albo RPA? Odpowiadam wprost na pytania, które najczęściej słyszę przed pierwszą rozmową." },
+    "about": { "title": "O mnie – Marcin Łętowski, automatyzacja procesów w n8n dla firm | OmniTask", "description": "Sam prowadziłem biuro nieruchomości, więc znam ten chaos od środka. Dziś automatyzuję procesy w firmach 5–50 osób - jedna osoba, od rozmowy po wdrożenie." },
+    "contact": { "title": "Kontakt – umów bezpłatną rozmowę o automatyzacji procesów | OmniTask", "description": "Napisz, zadzwoń albo od razu zarezerwuj termin w kalendarzu. 30 minut rozmowy wystarczy, żeby wiedzieć, czy w Waszym procesie jest coś do zautomatyzowania." },
+    "quote": { "title": "Bezpłatna wycena automatyzacji procesów w 24 godziny | OmniTask", "description": "Opisz proces, który zjada Wam czas - ile osób go wykonuje, ile trwa, jakich systemów używacie. Odpowiem z konkretną wyceną w ciągu 24 godzin, bez zobowiązań." },
+    "blog": { "title": "Blog o automatyzacji procesów, KSeF, n8n i dofinansowaniach PARP | OmniTask", "description": "Praktyczna wiedza bez lania wody: wdrożenia n8n, obsługa KSeF, dofinansowania i realne przykłady automatyzacji z małych i średnich firm." },
+    "home": { "title": "Automatyzacja procesów w firmie – stała cena, wdrożenie w 2–4 tygodnie | OmniTask", "description": "Twoi ludzie przestają przepisywać dane między systemami. Automatyzuję procesy dla małych firm: n8n, KSeF, integracje, RPA. Wdrożenie 2–4 tygodnie, do 83% dofinansowania." },
+    "privacy": { "title": "Polityka prywatności OmniTask – ochrona danych osobowych (RODO)", "description": "Jak przetwarzamy Twoje dane, jakie masz prawa i skąd wziąć zgodę na cookies - wszystko w jednym miejscu, napisane po ludzku, zgodnie z RODO." },
+    "terms": { "title": "Regulamin OmniTask.pl – zasady świadczenia usług drogą elektroniczną", "description": "Zasady korzystania z serwisu, dane usługodawcy i warunki świadczenia usług elektronicznych - jasno spisane, zgodnie z przepisami." }
   },
   "legal": {
-    "note_label": "Uwaga:",
-    "note_text": "Niniejszy dokument stanowi szablon i powinien zostać zweryfikowany przez radcę prawnego przed publikacją w wersji produkcyjnej.",
     "contact_email": "kontakt@omnitask.pl",
     "privacy": {
-      "title": "Polityka Prywatności",
-      "subtitle": "Informacje o przetwarzaniu danych osobowych",
-      "last_updated": "Ostatnia aktualizacja: 17 maja 2026 r.",
+      "title": "Polityka prywatności",
+      "subtitle": "Zasady przetwarzania danych osobowych w serwisie www.omnitask.pl",
+      "last_updated": "Obowiązuje od: 25 sierpnia 2026 r. Ostatnia aktualizacja: 25 sierpnia 2026 r.",
       "sections": [
-        { "title": "1. Administrator danych", "emailIntro": "Administratorem Twoich danych osobowych jest OmniTask z siedzibą w Polsce (dalej: „Administrator”). Kontakt: ", "emailAfter": "." },
-        { "title": "2. Jakie dane zbieramy", "intro": "Zbieramy dane, które sam nam podajesz w formularzach kontaktowych i zapytaniach ofertowych:", "items": ["Imię i nazwisko", "Adres e-mail", "Numer telefonu (opcjonalnie)", "Nazwa firmy (opcjonalnie)", "Treść wiadomości / opis procesu"] },
-        { "title": "3. Cel przetwarzania", "intro": "Twoje dane przetwarzamy w celu:", "items": ["Odpowiedzi na zapytania ofertowe i kontaktowe (art. 6 ust. 1 lit. b RODO)", "Realizacji newslettera – na podstawie zgody (art. 6 ust. 1 lit. a RODO)", "Dochodzenia lub obrony roszczeń (art. 6 ust. 1 lit. f RODO)"] },
-        { "title": "4. Okres przechowywania", "paragraphs": ["Dane przechowujemy przez okres niezbędny do realizacji celów przetwarzania, nie dłużej niż 3 lata od ostatniego kontaktu."] },
-        { "title": "5. Twoje prawa", "intro": "Masz prawo do:", "items": ["Dostępu do swoich danych", "Sprostowania danych", "Usunięcia danych („prawo do bycia zapomnianym”)", "Ograniczenia przetwarzania", "Przenoszenia danych", "Wniesienia sprzeciwu wobec przetwarzania", "Cofnięcia zgody w dowolnym momencie", "Wniesienia skargi do Prezesa UODO"] },
-        { "title": "6. Pliki cookies", "paragraphs": ["Strona wykorzystuje niezbędne pliki cookies do prawidłowego działania serwisu. Nie stosujemy cookies marketingowych ani śledzących."] },
-        { "title": "7. Kontakt", "emailIntro": "W sprawach dotyczących ochrony danych osobowych: ", "emailAfter": "" }
+        { "title": "1. Administrator danych osobowych", "paragraphs": [
+          "Administratorem Twoich danych osobowych jest: Warsaw Residential Group Marcin Łętowski, ul. Grafitowa 5, Posoka, 62-504 Stare Miasto. NIP: 665-306-59-82, REGON: 528314936.",
+          "Serwis www.omnitask.pl oraz marka OmniTask prowadzone są w ramach powyższej działalności gospodarczej.",
+          "Kontakt w sprawach danych osobowych: e-mail kontakt@omnitask.pl, telefon +48 721 719 238.",
+          "Administrator nie powołał Inspektora Ochrony Danych. We wszystkich sprawach dotyczących przetwarzania danych osobowych możesz kontaktować się bezpośrednio pod powyższymi danymi."
+        ] },
+        { "title": "2. Jakie dane zbieramy i w jakim celu", "subsections": [
+          { "title": "2.1. Formularz zapytania ofertowego", "table": { "headers": ["Element", "Szczegóły"], "rows": [
+            ["Zakres danych", "imię i nazwisko, adres e-mail, numer telefonu, nazwa firmy, treść wiadomości"],
+            ["Cel", "odpowiedź na zapytanie, przygotowanie oferty, podjęcie działań przed zawarciem umowy"],
+            ["Podstawa prawna", "art. 6 ust. 1 lit. b RODO – podjęcie działań na żądanie osoby przed zawarciem umowy; art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes administratora polegający na obsłudze zapytań"],
+            ["Okres przechowywania", "3 lata od ostatniego kontaktu; w przypadku zawarcia umowy – przez okres współpracy oraz 6 lat od zakończenia roku podatkowego, w którym wystawiono ostatni dokument księgowy"],
+            ["Podanie danych", "dobrowolne, ale niezbędne do udzielenia odpowiedzi"]
+          ] } },
+          { "title": "2.2. Formularz kontaktowy", "table": { "headers": ["Element", "Szczegóły"], "rows": [
+            ["Zakres danych", "imię, adres e-mail, treść wiadomości"],
+            ["Cel", "udzielenie odpowiedzi na wiadomość"],
+            ["Podstawa prawna", "art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes polegający na prowadzeniu korespondencji"],
+            ["Okres przechowywania", "3 lata od ostatniego kontaktu"],
+            ["Podanie danych", "dobrowolne, ale niezbędne do udzielenia odpowiedzi"]
+          ] } },
+          { "title": "2.3. Newsletter", "table": { "headers": ["Element", "Szczegóły"], "rows": [
+            ["Zakres danych", "adres e-mail"],
+            ["Cel", "przesyłanie informacji o usługach, artykułów i materiałów edukacyjnych"],
+            ["Podstawa prawna", "art. 6 ust. 1 lit. a RODO – zgoda osoby, której dane dotyczą"],
+            ["Okres przechowywania", "do momentu wycofania zgody"],
+            ["Podanie danych", "dobrowolne"]
+          ] } },
+          { "paragraphs": ["Zgodę możesz wycofać w każdej chwili – klikając link rezygnacji w stopce każdej wiadomości albo pisząc na adres kontaktowy. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem."] },
+          { "title": "2.4. Dane zbierane automatycznie", "paragraphs": [
+            "Podczas korzystania z serwisu automatycznie zbierane są dane techniczne: adres IP, typ i wersja przeglądarki, system operacyjny, data i godzina wizyty, odwiedzone podstrony, adres strony odsyłającej.",
+            "Cel: zapewnienie prawidłowego działania serwisu, bezpieczeństwo, statystyki oglądalności.",
+            "Podstawa prawna: art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes polegający na zapewnieniu bezpieczeństwa i rozwoju serwisu."
+          ] }
+        ] },
+        { "title": "3. Komu przekazujemy dane", "subsections": [
+          { "paragraphs": ["Twoje dane mogą być przekazywane wyłącznie podmiotom, które przetwarzają je na nasze zlecenie, na podstawie umowy powierzenia przetwarzania danych osobowych:"] },
+          { "table": { "headers": ["Kategoria odbiorcy", "Podmiot", "Zakres przetwarzania"], "rows": [
+            ["Dostawca infrastruktury serwerowej", "operator hostingu VPS z siedzibą na terenie EOG", "przechowywanie danych przesłanych przez formularze oraz bazy danych serwisu"],
+            ["Dostawca poczty elektronicznej", "Google Ireland Limited", "wysyłka powiadomień o nowych zapytaniach i korespondencja e-mail"],
+            ["Dostawca przechowywania plików", "Google Ireland Limited – Google Cloud Storage, region europe-central2 (Warszawa)", "pliki graficzne publikowane w serwisie"],
+            ["Dostawca narzędzi analitycznych", "Google Ireland Limited – Google Analytics 4", "dane o sposobie korzystania z serwisu, przetwarzane wyłącznie po wyrażeniu zgody"],
+            ["Biuro rachunkowe / doradca podatkowy", "podmiot obsługujący księgowość administratora", "dokumentacja księgowa w przypadku zawarcia umowy"]
+          ] } },
+          { "paragraphs": [
+            "Dane mogą zostać udostępnione organom publicznym, jeżeli obowiązek taki wynika z przepisów prawa.",
+            "Nie sprzedajemy danych osobowych i nie udostępniamy ich podmiotom trzecim w celach marketingowych."
+          ] },
+          { "title": "3.1. Przekazywanie danych poza Europejski Obszar Gospodarczy", "paragraphs": [
+            "Dane przesyłane przez formularze oraz baza danych serwisu przechowywane są wyłącznie na serwerach zlokalizowanych na terenie Europejskiego Obszaru Gospodarczego.",
+            "W przypadku korzystania z Google Analytics 4 dane dotyczące sposobu korzystania z serwisu mogą być przekazywane do Stanów Zjednoczonych. Podstawą przekazania jest decyzja wykonawcza Komisji Europejskiej stwierdzająca odpowiedni stopień ochrony danych w ramach EU–U.S. Data Privacy Framework, którym objęty jest Google LLC, oraz standardowe klauzule umowne zatwierdzone przez Komisję Europejską.",
+            "W ramach Google Analytics 4 adresy IP użytkowników są anonimizowane przed zapisaniem danych i nie są przechowywane w formie umożliwiającej identyfikację. Administrator nie łączy danych z Google Analytics z danymi przesłanymi przez formularze.",
+            "Możesz zablokować przetwarzanie danych przez Google Analytics, odmawiając zgody w banerze cookies albo instalując dodatek do przeglądarki dostępny pod adresem: tools.google.com/dlpage/gaoptout"
+          ] }
+        ] },
+        { "title": "4. Twoje prawa", "intro": "W związku z przetwarzaniem danych przysługują Ci następujące prawa:", "items": [
+          "Prawo dostępu – możesz uzyskać informację, jakie dane przetwarzamy i otrzymać ich kopię",
+          "Prawo do sprostowania – możesz żądać poprawienia danych nieprawidłowych lub uzupełnienia niekompletnych",
+          "Prawo do usunięcia („prawo do bycia zapomnianym”) – możesz żądać usunięcia danych, jeżeli nie ma podstawy do ich dalszego przetwarzania",
+          "Prawo do ograniczenia przetwarzania – możesz żądać wstrzymania przetwarzania w określonych sytuacjach",
+          "Prawo do przenoszenia danych – dotyczy danych przetwarzanych na podstawie zgody lub umowy",
+          "Prawo sprzeciwu – możesz sprzeciwić się przetwarzaniu opartemu na prawnie uzasadnionym interesie",
+          "Prawo do wycofania zgody – w każdej chwili, bez wpływu na zgodność z prawem wcześniejszego przetwarzania"
+        ], "paragraphs": [
+          "Aby skorzystać z powyższych praw, napisz na adres podany w punkcie 1. Odpowiadamy bez zbędnej zwłoki, nie później niż w ciągu miesiąca.",
+          "Prawo do skargi: jeżeli uważasz, że przetwarzanie Twoich danych narusza przepisy, możesz wnieść skargę do organu nadzorczego: Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa, uodo.gov.pl"
+        ] },
+        { "title": "5. Bezpieczeństwo danych", "intro": "Stosujemy środki techniczne i organizacyjne odpowiadające ryzyku, w szczególności:", "items": [
+          "szyfrowanie połączenia certyfikatem SSL/TLS na całej stronie",
+          "dostęp do danych wyłącznie dla administratora",
+          "kopie zapasowe bazy danych",
+          "aktualizacje oprogramowania serwerowego",
+          "serwery zlokalizowane na terenie Europejskiego Obszaru Gospodarczego"
+        ] },
+        { "title": "6. Pliki cookies", "subsections": [
+          { "title": "6.1. Czym są cookies", "paragraphs": ["Cookies to małe pliki tekstowe zapisywane na Twoim urządzeniu podczas korzystania z serwisu. Umożliwiają rozpoznanie urządzenia i dostosowanie działania strony."] },
+          { "title": "6.2. Zgoda na cookies", "intro": "Przy pierwszej wizycie w serwisie wyświetlany jest baner zgody na pliki cookies. Możesz w nim:", "items": [
+            "zaakceptować wszystkie pliki cookies",
+            "odrzucić cookies inne niż niezbędne",
+            "wybrać poszczególne kategorie w ustawieniach szczegółowych"
+          ], "paragraphs": ["Cookies analityczne i marketingowe nie są uruchamiane przed uzyskaniem Twojej zgody. Zgodę możesz w każdej chwili zmienić lub wycofać, korzystając z odnośnika „Ustawienia cookies” dostępnego w stopce serwisu. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej wycofaniem."] },
+          { "title": "6.3. Stosowane pliki cookies", "paragraphs": ["Cookies niezbędne – konieczne do prawidłowego działania serwisu. Nie wymagają zgody, podstawą przetwarzania jest art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes polegający na zapewnieniu funkcjonowania i bezpieczeństwa serwisu)."], "table": { "headers": ["Nazwa", "Cel", "Czas przechowywania"], "rows": [
+            ["cookies sesyjne aplikacji", "utrzymanie sesji, poprawne działanie formularzy", "do zamknięcia przeglądarki"],
+            ["preferencja językowa", "zapamiętanie wybranej wersji językowej", "12 miesięcy"],
+            ["zapis decyzji o cookies", "zapamiętanie Twojego wyboru w banerze zgody", "12 miesięcy"]
+          ] } },
+          { "paragraphs": ["Cookies analityczne – służą do analizy ruchu i sposobu korzystania z serwisu. Wymagają zgody, podstawą przetwarzania jest art. 6 ust. 1 lit. a RODO."], "table": { "headers": ["Nazwa", "Dostawca", "Cel", "Czas przechowywania"], "rows": [
+            ["_ga", "Google Analytics 4", "rozróżnianie użytkowników", "24 miesiące"],
+            ["_ga_<identyfikator>", "Google Analytics 4", "utrzymanie stanu sesji pomiarowej", "24 miesiące"]
+          ] } },
+          { "paragraphs": ["Cookies marketingowe – służą mierzeniu skuteczności kampanii reklamowych. Wymagają zgody, podstawą przetwarzania jest art. 6 ust. 1 lit. a RODO. Uruchamiane wyłącznie w okresach prowadzenia kampanii reklamowych."], "table": { "headers": ["Nazwa", "Dostawca", "Cel", "Czas przechowywania"], "rows": [
+            ["_gcl_au", "Google", "pomiar konwersji z kampanii reklamowych", "90 dni"]
+          ] } },
+          { "title": "6.4. Zarządzanie cookies w przeglądarce", "paragraphs": [
+            "Niezależnie od banera zgody możesz zarządzać cookies w ustawieniach przeglądarki – zablokować je lub usunąć już zapisane. Ograniczenie cookies niezbędnych może wpłynąć na działanie niektórych funkcji serwisu.",
+            "Instrukcje dla najpopularniejszych przeglądarek dostępne są w ich dokumentacji pomocy technicznej."
+          ] }
+        ] },
+        { "title": "7. Profilowanie i zautomatyzowane decyzje", "paragraphs": [
+          "Dane nie są wykorzystywane do zautomatyzowanego podejmowania decyzji wywołującego wobec Ciebie skutki prawne lub w podobny sposób istotnie wpływającego na Twoją sytuację.",
+          "W ramach Google Analytics 4 dane o sposobie korzystania z serwisu są analizowane w formie zagregowanej i statystycznej – służy to wyłącznie ulepszaniu treści i funkcjonalności serwisu, a nie ocenie poszczególnych osób."
+        ] },
+        { "title": "8. Linki do stron zewnętrznych", "paragraphs": ["Serwis może zawierać odesłania do stron podmiotów trzecich. Nie odpowiadamy za ich polityki prywatności – zalecamy zapoznanie się z nimi osobno."] },
+        { "title": "9. Zmiany polityki prywatności", "paragraphs": [
+          "Zastrzegamy prawo do zmiany niniejszej polityki. Aktualna wersja wraz z datą obowiązywania jest zawsze dostępna pod adresem www.omnitask.pl/polityka-prywatnosci.",
+          "Dokument sporządzony zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO) oraz ustawą z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną."
+        ] }
       ]
     },
     "terms": {
-      "title": "Regulamin serwisu OmniTask.pl",
-      "subtitle": "Warunki korzystania z serwisu",
-      "last_updated": "Ostatnia aktualizacja: 17 maja 2026 r.",
+      "title": "Regulamin świadczenia usług drogą elektroniczną",
+      "subtitle": "Zasady korzystania z serwisu www.omnitask.pl oraz świadczenia usług drogą elektroniczną",
+      "last_updated": "Obowiązuje od: 25 sierpnia 2026 r.",
       "sections": [
-        { "title": "1. Postanowienia ogólne", "paragraphs": ["Niniejszy regulamin określa zasady korzystania z serwisu internetowego omnitask.pl, prowadzonego przez OmniTask (dalej: „Usługodawca”)."] },
-        { "title": "2. Usługi", "intro": "Za pośrednictwem serwisu Usługodawca świadczy usługi drogą elektroniczną, w tym:", "items": ["Udostępnianie informacji o usługach automatyzacji procesów", "Możliwość przesłania zapytania ofertowego", "Formularz kontaktowy", "Newsletter (po wyrażeniu zgody)"] },
-        { "title": "3. Wymagania techniczne", "paragraphs": ["Do korzystania z serwisu wymagana jest przeglądarka internetowa z obsługą JavaScript oraz aktywne połączenie z Internetem."] },
-        { "title": "4. Prawa własności intelektualnej", "paragraphs": ["Wszelkie treści zamieszczone w serwisie, w tym teksty, grafiki, logotypy i oprogramowanie, stanowią własność Usługodawcy i są chronione prawem autorskim."] },
-        { "title": "5. Odpowiedzialność", "paragraphs": ["Usługodawca dokłada starań, aby informacje zamieszczone w serwisie były aktualne i rzetelne, jednak nie ponosi odpowiedzialności za ewentualne błędy lub nieaktualność treści."] },
-        { "title": "6. Postanowienia końcowe", "paragraphs": ["Usługodawca zastrzega sobie prawo do zmiany regulaminu. Zmiany wchodzą w życie z chwilą ich publikacji w serwisie."] }
+        { "title": "§ 1. Postanowienia ogólne", "paragraphs": [
+          "Niniejszy Regulamin określa zasady korzystania z serwisu internetowego dostępnego pod adresem www.omnitask.pl oraz zasady świadczenia usług drogą elektroniczną.",
+          "Usługodawcą jest: Warsaw Residential Group Marcin Łętowski, ul. Grafitowa 5, Posoka, 62-504 Stare Miasto. NIP: 665-306-59-82, REGON: 528314936. E-mail: kontakt@omnitask.pl, telefon: +48 721 719 238. Adres do doręczeń elektronicznych: AE:PL-74340-47002-TIHVB-19.",
+          "Serwis www.omnitask.pl oraz marka OmniTask stanowią oznaczenie handlowe działalności prowadzonej pod powyższą firmą.",
+          "Regulamin jest udostępniony nieodpłatnie pod adresem www.omnitask.pl/regulamin w formie umożliwiającej jego pobranie, utrwalenie i wydrukowanie.",
+          "Korzystanie z Serwisu oznacza akceptację niniejszego Regulaminu."
+        ] },
+        { "title": "§ 2. Definicje", "table": { "headers": ["Pojęcie", "Znaczenie"], "rows": [
+          ["Serwis", "strona internetowa pod adresem www.omnitask.pl"],
+          ["Usługodawca", "podmiot wskazany w § 1 ust. 2"],
+          ["Użytkownik", "osoba fizyczna, osoba prawna lub jednostka organizacyjna korzystająca z Serwisu"],
+          ["Usługi elektroniczne", "usługi świadczone drogą elektroniczną, opisane w § 3"],
+          ["Usługi automatyzacji", "odpłatne usługi wdrożeniowe, doradcze i szkoleniowe, świadczone na podstawie odrębnej umowy"],
+          ["Formularz", "formularz kontaktowy lub formularz zapytania ofertowego dostępny w Serwisie"],
+          ["Przedsiębiorca na prawach konsumenta", "osoba fizyczna zawierająca umowę bezpośrednio związaną z jej działalnością gospodarczą, gdy umowa nie ma dla niej charakteru zawodowego"]
+        ] } },
+        { "title": "§ 3. Rodzaje i zakres usług elektronicznych", "intro": "Usługodawca świadczy za pośrednictwem Serwisu następujące usługi elektroniczne, nieodpłatnie:", "items": [
+          "Przeglądanie treści Serwisu – dostęp do informacji o usługach, cenniku, artykułów blogowych i materiałów informacyjnych",
+          "Formularz kontaktowy i formularz zapytania ofertowego – umożliwiające przesłanie wiadomości oraz otrzymanie odpowiedzi lub oferty",
+          "Newsletter – przesyłanie informacji handlowych i materiałów edukacyjnych na podany adres e-mail, świadczony po wyrażeniu odrębnej zgody"
+        ], "paragraphs": [
+          "Usługi automatyzacji nie są sprzedawane przez Serwis. Informacje o usługach i cenach zamieszczone w Serwisie nie stanowią oferty w rozumieniu art. 66 § 1 Kodeksu cywilnego, lecz zaproszenie do zawarcia umowy (art. 71 Kodeksu cywilnego). Warunki realizacji, zakres, terminy i wynagrodzenie ustalane są indywidualnie w odrębnej umowie.",
+          "Ceny wskazane w Serwisie są cenami netto i nie zawierają podatku VAT. Ostateczna cena ustalana jest po analizie zakresu prac."
+        ] },
+        { "title": "§ 4. Warunki świadczenia usług", "subsections": [
+          { "intro": "Do korzystania z Serwisu niezbędne są:", "items": [
+            "urządzenie z dostępem do internetu",
+            "przeglądarka internetowa w aktualnej wersji, obsługująca JavaScript i pliki cookies",
+            "aktywne konto poczty elektronicznej – w przypadku korzystania z Formularzy lub Newslettera"
+          ] },
+          { "paragraphs": ["Usługodawca dokłada starań, aby Serwis był dostępny nieprzerwanie. Zastrzega jednak prawo do czasowych przerw technicznych, w szczególności w celu konserwacji, aktualizacji lub rozbudowy."] },
+          { "paragraphs": ["Usługodawca nie ponosi odpowiedzialności za przerwy w dostępie do Serwisu wynikające z przyczyn niezależnych, w szczególności awarii łączy internetowych, siły wyższej lub działania podmiotów trzecich."] },
+          { "intro": "Zawarcie umowy o świadczenie usługi elektronicznej następuje:", "items": [
+            "w przypadku przeglądania treści – z chwilą wejścia na stronę Serwisu",
+            "w przypadku Formularzy – z chwilą wysłania wiadomości",
+            "w przypadku Newslettera – z chwilą potwierdzenia zapisu"
+          ] },
+          { "intro": "Rozwiązanie umowy o świadczenie usługi elektronicznej następuje:", "items": [
+            "w przypadku przeglądania treści – z chwilą opuszczenia Serwisu",
+            "w przypadku Formularzy – z chwilą zakończenia korespondencji",
+            "w przypadku Newslettera – w każdej chwili, poprzez kliknięcie linku rezygnacji lub wiadomość na adres kontaktowy"
+          ] }
+        ] },
+        { "title": "§ 5. Zakaz dostarczania treści bezprawnych", "paragraphs": [
+          "Użytkownika obowiązuje zakaz dostarczania treści o charakterze bezprawnym, w szczególności treści naruszających dobra osobiste, prawa autorskie, prawa własności przemysłowej lub przepisy prawa powszechnie obowiązującego.",
+          "Zakazane jest korzystanie z Serwisu w sposób zakłócający jego funkcjonowanie, w szczególności poprzez użycie oprogramowania automatyzującego, przeciążanie infrastruktury lub próby uzyskania nieuprawnionego dostępu.",
+          "W przypadku naruszenia powyższych zasad Usługodawca może zablokować dostęp do Serwisu."
+        ] },
+        { "title": "§ 6. Odpowiedzialność", "paragraphs": [
+          "Treści zamieszczone w Serwisie – w szczególności artykuły blogowe, poradniki i materiały informacyjne – mają charakter informacyjny i edukacyjny. Nie stanowią porady prawnej, podatkowej ani doradztwa inwestycyjnego.",
+          "Informacje dotyczące programów dofinansowań, obowiązków podatkowych oraz przepisów prawa są przedstawiane według stanu na dzień publikacji. Usługodawca nie gwarantuje ich aktualności – przed podjęciem decyzji należy zweryfikować je u właściwego organu lub doradcy.",
+          "Usługodawca nie ponosi odpowiedzialności za decyzje podjęte przez Użytkownika wyłącznie na podstawie treści zamieszczonych w Serwisie."
+        ] },
+        { "title": "§ 7. Prawa autorskie", "paragraphs": [
+          "Serwis oraz jego elementy – teksty, grafiki, układ, logotyp, znaki graficzne – stanowią przedmiot praw autorskich przysługujących Usługodawcy lub podmiotom, z którymi zawarł stosowne umowy.",
+          "Kopiowanie, rozpowszechnianie lub wykorzystywanie treści Serwisu w celach komercyjnych bez pisemnej zgody Usługodawcy jest zabronione.",
+          "Dozwolone jest cytowanie fragmentów treści z podaniem źródła i aktywnego odesłania do Serwisu."
+        ] },
+        { "title": "§ 8. Reklamacje", "intro": "Reklamacje dotyczące usług elektronicznych można składać:", "items": [
+          "na adres e-mail: kontakt@omnitask.pl",
+          "pisemnie na adres siedziby Usługodawcy"
+        ], "paragraphs": [
+          "Reklamacja powinna zawierać: oznaczenie Użytkownika, opis problemu wraz z datą jego wystąpienia oraz oczekiwany sposób rozpatrzenia.",
+          "Usługodawca rozpatruje reklamację w terminie 14 dni od jej otrzymania i informuje o wyniku w formie, w jakiej reklamacja została złożona."
+        ] },
+        { "title": "§ 9. Odstąpienie od umowy", "paragraphs": [
+          "Konsument oraz Przedsiębiorca na prawach konsumenta, który zawarł umowę na odległość, może od niej odstąpić w terminie 14 dni bez podania przyczyny.",
+          "Termin liczy się od dnia zawarcia umowy. Do zachowania terminu wystarczy wysłanie oświadczenia przed jego upływem.",
+          "Oświadczenie o odstąpieniu należy przesłać na adres e-mail lub adres siedziby Usługodawcy.",
+          "Prawo odstąpienia nie przysługuje, jeżeli Usługodawca wykonał w pełni usługę za wyraźną zgodą Użytkownika, który został przed rozpoczęciem świadczenia poinformowany o utracie prawa odstąpienia.",
+          "Postanowienia niniejszego paragrafu nie dotyczą przedsiębiorców zawierających umowy o charakterze zawodowym."
+        ] },
+        { "title": "§ 10. Ochrona danych osobowych", "paragraphs": ["Zasady przetwarzania danych osobowych, cele, podstawy prawne oraz prawa przysługujące osobom, których dane dotyczą, opisane są w Polityce prywatności dostępnej pod adresem www.omnitask.pl/polityka-prywatnosci."] },
+        { "title": "§ 11. Postanowienia końcowe", "paragraphs": [
+          "W sprawach nieuregulowanych Regulaminem zastosowanie mają przepisy prawa polskiego, w szczególności Kodeksu cywilnego oraz ustawy z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną.",
+          "Usługodawca zastrzega prawo do zmiany Regulaminu z ważnych przyczyn, w szczególności zmiany przepisów prawa lub zakresu świadczonych usług. Zmiany wchodzą w życie z dniem publikacji w Serwisie.",
+          "Spory wynikające z korzystania z Serwisu rozstrzyga sąd właściwy według przepisów prawa polskiego. Konsument może skorzystać z pozasądowych sposobów rozpatrywania reklamacji, w tym platformy ODR dostępnej pod adresem ec.europa.eu/consumers/odr.",
+          "Regulamin obowiązuje od dnia 25 sierpnia 2026 r."
+        ] }
       ]
     }
   }

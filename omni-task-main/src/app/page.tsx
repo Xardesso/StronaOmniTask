@@ -1,8 +1,14 @@
+import type { Metadata } from 'next'
 import HomeClient from './HomeClient'
 import { prisma } from '@/lib/prisma'
 import { getPublicUrl } from '@/lib/gcs'
+import { buildPageMetadata } from '@/lib/meta'
 
 export const revalidate = 3600 // Revalidate every hour
+
+export function generateMetadata(): Metadata {
+  return buildPageMetadata({ locale: 'pl', cleanPath: '/', metaKey: 'home', absoluteTitle: true })
+}
 
 export default async function HomePage() {
   let articles: any[] = []

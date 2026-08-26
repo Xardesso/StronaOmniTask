@@ -2,7 +2,9 @@
 
 import Link from './LocaleLink'
 import { useTranslation } from '@/i18n/context'
-import { CALCOM_URL, CONTACT, FEATURE_REALIZACJE } from '@/lib/site-config'
+import { CONTACT, FEATURE_REALIZACJE } from '@/lib/site-config'
+import CtaButton from './CtaButton'
+import { useCookieConsent } from './CookieConsent'
 
 interface FooterPost {
   slug: string
@@ -13,6 +15,7 @@ interface FooterPost {
 
 export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
   const { t, locale } = useTranslation()
+  const { openSettings } = useCookieConsent()
 
   return (
     <footer className="footer" id="main-footer">
@@ -21,7 +24,7 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
           {/* Column 1 - Brand */}
           <div className="footer__col">
             <div className="footer__brand">
-              <img src="/Logo.png" alt="OmniTask Logo" title="OmniTask Logo" className="footer__logo-img" style={{ height: '46px', width: 'auto' }} />
+              <img src="/logo-footer.png" alt="OmniTask Logo" title="OmniTask Logo" className="footer__logo-img" style={{ height: '46px', width: 'auto' }} />
             </div>
             <p className="footer__description">{t('footer.description')}</p>
             <div className="footer__socials">
@@ -46,7 +49,7 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
               <li><Link href="/uslugi/integracja-systemow" className="footer__link" title={t('service_detail.labels.integration')}>{t('service_detail.labels.integration')}</Link></li>
               {locale === 'pl' && <li><Link href="/uslugi/szkolenia-i-doradztwo" className="footer__link" title={t('service_detail.labels.szkolenia')}>{t('service_detail.labels.szkolenia')}</Link></li>}
               <li><Link href="/uslugi/rpa" className="footer__link" title={t('service_detail.labels.rpa')}>{t('service_detail.labels.rpa')}</Link></li>
-              {locale === 'pl' && <li><Link href="/uslugi/opieka-i-hosting" className="footer__link" title={t('service_detail.labels.opieka')}>{t('service_detail.labels.opieka')}</Link></li>}
+              <li><Link href="/uslugi/opieka-i-hosting" className="footer__link" title={t('service_detail.labels.opieka')}>{t('service_detail.labels.opieka')}</Link></li>
               <li><Link href="/uslugi/agenci-ai" className="footer__link" title={t('service_detail.labels.ai')}>{t('service_detail.labels.ai')}</Link></li>
             </ul>
           </div>
@@ -99,11 +102,10 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <a href={`mailto:${CONTACT.email}`} className="footer__link" title="Email">{CONTACT.email}</a>
               </li>
-              <li className="footer__contact-item footer__contact-item--nip">{CONTACT.nip}</li>
             </ul>
-            <a href={CALCOM_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary footer__cta" title={t('nav.book_call')}>
+            <CtaButton className="btn btn--primary footer__cta" title={t('nav.book_call')}>
               {t('nav.book_call')}
-            </a>
+            </CtaButton>
           </div>
         </div>
 
@@ -113,6 +115,10 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
             <Link href="/polityka-prywatnosci" className="footer__link" title={t('footer.privacy_policy')}>{t('footer.privacy_policy')}</Link>
             <span>|</span>
             <Link href="/regulamin" className="footer__link" title={t('footer.terms')}>{t('footer.terms')}</Link>
+            <span>|</span>
+            <button type="button" className="footer__link footer__link--button" onClick={openSettings} title={t('footer.cookie_settings')}>
+              {t('footer.cookie_settings')}
+            </button>
           </div>
         </div>
       </div>

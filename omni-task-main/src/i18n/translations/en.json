@@ -13,6 +13,16 @@
     "all_services": "All services",
     "book_call": "Book a call"
   },
+  "eyebrow": {
+    "automation": "Process automation",
+    "trust": "Trust",
+    "problem": "Problem",
+    "services": "Services",
+    "process": "Process",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "about": "About me"
+  },
   "hero": {
     "title": "Your people stop retyping data between systems",
     "subtitle": "I automate repetitive processes for small and mid-size companies. Implementation in 2–4 weeks, at a fixed price agreed upfront.",
@@ -23,7 +33,15 @@
       "Care plan after launch"
     ],
     "cta_primary": "Book a free call",
-    "cta_secondary": "See pricing"
+    "cta_secondary": "See pricing",
+    "diagram_before_title": "Invoice via KSeF and email",
+    "diagram_before_desc": "Someone checks by hand whether it's a duplicate",
+    "diagram_after_title": "Automation",
+    "diagram_after_desc": "Deduplication and routing to the right department, no human involved",
+    "badge_time_value": "2-4 weeks",
+    "badge_time_label": "implementation",
+    "badge_funding_value": "up to 83%",
+    "badge_funding_label": "grant funding"
   },
   "trust": {
     "title": "Built on proven, secure tools"
@@ -32,7 +50,7 @@
     "title": "Does this sound familiar?",
     "subtitle": "If the situations below happen every week at your company, there is a good chance they can be automated.",
     "items": [
-      "An invoice comes in twice, through two channels — someone has to catch the duplicate before it gets booked twice.",
+      "An invoice comes in twice, through two channels - someone has to catch the duplicate before it gets booked twice.",
       "A lead sits in the inbox for half a day while the prospect messages three competitors instead.",
       "Someone re-types the same data from one system into another, every month.",
       "Documents circulate by email and nobody knows whose desk the approval is stuck on."
@@ -43,36 +61,36 @@
     "subtitle": "From a single process to full system integrations and AI agents.",
     "service1": {
       "title": "Workflow automation",
-      "desc": "I connect systems, apps and people into one flow — no more copying data by hand."
+      "desc": "I connect systems, apps and people into one flow. Data entered once ends up wherever it's needed - no copying, no email attachments, no guessing who did what. Works well for purchase approvals, invoice sign-off, or onboarding a new employee."
     },
     "service2": {
       "title": "Document workflow automation",
-      "desc": "Automatic deduplication and routing of incoming documents across departments."
+      "desc": "Automatic deduplication and routing of incoming documents across departments - no more double-booked entries. Includes monitoring of the underlying integrations, with an alert before a process silently breaks mid-day."
     },
     "service3": {
       "title": "System integration",
-      "desc": "I connect ERP, CRM, email and your warehouse into one ecosystem with automatic data exchange."
+      "desc": "I connect ERP, CRM, email and your warehouse into one ecosystem with automatic data exchange, no monthly spreadsheet export. Data updates on both sides in near real time, so sales and accounting see the same numbers."
     },
     "service4": {
       "title": "Training & consulting",
-      "desc": "Practical, hands-on training for your team on how to spot and run automations."
+      "desc": "I teach your team to spot which processes are worth automating. Available with public co-funding covering up to 83% of the cost. The workshop ends with a concrete, ready-to-build list of processes for your company."
     },
     "service5": {
       "title": "Task automation (RPA)",
-      "desc": "A software robot takes over repetitive work inside your existing systems."
+      "desc": "A software robot takes over repetitive work inside your existing systems - clicking, copying and filling forms exactly like a person, minus the breaks. Especially useful where a system has no API, like older accounting software."
     },
     "service6": {
       "title": "Care & hosting",
-      "desc": "I monitor and fix deployed automations — without care, they quietly break over time."
+      "desc": "I monitor and fix deployed automations. Left unattended, they quietly break the moment a connected system changes. Care includes a monthly report on what ran and how much time it saved."
     },
     "service7": {
       "title": "AI agents",
-      "desc": "I build AI assistants for document analysis, customer support and data monitoring."
+      "desc": "I build AI assistants for document analysis, customer support and data monitoring - they take the first pass at high volumes of information, answering from your own documentation and handing off harder cases to a person."
     }
   },
   "process": {
     "title": "How I work",
-    "subtitle": "A proven 4-step process — no surprises along the way.",
+    "subtitle": "A proven 4-step process - no surprises along the way.",
     "step1": {
       "number": "01",
       "title": "Call",
@@ -97,7 +115,8 @@
   "pricing_home": {
     "title": "Pricing, no surprises",
     "subtitle": "Prices starting from, never \"ask for a quote\". Full pricing with care plans below.",
-    "cta": "See full pricing"
+    "cta": "See full pricing",
+    "card_cta": "See details"
   },
   "faq": {
     "title": "Frequently asked questions",
@@ -105,19 +124,19 @@
     "q1": "How long does an implementation take?",
     "a1": "A simple process takes 1–2 weeks. A more complex one, integrating several systems, takes 3–4 weeks. I always start with whatever proves value fastest.",
     "q2": "How much does it cost?",
-    "a2": "Implementing a single process starts at a fixed price agreed before we start — never \"ask for a quote\". Full pricing is public on the /cennik page.",
+    "a2": "Implementing a single process starts at a fixed price agreed before we start - never \"ask for a quote\". Full pricing is public on the /cennik page.",
     "q3": "Do I need to understand the underlying tools?",
     "a3": "No. We talk about your process and the hours you could get back. I pick the tools and take responsibility for them.",
     "q4": "What happens after launch?",
     "a4": "Automation left unattended eventually breaks as the systems around it change. I offer a monthly care plan to keep it running.",
-    "q5": "Who actually does the work — a company or one person?",
+    "q5": "Who actually does the work - a company or one person?",
     "a5": "One person, from the first call through implementation and ongoing care. Your project doesn't get handed off between a salesperson and a different implementer.",
     "q6": "Can I see pricing before talking to you?",
-    "a6": "Yes — pricing is public. Book a free call once you've seen it, and we'll talk about your specific process."
+    "a6": "Yes - pricing is public. Book a free call once you've seen it, and we'll talk about your specific process."
   },
   "about_home": {
     "title": "Who's behind this",
-    "text": "I'm a software developer by trade — automation is my everyday craft, not a bolt-on service. I've also run smaller businesses myself, so I know first-hand the flood of documents and data even a small company generates.",
+    "text": "I'm a software developer by trade - process automation and system integrations are what I do day in, day out, not just a line on a services page. I've also run smaller businesses myself, so I know first-hand the flood of invoices, emails and spreadsheets even a small company generates. That means when we talk, I don't need your business explained to me - we go straight to specifics.",
     "link": "Get to know me"
   },
   "cta": {
@@ -125,16 +144,29 @@
     "subtitle": "30 minutes, no slide deck, no obligation. If I don't see a process worth automating, I'll tell you straight.",
     "button": "Book a call"
   },
+  "cta_modal": {
+    "title": "How would you like to get in touch?",
+    "subtitle": "Pick whatever's most convenient for you.",
+    "close": "Close",
+    "phone_title": "Call us",
+    "book_title": "Book a call",
+    "book_desc": "Pick a convenient time in the calendar",
+    "describe_title": "Describe your process",
+    "describe_desc": "Already know what you want to automate? Write it up and we'll get back to you"
+  },
   "clients": {
     "title": "Industries I work with"
   },
   "trusted_by": {
-    "title": "Companies that have trusted me",
-    "subtitle": "Process automation for real clients, not just a slide deck.",
+    "title": "Recently I've worked with, among others",
+    "subtitle": "A few selected companies - process automation for real clients, not just a slide deck. Some smaller engagements stay anonymous at the client's request.",
+    "label_industry": "Industry",
+    "label_improved": "What I automated",
+    "label_result": "Result",
     "items": [
-      { "name": "Warsaw Residential Group", "initials": "WRG", "desc": "Rental and property management in Warsaw — automated lease document flow and tenant billing." },
-      { "name": "Metronq", "initials": "MQ", "desc": "A data-driven technology company — automated reporting and integration between data sources." },
-      { "name": "Nail the Deal", "initials": "NTD", "desc": "A sales team closing deals at scale — automated follow-ups and offer flow between sales stages." }
+      { "name": "Warsaw Residential Group", "logo": "/clients/warsaw-residential-group.svg", "industry": "Real estate brokerage - property sales and rental intermediation in Warsaw", "improved": "Managing the flow of brokerage agreements and compiling the attachments required under Poland's AML law for every transaction", "result": "AML documentation is complete for every transaction instead of being scrambled together right before an audit" },
+      { "name": "Metronq", "logo": "/clients/metronq.png", "industry": "Automated quoting system for CNC machining orders", "improved": "Automatically issuing KSeF invoices based on Stripe payment data", "result": "An invoice reaches KSeF within minutes of payment, with no manual copying from the Stripe dashboard" },
+      { "name": "Nail the Deal", "logo": "/clients/nail-the-deal.png", "industry": "Quoting system for construction and building work", "improved": "Syncing average market rates for construction jobs that feed the platform's default pricing sheet", "result": "New clients see a realistic starting price sheet right away instead of guessing numbers out of thin air" }
     ]
   },
   "newsletter": {
@@ -194,7 +226,7 @@
     "see_all": "See all posts"
   },
   "footer": {
-    "description": "OmniTask. I automate repetitive processes for companies with 5–50 employees: document workflows, approvals, system integrations.",
+    "description": "OmniTask – I automate repetitive processes so your team stops losing time on manual data entry. Fixed price, deployment in 2–4 weeks, ongoing care after launch.",
     "quick_links": "Quick Links",
     "services": "Services",
     "company": "Company",
@@ -204,7 +236,23 @@
     "copyright": "© 2026 OmniTask. All rights reserved.",
     "privacy_policy": "Privacy Policy",
     "terms": "Terms of Service",
+    "cookie_settings": "Cookie settings",
     "about": "About"
+  },
+  "cookie_consent": {
+    "title": "This website uses cookies",
+    "description": "Necessary cookies are always active. We only enable analytics and marketing cookies with your consent.",
+    "customize": "Settings",
+    "reject": "Reject",
+    "accept_all": "Accept all",
+    "settings_title": "Cookie settings",
+    "necessary_label": "Necessary",
+    "necessary_desc": "Required for the website to work correctly (e.g. maintaining your session, remembering your language and cookie choice). Always active.",
+    "analytics_label": "Analytics",
+    "analytics_desc": "Help us understand how you use the website (Google Analytics 4).",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Used to measure the effectiveness of advertising campaigns.",
+    "save": "Save settings"
   },
   "breadcrumbs": {
     "home": "Home"
@@ -214,10 +262,10 @@
     "h1": "What I actually automate",
     "learn_more": "Learn more →",
     "cta_title": "Not sure where to start?",
-    "cta_subtitle": "Let's start with an audit — I'll map your processes and show you where the biggest potential is."
+    "cta_subtitle": "Let's start with an audit - I'll map your processes and show you where the biggest potential is."
   },
   "service_detail": {
-    "cta_button": "Free quote",
+    "cta_button": "Book a call",
     "faq_label": "Frequently asked questions",
     "labels": {
       "rpa": "Task automation (RPA)",
@@ -230,13 +278,14 @@
     },
     "rpa": {
       "h1": "Task automation (RPA) for 5–50 person companies",
-      "subtitle": "A software robot takes over tedious, repetitive work inside your systems — you focus on the rest.",
+      "subtitle": "A software robot takes over tedious, repetitive work inside your systems - you focus on the rest.",
+      "service_type": "Robotic process automation (RPA)",
       "breadcrumb": "Task automation",
       "related_title": "Related services",
       "cta_title": "Want to see how much time you'd get back?",
       "cta_subtitle": "30 minutes about your process, no slide deck, no obligation.",
       "s1_title": "What task automation actually is",
-      "s1_p1": "A software robot mimics what a person does today in your systems: logging in, clicking, copying data between apps, filling in forms, sending emails and generating reports — the same work, just without breaks or mistakes.",
+      "s1_p1": "A software robot mimics what a person does today in your systems: logging in, clicking, copying data between apps, filling in forms, sending emails and generating reports - the same work, just without breaks or mistakes.",
       "s1_p2": "It doesn't replace people in work that requires judgment. It removes the repetitive, tedious tasks that don't develop anyone and quietly eat hours every day.",
       "benefits": [
         "Cuts process execution time by up to 80%",
@@ -246,23 +295,26 @@
         "Easy to add more processes over time",
         "Full log of every action performed"
       ],
+      "cena_label": "How much does it cost?",
+      "cena_text": "Automating a single process starts at $1,475 (START package). I'll give you an exact quote after we talk through your process.",
       "faq_title": "Frequently asked questions about task automation",
       "faq": [
-        { "q": "Do I need to change my existing systems?", "a": "No. Automation works on top of your existing systems — no software swap or vendor approval needed." },
-        { "q": "What happens if a system the robot works with changes?", "a": "The automation needs updating. That's why I offer a care plan — I monitor changes and react before the process stops." },
+        { "q": "Do I need to change my existing systems?", "a": "No. Automation works on top of your existing systems - no software swap or vendor approval needed." },
+        { "q": "What happens if a system the robot works with changes?", "a": "The automation needs updating. That's why I offer a care plan - I monitor changes and react before the process stops." },
         { "q": "How long does it take to implement?", "a": "A simple process is ready in 1–2 weeks. Something more complex, with several integrations, takes 3–4 weeks." }
       ]
     },
     "workflow": {
       "h1": "Workflow automation – no more manual handoffs",
       "subtitle": "I connect systems, apps and people into one coherent, automated process.",
+      "service_type": "Workflow automation with n8n and Make.com",
       "breadcrumb": "Workflow automation",
       "related_title": "Related services",
       "cta_title": "Want to automate your workflows?",
       "cta_subtitle": "Book a free call and show me your processes.",
       "s1_title": "What workflow automation is",
       "s1_p1": "Workflow automation is designing and implementing flows that connect different systems, apps and teams into one coherent, automated process. Instead of manually passing data between applications, your systems talk to each other automatically.",
-      "s1_p2": "In practice, data entered once in one place ends up wherever it's needed — no copy-pasting, no email attachments, no \"has someone already done this?\".",
+      "s1_p2": "In practice, data entered once in one place ends up wherever it's needed - no copy-pasting, no email attachments, no \"has someone already done this?\".",
       "benefits": [
         "Eliminates manual data handoffs between systems",
         "Cuts process completion time by 60–80%",
@@ -270,19 +322,26 @@
         "Automatic notifications and escalations",
         "Easy to extend as the company grows"
       ],
-      "faq_title": "",
-      "faq": []
+      "cena_label": "How much does it cost?",
+      "cena_text": "I price n8n implementation for a single workflow from $1,475, a package of 2-4 processes from $3,725. The final price depends on the number of integrations and rule complexity.",
+      "faq_title": "Frequently asked questions about n8n implementation",
+      "faq": [
+        { "q": "How much does an n8n implementation cost?", "a": "The price of n8n implementation depends on the number of processes and integrations - a single workflow starts at $1,475. I'll give you an exact quote after we talk through your systems." },
+        { "q": "How is n8n different from Zapier?", "a": "n8n is an open-source alternative to Zapier - it can be self-hosted, which lowers the cost at high volume and gives you full control over your data." },
+        { "q": "Do I need an n8n specialist, or can I build it myself?", "a": "Simple automations can be built on your own. I step in as an n8n consultant when a process spans several systems, needs error handling, or requires an integration with no ready-made connector." }
+      ]
     },
     "integration": {
       "h1": "System integration – connecting ERP, CRM and databases",
       "subtitle": "I build bridges between your systems, creating one coherent ecosystem with automatic data exchange.",
+      "service_type": "System integration (ERP, CRM, API)",
       "breadcrumb": "System integration",
       "related_title": "Related services",
       "cta_title": "Need system integration?",
       "cta_subtitle": "Describe your systems and I'll propose the right connection.",
       "s1_title": "Why system integration matters",
       "s1_p1": "5–50 person companies typically run a handful of applications: ERP, CRM, email, warehouse, sales platform. Without integration, someone manually moves data between them, which creates errors, delays and frustration.",
-      "s1_p2": "I connect your systems through APIs, webhooks and dedicated middleware so data flows automatically, in real time — no more monthly export to a spreadsheet.",
+      "s1_p2": "I connect your systems through APIs, webhooks and dedicated middleware so data flows automatically, in real time - no more monthly export to a spreadsheet.",
       "benefits": [
         "Eliminates manual re-entry of data",
         "Data stays current across every system",
@@ -290,56 +349,115 @@
         "Faster flow of information and decisions",
         "One consistent customer view for the whole team"
       ],
+      "cena_label": "How much does it cost?",
+      "cena_text": "A simple integration between two systems fits the START package from $1,475; multi-system integrations fall under the CORE package from $3,725.",
       "faq_title": "",
       "faq": []
     },
     "ai": {
       "h1": "AI agents for business",
       "subtitle": "I build AI assistants that analyze documents, answer customer questions and keep an eye on your data.",
+      "service_type": "AI agent implementation",
       "breadcrumb": "AI Agents",
       "related_title": "Related services",
       "cta_title": "Ready for an AI agent at your company?",
       "cta_subtitle": "Let's find out which process would benefit most from an AI agent.",
       "s1_title": "What an AI agent actually does",
       "s1_p1": "Unlike a plain RPA robot, an AI agent understands the content of a document or question rather than just clicking predefined spots. It can read an invoice in any format, answer a customer in natural language, or summarize a long document.",
-      "s1_p2": "It doesn't replace the expert in your company. It takes the first pass at a large volume of data — documents, messages, questions — and only passes forward what actually needs a human decision.",
+      "s1_p2": "It doesn't replace the expert in your company. It takes the first pass at a large volume of data - documents, messages, questions - and only passes forward what actually needs a human decision.",
       "benefits": [],
+      "cena_label": "How much does it cost?",
+      "cena_text": "A simple AI agent wired into one process fits the CORE package from $3,725; a full self-hosted deployment with its own knowledge base falls under the TRANSFORMACJA package from $7,250.",
       "faq_title": "",
       "faq": []
+    },
+    "opieka": {
+      "h1": "n8n care & hosting – automation under continuous oversight",
+      "subtitle": "I monitor, fix and grow your deployed automations on a self-hosted n8n server in the EU, GDPR-compliant - before they stop working.",
+      "service_type": "n8n hosting and automation care (self-hosted, GDPR)",
+      "breadcrumb": "Care & hosting",
+      "related_title": "Related services",
+      "cta_title": "Already have an automation and need ongoing care?",
+      "cta_subtitle": "I'll check how it's running today and suggest the right level of care.",
+      "s1_title": "Why automation needs ongoing care",
+      "s1_p1": "Automation isn't a one-and-done deployment. The systems it talks to change their interfaces and APIs, vendors update their platforms, and your company grows and adds new exceptions to the rule. Without care, a process quietly breaks after a while - and nobody notices until data starts going missing.",
+      "s1_p2": "Care means monitoring, a fast response to failures, and maintaining the server the automation runs on - so the investment in building it doesn't go to waste after six months.",
+      "dla_kogo_title": "Who it's for",
+      "dla_kogo": [
+        { "title": "Companies with an existing automation", "desc": "Whether I built it or someone else did - they need someone to keep it running. An automation with no owner is only a matter of time before it quietly stops working." },
+        { "title": "Companies without their own IT department", "desc": "Nobody in-house would notice an automation failure before it grows into a real problem. Usually they only find out once data starts going missing." },
+        { "title": "Companies planning to grow the process", "desc": "They want to keep adding new scenarios regularly without commissioning and quoting every change from scratch. A monthly hour bank works out clearly cheaper than pricing each fix separately." }
+      ],
+      "zastosowania_title": "What care includes",
+      "zastosowania": [
+        { "title": "Uptime monitoring", "desc": "I check that the automation actually did its job, not just that the server is running." },
+        { "title": "Incident response", "desc": "When a vendor's API changes or a process stalls, I respond within the agreed window (up to 48h, or up to 4h on the Pro plan)." },
+        { "title": "Managed n8n hosting", "desc": "A self-hosted n8n server in the EU, GDPR-compliant, with updates and backups of the environment the automation runs on." },
+        { "title": "Process development", "desc": "A monthly hour bank for new scenarios and changes, with no separate quote for each one." }
+      ],
+      "wdrozenie_title": "How we start working together",
+      "wdrozenie": [
+        { "title": "Review of the existing automation", "desc": "I check how it runs today, even if someone else built it." },
+        { "title": "Choosing the level of care", "desc": "We agree whether monitoring alone is enough, or whether you need an SLA with a faster response." },
+        { "title": "Connecting monitoring", "desc": "I set up continuous checks that the process runs correctly." },
+        { "title": "Monthly report", "desc": "You get a short summary of what happened with the automation." }
+      ],
+      "technologie_title": "Environment",
+      "technologie_p": "I usually run automations on my own self-hosted n8n server in the EU, GDPR-compliant, with regular backups.",
+      "technologie_list": ["n8n", "Self-hosted", "GDPR", "Backup"],
+      "s3_title": "Benefits",
+      "benefits": [
+        "The automation keeps running despite changes in external systems",
+        "A fast response instead of weeks of downtime",
+        "Data and configuration kept safe with backups",
+        "A clear, fixed monthly cost instead of unpredictable repairs"
+      ],
+      "cena_label": "How much does it cost?",
+      "cena_text": "Managed hosting from $100/mo, Standard care from $225/mo, Pro care (4h SLA) from $475/mo.",
+      "faq_title": "Frequently asked questions about care",
+      "faq": [
+        { "q": "Do you have to have built the automation to take over its care?", "a": "No. I also take over care for automations built earlier by someone else, after reviewing them first." },
+        { "q": "What happens if I cancel the care plan?", "a": "The automation keeps running, but nobody responds when something breaks after a change in one of the connected systems." },
+        { "q": "What's the difference between Standard and Pro care?", "a": "Standard means monitoring with a response time of up to 48h. Pro means a 4h SLA, priority in the queue, and a monthly report." },
+        { "q": "Is n8n hosting GDPR-compliant?", "a": "Yes - I run automations on a self-hosted server in the EU, without passing data to any party outside the agreed processing chain." }
+      ]
     }
   },
   "cennik_page": {
     "h1": "Automation pricing",
     "subtitle": "Prices stated upfront, never \"ask for a quote\". Below you'll find implementation cost, care plans and the ROI calculator.",
     "tier1_title": "Implementations",
+    "featured_badge": "Most popular",
     "tier2_title": "Care plans (monthly)",
     "tier3_title": "With funding support",
     "tier3_text": "Some clients qualify for public co-funding on training and consulting.",
     "tier3_cta": "Learn more",
     "why_title": "Why I don't take implementations under a certain price",
-    "why_text": "Below that level there isn't enough room for a real process audit, error handling in the automation, and training your team. A cheaper offer usually means one of those got skipped — and that's the part that comes back to bite you when the process breaks after a month.",
+    "why_text": "Below that level there isn't enough room for a real process audit, error handling in the automation, and training your team. A cheaper offer usually means one of those got skipped - and that's the part that comes back to bite you when the process breaks after a month.",
     "calculator_title": "ROI calculator",
-    "calculator_people_label": "People running the process",
-    "calculator_hours_label": "Hours per month, per person",
-    "calculator_rate_label": "Hourly rate (PLN)",
+    "calculator_hours_label": "Hours per month spent on this process",
+    "calculator_rate_label": "Hourly rate ($)",
+    "calculator_tier_label": "Implementation package",
+    "calculator_processes_label": "Number of processes to automate",
+    "calculator_tier_hint": "For that many processes, the right fit is",
     "calculator_result_yearly": "Yearly savings",
     "calculator_result_payback": "Estimated payback time",
     "faq_title": "Frequently asked questions about pricing",
     "faq": [
       { "q": "Is the price fixed, or can it grow during the project?", "a": "The price agreed at the start is fixed. If the audit reveals a bigger scope than assumed, I tell you before work starts, not during it." },
-      { "q": "What if the process turns out to be harder than expected?", "a": "That's exactly what the audit is for — I recommend starting there if the process is complex or spans several systems." },
-      { "q": "Is the care plan mandatory?", "a": "No, but without it automation tends to break over time as external systems change — so I do recommend it." },
+      { "q": "What if the process turns out to be harder than expected?", "a": "That's exactly what the audit is for - I recommend starting there if the process is complex or spans several systems." },
+      { "q": "Is the care plan mandatory?", "a": "No, but without it automation tends to break over time as external systems change - so I do recommend it." },
       { "q": "Do you issue a VAT invoice?", "a": "Yes, every engagement is billed with a VAT invoice." }
     ]
   },
   "about_page": {
     "h1": "About me",
-    "subtitle": "I'm a software developer by trade, but I've also run smaller businesses myself — I know first-hand how much time and attention manual work and document overload eat up in a small company.",
+    "subtitle": "I'm a software developer by trade, but I've also run smaller businesses myself - I know first-hand how much time and attention manual work and document overload eat up in a small company.",
     "why_title": "Why I do this",
-    "why_p1": "I'm a software developer by trade — automation, Python and system integrations are my everyday craft, not a service bolted on for marketing. But before I started building automations for other people, I ran smaller businesses myself, and learned first-hand how many invoices, emails, contracts and spreadsheets even a small company generates.",
-    "why_p2": "That combination matters: I understand the code and the systems, but I also know what daily life looks like for the owner of a 5–50 person company — data typed a second and third time because no system talks to the others, and the constant \"someone will sort it out later\". So when I talk to you, I don't need your business explained to me. We go straight to specifics: what's eating the time, and what can realistically come off your plate.",
+    "why_p1": "I'm a software developer by trade - process automation and system integrations are what I do day in, day out, not just a line on a services page. But before I started building automations for other people, I ran smaller businesses myself, and learned first-hand how many invoices, emails, contracts and spreadsheets even a small company generates.",
+    "why_p2": "That combination matters: I understand the code and the systems, but I also know what daily life looks like for the owner of a 5–50 person company - data typed a second and third time because no system talks to the others, and the constant \"someone will sort it out later\". So when I talk to you, I don't need your business explained to me. We go straight to specifics: what's eating the time, and what can realistically come off your plate.",
     "how_title": "How I work",
-    "how_text": "Directly, with no salespeople and no handoffs between departments. One person — me — takes you from the first call, through the audit and implementation, to ongoing care of the working automation. You know exactly who you're talking to at every stage.",
+    "how_text": "Directly, with no salespeople and no handoffs between departments. One person - me - takes you from the first call, through the audit and implementation, to ongoing care of the working automation. You know exactly who you're talking to at every stage.",
     "not_doing_title": "What I don't do",
     "not_doing_items": [
       "I don't build websites or online stores",
@@ -353,6 +471,7 @@
   "meta": {
     "uslugi": { "title": "Process automation for 5–50 person companies | OmniTask", "description": "Workflow automation, document processing, system integration, AI agents. Implementation in 2–4 weeks, fixed price." },
     "rpa": { "title": "Task automation (RPA) for companies | OmniTask", "description": "A software robot takes over repetitive tasks in your systems. Implementation from 1–2 weeks. Free call." },
+    "opieka": { "title": "n8n hosting & automation care – self-hosted, GDPR", "description": "Managed n8n hosting on an EU server, GDPR-compliant. Monitoring, automation fixes and care from $100/month. Response within 48h, or 4h on the Pro plan." },
     "workflow": { "title": "Workflow automation – no more manual handoffs", "description": "I connect systems, apps and people into one automated process. Free call about your process." },
     "integration": { "title": "System integration – ERP, CRM, API and databases", "description": "I connect ERP, CRM, email and warehouse into one ecosystem with automatic data exchange. Free call." },
     "ai": { "title": "AI agents for business – document analysis & support", "description": "I build AI agents that analyze documents, answer customers and monitor data. Free call." },
@@ -366,34 +485,205 @@
     "terms": { "title": "Website and online services terms of service", "description": "Terms of use of the OmniTask.pl website. Conditions for providing services electronically." }
   },
   "legal": {
-    "note_label": "Note:",
-    "note_text": "This document is a template and should be reviewed by a legal advisor before publication in a production version.",
     "contact_email": "kontakt@omnitask.pl",
     "privacy": {
       "title": "Privacy Policy",
-      "subtitle": "Information on the processing of personal data",
-      "last_updated": "Last updated: 17 May 2026.",
+      "subtitle": "Rules for processing personal data on www.omnitask.pl",
+      "last_updated": "In effect from: 25 August 2026. Last updated: 25 August 2026.",
       "sections": [
-        { "title": "1. Data controller", "emailIntro": "The controller of your personal data is OmniTask, based in Poland (hereinafter: the “Controller”). Contact: ", "emailAfter": "." },
-        { "title": "2. What data we collect", "intro": "We collect the data you provide to us in contact forms and quote requests:", "items": ["Full name", "Email address", "Phone number (optional)", "Company name (optional)", "Message content / process description"] },
-        { "title": "3. Purpose of processing", "intro": "We process your data in order to:", "items": ["Respond to quote and contact requests (Art. 6(1)(b) GDPR)", "Deliver the newsletter – based on consent (Art. 6(1)(a) GDPR)", "Pursue or defend claims (Art. 6(1)(f) GDPR)"] },
-        { "title": "4. Retention period", "paragraphs": ["We store data for the period necessary to fulfil the purposes of processing, no longer than 3 years from the last contact."] },
-        { "title": "5. Your rights", "intro": "You have the right to:", "items": ["Access your data", "Rectify your data", "Erase your data (the “right to be forgotten”)", "Restrict processing", "Data portability", "Object to processing", "Withdraw consent at any time", "Lodge a complaint with the President of the Personal Data Protection Office (UODO)"] },
-        { "title": "6. Cookies", "paragraphs": ["The site uses essential cookies necessary for the proper functioning of the service. We do not use marketing or tracking cookies."] },
-        { "title": "7. Contact", "emailIntro": "For matters regarding the protection of personal data: ", "emailAfter": "" }
+        { "title": "1. Data controller", "paragraphs": [
+          "The controller of your personal data is: Warsaw Residential Group Marcin Łętowski, ul. Grafitowa 5, Posoka, 62-504 Stare Miasto, Poland. NIP (Tax ID): 665-306-59-82, REGON: 528314936.",
+          "The website www.omnitask.pl and the OmniTask brand are operated as part of the above business activity.",
+          "Contact for data protection matters: email kontakt@omnitask.pl, phone +48 721 719 238.",
+          "The Controller has not appointed a Data Protection Officer. For any matters concerning the processing of personal data, you can contact us directly using the details above."
+        ] },
+        { "title": "2. What data we collect and why", "subsections": [
+          { "title": "2.1. Quote request form", "table": { "headers": ["Item", "Details"], "rows": [
+            ["Scope of data", "full name, email address, phone number, company name, message content"],
+            ["Purpose", "responding to the request, preparing a quote, taking steps prior to entering into a contract"],
+            ["Legal basis", "Art. 6(1)(b) GDPR – taking steps at the data subject's request prior to entering into a contract; Art. 6(1)(f) GDPR – the Controller's legitimate interest in handling requests"],
+            ["Retention period", "3 years from the last contact; if a contract is concluded – for the duration of the cooperation plus 6 years from the end of the tax year in which the last accounting document was issued"],
+            ["Providing the data", "voluntary, but necessary to receive a response"]
+          ] } },
+          { "title": "2.2. Contact form", "table": { "headers": ["Item", "Details"], "rows": [
+            ["Scope of data", "name, email address, message content"],
+            ["Purpose", "responding to the message"],
+            ["Legal basis", "Art. 6(1)(f) GDPR – legitimate interest in conducting correspondence"],
+            ["Retention period", "3 years from the last contact"],
+            ["Providing the data", "voluntary, but necessary to receive a response"]
+          ] } },
+          { "title": "2.3. Newsletter", "table": { "headers": ["Item", "Details"], "rows": [
+            ["Scope of data", "email address"],
+            ["Purpose", "sending information about services, articles and educational materials"],
+            ["Legal basis", "Art. 6(1)(a) GDPR – consent of the data subject"],
+            ["Retention period", "until consent is withdrawn"],
+            ["Providing the data", "voluntary"]
+          ] } },
+          { "paragraphs": ["You can withdraw your consent at any time – by clicking the unsubscribe link in the footer of any message, or by writing to our contact address. Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal."] },
+          { "title": "2.4. Data collected automatically", "paragraphs": [
+            "While using the website, technical data is automatically collected: IP address, browser type and version, operating system, date and time of visit, pages visited, referring page address.",
+            "Purpose: ensuring the website functions correctly, security, traffic statistics.",
+            "Legal basis: Art. 6(1)(f) GDPR – legitimate interest in ensuring the security and development of the website."
+          ] }
+        ] },
+        { "title": "3. Who we share your data with", "subsections": [
+          { "paragraphs": ["Your data may only be shared with entities that process it on our behalf, under a data processing agreement:"] },
+          { "table": { "headers": ["Recipient category", "Entity", "Scope of processing"], "rows": [
+            ["Server infrastructure provider", "VPS hosting operator based in the EEA", "storing data submitted through forms and the website's database"],
+            ["Email provider", "Google Ireland Limited", "sending notifications about new requests and email correspondence"],
+            ["File storage provider", "Google Ireland Limited – Google Cloud Storage, region europe-central2 (Warsaw)", "image files published on the website"],
+            ["Analytics tools provider", "Google Ireland Limited – Google Analytics 4", "data on how the website is used, processed only after consent is given"],
+            ["Accounting office / tax advisor", "the entity handling the Controller's bookkeeping", "accounting documentation if a contract is concluded"]
+          ] } },
+          { "paragraphs": [
+            "Your data may be disclosed to public authorities where required by law.",
+            "We do not sell personal data and do not share it with third parties for marketing purposes."
+          ] },
+          { "title": "3.1. Transfers of data outside the European Economic Area", "paragraphs": [
+            "Data submitted through the forms and the website's database is stored exclusively on servers located within the European Economic Area.",
+            "When Google Analytics 4 is used, data about how the website is used may be transferred to the United States. This transfer is based on the European Commission's adequacy decision for the EU–U.S. Data Privacy Framework, which covers Google LLC, as well as standard contractual clauses approved by the European Commission.",
+            "Within Google Analytics 4, users' IP addresses are anonymised before data is stored and are not retained in a form that allows identification. The Controller does not combine Google Analytics data with data submitted through the forms.",
+            "You can block data processing by Google Analytics by declining consent in the cookie banner, or by installing the browser add-on available at: tools.google.com/dlpage/gaoptout"
+          ] }
+        ] },
+        { "title": "4. Your rights", "intro": "In connection with the processing of your data, you have the following rights:", "items": [
+          "Right of access – you can obtain information about what data we process and receive a copy of it",
+          "Right to rectification – you can request correction of inaccurate data or completion of incomplete data",
+          "Right to erasure (the “right to be forgotten”) – you can request deletion of your data if there is no basis for its further processing",
+          "Right to restriction of processing – you can request that processing be suspended in certain situations",
+          "Right to data portability – applies to data processed on the basis of consent or a contract",
+          "Right to object – you can object to processing based on our legitimate interest",
+          "Right to withdraw consent – at any time, without affecting the lawfulness of processing carried out beforehand"
+        ], "paragraphs": [
+          "To exercise the above rights, write to the address given in point 1. We respond without undue delay, no later than within one month.",
+          "Right to lodge a complaint: if you believe that the processing of your data violates the law, you can lodge a complaint with the supervisory authority: President of the Personal Data Protection Office (UODO), ul. Stawki 2, 00-193 Warsaw, Poland, uodo.gov.pl"
+        ] },
+        { "title": "5. Data security", "intro": "We apply technical and organisational measures appropriate to the risk, in particular:", "items": [
+          "SSL/TLS encryption of the connection across the entire website",
+          "access to data restricted to the Controller",
+          "database backups",
+          "server software updates",
+          "servers located within the European Economic Area"
+        ] },
+        { "title": "6. Cookies", "subsections": [
+          { "title": "6.1. What cookies are", "paragraphs": ["Cookies are small text files stored on your device while you use the website. They allow the device to be recognised and the website's behaviour to be adapted accordingly."] },
+          { "title": "6.2. Cookie consent", "intro": "On your first visit to the website, a cookie consent banner is displayed. In it, you can:", "items": [
+            "accept all cookies",
+            "reject cookies other than necessary ones",
+            "choose individual categories in the detailed settings"
+          ], "paragraphs": ["Analytics and marketing cookies are not activated before your consent is obtained. You can change or withdraw your consent at any time using the “Cookie settings” link available in the website's footer. Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal."] },
+          { "title": "6.3. Cookies we use", "paragraphs": ["Necessary cookies – required for the website to function correctly. They do not require consent; the legal basis is Art. 6(1)(f) GDPR (legitimate interest in ensuring the website's functioning and security)."], "table": { "headers": ["Name", "Purpose", "Retention period"], "rows": [
+            ["application session cookies", "maintaining the session, correct operation of forms", "until the browser is closed"],
+            ["language preference", "remembering the selected language version", "12 months"],
+            ["cookie decision record", "remembering your choice in the consent banner", "12 months"]
+          ] } },
+          { "paragraphs": ["Analytics cookies – used to analyse traffic and how the website is used. They require consent; the legal basis is Art. 6(1)(a) GDPR."], "table": { "headers": ["Name", "Provider", "Purpose", "Retention period"], "rows": [
+            ["_ga", "Google Analytics 4", "distinguishing between users", "24 months"],
+            ["_ga_<identifier>", "Google Analytics 4", "maintaining measurement session state", "24 months"]
+          ] } },
+          { "paragraphs": ["Marketing cookies – used to measure the effectiveness of advertising campaigns. They require consent; the legal basis is Art. 6(1)(a) GDPR. Activated only while advertising campaigns are running."], "table": { "headers": ["Name", "Provider", "Purpose", "Retention period"], "rows": [
+            ["_gcl_au", "Google", "measuring conversions from advertising campaigns", "90 days"]
+          ] } },
+          { "title": "6.4. Managing cookies in your browser", "paragraphs": [
+            "Regardless of the consent banner, you can manage cookies in your browser settings – block them or delete those already stored. Restricting necessary cookies may affect the operation of some website features.",
+            "Instructions for the most popular browsers are available in their help documentation."
+          ] }
+        ] },
+        { "title": "7. Profiling and automated decisions", "paragraphs": [
+          "Your data is not used for automated decision-making that produces legal effects concerning you or similarly significantly affects you.",
+          "Within Google Analytics 4, data on website usage is analysed in aggregated, statistical form – this serves only to improve the website's content and functionality, not to evaluate individual people."
+        ] },
+        { "title": "8. Links to external websites", "paragraphs": ["The website may contain links to third-party websites. We are not responsible for their privacy policies – we recommend reviewing them separately."] },
+        { "title": "9. Changes to this privacy policy", "paragraphs": [
+          "We reserve the right to change this policy. The current version, along with its effective date, is always available at www.omnitask.pl/polityka-prywatnosci.",
+          "This document has been prepared in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and the Polish Act of 18 July 2002 on the Provision of Electronic Services."
+        ] }
       ]
     },
     "terms": {
-      "title": "OmniTask.pl Terms of Service",
-      "subtitle": "Conditions for using the website",
-      "last_updated": "Last updated: 17 May 2026.",
+      "title": "Terms of Electronic Service Provision",
+      "subtitle": "Rules for using www.omnitask.pl and for the provision of electronic services",
+      "last_updated": "In effect from: 25 August 2026.",
       "sections": [
-        { "title": "1. General provisions", "paragraphs": ["These terms set out the rules for using the omnitask.pl website operated by OmniTask (hereinafter: the “Service Provider”)."] },
-        { "title": "2. Services", "intro": "Through the website, the Service Provider provides services electronically, including:", "items": ["Providing information about process automation services", "The option to submit a quote request", "A contact form", "Newsletter (after giving consent)"] },
-        { "title": "3. Technical requirements", "paragraphs": ["Using the website requires a web browser with JavaScript support and an active Internet connection."] },
-        { "title": "4. Intellectual property rights", "paragraphs": ["All content posted on the website, including texts, graphics, logos and software, is the property of the Service Provider and is protected by copyright."] },
-        { "title": "5. Liability", "paragraphs": ["The Service Provider makes every effort to keep the information on the website up to date and reliable, but is not responsible for any errors or outdated content."] },
-        { "title": "6. Final provisions", "paragraphs": ["The Service Provider reserves the right to change the terms. Changes take effect upon their publication on the website."] }
+        { "title": "§ 1. General provisions", "paragraphs": [
+          "These Terms set out the rules for using the website available at www.omnitask.pl and the rules for the provision of electronic services.",
+          "The Service Provider is: Warsaw Residential Group Marcin Łętowski, ul. Grafitowa 5, Posoka, 62-504 Stare Miasto, Poland. NIP (Tax ID): 665-306-59-82, REGON: 528314936. Email: kontakt@omnitask.pl, phone: +48 721 719 238. Electronic delivery address: AE:PL-74340-47002-TIHVB-19.",
+          "The website www.omnitask.pl and the OmniTask brand constitute the trading name of the business operated under the above company.",
+          "These Terms are made available free of charge at www.omnitask.pl/regulamin in a form that allows them to be downloaded, saved and printed.",
+          "Using the Website constitutes acceptance of these Terms."
+        ] },
+        { "title": "§ 2. Definitions", "table": { "headers": ["Term", "Meaning"], "rows": [
+          ["Website", "the website available at www.omnitask.pl"],
+          ["Service Provider", "the entity identified in § 1(2)"],
+          ["User", "a natural person, legal person, or organisational unit using the Website"],
+          ["Electronic services", "services provided electronically, described in § 3"],
+          ["Automation services", "paid implementation, advisory and training services, provided under a separate agreement"],
+          ["Form", "the contact form or quote request form available on the Website"],
+          ["Sole trader with consumer rights", "a natural person entering into a contract directly related to their business activity, where the contract is not of a professional nature for them"]
+        ] } },
+        { "title": "§ 3. Types and scope of electronic services", "intro": "The Service Provider provides the following electronic services through the Website, free of charge:", "items": [
+          "Browsing the Website's content – access to information about services, pricing, blog articles and informational materials",
+          "The contact form and quote request form – allowing a message to be sent and a response or offer to be received",
+          "Newsletter – sending commercial information and educational materials to the provided email address, provided after separate consent is given"
+        ], "paragraphs": [
+          "Automation services are not sold through the Website. The information about services and prices published on the Website does not constitute an offer within the meaning of Art. 66 § 1 of the Polish Civil Code, but an invitation to enter into a contract (Art. 71 of the Polish Civil Code). The terms of performance, scope, timeframes and remuneration are agreed individually in a separate contract.",
+          "Prices shown on the Website are net prices and do not include VAT. The final price is determined after an analysis of the scope of work."
+        ] },
+        { "title": "§ 4. Conditions for the provision of services", "subsections": [
+          { "intro": "Using the Website requires:", "items": [
+            "a device with internet access",
+            "an up-to-date web browser supporting JavaScript and cookies",
+            "an active email account – when using the Forms or Newsletter"
+          ] },
+          { "paragraphs": ["The Service Provider makes every effort to keep the Website available without interruption. It reserves the right to temporary technical breaks, in particular for maintenance, updates or expansion."] },
+          { "paragraphs": ["The Service Provider is not liable for interruptions in access to the Website resulting from causes beyond its control, in particular internet connection failures, force majeure, or the actions of third parties."] },
+          { "intro": "A contract for the provision of an electronic service is concluded:", "items": [
+            "for browsing content – at the moment of entering the Website",
+            "for the Forms – at the moment the message is sent",
+            "for the Newsletter – at the moment the subscription is confirmed"
+          ] },
+          { "intro": "A contract for the provision of an electronic service is terminated:", "items": [
+            "for browsing content – at the moment of leaving the Website",
+            "for the Forms – at the moment the correspondence ends",
+            "for the Newsletter – at any time, by clicking the unsubscribe link or writing to the contact address"
+          ] }
+        ] },
+        { "title": "§ 5. Prohibition on providing unlawful content", "paragraphs": [
+          "Users are prohibited from providing unlawful content, in particular content that infringes personal rights, copyrights, industrial property rights, or generally applicable law.",
+          "It is prohibited to use the Website in a way that disrupts its operation, in particular by using automated software, overloading the infrastructure, or attempting to gain unauthorised access.",
+          "In the event of a breach of the above rules, the Service Provider may block access to the Website."
+        ] },
+        { "title": "§ 6. Liability", "paragraphs": [
+          "The content published on the Website – in particular blog articles, guides and informational materials – is of an informational and educational nature. It does not constitute legal, tax or investment advice.",
+          "Information regarding funding programmes, tax obligations and legal provisions is presented as of the date of publication. The Service Provider does not guarantee its being up to date – before making a decision, it should be verified with the relevant authority or advisor.",
+          "The Service Provider is not liable for decisions made by the User based solely on the content published on the Website."
+        ] },
+        { "title": "§ 7. Copyright", "paragraphs": [
+          "The Website and its elements – texts, graphics, layout, logo, graphic marks – are subject to the copyright held by the Service Provider or by entities with which it has concluded relevant agreements.",
+          "Copying, distributing or using the Website's content for commercial purposes without the Service Provider's written consent is prohibited.",
+          "Quoting excerpts of the content is permitted, provided the source is cited and an active link to the Website is included."
+        ] },
+        { "title": "§ 8. Complaints", "intro": "Complaints regarding electronic services can be submitted:", "items": [
+          "by email to: kontakt@omnitask.pl",
+          "in writing to the Service Provider's registered address"
+        ], "paragraphs": [
+          "A complaint should include: identification of the User, a description of the problem with the date it occurred, and the expected way of resolving it.",
+          "The Service Provider considers complaints within 14 days of receipt and informs the User of the outcome in the form in which the complaint was submitted."
+        ] },
+        { "title": "§ 9. Withdrawal from the contract", "paragraphs": [
+          "A Consumer or a Sole trader with consumer rights who has entered into a distance contract may withdraw from it within 14 days without giving a reason.",
+          "The period is counted from the day the contract is concluded. To meet the deadline, it is sufficient to send the withdrawal statement before it expires.",
+          "The withdrawal statement should be sent to the Service Provider's email address or registered address.",
+          "The right of withdrawal does not apply if the Service Provider has fully performed the service with the User's express consent, having informed the User before the service began that the right of withdrawal would be lost.",
+          "The provisions of this section do not apply to entrepreneurs entering into contracts of a professional nature."
+        ] },
+        { "title": "§ 10. Protection of personal data", "paragraphs": ["The rules for processing personal data, the purposes, legal bases, and the rights of data subjects are described in the Privacy Policy available at www.omnitask.pl/polityka-prywatnosci."] },
+        { "title": "§ 11. Final provisions", "paragraphs": [
+          "In matters not regulated by these Terms, Polish law applies, in particular the Polish Civil Code and the Act of 18 July 2002 on the Provision of Electronic Services.",
+          "The Service Provider reserves the right to change these Terms for valid reasons, in particular changes in the law or in the scope of services provided. Changes take effect upon publication on the Website.",
+          "Disputes arising from the use of the Website are resolved by the court having jurisdiction under Polish law. Consumers may use out-of-court methods of complaint resolution, including the ODR platform available at ec.europa.eu/consumers/odr.",
+          "These Terms are in effect from 25 August 2026."
+        ] }
       ]
     }
   }
