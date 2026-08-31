@@ -969,6 +969,12 @@ img {
   gap: 1.5rem;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -1188,7 +1194,7 @@ img {
 }
 
 .article-page__container {
-  max-width: 920px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }

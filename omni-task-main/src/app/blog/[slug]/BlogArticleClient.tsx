@@ -21,6 +21,21 @@ interface Article {
   created_at: string
 }
 
+// Treść artykułu bywa wygenerowana z własnym nagłówkiem tytułowym na
+// początku, identycznym z tytułem, który i tak renderujemy w page-header.
+// To dubluje <h1> na stronie (źle dla SEO), więc wycinamy go, jeśli
+// pokrywa się z tytułem - czysty string/regex, żeby działało tak samo
+// przy SSR (co widzi Google), jak i po stronie klienta.
+function stripDuplicateHeading(html: string, title: string): string {
+  const match = html.match(/^\s*<h([1-3])[^>]*>([\s\S]*?)<\/h\1>\s*/i)
+  if (!match) return html
+  const headingText = match[2].replace(/<[^>]+>/g, '').trim().toLowerCase()
+  if (headingText === title.trim().toLowerCase()) {
+    return html.slice(match[0].length)
+  }
+  return html
+}
+
 export default function BlogArticleClient({ article }: { article: Article }) {
   const { t, locale } = useTranslation()
 
@@ -35,7 +50,8 @@ export default function BlogArticleClient({ article }: { article: Article }) {
   }, [article])
 
   const title = article.title ? (article.title[locale] || article.title.pl || '') : ''
-  const content = article.content ? (article.content[locale] || article.content.pl || '') : ''
+  const rawContent = article.content ? (article.content[locale] || article.content.pl || '') : ''
+  const content = stripDuplicateHeading(rawContent, title)
 
   return (
     <>
