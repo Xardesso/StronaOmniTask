@@ -23,8 +23,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params
   const article = (await prisma.article.findUnique({ where: { slug, is_public: true } })) as any
   if (!article) return {}
-  const title = article.meta_title || article.title?.[locale] || article.title?.pl || 'Blog'
-  const description = article.meta_description || article.excerpt?.[locale] || article.excerpt?.pl || ''
+  // meta_title/meta_description w bazie są polskojęzycznym, ręcznie wpisanym
+  // SEO-nagłówkiem - nie mają wersji EN/UA, więc mają pierwszeństwo tylko dla
+  // locale 'pl'. Dla EN/UA bierzemy przetłumaczony title/excerpt, inaczej
+  // każdy artykuł w obcej wersji renderował polski <title>.
+  const title = locale === 'pl'
+    ? (article.meta_title || article.title?.pl || 'Blog')
+    : (article.title?.[locale] || article.title?.pl || 'Blog')
+  const description = locale === 'pl'
+    ? (article.meta_description || article.excerpt?.pl || '')
+    : (article.excerpt?.[locale] || article.excerpt?.pl || '')
   const cleanPath = `/blog/${slug}`
   return {
     title,
@@ -44,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function LocalizedBlogArticlePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
-  const { slug } = await params
+  const { locale, slug } = await params
   const article = (await prisma.article.findUnique({ where: { slug, is_public: true } })) as any
   if (!article) {
     notFound()
@@ -60,11 +68,29 @@ export default async function LocalizedBlogArticlePage({ params }: { params: Pro
     created_at: article.created_at.toISOString(),
   }
 
+  const localizedTitle = article.title?.[locale] || article.title?.pl || ''
+
   return (
     <>
       <BlogArticleClient article={resolvedArticle} />
-      {article.schema_markup && (
+      {article.schema_markup ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: article.schema_markup }} />
+      ) : (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: localizedTitle,
+              inLanguage: locale === 'ua' ? 'uk' : locale,
+              datePublished: article.date || article.created_at.toISOString(),
+              image: resolvedArticle.image || undefined,
+              author: { '@type': 'Organization', name: 'OmniTask' },
+              publisher: { '@type': 'Organization', name: 'OmniTask', url: SITE_URL },
+            }),
+          }}
+        />
       )}
     </>
   )

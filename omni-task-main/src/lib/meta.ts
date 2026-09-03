@@ -65,6 +65,7 @@ export function buildPageMetadata({
       url: `${SITE_URL}${canonical}`,
       type: 'website',
       locale: OG_LOCALE[locale],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1024, height: 1024, alt: title }],
     },
   }
 }
@@ -96,6 +97,7 @@ export function buildPlOnlyMetadata({ cleanPath, metaKey }: BuildPlOnlyMetaOptio
       url: canonical,
       type: 'website',
       locale: 'pl_PL',
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1024, height: 1024, alt: title }],
     },
   }
 }

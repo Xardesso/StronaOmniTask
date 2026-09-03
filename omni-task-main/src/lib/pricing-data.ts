@@ -1,114 +1,85 @@
 // Jedno źródło prawdy dla cen — używane na /cennik, w skrócie na stronie
 // głównej i w kalkulatorze dofinansowania, żeby liczby nigdy się nie rozjechały.
+//
+// Kwoty (priceValue) są locale-niezależne (przeliczane na USD dopiero przy
+// wyświetlaniu, patrz lib/currency.ts), ale opisy, nazwy i listy cech muszą
+// być tłumaczone — stąd funkcje get*Tiers(t, tRaw) zamiast statycznych
+// stałych: pobierają teksty z namespace'u "pricing_data" w plikach
+// tłumaczeń, dla aktywnego locale.
 
 export interface PricingTier {
   slug: string
   name: string
   scope: string
   time: string
-  price: string
   priceValue: number
   isFrom?: boolean
-  priceNote?: string
   features: string[]
   featured?: boolean
 }
 
+type TFn = (key: string) => string
+type TRawFn = <T = unknown>(key: string) => T
+
 // Główna "drabinka" wdrożeń - rosnąca po cenie i zakresie, bez pakietu KSeF
-// (ten jest wyspecjalizowany, nie jest kolejnym szczeblem drabinki - patrz KSEF_TIER).
-export const IMPLEMENTATION_TIERS: PricingTier[] = [
-  {
-    slug: 'start',
-    name: 'START',
-    scope: '1 proces end-to-end, do 3 integracji, dokumentacja, szkolenie 2h',
-    time: '1–2 tyg.',
-    price: '5 900 zł',
-    priceValue: 5900,
-    features: [
-      '1 proces automatyzacji od początku do końca',
-      'Do 3 integracji między systemami',
-      'Dokumentacja wdrożenia',
-      'Szkolenie zespołu (2h)',
-    ],
-  },
-  {
-    slug: 'core',
-    name: 'CORE',
-    scope: '2–4 procesy, obsługa błędów, integracje wielosystemowe, 30 dni gwarancji',
-    time: '3–4 tyg.',
-    price: '14 900 zł',
-    priceValue: 14900,
-    features: [
-      '2–4 procesy automatyzacji',
-      'Obsługa błędów i wyjątków',
-      'Integracje wielosystemowe',
-      'Szkolenie zespołu (4h)',
-      '30 dni gwarancji po wdrożeniu',
-    ],
-    featured: true,
-  },
-  {
-    slug: 'transformacja',
-    name: 'TRANSFORMACJA',
-    scope: '5+ procesów, agent AI z bazą wiedzy, self-hosted, 90 dni opieki w cenie',
-    time: '6–10 tyg.',
-    price: 'od 29 000 zł',
-    priceValue: 29000,
-    isFrom: true,
-    features: [
-      '5+ procesów automatyzacji',
-      'Agent AI z własną bazą wiedzy',
-      'Środowisko self-hosted',
-      '90 dni opieki w cenie',
-    ],
-  },
+// (ten jest wyspecjalizowany, nie jest kolejnym szczeblem drabinki - patrz getKsefTier).
+const IMPLEMENTATION_STRUCTURE: { slug: string; priceValue: number; isFrom?: boolean; featured?: boolean }[] = [
+  { slug: 'start', priceValue: 5900 },
+  { slug: 'core', priceValue: 14900, featured: true },
+  { slug: 'transformacja', priceValue: 29000, isFrom: true },
 ]
+
+export function getImplementationTiers(t: TFn, tRaw: TRawFn): PricingTier[] {
+  return IMPLEMENTATION_STRUCTURE.map((s) => ({
+    slug: s.slug,
+    priceValue: s.priceValue,
+    isFrom: s.isFrom,
+    featured: s.featured,
+    name: t(`pricing_data.${s.slug}.name`),
+    scope: t(`pricing_data.${s.slug}.scope`),
+    time: t(`pricing_data.${s.slug}.time`),
+    features: tRaw<string[]>(`pricing_data.${s.slug}.features`) || [],
+  }))
+}
 
 // Wyspecjalizowany pakiet KSeF - celowo poza drabinką START/CORE/TRANSFORMACJA,
 // bo nie jest kolejnym krokiem w liczbie procesów, tylko osobnym zakresem usługi.
-export const KSEF_TIER: PricingTier = {
-  slug: 'ksef-kontrola',
-  name: 'KSeF KONTROLA',
-  scope: 'Deduplikacja, kategoryzacja i routing faktur, MPK, monitoring API',
-  time: '2–4 tyg.',
-  price: '12 900 zł',
-  priceValue: 12900,
-  features: [
-    'Deduplikacja faktur z KSeF i maila',
-    'Kategoryzacja i routing do oddziałów/MPK',
-    'Monitoring limitów i sesji API',
-    'Integracja z systemem księgowym',
-  ],
+export function getKsefTier(t: TFn, tRaw: TRawFn): PricingTier {
+  return {
+    slug: 'ksef-kontrola',
+    priceValue: 12900,
+    name: t('pricing_data.ksef.name'),
+    scope: t('pricing_data.ksef.scope'),
+    time: t('pricing_data.ksef.time'),
+    features: tRaw<string[]>('pricing_data.ksef.features') || [],
+  }
 }
 
-export const AUDIT_TIER: PricingTier & { deductionNote: string; exitNote: string } = {
-  slug: 'audyt',
-  name: 'Zacznij od audytu',
-  scope: 'Analiza procesów, mapa automatyzacji i wycena.',
-  time: '3–5 dni',
-  price: '2 400 zł',
-  priceValue: 2400,
-  deductionNote: 'Całą kwotę odliczam od ceny wdrożenia.',
-  exitNote: 'Możesz kupić sam audyt i na tym poprzestać. Dokumentacja zostaje u Ciebie - jeśli nie zdecydujesz się na współpracę, możesz zrealizować to z kimkolwiek innym.',
-  features: [
-    'Analiza obecnych procesów',
-    'Mapa możliwych automatyzacji z wyceną',
-  ],
+export function getAuditTier(t: TFn, tRaw: TRawFn): PricingTier & { deductionNote: string; exitNote: string } {
+  return {
+    slug: 'audyt',
+    priceValue: 2400,
+    name: t('pricing_data.audit.name'),
+    scope: t('pricing_data.audit.scope'),
+    time: t('pricing_data.audit.time'),
+    deductionNote: t('pricing_data.audit.deductionNote'),
+    exitNote: t('pricing_data.audit.exitNote'),
+    features: tRaw<string[]>('pricing_data.audit.features') || [],
+  }
 }
 
 export interface CareTier {
   name: string
   scope: string
-  price: string
   priceValue: number
 }
 
-export const CARE_TIERS: CareTier[] = [
-  { name: 'Hosting zarządzany n8n', scope: 'Serwer w UE, aktualizacje, kopie zapasowe, monitoring', price: '390 zł/mc', priceValue: 390 },
-  { name: 'Opieka Standard', scope: 'Monitoring, poprawki przy zmianach API, reakcja do 48h', price: '890 zł/mc', priceValue: 890 },
-  { name: 'Opieka Pro', scope: 'SLA reakcja 4h, priorytet, raport miesięczny', price: '1 890 zł/mc', priceValue: 1890 },
-  { name: 'Pakiet rozwoju', scope: 'Bank 4h miesięcznie na zmiany i nowe scenariusze', price: '1 490 zł/mc', priceValue: 1490 },
-]
+const CARE_PRICES = [390, 890, 1890, 1490]
+
+export function getCareTiers(t: TFn, tRaw: TRawFn): CareTier[] {
+  const items = tRaw<{ name: string; scope: string }[]>('pricing_data.care') || []
+  return items.map((item, i) => ({ ...item, priceValue: CARE_PRICES[i] }))
+}
 
 export const FUNDING_RATE = 0.83
 

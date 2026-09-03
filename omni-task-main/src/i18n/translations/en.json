@@ -423,11 +423,55 @@
       ]
     }
   },
+  "pricing_data": {
+    "start": {
+      "name": "START",
+      "scope": "1 end-to-end process, up to 3 integrations, documentation, 2h training",
+      "time": "1–2 weeks",
+      "features": ["1 automation process from start to finish", "Up to 3 integrations between systems", "Implementation documentation", "Team training (2h)"]
+    },
+    "core": {
+      "name": "CORE",
+      "scope": "2–4 processes, error handling, multi-system integrations, 30-day warranty",
+      "time": "3–4 weeks",
+      "features": ["2–4 automation processes", "Error and exception handling", "Multi-system integrations", "Team training (4h)", "30-day warranty after launch"]
+    },
+    "transformacja": {
+      "name": "TRANSFORMATION",
+      "scope": "5+ processes, AI agent with a knowledge base, self-hosted, 90 days of care included",
+      "time": "6–10 weeks",
+      "features": ["5+ automation processes", "AI agent with its own knowledge base", "Self-hosted environment", "90 days of care included"]
+    },
+    "ksef": {
+      "name": "KSeF CONTROL",
+      "scope": "Deduplication, categorisation and routing of invoices, cost centres, API monitoring",
+      "time": "2–4 weeks",
+      "features": ["Invoice deduplication from KSeF and email", "Categorisation and routing to branches / cost centres", "API session and limit monitoring", "Integration with your accounting system"]
+    },
+    "audit": {
+      "name": "Start with an audit",
+      "scope": "Process analysis, automation map and a quote.",
+      "time": "3–5 days",
+      "deductionNote": "I deduct the full amount from the implementation price.",
+      "exitNote": "You can buy just the audit and stop there. The documentation stays with you - if you decide not to work together, you can have anyone else carry it out.",
+      "features": ["Analysis of current processes", "Map of possible automations with a quote"]
+    },
+    "care": [
+      { "name": "Managed n8n hosting", "scope": "EU server, updates, backups, monitoring" },
+      { "name": "Standard care", "scope": "Monitoring, fixes for API changes, response within 48h" },
+      { "name": "Pro care", "scope": "4h SLA response, priority, monthly report" },
+      { "name": "Development package", "scope": "Monthly 4h bank for changes and new scenarios" }
+    ]
+  },
   "cennik_page": {
     "h1": "Automation pricing",
     "subtitle": "Prices stated upfront, never \"ask for a quote\". Below you'll find implementation cost, care plans and the ROI calculator.",
     "tier1_title": "Implementations",
     "featured_badge": "Most popular",
+    "audit_badge": "Not sure where to start?",
+    "care_table_service": "Service",
+    "care_table_scope": "Scope",
+    "care_table_price": "Price",
     "tier2_title": "Care plans (monthly)",
     "tier3_title": "With funding support",
     "tier3_text": "Some clients qualify for public co-funding on training and consulting.",

@@ -63,6 +63,7 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
               <li><Link href="/blog" className="footer__link" title={t('nav.blog')}>{t('nav.blog')}</Link></li>
               {locale === 'pl' && <li><Link href="/faq" className="footer__link" title={t('nav.faq')}>{t('nav.faq')}</Link></li>}
               <li><Link href="/kontakt" className="footer__link" title={t('nav.contact')}>{t('nav.contact')}</Link></li>
+              <li><Link href="/zapytanie-ofertowe" className="footer__link" title={t('nav.quote')}>{t('nav.quote')}</Link></li>
             </ul>
           </div>
 
@@ -103,9 +104,14 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
                 <a href={`mailto:${CONTACT.email}`} className="footer__link" title="Email">{CONTACT.email}</a>
               </li>
             </ul>
-            <CtaButton className="btn btn--primary footer__cta" title={t('nav.book_call')}>
-              {t('nav.book_call')}
-            </CtaButton>
+            <div className="footer__cta-group">
+              <CtaButton className="btn btn--primary footer__cta" title={t('nav.book_call')}>
+                {t('nav.book_call')}
+              </CtaButton>
+              <Link href="/zapytanie-ofertowe" className="btn btn--outline footer__cta" title={t('nav.quote')}>
+                {t('nav.quote')}
+              </Link>
+            </div>
           </div>
         </div>
 

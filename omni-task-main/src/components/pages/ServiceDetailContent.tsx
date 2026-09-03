@@ -4,9 +4,22 @@ import LocaleLink from '@/components/LocaleLink'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL, localizePath } from '@/lib/i18n'
+import { convertPlnToUsd } from '@/lib/currency'
 import CtaButton from '@/components/CtaButton'
 
 export type ServiceKey = 'rpa' | 'workflow' | 'integration' | 'ai' | 'ksef' | 'szkolenia' | 'opieka'
+
+// Cena startowa do danych strukturalnych (Offer) - dopasowana do faktycznego
+// pakietu z cennika, nie wymyślona. "szkolenia" nie ma ceny jednostkowej
+// (usługa z dofinansowaniem PARP), więc celowo bez wpisu - Offer jest wtedy pomijany.
+const SERVICE_PRICE_HINT: Partial<Record<ServiceKey, { priceValue: number; isFrom: boolean; monthly?: boolean }>> = {
+  rpa: { priceValue: 5900, isFrom: true },
+  workflow: { priceValue: 5900, isFrom: true },
+  integration: { priceValue: 5900, isFrom: true },
+  ai: { priceValue: 14900, isFrom: true },
+  ksef: { priceValue: 12900, isFrom: false },
+  opieka: { priceValue: 390, isFrom: true, monthly: true },
+}
 
 interface TitleDesc {
   title: string
@@ -42,6 +55,7 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
   const slug = SERVICES.find((s) => s.key === serviceKey)!.slug
   const related = SERVICES.filter((s) => s.key !== serviceKey && s.key !== 'szkolenia' && s.key !== 'opieka').slice(0, 3)
   const canonicalUrl = `${SITE_URL}${localizePath(`/uslugi/${slug}`, locale)}`
+  const priceHint = SERVICE_PRICE_HINT[serviceKey]
 
   return (
     <>
@@ -209,6 +223,20 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
             provider: { '@type': 'Organization', name: 'OmniTask', '@id': `${SITE_URL}/#organization` },
             areaServed: { '@type': 'Country', name: 'PL' },
             url: canonicalUrl,
+            ...(priceHint ? {
+              offers: {
+                '@type': 'Offer',
+                url: canonicalUrl,
+                priceCurrency: locale === 'pl' ? 'PLN' : 'USD',
+                priceSpecification: {
+                  '@type': 'UnitPriceSpecification',
+                  price: locale === 'pl' ? priceHint.priceValue : convertPlnToUsd(priceHint.priceValue),
+                  priceCurrency: locale === 'pl' ? 'PLN' : 'USD',
+                  ...(priceHint.isFrom ? { minPrice: locale === 'pl' ? priceHint.priceValue : convertPlnToUsd(priceHint.priceValue) } : {}),
+                  ...(priceHint.monthly ? { unitCode: 'MON' } : {}),
+                },
+              },
+            } : {}),
           }),
         }}
       />

@@ -1346,8 +1346,14 @@ img {
   opacity: 0.55;
 }
 
-.footer__cta {
+.footer__cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   margin-top: 1.75rem;
+}
+
+.footer__cta {
   width: 100%;
   text-align: center;
 }

@@ -680,11 +680,55 @@
     ],
     "cta": "Sprawdzę za Ciebie, czy się kwalifikujesz"
   },
+  "pricing_data": {
+    "start": {
+      "name": "START",
+      "scope": "1 proces end-to-end, do 3 integracji, dokumentacja, szkolenie 2h",
+      "time": "1–2 tyg.",
+      "features": ["1 proces automatyzacji od początku do końca", "Do 3 integracji między systemami", "Dokumentacja wdrożenia", "Szkolenie zespołu (2h)"]
+    },
+    "core": {
+      "name": "CORE",
+      "scope": "2–4 procesy, obsługa błędów, integracje wielosystemowe, 30 dni gwarancji",
+      "time": "3–4 tyg.",
+      "features": ["2–4 procesy automatyzacji", "Obsługa błędów i wyjątków", "Integracje wielosystemowe", "Szkolenie zespołu (4h)", "30 dni gwarancji po wdrożeniu"]
+    },
+    "transformacja": {
+      "name": "TRANSFORMACJA",
+      "scope": "5+ procesów, agent AI z bazą wiedzy, self-hosted, 90 dni opieki w cenie",
+      "time": "6–10 tyg.",
+      "features": ["5+ procesów automatyzacji", "Agent AI z własną bazą wiedzy", "Środowisko self-hosted", "90 dni opieki w cenie"]
+    },
+    "ksef": {
+      "name": "KSeF KONTROLA",
+      "scope": "Deduplikacja, kategoryzacja i routing faktur, MPK, monitoring API",
+      "time": "2–4 tyg.",
+      "features": ["Deduplikacja faktur z KSeF i maila", "Kategoryzacja i routing do oddziałów/MPK", "Monitoring limitów i sesji API", "Integracja z systemem księgowym"]
+    },
+    "audit": {
+      "name": "Zacznij od audytu",
+      "scope": "Analiza procesów, mapa automatyzacji i wycena.",
+      "time": "3–5 dni",
+      "deductionNote": "Całą kwotę odliczam od ceny wdrożenia.",
+      "exitNote": "Możesz kupić sam audyt i na tym poprzestać. Dokumentacja zostaje u Ciebie - jeśli nie zdecydujesz się na współpracę, możesz zrealizować to z kimkolwiek innym.",
+      "features": ["Analiza obecnych procesów", "Mapa możliwych automatyzacji z wyceną"]
+    },
+    "care": [
+      { "name": "Hosting zarządzany n8n", "scope": "Serwer w UE, aktualizacje, kopie zapasowe, monitoring" },
+      { "name": "Opieka Standard", "scope": "Monitoring, poprawki przy zmianach API, reakcja do 48h" },
+      { "name": "Opieka Pro", "scope": "SLA reakcja 4h, priorytet, raport miesięczny" },
+      { "name": "Pakiet rozwoju", "scope": "Bank 4h miesięcznie na zmiany i nowe scenariusze" }
+    ]
+  },
   "cennik_page": {
     "h1": "Cennik automatyzacji procesów – ile kosztuje wdrożenie",
     "subtitle": "Ceny podane wprost, bez „zapytaj o wycenę”. Sprawdź, ile kosztuje automatyzacja procesów w Twojej firmie - koszt wdrożenia, opieki i wariant z dofinansowaniem.",
     "tier1_title": "Wdrożenia",
     "featured_badge": "Najczęściej wybierane",
+    "audit_badge": "Nie wiesz, od czego zacząć?",
+    "care_table_service": "Usługa",
+    "care_table_scope": "Zakres",
+    "care_table_price": "Cena",
     "tier2_title": "Opieka (miesięcznie)",
     "tier3_title": "Z dofinansowaniem PARP",
     "tier3_text": "Szkolenia i doradztwo z mojej oferty w Bazie Usług Rozwojowych możesz kupić z dofinansowaniem do 83% kosztu.",

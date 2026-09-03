@@ -78,6 +78,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
               '@context': 'https://schema.org',
               '@type': 'Article',
               headline: title,
+              inLanguage: 'pl',
               datePublished: article.date || article.created_at.toISOString(),
               image: resolvedArticle.image || undefined,
               author: {

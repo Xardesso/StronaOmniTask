@@ -28,12 +28,12 @@ const STATIC_PATHS: {
   { path: '/uslugi/szkolenia-i-doradztwo', changeFrequency: 'monthly', priority: 0.8, plOnly: true },
   { path: '/uslugi/opieka-i-hosting', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/o-nas', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/zapytanie-ofertowe', changeFrequency: 'monthly', priority: 0.6, plOnly: true },
+  { path: '/zapytanie-ofertowe', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/kontakt', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/blog', changeFrequency: 'daily', priority: 0.6 },
   { path: '/faq', changeFrequency: 'monthly', priority: 0.4, plOnly: true },
-  { path: '/polityka-prywatnosci', changeFrequency: 'yearly', priority: 0.4, plOnly: true },
-  { path: '/regulamin', changeFrequency: 'yearly', priority: 0.4, plOnly: true },
+  { path: '/polityka-prywatnosci', changeFrequency: 'yearly', priority: 0.4 },
+  { path: '/regulamin', changeFrequency: 'yearly', priority: 0.4 },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

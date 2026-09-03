@@ -122,13 +122,13 @@ export default async function RootLayout({
   return (
     <html lang={HREFLANG_MAP[locale]} className={`${bodyFont.variable} ${headingFont.variable}`} data-scroll-behavior="smooth">
       <head>
-        {/* Organization + LocalBusiness Schema */}
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': ['Organization', 'LocalBusiness'],
+              '@type': 'Organization',
               '@id': 'https://www.omnitask.pl/#organization',
               name: 'OmniTask',
               url: 'https://www.omnitask.pl',
@@ -151,11 +151,6 @@ export default async function RootLayout({
                 contactType: 'customer service',
                 availableLanguage: ['Polish', 'English', 'Ukrainian'],
               },
-              address: {
-                '@type': 'PostalAddress',
-                addressCountry: 'PL',
-              },
-              priceRange: '$$',
             }),
           }}
         />

@@ -5,7 +5,7 @@ import LocaleLink from '@/components/LocaleLink'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { useTranslation } from '@/i18n/context'
 import { SITE_URL } from '@/lib/i18n'
-import { IMPLEMENTATION_TIERS, KSEF_TIER, AUDIT_TIER, CARE_TIERS } from '@/lib/pricing-data'
+import { getImplementationTiers, getKsefTier, getAuditTier, getCareTiers } from '@/lib/pricing-data'
 import { FEATURE_BUR } from '@/lib/site-config'
 import { convertPlnToUsd, formatMoney, formatMoneyFrom, formatMoneyMonthly, formatPln, formatUsd } from '@/lib/currency'
 import CtaButton from '@/components/CtaButton'
@@ -16,6 +16,10 @@ export default function CennikContent() {
   const { t, tRaw, locale } = useTranslation()
   const base = 'cennik_page'
   const faq = tRaw<Faq[]>(`${base}.faq`) || []
+  const IMPLEMENTATION_TIERS = getImplementationTiers(t, tRaw)
+  const KSEF_TIER = getKsefTier(t, tRaw)
+  const AUDIT_TIER = getAuditTier(t, tRaw)
+  const CARE_TIERS = getCareTiers(t, tRaw)
 
   const [hours, setHours] = useState(20)
   const [rate, setRate] = useState(45)
@@ -96,7 +100,7 @@ export default function CennikContent() {
 
             <div className="audit-banner">
               <div className="audit-banner__text">
-                <span className="badge badge--accent">Nie wiesz, od czego zacząć?</span>
+                <span className="badge badge--accent">{t(`${base}.audit_badge`)}</span>
                 <h3>{AUDIT_TIER.name}</h3>
                 <p>{AUDIT_TIER.scope} {AUDIT_TIER.time}.</p>
                 <p className="audit-banner__exit-note">{AUDIT_TIER.exitNote}</p>
@@ -119,7 +123,7 @@ export default function CennikContent() {
             <div className="table-wrap">
               <table className="data-table">
                 <thead>
-                  <tr><th>Usługa</th><th>Zakres</th><th>Cena</th></tr>
+                  <tr><th>{t(`${base}.care_table_service`)}</th><th>{t(`${base}.care_table_scope`)}</th><th>{t(`${base}.care_table_price`)}</th></tr>
                 </thead>
                 <tbody>
                   {CARE_TIERS.map((c) => (

@@ -4,7 +4,7 @@ import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import { useState } from 'react'
 import { FEATURE_BUR, FEATURE_REALIZACJE, FOUNDER } from '@/lib/site-config'
-import { IMPLEMENTATION_TIERS } from '@/lib/pricing-data'
+import { getImplementationTiers } from '@/lib/pricing-data'
 import { formatMoneyFrom } from '@/lib/currency'
 import ServiceIcon from '@/components/ServiceIcon'
 import ToolIcon from '@/components/ToolIcon'
@@ -28,8 +28,6 @@ const SERVICES = [
   { key: 'service6', slug: 'opieka-i-hosting' },
   { key: 'service7', slug: 'agenci-ai' },
 ]
-
-const HOME_TIERS = IMPLEMENTATION_TIERS.filter((t) => ['start', 'core', 'transformacja'].includes(t.slug))
 
 const PROBLEM_ICONS = [
   // duplikat dokumentów
@@ -100,6 +98,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
   const problemItems = tRaw<string[]>('problems.items')
   const trustedByItemsRaw = tRaw<{ name: string; logo: string; industry: string; improved: string; result: string }[]>('trusted_by.items')
   const trustedByItems = Array.isArray(trustedByItemsRaw) ? trustedByItemsRaw : []
+  const HOME_TIERS = getImplementationTiers(t, tRaw)
 
   return (
     <>
