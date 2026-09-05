@@ -148,7 +148,10 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
                   </div>
                   <div>
-                    <h4>{t('hero.diagram_before_title')}</h4>
+                    {/* Podpis w obrębie dekoracyjnego diagramu, nie sekcja strony -
+                        p zamiast h4, żeby nie przeskakiwać z H1 od razu do H4
+                        (audyt SEO 2026-09-02, sekcja 5). */}
+                    <p className="hero__diagram-step__label">{t('hero.diagram_before_title')}</p>
                     <p>{t('hero.diagram_before_desc')}</p>
                   </div>
                 </div>
@@ -160,7 +163,7 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                   </div>
                   <div>
-                    <h4>{t('hero.diagram_after_title')}</h4>
+                    <p className="hero__diagram-step__label">{t('hero.diagram_after_title')}</p>
                     <p>{t('hero.diagram_after_desc')}</p>
                   </div>
                 </div>

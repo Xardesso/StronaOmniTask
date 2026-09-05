@@ -106,7 +106,7 @@ export default function BlogClient({ articles }: { articles: Article[] }) {
                         locale === 'ua' ? 'uk-UA' : locale === 'en' ? 'en-US' : 'pl-PL'
                       )}
                     </p>
-                    <h3 className="blog-card__title">{getTitle(article)}</h3>
+                    <h2 className="blog-card__title">{getTitle(article)}</h2>
                     <p className="blog-card__excerpt">{getDescription(article)}</p>
                     <span className="blog-card__link">
                       {t('blog.read_more')}

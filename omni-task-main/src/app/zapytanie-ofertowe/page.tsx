@@ -80,7 +80,7 @@ export default function QuoteRequestPage() {
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
-                <h3 style={{ color: 'var(--color-success)', fontSize: '1.25rem', margin: 0, fontWeight: 600 }}>{t('quote.success')}</h3>
+                <h2 style={{ color: 'var(--color-success)', fontSize: '1.25rem', margin: 0, fontWeight: 600 }}>{t('quote.success')}</h2>
               </div>
             ) : (
               <form className="quote-form" onSubmit={handleSubmit} id="quote-form" noValidate>

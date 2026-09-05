@@ -313,6 +313,14 @@
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "Automating a single process starts at $1,475 (START package). I'll give you an exact quote after we talk through your process.",
+      "wliczone_title": "What's included in the price",
+      "wliczone": [
+        "Process analysis and automation design before any work starts",
+        "Building and configuring the robot against your test data",
+        "Parallel testing of the robot and a human before going live",
+        "Training your team to monitor how the robot is running",
+        "Documentation of how the automation works"
+      ],
       "faq_title": "Frequently asked questions about task automation",
       "faq": [
         { "q": "Do I need to change my existing systems?", "a": "No. Automation works on top of your existing systems - no software swap or vendor approval needed." },
@@ -352,6 +360,14 @@
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "I price n8n implementation for a single workflow from $1,475, a package of 2-4 processes from $3,725. The final price depends on the number of integrations and rule complexity.",
+      "wliczone_title": "What's included in the price",
+      "wliczone": [
+        "Mapping the current workflow and designing the automation",
+        "Configuring the n8n or Make scenario, including error handling",
+        "Testing against real cases from your business",
+        "Training your team to read and monitor the running flow",
+        "Two weeks of post-launch support included"
+      ],
       "faq_title": "Frequently asked questions about n8n implementation",
       "faq": [
         { "q": "How much does an n8n implementation cost?", "a": "The price of n8n implementation depends on the number of processes and integrations - a single workflow starts at $1,475. I'll give you an exact quote after we talk through your systems." },
@@ -393,6 +409,14 @@
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "A simple integration between two systems fits the START package from $1,475; multi-system integrations fall under the CORE package from $3,725.",
+      "wliczone_title": "What's included in the price",
+      "wliczone": [
+        "A systems audit and a design for the data flow direction",
+        "Building the integration and testing it against a copy of your data",
+        "Production rollout with monitoring of the first sync cycles",
+        "Technical documentation of the integration",
+        "Two weeks of post-launch support included"
+      ],
       "faq_title": "",
       "faq": []
     },
@@ -422,6 +446,14 @@
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "A simple AI agent wired into one process fits the CORE package from $3,725; a full self-hosted deployment with its own knowledge base falls under the TRANSFORMACJA package from $7,250.",
+      "wliczone_title": "What's included in the price",
+      "wliczone": [
+        "Narrowing down the task where an AI agent adds the most value",
+        "Building the agent and, if needed, feeding it your company's knowledge base",
+        "Testing against real documents and questions, not demo examples",
+        "A supervised rollout with easy correction of its answers",
+        "Two weeks of post-launch support included"
+      ],
       "faq_title": "",
       "faq": []
     },
@@ -479,6 +511,14 @@
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "Managed hosting from $100/mo, Standard care from $225/mo, Pro care (4h SLA) from $475/mo.",
+      "wliczone_title": "What's included in care",
+      "wliczone": [
+        "Continuous monitoring of the automation's performance",
+        "Incident response within the agreed window (up to 48h, or up to 4h on Pro)",
+        "Updates and backups of the n8n server",
+        "A monthly hour bank for growing the process",
+        "A monthly report on what happened with the automation"
+      ],
       "faq_title": "Frequently asked questions about care",
       "faq": [
         { "q": "Do you have to have built the automation to take over its care?", "a": "No. I also take over care for automations built earlier by someone else, after reviewing them first." },

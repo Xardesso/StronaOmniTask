@@ -59,6 +59,7 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
   const benefits = asArray<string>(tRaw(`${base}.benefits`))
   const faq = asArray<Faq>(tRaw(`${base}.faq`))
   const nieOplaca = asArray<string>(tRaw(`${base}.nie_oplaca`))
+  const wliczone = asArray<string>(tRaw(`${base}.wliczone`))
   const caseStudyRaw = tRaw<CaseStudy | string>(`${base}.case_study`)
   const caseStudy = caseStudyRaw && typeof caseStudyRaw === 'object' ? caseStudyRaw : null
   const slug = SERVICES.find((s) => s.key === serviceKey)!.slug
@@ -88,6 +89,7 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
               <h2>{t(`${base}.s1_title`)}</h2>
               <p>{t(`${base}.s1_p1`)}</p>
               <p>{t(`${base}.s1_p2`)}</p>
+              {t(`${base}.s1_p3`) !== `${base}.s1_p3` && <p>{t(`${base}.s1_p3`)}</p>}
             </section>
 
             {dlaKogo.length > 0 && (
@@ -201,6 +203,17 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
                 <LocaleLink href="/cennik" title={t('nav.pricing')}>{t('services_page.learn_more')}</LocaleLink>
               </div>
             </section>
+
+            {wliczone.length > 0 && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.wliczone_title`)}</h2>
+                <ul className="service-detail__benefits">
+                  {wliczone.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {faq.length > 0 && (
               <section className="service-detail__section">

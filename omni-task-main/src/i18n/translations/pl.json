@@ -302,11 +302,13 @@
       "s1_title": "Na czym polega automatyzacja zadań",
       "s1_p1": "Robot programowy naśladuje to, co dziś robi człowiek w Waszych systemach: loguje się, klika, kopiuje dane między aplikacjami, wypełnia formularze, wysyła e-maile i generuje raporty - dokładnie tak samo, tylko bez przerw i bez pomyłek.",
       "s1_p2": "Nie zastępuje ludzi w pracy, która wymaga oceny sytuacji. Zdejmuje z nich powtarzalne, nudne czynności, które i tak nikogo nie rozwijają, a codziennie zjadają godziny.",
+      "s1_p3": "Wdrożenie zaczyna się zawsze od jednego procesu, nie od całej firmy naraz. Widzicie efekt w kilka tygodni, zamiast czekać miesiącami na wielki projekt transformacji, który nigdy się nie kończy.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Biura rachunkowe", "desc": "Setki dokumentów miesięcznie do przepisania między systemem klienta a systemem księgowym. Każdy nowy klient to kolejne źródło danych do ręcznego uzgadniania, a sezon rozliczeń zamienia to w wąskie gardło całego zespołu." },
         { "title": "Handel i e-commerce", "desc": "Zamówienia, faktury i stany magazynowe wymagające ręcznego uzgadniania każdego dnia. Im więcej sprzedajecie, tym więcej godzin to pochłania - automatyzacja jest jedynym sposobem, żeby wzrost sprzedaży nie oznaczał wzrostu etatów w administracji." },
-        { "title": "Firmy usługowe", "desc": "Powtarzalne raporty i zestawienia zjadające kilka godzin tygodniowo tej samej, dobrze opłacanej osoby. To czas, którego nikt nie odzyska, jeśli zostanie w kolejnym arkuszu Excela." }
+        { "title": "Firmy usługowe", "desc": "Powtarzalne raporty i zestawienia zjadające kilka godzin tygodniowo tej samej, dobrze opłacanej osoby. To czas, którego nikt nie odzyska, jeśli zostanie w kolejnym arkuszu Excela." },
+        { "title": "Firmy z sezonowością", "desc": "Wolumen pracy skacze kilka razy do roku - koniec kwartału, sezon urlopowy - a zatrudnianie tymczasowych ludzi na te szczyty jest drogie i wolne. Robot skaluje się bez rekrutacji." }
       ],
       "zastosowania_title": "Typowe zastosowania",
       "zastosowania": [
@@ -314,7 +316,8 @@
         { "title": "Generowanie i wysyłka raportów", "desc": "Cotygodniowe zestawienia sprzedaży, kosztów czy magazynu składane automatycznie i wysyłane do wskazanych osób." },
         { "title": "Weryfikacja i uzgadnianie dokumentów", "desc": "Robot porównuje dane z dwóch źródeł, np. zamówienie i fakturę, i zgłasza tylko rozbieżności." },
         { "title": "Eksport i import danych między aplikacjami", "desc": "Migracja danych klientów, produktów czy zamówień bez ręcznego kopiowania arkuszy." },
-        { "title": "Powiadomienia i przypomnienia", "desc": "Automatyczny alert, gdy termin się zbliża albo dokument czeka na akceptację dłużej niż ustalony czas." }
+        { "title": "Powiadomienia i przypomnienia", "desc": "Automatyczny alert, gdy termin się zbliża albo dokument czeka na akceptację dłużej niż ustalony czas." },
+        { "title": "Kontrola jakości danych", "desc": "Robot sprawdza kompletność i poprawność danych wejściowych, zanim trafią dalej w proces - błąd wyłapany na starcie kosztuje mniej niż błąd wyłapany na końcu." }
       ],
       "wdrozenie_title": "Jak wygląda wdrożenie RPA",
       "wdrozenie": [
@@ -349,10 +352,20 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Automatyzacja jednego procesu zaczyna się od 5 900 zł (pakiet START). Dokładną wycenę podaję po rozmowie o Waszym procesie.",
+      "wliczone_title": "Co jest wliczone w wycenę",
+      "wliczone": [
+        "Analiza procesu i projekt automatyzacji przed rozpoczęciem prac",
+        "Budowa i konfiguracja robota na Waszych danych testowych",
+        "Testy równoległe robota i człowieka przed uruchomieniem produkcyjnym",
+        "Szkolenie zespołu z monitorowania działania robota",
+        "Dokumentacja działania automatyzacji"
+      ],
       "faq_title": "Najczęściej zadawane pytania o automatyzację zadań",
       "faq": [
         { "q": "Czy muszę zmieniać swoje obecne systemy?", "a": "Nie. Automatyzacja działa na Waszych obecnych systemach - nie wymaga wymiany oprogramowania ani zgody dostawcy." },
         { "q": "Co się stanie, jeśli system, z którym pracuje robot, się zmieni?", "a": "Automatyzację trzeba wtedy zaktualizować. Dlatego oferuję opiekę powdrożeniową - monitoruję zmiany i reaguję, zanim proces się zatrzyma." },
+        { "q": "Ile czasu zajmuje wdrożenie jednego robota?", "a": "Prosty proces jest gotowy w 1-2 tygodnie. Bardziej złożony, z kilkoma integracjami i wyjątkami, zajmuje 3-4 tygodnie." },
+        { "q": "Czy robot może pracować równolegle z człowiekiem?", "a": "Tak, i tak właśnie wygląda etap testów - robot i człowiek wykonują to samo zadanie obok siebie, aż wyniki się w pełni zgadzają, dopiero potem robot przejmuje proces samodzielnie." },
         { "q": "Ile trwa wdrożenie?", "a": "Prosty proces jest gotowy w 1–2 tygodnie. Bardziej złożony, z kilkoma integracjami, zajmuje 3–4 tygodnie." },
         { "q": "Czy muszę umieć programować, żeby z tego korzystać?", "a": "Nie. Po wdrożeniu proces działa sam, a zespół dostaje krótkie szkolenie, jak go monitorować." }
       ]
@@ -368,11 +381,13 @@
       "s1_title": "Na czym polega automatyzacja workflow",
       "s1_p1": "Automatyzacja workflow to projektowanie i wdrażanie przepływów pracy w narzędziach no-code takich jak n8n i Make.com, które łączą różne systemy, aplikacje i zespoły w jeden spójny proces. Zamiast ręcznego przekazywania danych między aplikacjami, Wasze systemy komunikują się automatycznie.",
       "s1_p2": "W praktyce oznacza to, że dane wpisane raz w jednym miejscu trafiają tam, gdzie są potrzebne - bez kopiowania, bez maili z załącznikiem i bez pytania „czy ktoś to już zrobił”.",
+      "s1_p3": "Zaczynam od jednego, dobrze wybranego procesu - nie od przebudowy wszystkich systemów naraz. Dzięki temu widzicie efekt w tygodnie, a kolejne automatyzacje dokładamy stopniowo, w miarę jak rośnie zaufanie do tego, jak to działa.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z kilkoma działami", "desc": "Sprzedaż, księgowość i magazyn pracują na osobnych systemach, które nie rozmawiają ze sobą. Każda zmiana w jednym miejscu wymaga ręcznego powielenia w drugim, a to tylko kwestia czasu, aż ktoś zapomni tego dopilnować." },
         { "title": "Firmy usługowe z leadami z kilku źródeł", "desc": "Formularz, telefon i mail trafiają do różnych miejsc, część zapytań ginie po drodze. Klient, który nie dostanie odpowiedzi w rozsądnym czasie, po prostu pisze do konkurencji." },
-        { "title": "Firmy z procesami zatwierdzania", "desc": "Wnioski, umowy czy zamówienia krążą mailem i nikt nie wie, u kogo utknęła akceptacja. Odpowiedzialność rozmywa się między kilkoma skrzynkami, a proces trwa dłużej, niż powinien." }
+        { "title": "Firmy z procesami zatwierdzania", "desc": "Wnioski, umowy czy zamówienia krążą mailem i nikt nie wie, u kogo utknęła akceptacja. Odpowiedzialność rozmywa się między kilkoma skrzynkami, a proces trwa dłużej, niż powinien." },
+        { "title": "Firmy korzystające z wielu narzędzi SaaS", "desc": "Każde nowe narzędzie to kolejne źródło danych, które trzeba ręcznie synchronizować z resztą. Im więcej aplikacji w firmie, tym więcej godzin ginie na przełączanie się między nimi." }
       ],
       "zastosowania_title": "Typowe zastosowania",
       "zastosowania": [
@@ -380,7 +395,8 @@
         { "title": "Obsługa leadów", "desc": "Formularz kontaktowy → CRM → powiadomienie handlowca → automatyczny follow-up e-mail, bez pół dnia oczekiwania klienta." },
         { "title": "Procesy zatwierdzania", "desc": "Automatyczny routing wniosków do właściwej osoby, z eskalacją, jeśli nikt nie zareaguje w ustalonym czasie." },
         { "title": "Synchronizacja danych", "desc": "Automatyczna synchronizacja klientów i zamówień między ERP, CRM i systemem magazynowym w czasie rzeczywistym." },
-        { "title": "Migracja z Zapier lub Make do n8n", "desc": "Rosnąca liczba operacji w Zapier czy Make potrafi wywindować miesięczny rachunek o rząd wielkości. Przenoszę istniejące automatyzacje do n8n, gdzie płacicie za serwer, nie za liczbę zadań." }
+        { "title": "Migracja z Zapier lub Make do n8n", "desc": "Rosnąca liczba operacji w Zapier czy Make potrafi wywindować miesięczny rachunek o rząd wielkości. Przenoszę istniejące automatyzacje do n8n, gdzie płacicie za serwer, nie za liczbę zadań." },
+        { "title": "Integracja formularzy i ankiet", "desc": "Odpowiedzi z formularza trafiają automatycznie do CRM, arkusza albo bezpośrednio do odpowiedniej osoby - bez ręcznego przepisywania z jednego narzędzia do drugiego." }
       ],
       "wdrozenie_title": "Jak wygląda wdrożenie",
       "wdrozenie": [
@@ -414,13 +430,23 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Wdrożenie n8n dla pojedynczego przepływu pracy wyceniam od 5 900 zł, pakiet 2–4 procesów od 14 900 zł. Ostateczna cena wdrożenia n8n zależy od liczby integracji i złożoności reguł.",
+      "wliczone_title": "Co jest wliczone w wycenę",
+      "wliczone": [
+        "Mapowanie obecnego przepływu pracy i projekt automatyzacji",
+        "Konfiguracja scenariusza w n8n lub Make wraz z obsługą błędów",
+        "Testy na realnych przypadkach z Waszej firmy",
+        "Szkolenie zespołu z czytania i kontrolowania działającego przepływu",
+        "Dwa tygodnie wsparcia powdrożeniowego w cenie"
+      ],
       "faq_title": "Najczęściej zadawane pytania o wdrożenie n8n",
       "faq": [
         { "q": "Ile kosztuje wdrożenie n8n w firmie?", "a": "Cena wdrożenia n8n zależy od liczby procesów i integracji - pojedynczy przepływ pracy zaczyna się od 5 900 zł. Dokładną wycenę podaję po rozmowie o Waszych systemach." },
         { "q": "Czym n8n różni się od Zapier?", "a": "n8n to open-source'owa alternatywa dla Zapier - można go hostować samodzielnie (self-hosted), co obniża koszt przy dużej liczbie operacji i daje pełną kontrolę nad danymi." },
         { "q": "Czy potrzebuję n8n specjalisty, czy da się to zrobić samemu?", "a": "Proste automatyzacje da się złożyć samodzielnie. Jako n8n konsultant wchodzę do gry, gdy proces obejmuje kilka systemów, wymaga obsługi błędów albo integracji bez gotowego konektora." },
         { "q": "Czy n8n można hostować samodzielnie (self-hosted)?", "a": "Tak - to jedna z głównych przewag n8n nad Zapier. Stawiam instancję na Waszym serwerze lub w bezpiecznej chmurze w UE i biorę na siebie utrzymanie, aktualizacje i monitoring w ramach opieki nad automatyzacją." },
-        { "q": "Przenosicie automatyzacje z Zapier, Make albo Power Automate?", "a": "Tak. Odtwarzam istniejące scenariusze w n8n krok po kroku, sprawdzam je na tych samych danych co oryginał i przełączam dopiero, gdy wyniki się zgadzają - bez przerwy w działaniu procesu." }
+        { "q": "Przenosicie automatyzacje z Zapier, Make albo Power Automate?", "a": "Tak. Odtwarzam istniejące scenariusze w n8n krok po kroku, sprawdzam je na tych samych danych co oryginał i przełączam dopiero, gdy wyniki się zgadzają - bez przerwy w działaniu procesu." },
+        { "q": "Ile trwa wdrożenie pierwszej automatyzacji w n8n?", "a": "Prosty przepływ pracy jest gotowy w 1-2 tygodnie. Automatyzacja obejmująca kilka systemów i reguł zajmuje 3-4 tygodnie." },
+        { "q": "Co się stanie, jeśli zmienię system, z którym łączy się automatyzacja?", "a": "Scenariusz trzeba zaktualizować pod nowy system - to jedna z sytuacji, którą obejmuje opieka powdrożeniowa, żeby proces nie przestał działać z dnia na dzień." }
       ]
     },
     "integration": {
@@ -434,11 +460,13 @@
       "s1_title": "Dlaczego integracja systemów jest kluczowa",
       "s1_p1": "Firmy 5–50 osób zwykle używają kilku–kilkunastu aplikacji: ERP, CRM, e-mail, system magazynowy, platforma sprzedażowa. Bez integracji systemów ktoś ręcznie przenosi dane między nimi, co generuje błędy, opóźnienia i frustrację.",
       "s1_p2": "Łączę Wasze systemy przez API, webhooki i dedykowane middleware, żeby dane przepływały automatycznie i w czasie rzeczywistym - bez comiesięcznego eksportu do Excela. W praktyce najczęściej oznacza to integrację Comarch Optima, Subiekt GT, Baselinker, wFirma lub Fakturownia z resztą Waszych narzędzi.",
+      "s1_p3": "Integrację projektuję tak, żeby przetrwała zmianę pojedynczego systemu - jeśli za rok wymienicie CRM, nie musicie budować całego połączenia od nowa, tylko podłączyć nowy system w tym samym miejscu.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z ERP i osobnym CRM", "desc": "Dane klienta trzeba wpisywać dwa razy, bo systemy nie mają wspólnego źródła prawdy. Każde rozjechanie się danych to później godziny szukania, po której stronie jest błąd." },
         { "title": "E-commerce ze sklepem i magazynem", "desc": "Stany magazynowe rozjeżdżają się między platformą sprzedażową a magazynem. Sprzedajecie towar, którego już nie ma, albo blokujecie klientom towar, który realnie jest dostępny." },
-        { "title": "Firmy rozwijające się szybko", "desc": "Liczba aplikacji rośnie szybciej niż zdolność zespołu do ręcznego ich łączenia. To, co dało się ogarnąć przy 5 osobach, zaczyna się sypać przy 20." }
+        { "title": "Firmy rozwijające się szybko", "desc": "Liczba aplikacji rośnie szybciej niż zdolność zespołu do ręcznego ich łączenia. To, co dało się ogarnąć przy 5 osobach, zaczyna się sypać przy 20." },
+        { "title": "Firmy z wieloma oddziałami lub markami", "desc": "Każdy oddział ma swój lokalny sposób pracy z tymi samymi systemami centralnymi, co utrudnia raportowanie i porównywanie wyników między nimi." }
       ],
       "zastosowania_title": "Co integruję",
       "zastosowania": [
@@ -447,7 +475,8 @@
         { "title": "Integracja Comarch Optima, Subiekt GT i Baselinker", "desc": "Integracja Comarch Optima przez API, integracja Subiekt GT oraz automatyzacja Baselinker - zamówienia, faktury i stany magazynowe w jednym miejscu, bez ręcznego eksportu." },
         { "title": "Integracja wFirma i Fakturownia", "desc": "Automatyczne przekazywanie faktur, płatności i danych klientów między wFirma lub Fakturownia a resztą Waszych systemów." },
         { "title": "HR ↔ Payroll", "desc": "Automatyczne przekazywanie danych o etatach, urlopach i rozliczeniach między systemami kadrowym i płacowym." },
-        { "title": "Integracje niestandardowe (Custom API)", "desc": "Buduję integracje dla systemów, które nie mają gotowego konektora - w oparciu o ich API." }
+        { "title": "Integracje niestandardowe (Custom API)", "desc": "Buduję integracje dla systemów, które nie mają gotowego konektora - w oparciu o ich API." },
+        { "title": "Integracja płatności i fakturowania", "desc": "Płatność zaksięgowana w systemie płatniczym automatycznie aktualizuje status zamówienia i generuje fakturę, bez ręcznego uzgadniania dwóch systemów." }
       ],
       "wdrozenie_title": "Jak wygląda wdrożenie",
       "wdrozenie": [
@@ -481,11 +510,21 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Prosta integracja dwóch systemów mieści się w pakiecie START od 5 900 zł, integracje wielosystemowe w pakiecie CORE od 14 900 zł.",
+      "wliczone_title": "Co jest wliczone w wycenę",
+      "wliczone": [
+        "Audyt systemów i projekt kierunku przepływu danych",
+        "Budowa integracji i testy na kopii Waszych danych",
+        "Wdrożenie produkcyjne z monitoringiem pierwszych cykli synchronizacji",
+        "Dokumentacja techniczna integracji",
+        "Dwa tygodnie wsparcia powdrożeniowego w cenie"
+      ],
       "faq_title": "Najczęściej zadawane pytania o integrację systemów",
       "faq": [
         { "q": "Czy zintegrujecie Comarch Optima z moim sklepem internetowym?", "a": "Tak - integracja Comarch Optima przez API to jedna z najczęstszych integracji, które wdrażam, zarówno z platformami e-commerce, jak i z Baselinker czy CRM." },
         { "q": "Pracuję na Subiekcie GT - da się to zintegrować?", "a": "Tak, integracja Subiekt GT jest możliwa - łączę go z magazynem, sklepem internetowym lub systemem księgowym w zależności od potrzeb." },
-        { "q": "Czym różni się synchronizacja danych między systemami od zwykłego eksportu do Excela?", "a": "Synchronizacja danych działa automatycznie i w czasie rzeczywistym - nie trzeba nikogo, kto raz w tygodniu ręcznie eksportuje i wgrywa plik." }
+        { "q": "Czym różni się synchronizacja danych między systemami od zwykłego eksportu do Excela?", "a": "Synchronizacja danych działa automatycznie i w czasie rzeczywistym - nie trzeba nikogo, kto raz w tygodniu ręcznie eksportuje i wgrywa plik." },
+        { "q": "Ile trwa wdrożenie integracji?", "a": "Integracja dwóch systemów przez gotowe API to zwykle 1-2 tygodnie. Integracje wielosystemowe, z niestandardową logiką, zajmują 3-4 tygodnie." },
+        { "q": "Co jeśli jeden z systemów nie ma API?", "a": "Sprawdzam, czy da się skorzystać z eksportu plików, webhooków albo innej dostępnej metody. Jeśli system faktycznie nie udostępnia żadnego interfejsu, uczciwie mówię, że integracja nie ma sensu." }
       ]
     },
     "ai": {
@@ -499,18 +538,21 @@
       "s1_title": "Czym jest agent AI w praktyce",
       "s1_p1": "Agent AI to program, który - w odróżnieniu od zwykłego robota RPA - rozumie treść dokumentu czy pytania, a nie tylko klika w zadane miejsca. Potrafi przeczytać fakturę w dowolnym formacie (OCR faktur), odpowiedzieć klientowi w naturalnym języku jako asystent AI albo streścić długi dokument. To realne wdrożenie sztucznej inteligencji w firmie, nie demo na pokaz.",
       "s1_p2": "Nie zastępuje eksperta w Waszej firmie. Odciąża go od pierwszego kontaktu z dużą ilością danych - dokumentów, wiadomości, zapytań - i przekazuje dalej tylko to, co faktycznie wymaga decyzji człowieka.",
+      "s1_p3": "Zaczynam od jednego, dobrze zdefiniowanego zadania - np. czytania jednego typu dokumentu albo odpowiadania na jedną kategorię pytań. Dopiero gdy to działa stabilnie, rozszerzamy zakres o kolejne przypadki.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z dużym ruchem zapytań", "desc": "Obsługa klienta odpowiada wielokrotnie na te same pytania zamiast zajmować się trudniejszymi sprawami. Prosta sprawa czeka w tej samej kolejce co sprawa skomplikowana." },
         { "title": "Firmy przetwarzające dużo dokumentów", "desc": "Umowy, faktury i zgłoszenia w różnych formatach, które trzeba ręcznie odczytać i skategoryzować. Im więcej dokumentów wpływa, tym łatwiej coś przeoczyć albo pomylić." },
-        { "title": "Firmy monitorujące rynek", "desc": "Ceny konkurencji, przepisy branżowe czy dostępność towaru zmieniają się szybciej, niż ktoś zdąży to ręcznie sprawdzić. Decyzje zapadają wtedy na podstawie danych sprzed tygodnia." }
+        { "title": "Firmy monitorujące rynek", "desc": "Ceny konkurencji, przepisy branżowe czy dostępność towaru zmieniają się szybciej, niż ktoś zdąży to ręcznie sprawdzić. Decyzje zapadają wtedy na podstawie danych sprzed tygodnia." },
+        { "title": "Firmy z wiedzą rozproszoną w głowach ludzi", "desc": "Odpowiedzi na pytania klientów zależą od tego, kto akurat odbierze telefon czy maila. Agent AI, zasilony bazą wiedzy firmowej, odpowiada tak samo niezależnie od tego, kto pyta i o której godzinie." }
       ],
       "zastosowania_title": "Zastosowania",
       "zastosowania": [
         { "title": "OCR faktur AI i analiza dokumentów", "desc": "Agent czyta, klasyfikuje i wydobywa dane z faktur oraz innych dokumentów w dowolnym formacie - bez sztywnego szablonu wejściowego." },
         { "title": "Chatbot i asystent AI dla firmy", "desc": "Agent odpowiada na standardowe pytania klientów jako chatbot dla firmy, a trudniejsze sprawy przekazuje od razu z pełnym kontekstem do człowieka." },
         { "title": "Monitoring rynku i konkurencji", "desc": "Agent śledzi ceny, oferty i zmiany u konkurencji i przygotowuje krótkie podsumowanie zamiast surowych danych." },
-        { "title": "Audyt zgodności z procedurami", "desc": "Agent porównuje dokumenty czy działania z wewnętrznymi procedurami i wskazuje odstępstwa do sprawdzenia." }
+        { "title": "Audyt zgodności z procedurami", "desc": "Agent porównuje dokumenty czy działania z wewnętrznymi procedurami i wskazuje odstępstwa do sprawdzenia." },
+        { "title": "Podsumowania i streszczenia", "desc": "Agent streszcza długie dokumenty, maile czy transkrypcje rozmów do kilku zdań, które faktycznie da się przeczytać w minutę." }
       ],
       "wdrozenie_title": "Jak wygląda wdrożenie",
       "wdrozenie": [
@@ -538,11 +580,21 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Prosty agent AI wpięty w jeden proces mieści się w pakiecie CORE od 14 900 zł, pełne wdrożenie z bazą wiedzy self-hosted - w pakiecie TRANSFORMACJA od 29 000 zł.",
+      "wliczone_title": "Co jest wliczone w wycenę",
+      "wliczone": [
+        "Wybór i zawężenie zadania, w którym agent AI da najwięcej wartości",
+        "Budowa agenta i - jeśli trzeba - zasilenie go bazą wiedzy firmowej",
+        "Testy na realnych dokumentach i pytaniach, nie na przykładach demo",
+        "Wdrożenie z nadzorem i możliwością łatwej korekty odpowiedzi",
+        "Dwa tygodnie wsparcia powdrożeniowego w cenie"
+      ],
       "faq_title": "Najczęściej zadawane pytania o agentów AI",
       "faq": [
         { "q": "Czy agent AI zastąpi mój zespół obsługi klienta?", "a": "Nie. Agent AI przejmuje pierwszy kontakt i standardowe pytania, a trudniejsze sprawy przekazuje z pełnym kontekstem do człowieka - to wsparcie zespołu, nie jego zastąpienie." },
         { "q": "Czym różni się agent AI od zwykłego chatbota dla firmy?", "a": "Prosty chatbot działa na sztywnych regułach i scenariuszach. Agent AI rozumie treść pytania czy dokumentu i potrafi odpowiedzieć poza z góry zaprogramowanym scenariuszem." },
-        { "q": "Czy wdrożenie sztucznej inteligencji jest bezpieczne dla małej firmy?", "a": "Tak, przy odpowiedniej konfiguracji. Dane wrażliwe mogą zostać na Waszej infrastrukturze, a agent startuje z nadzorem, więc nie podejmuje decyzji bez kontroli od pierwszego dnia." }
+        { "q": "Czy wdrożenie sztucznej inteligencji jest bezpieczne dla małej firmy?", "a": "Tak, przy odpowiedniej konfiguracji. Dane wrażliwe mogą zostać na Waszej infrastrukturze, a agent startuje z nadzorem, więc nie podejmuje decyzji bez kontroli od pierwszego dnia." },
+        { "q": "Jak długo trwa wdrożenie agenta AI?", "a": "Prosty agent wpięty w jeden proces jest gotowy w 2-3 tygodnie. Wdrożenie z własną bazą wiedzy i integracjami zajmuje 4-6 tygodni." },
+        { "q": "Co jeśli agent się pomyli?", "a": "Agent startuje z nadzorem - jego odpowiedzi są sprawdzane, zanim trafią do klienta, a próg pewności, przy którym przekazuje sprawę do człowieka, ustalamy wspólnie na starcie." }
       ]
     },
     "szkolenia": {
@@ -556,11 +608,13 @@
       "s1_title": "Dla kogo są te szkolenia",
       "s1_p1": "To nie jest ogólny kurs o „sztucznej inteligencji”. Uczę zespół rozpoznawać, który proces w codziennej pracy nadaje się do automatyzacji, i jak z automatyzacją pracować na co dzień - bez konieczności programowania.",
       "s1_p2": "Jestem zarejestrowany w Bazie Usług Rozwojowych, więc szkolenie i doradztwo można kupić z dofinansowaniem z programu PARP - mikro i mała firma odzyskuje do 83% kosztu.",
+      "s1_p3": "Nie sprzedaję gotowego programu ze slajdów - każde szkolenie zaczyna się od rozmowy o Waszych realnych procesach, a materiały budujemy wokół nich, nie odwrotnie.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Właściciele i kierownicy operacyjni", "desc": "Chcą wiedzieć, gdzie w firmie jest największy potencjał do automatyzacji, zanim zainwestują. Nie chcą kupować kota w worku od informatyka, którego nie znają i nie rozumieją." },
         { "title": "Zespoły administracyjne i księgowe", "desc": "Pracują codziennie z dokumentami i danymi, które da się zautomatyzować. To oni najlepiej wiedzą, które zadanie realnie zjada im najwięcej czasu w tygodniu." },
-        { "title": "Firmy planujące wdrożenie", "desc": "Chcą najpierw zrozumieć proces, zanim zlecą budowę automatyzacji komuś z zewnątrz. Szkolenie kosztuje wyraźnie mniej niż nietrafione, źle zaplanowane wdrożenie." }
+        { "title": "Firmy planujące wdrożenie", "desc": "Chcą najpierw zrozumieć proces, zanim zlecą budowę automatyzacji komuś z zewnątrz. Szkolenie kosztuje wyraźnie mniej niż nietrafione, źle zaplanowane wdrożenie." },
+        { "title": "Nowe zespoły po wdrożeniu automatyzacji", "desc": "Automatyzacja już działa, ale zespół nie wie, jak ją czytać, kontrolować ani rozbudowywać - szkolenie wypełnia tę lukę wiedzy." }
       ],
       "zastosowania_title": "Zakres szkolenia",
       "zastosowania": [
@@ -568,7 +622,8 @@
         { "title": "Rozpoznawanie procesów do automatyzacji", "desc": "Jak ocenić, które zadanie warto zautomatyzować, a które nie ma sensu - na przykładach z Waszej firmy." },
         { "title": "Podstawy pracy z automatyzacją", "desc": "Jak czytać działający przepływ, gdzie sprawdzić błąd i kiedy wezwać wsparcie." },
         { "title": "KSeF i obieg dokumentów", "desc": "Jak zorganizować pracę zespołu wokół automatycznego obiegu faktur." },
-        { "title": "Doradztwo wdrożeniowe", "desc": "Wspólnie planujemy kolejność wdrożeń, żeby najpierw zautomatyzować to, co przynosi najwięcej godzin." }
+        { "title": "Doradztwo wdrożeniowe", "desc": "Wspólnie planujemy kolejność wdrożeń, żeby najpierw zautomatyzować to, co przynosi najwięcej godzin." },
+        { "title": "Warsztat z ROI i priorytetyzacji", "desc": "Uczymy się liczyć, ile faktycznie kosztuje dany proces dziś, żeby wiedzieć, które automatyzacje wdrożyć najpierw." }
       ],
       "wdrozenie_title": "Jak to przebiega",
       "wdrozenie": [
@@ -600,11 +655,20 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Cena zależy od zakresu i liczby uczestników - sprawdzam ją razem z kwalifikowalnością do dofinansowania. Szczegóły na stronie /dofinansowanie.",
+      "wliczone_title": "Co jest wliczone w cenę",
+      "wliczone": [
+        "Rozmowa wstępna i sprawdzenie kwalifikowalności do dofinansowania",
+        "Program szkolenia dopasowany do Waszych procesów",
+        "Materiały szkoleniowe do wykorzystania po zajęciach",
+        "Możliwość konsultacji powdrożeniowej"
+      ],
       "faq_title": "Najczęściej zadawane pytania o szkolenia",
       "faq": [
         { "q": "Czy szkolenie na pewno załapie się na dofinansowanie?", "a": "Sprawdzam to indywidualnie na etapie rozmowy wstępnej - zależy od wielkości firmy i dostępnego limitu u operatora regionalnego." },
         { "q": "Ile osób może wziąć udział?", "a": "Zależy od formuły - ustalamy to razem, dopasowując program do liczby uczestników i budżetu." },
-        { "q": "Czy to jest to samo co wdrożenie automatyzacji?", "a": "Nie. Program dofinansowania obejmuje szkolenia i doradztwo, a nie samo wdrożenie techniczne. Wdrożenie wyceniam osobno." }
+        { "q": "Czy to jest to samo co wdrożenie automatyzacji?", "a": "Nie. Program dofinansowania obejmuje szkolenia i doradztwo, a nie samo wdrożenie techniczne. Wdrożenie wyceniam osobno." },
+        { "q": "Czy szkolenie odbywa się stacjonarnie czy online?", "a": "Obie formy są możliwe - dobieramy to razem, w zależności od tego, co jest wygodniejsze dla Waszego zespołu." },
+        { "q": "Co, jeśli zespół nie ma żadnego doświadczenia z automatyzacją?", "a": "To normalny punkt startowy - program zaczyna się od podstaw i tempa dopasowanego do grupy, nie zakłada wcześniejszej wiedzy technicznej." }
       ]
     },
     "opieka": {
@@ -618,18 +682,21 @@
       "s1_title": "Dlaczego automatyzacja potrzebuje opieki",
       "s1_p1": "Automatyzacja nie jest wdrażana raz na zawsze. Systemy, z którymi współpracuje, zmieniają interfejsy i API, dostawcy aktualizują swoje platformy, a firma rośnie i dodaje nowe wyjątki od reguły. Bez opieki proces po jakimś czasie cicho się psuje - i nikt tego nie zauważa, dopóki nie zacznie brakować danych.",
       "s1_p2": "Opieka to monitoring działania, szybka reakcja na awarie i utrzymanie serwera, na którym automatyzacja pracuje - żeby inwestycja we wdrożenie nie zmarnowała się po pół roku.",
+      "s1_p3": "Opieka nie jest z góry ustalonym pakietem godzin do wykorzystania za wszelką cenę - jeśli w danym miesiącu nic się nie psuje i nie ma nowych scenariuszy, po prostu płacicie za spokój, że ktoś pilnuje, a nie za sztucznie wygenerowaną pracę.",
       "dla_kogo_title": "Dla kogo",
       "dla_kogo": [
         { "title": "Firmy z wdrożoną automatyzacją", "desc": "Niezależnie od tego, czy wdrażałem ją ja, czy ktoś inny - potrzebują kogoś, kto ją utrzyma na bieżąco. Automatyzacja bez właściciela to tylko kwestia czasu, aż przestanie działać po cichu." },
         { "title": "Firmy bez własnego działu IT", "desc": "Nie mają nikogo na miejscu, kto zauważyłby awarię automatyzacji, zanim urośnie w realny problem. Zwykle dowiadują się o niej dopiero wtedy, gdy zaczyna brakować danych." },
-        { "title": "Firmy planujące rozwój procesu", "desc": "Chcą regularnie dodawać nowe scenariusze bez zlecania i wyceniania każdej zmiany od zera. Bank godzin w opiece wychodzi wyraźnie taniej niż osobna wycena każdej poprawki." }
+        { "title": "Firmy planujące rozwój procesu", "desc": "Chcą regularnie dodawać nowe scenariusze bez zlecania i wyceniania każdej zmiany od zera. Bank godzin w opiece wychodzi wyraźnie taniej niż osobna wycena każdej poprawki." },
+        { "title": "Firmy po zmianie dostawcy automatyzacji", "desc": "Poprzedni wykonawca zniknął albo przestał odpowiadać, a automatyzacja wciąż działa - ale nikt nie wie, co się stanie, gdy coś pójdzie nie tak." }
       ],
       "zastosowania_title": "Co obejmuje opieka",
       "zastosowania": [
         { "title": "Monitoring działania", "desc": "Sprawdzam, czy automatyzacja faktycznie wykonała swoją pracę, a nie tylko czy serwer działa." },
         { "title": "Reakcja na awarie", "desc": "Gdy API dostawcy się zmieni albo proces się zatrzyma, reaguję w uzgodnionym czasie (do 48h lub do 4h w opiece Pro)." },
         { "title": "Hosting n8n zarządzany", "desc": "Self-hostowany serwer n8n w UE, zgodny z RODO, aktualizacje i kopie zapasowe środowiska, na którym działa automatyzacja." },
-        { "title": "Rozwój procesu", "desc": "Bank godzin miesięcznie na nowe scenariusze i zmiany bez osobnej wyceny każdej z nich." }
+        { "title": "Rozwój procesu", "desc": "Bank godzin miesięcznie na nowe scenariusze i zmiany bez osobnej wyceny każdej z nich." },
+        { "title": "Aktualizacje bezpieczeństwa", "desc": "Regularne aktualizacje serwera i samego n8n, żeby automatyzacja nie działała na wersji z lukami bezpieczeństwa sprzed roku." }
       ],
       "wdrozenie_title": "Jak zaczynamy współpracę",
       "wdrozenie": [
@@ -650,12 +717,22 @@
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Hosting zarządzany od 390 zł/mc, Opieka Standard od 890 zł/mc, Opieka Pro (SLA 4h) od 1 890 zł/mc.",
+      "wliczone_title": "Co jest wliczone w opiekę",
+      "wliczone": [
+        "Stały monitoring działania automatyzacji",
+        "Reakcja na awarie w uzgodnionym czasie (do 48h lub do 4h w Pro)",
+        "Aktualizacje i kopie zapasowe serwera n8n",
+        "Bank godzin miesięcznie na rozwój procesu",
+        "Comiesięczny raport z tego, co działo się z automatyzacją"
+      ],
       "faq_title": "Najczęściej zadawane pytania o opiekę",
       "faq": [
         { "q": "Czy musicie wdrażać automatyzację, żeby objąć ją opieką?", "a": "Nie. Przejmuję opiekę też nad automatyzacjami wdrożonymi wcześniej przez kogoś innego, po ich przeglądzie." },
         { "q": "Co się stanie, jeśli zrezygnuję z opieki?", "a": "Automatyzacja dalej działa, ale nikt nie zareaguje, gdy coś się zepsuje po zmianie w jednym z systemów." },
         { "q": "Czym różni się Opieka Standard od Opieka Pro?", "a": "Standard to reakcja do 48h i monitoring. Pro to SLA 4h, priorytet w kolejce i comiesięczny raport." },
-        { "q": "Czy hosting n8n jest zgodny z RODO?", "a": "Tak - automatyzacje utrzymuję na self-hostowanym serwerze w UE, bez przekazywania danych do podmiotów spoza uzgodnionego łańcucha przetwarzania." }
+        { "q": "Czy hosting n8n jest zgodny z RODO?", "a": "Tak - automatyzacje utrzymuję na self-hostowanym serwerze w UE, bez przekazywania danych do podmiotów spoza uzgodnionego łańcucha przetwarzania." },
+        { "q": "Jak szybko reagujecie na zgłoszenie awarii?", "a": "W opiece Standard do 48h, w opiece Pro do 4h - w obu przypadkach dostajecie jasno określone okno reakcji, a nie „zajmę się, jak będę miał czas”." },
+        { "q": "Czy mogę zmienić poziom opieki w trakcie współpracy?", "a": "Tak - jeśli potrzeby rosną albo maleją, dostosowujemy poziom opieki bez konieczności podpisywania nowej umowy od zera." }
       ]
     }
   },

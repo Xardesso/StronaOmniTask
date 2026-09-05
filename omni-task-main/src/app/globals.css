@@ -515,7 +515,7 @@ img {
   color: #fff;
 }
 
-.hero__diagram-step h4 {
+.hero__diagram-step__label {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
@@ -1579,7 +1579,7 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
-.contact-info__text h3 {
+.contact-info__text h2 {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
