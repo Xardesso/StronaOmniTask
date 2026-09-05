@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import Breadcrumbs from '@/components/Breadcrumbs'
@@ -71,11 +72,13 @@ export default function BlogClient({ articles }: { articles: Article[] }) {
                 >
                   <div className="blog-card__image">
                     {article.image ? (
-                      <img
+                      <Image
                         src={article.image}
                         alt={article.image_alt || getTitle(article)}
                         title={article.image_title || getTitle(article)}
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 380px"
+                        style={{ objectFit: 'cover' }}
                       />
                     ) : (
                       <div style={{

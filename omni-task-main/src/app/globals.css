@@ -2552,6 +2552,52 @@ img {
   font-size: 1.1rem;
 }
 
+.service-detail__nie-oplaca li::before {
+  content: '\2717';
+  color: var(--color-text-light);
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.case-study__col {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+}
+
+.case-study__col strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.case-study__col p {
+  margin: 0;
+}
+
+.case-study__result {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 640px) {
+  .case-study {
+    grid-template-columns: 1fr;
+  }
+}
+
 .service-detail__cta {
   text-align: center;
   padding: 2.75rem 2rem;

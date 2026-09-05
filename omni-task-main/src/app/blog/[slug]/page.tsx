@@ -60,9 +60,26 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
   const title = article.title?.pl || ''
 
+  let relatedPosts: { slug: string; title: string; image: string | null }[] = []
+  try {
+    const rawRelated = await prisma.article.findMany({
+      where: { is_public: true, slug: { not: slug } },
+      orderBy: { created_at: 'desc' },
+      take: 3,
+      select: { slug: true, title: true, image: true },
+    }) as any[]
+    relatedPosts = rawRelated.map((a) => ({
+      slug: a.slug,
+      title: a.title?.pl || '',
+      image: a.image ? (a.image.startsWith('http') ? a.image : getPublicUrl(a.image)) : null,
+    }))
+  } catch (e) {
+    console.error('Error fetching related posts:', e)
+  }
+
   return (
     <>
-      <BlogArticleClient article={resolvedArticle} />
+      <BlogArticleClient article={resolvedArticle} relatedPosts={relatedPosts} />
       
       {/* Article Schema */}
       {article.schema_markup ? (

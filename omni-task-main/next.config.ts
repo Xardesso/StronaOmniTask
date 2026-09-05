@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'storage.googleapis.com' },
+    ],
+  },
   async headers() {
     return [
       {
@@ -89,6 +94,69 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/przyszlosc-biura-automatyzacja-robotyzacja-ai',
         destination: '/blog/przyszlosc-biura-automatyzacja-rpa-ai-agenci',
+        statusCode: 301,
+      },
+      // Migracja slugów EN/UA z polskich na anglojęzyczne segmenty (audyt SEO
+      // 2026-09-02, sekcja 3 i plan działania #20). Blog i /faq zostają bez
+      // zmian - patrz komentarz przy INTL_PATH_MAP w src/lib/i18n.ts.
+      {
+        source: '/:locale(en|ua)/uslugi',
+        destination: '/:locale/services',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/uslugi/rpa',
+        destination: '/:locale/services/rpa',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/uslugi/automatyzacja-workflow',
+        destination: '/:locale/services/workflow-automation',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/uslugi/integracja-systemow',
+        destination: '/:locale/services/system-integration',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/uslugi/agenci-ai',
+        destination: '/:locale/services/ai-agents',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/uslugi/opieka-i-hosting',
+        destination: '/:locale/services/hosting-support',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/cennik',
+        destination: '/:locale/pricing',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/o-nas',
+        destination: '/:locale/about',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/kontakt',
+        destination: '/:locale/contact',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/zapytanie-ofertowe',
+        destination: '/:locale/request-quote',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/polityka-prywatnosci',
+        destination: '/:locale/privacy-policy',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(en|ua)/regulamin',
+        destination: '/:locale/terms',
         statusCode: 301,
       },
     ];

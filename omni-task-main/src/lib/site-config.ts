@@ -1,9 +1,9 @@
 // Centralne stałe konfiguracyjne serwisu — jedno miejsce do podmiany
 // linku do kalendarza, danych kontaktowych i flag funkcji.
 
-// TODO: podmienić na docelowy link Cal.com, gdy będzie dostępny
-// (np. przez zmienną środowiskową NEXT_PUBLIC_CALCOM_URL w .env.production).
-export const CALCOM_URL = process.env.NEXT_PUBLIC_CALCOM_URL || 'https://cal.com/omnitask/rozmowa'
+// Link do rezerwacji spotkania. Można nadpisać zmienną środowiskową
+// NEXT_PUBLIC_CALCOM_URL w .env.production bez zmiany kodu.
+export const CALCOM_URL = process.env.NEXT_PUBLIC_CALCOM_URL || 'https://calendar.app.google/Ni9zxrdYwt6WDQ437'
 
 // Włącza sekcję/stronę dofinansowania PARP/BUR. Musi pozostać `false`,
 // dopóki firma nie zostanie faktycznie wpisana do Bazy Usług Rozwojowych —

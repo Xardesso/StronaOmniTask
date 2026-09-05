@@ -23,6 +23,42 @@ export function isLocale(value: string): value is Locale {
   return (LOCALES as string[]).includes(value)
 }
 
+// Mapa "czystych" (polskich) ścieżek na anglojęzyczne segmenty używane w
+// wersjach EN i UA (audyt SEO 2026-09-02, sekcja 3: "adresy EN i UA używają
+// polskich slugów"). Ścieżki spoza tej mapy (np. /blog/[slug], /faq) używają
+// tego samego segmentu co PL - albo bo już są po angielsku, albo bo migracja
+// slugów blogowych jest odłożona na później (patrz audyt, plan działania #20).
+const INTL_PATH_MAP: Record<string, string> = {
+  '/uslugi': '/services',
+  '/uslugi/rpa': '/services/rpa',
+  '/uslugi/automatyzacja-workflow': '/services/workflow-automation',
+  '/uslugi/integracja-systemow': '/services/system-integration',
+  '/uslugi/agenci-ai': '/services/ai-agents',
+  '/uslugi/opieka-i-hosting': '/services/hosting-support',
+  '/cennik': '/pricing',
+  '/o-nas': '/about',
+  '/kontakt': '/contact',
+  '/zapytanie-ofertowe': '/request-quote',
+  '/polityka-prywatnosci': '/privacy-policy',
+  '/regulamin': '/terms',
+}
+
+const INTL_PATH_MAP_REVERSE: Record<string, string> = Object.fromEntries(
+  Object.entries(INTL_PATH_MAP).map(([pl, intl]) => [intl, pl])
+)
+
+// Tłumaczy "czystą" ścieżkę PL na segment używany w EN/UA (no-op, jeśli
+// ścieżka nie ma anglojęzycznego odpowiednika w mapie).
+function toIntlPath(cleanPath: string): string {
+  return INTL_PATH_MAP[cleanPath] || cleanPath
+}
+
+// Odwrotność toIntlPath - z segmentu EN/UA z powrotem na "czystą" ścieżkę PL,
+// która jest kanonicznym kluczem używanym w tłumaczeniach i metadanych.
+function fromIntlPath(intlPath: string): string {
+  return INTL_PATH_MAP_REVERSE[intlPath] || intlPath
+}
+
 // Wyznacza lokalizację na podstawie ścieżki URL.
 export function localeFromPathname(pathname: string): Locale {
   const seg = pathname.split('/')[1]
@@ -32,21 +68,25 @@ export function localeFromPathname(pathname: string): Locale {
   return DEFAULT_LOCALE
 }
 
-// Usuwa prefiks lokalizacji ze ścieżki, zwracając "czystą" ścieżkę PL.
+// Usuwa prefiks lokalizacji ze ścieżki i tłumaczy anglojęzyczne segmenty
+// EN/UA z powrotem na "czystą" ścieżkę PL (odwrotność localizePath).
 export function stripLocale(pathname: string): string {
   const seg = pathname.split('/')[1]
   if (seg && isLocale(seg) && PREFIXED_LOCALES.includes(seg)) {
     const rest = pathname.slice(seg.length + 1)
-    return rest === '' ? '/' : rest
+    const restPath = rest === '' ? '/' : rest
+    return fromIntlPath(restPath)
   }
   return pathname
 }
 
-// Buduje ścieżkę dla danej lokalizacji (PL bez prefiksu, pozostałe z prefiksem).
+// Buduje ścieżkę dla danej lokalizacji (PL bez prefiksu i z polskimi
+// segmentami, EN/UA z prefiksem i przetłumaczonymi segmentami z INTL_PATH_MAP).
 export function localizePath(pathname: string, locale: Locale): string {
   const clean = stripLocale(pathname)
   if (locale === DEFAULT_LOCALE) return clean
-  return clean === '/' ? `/${locale}` : `/${locale}${clean}`
+  const localized = toIntlPath(clean)
+  return localized === '/' ? `/${locale}` : `/${locale}${localized}`
 }
 
 // Buduje absolutny adres dla "czystej" ścieżki PL i danej lokalizacji.

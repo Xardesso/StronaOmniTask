@@ -223,7 +223,8 @@
     "no_articles": "No articles to display.",
     "published": "Published",
     "latest_title": "Latest from the blog",
-    "see_all": "See all posts"
+    "see_all": "See all posts",
+    "related_title": "You might also like"
   },
   "footer": {
     "description": "OmniTask – I automate repetitive processes so your team stops losing time on manual data entry. Fixed price, deployment in 2–4 weeks, ongoing care after launch.",
@@ -267,6 +268,9 @@
   "service_detail": {
     "cta_button": "Book a call",
     "faq_label": "Frequently asked questions",
+    "case_study_before": "Before",
+    "case_study_after": "After",
+    "case_study_result": "Result",
     "labels": {
       "rpa": "Task automation (RPA)",
       "workflow": "Workflow automation",
@@ -287,6 +291,12 @@
       "s1_title": "What task automation actually is",
       "s1_p1": "A software robot mimics what a person does today in your systems: logging in, clicking, copying data between apps, filling in forms, sending emails and generating reports - the same work, just without breaks or mistakes.",
       "s1_p2": "It doesn't replace people in work that requires judgment. It removes the repetitive, tedious tasks that don't develop anyone and quietly eat hours every day.",
+      "case_study": {
+        "title": "Debt collection agency, 12 employees",
+        "before": "Three people manually checked case status across five systems and copied the data into a reporting spreadsheet - 3 hours per person, per day.",
+        "after": "A software robot logs into each system, pulls the statuses and updates the report automatically every hour.",
+        "result": "9 hours of work recovered daily, and the report is always current instead of once a day."
+      },
       "benefits": [
         "Cuts process execution time by up to 80%",
         "Zero errors when copying data",
@@ -294,6 +304,12 @@
         "Typically pays back in 3–6 months",
         "Easy to add more processes over time",
         "Full log of every action performed"
+      ],
+      "nie_oplaca_title": "When RPA isn't worth it",
+      "nie_oplaca": [
+        "The process changes more often than once a month - the robot needs reprogramming every time the interface changes.",
+        "Volume is very low (a few operations a week) - the implementation cost won't pay back in a reasonable time.",
+        "The system the robot would run on already has an open API - integrating via API is cheaper and more stable than automating the interface."
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "Automating a single process starts at $1,475 (START package). I'll give you an exact quote after we talk through your process.",
@@ -315,6 +331,12 @@
       "s1_title": "What workflow automation is",
       "s1_p1": "Workflow automation is designing and implementing flows that connect different systems, apps and teams into one coherent, automated process. Instead of manually passing data between applications, your systems talk to each other automatically.",
       "s1_p2": "In practice, data entered once in one place ends up wherever it's needed - no copy-pasting, no email attachments, no \"has someone already done this?\".",
+      "case_study": {
+        "title": "Accounting office, 8 people",
+        "before": "Onboarding a new client meant manually setting up accounts in 4 systems (CRM, invoicing, drive, chat) - 40 minutes of office work per client.",
+        "after": "An onboarding form triggers an n8n scenario that creates the accounts and sends login details automatically.",
+        "result": "Client onboarding dropped from 40 minutes to 3 minutes of oversight."
+      },
       "benefits": [
         "Eliminates manual data handoffs between systems",
         "Cuts process completion time by 60–80%",
@@ -322,13 +344,21 @@
         "Automatic notifications and escalations",
         "Easy to extend as the company grows"
       ],
+      "nie_oplaca_title": "When workflow automation isn't worth it",
+      "nie_oplaca": [
+        "The process runs less than a few times a month - building the automation takes longer than it saves.",
+        "Every case needs a different, non-standard human judgment call - hard to encode into reliable rules.",
+        "The systems you need to connect have no API or webhooks, and the vendor has no plans to add them."
+      ],
       "cena_label": "How much does it cost?",
       "cena_text": "I price n8n implementation for a single workflow from $1,475, a package of 2-4 processes from $3,725. The final price depends on the number of integrations and rule complexity.",
       "faq_title": "Frequently asked questions about n8n implementation",
       "faq": [
         { "q": "How much does an n8n implementation cost?", "a": "The price of n8n implementation depends on the number of processes and integrations - a single workflow starts at $1,475. I'll give you an exact quote after we talk through your systems." },
         { "q": "How is n8n different from Zapier?", "a": "n8n is an open-source alternative to Zapier - it can be self-hosted, which lowers the cost at high volume and gives you full control over your data." },
-        { "q": "Do I need an n8n specialist, or can I build it myself?", "a": "Simple automations can be built on your own. I step in as an n8n consultant when a process spans several systems, needs error handling, or requires an integration with no ready-made connector." }
+        { "q": "Do I need an n8n specialist, or can I build it myself?", "a": "Simple automations can be built on your own. I step in as an n8n consultant when a process spans several systems, needs error handling, or requires an integration with no ready-made connector." },
+        { "q": "Can n8n be self-hosted?", "a": "Yes - it's one of n8n's main advantages over Zapier. I set up an instance on your server or in a secure EU cloud and handle maintenance, updates and monitoring as part of ongoing care." },
+        { "q": "Do you migrate automations from Zapier, Make or Power Automate?", "a": "Yes. I rebuild your existing scenarios in n8n step by step, test them against the same data as the original, and switch over only once the results match - no downtime for the process." }
       ]
     },
     "integration": {
@@ -342,12 +372,24 @@
       "s1_title": "Why system integration matters",
       "s1_p1": "5–50 person companies typically run a handful of applications: ERP, CRM, email, warehouse, sales platform. Without integration, someone manually moves data between them, which creates errors, delays and frustration.",
       "s1_p2": "I connect your systems through APIs, webhooks and dedicated middleware so data flows automatically, in real time - no more monthly export to a spreadsheet.",
+      "case_study": {
+        "title": "B2B wholesaler, 25 employees",
+        "before": "Orders from the B2B store reached the ERP once a day, manually, via a CSV file - pricing errors and stock mismatches followed.",
+        "after": "An API integration connects the store, ERP and warehouse in real time - an order reserves stock immediately.",
+        "result": "Zero pricing errors since launch, order fulfillment time cut from a day to a few minutes."
+      },
       "benefits": [
         "Eliminates manual re-entry of data",
         "Data stays current across every system",
         "Fewer errors and duplicates",
         "Faster flow of information and decisions",
         "One consistent customer view for the whole team"
+      ],
+      "nie_oplaca_title": "When system integration isn't worth it",
+      "nie_oplaca": [
+        "You're planning to replace the systems within the next few months anyway - the integration would become obsolete right after launch.",
+        "The data volume to sync is small enough that manual entry takes a few minutes a day.",
+        "One of the systems has no programmatic interface at all (API, file export, database) - integration would need a costly workaround."
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "A simple integration between two systems fits the START package from $1,475; multi-system integrations fall under the CORE package from $3,725.",
@@ -365,7 +407,19 @@
       "s1_title": "What an AI agent actually does",
       "s1_p1": "Unlike a plain RPA robot, an AI agent understands the content of a document or question rather than just clicking predefined spots. It can read an invoice in any format, answer a customer in natural language, or summarize a long document.",
       "s1_p2": "It doesn't replace the expert in your company. It takes the first pass at a large volume of data - documents, messages, questions - and only passes forward what actually needs a human decision.",
+      "case_study": {
+        "title": "Field service company, 15 employees",
+        "before": "Support staff manually read every complaint email, checked the job history and wrote a reply - 15 minutes per ticket.",
+        "after": "An AI agent reads the ticket, checks CRM history and drafts a ready reply for a human to approve.",
+        "result": "Ticket handling time dropped to 3 minutes, and the team handled twice the volume without hiring anyone."
+      },
       "benefits": [],
+      "nie_oplaca_title": "When an AI agent isn't worth it",
+      "nie_oplaca": [
+        "The data the agent would rely on is scattered and incomplete - the sources need cleaning up first.",
+        "Decisions require context that can't be captured in rules or examples - a genuinely unique judgment call every time.",
+        "The case volume is too low to justify the cost of building and maintaining the model."
+      ],
       "cena_label": "How much does it cost?",
       "cena_text": "A simple AI agent wired into one process fits the CORE package from $3,725; a full self-hosted deployment with its own knowledge base falls under the TRANSFORMACJA package from $7,250.",
       "faq_title": "",
@@ -405,12 +459,23 @@
       "technologie_title": "Environment",
       "technologie_p": "I usually run automations on my own self-hosted n8n server in the EU, GDPR-compliant, with regular backups.",
       "technologie_list": ["n8n", "Self-hosted", "GDPR", "Backup"],
+      "case_study": {
+        "title": "Logistics company, self-hosted n8n",
+        "before": "Automations ran on a server nobody monitored - a carrier integration failure went unnoticed for 3 days.",
+        "after": "Monitoring catches the error within minutes, the team gets notified, and the fix ships the same day.",
+        "result": "Time-to-detect dropped from days to minutes, zero lost orders from silent integration failures."
+      },
       "s3_title": "Benefits",
       "benefits": [
         "The automation keeps running despite changes in external systems",
         "A fast response instead of weeks of downtime",
         "Data and configuration kept safe with backups",
         "A clear, fixed monthly cost instead of unpredictable repairs"
+      ],
+      "nie_oplaca_title": "When ongoing care isn't worth it",
+      "nie_oplaca": [
+        "You already have someone in-house who checks automation logs daily and can fix issues.",
+        "The automation supports a process with no real business impact, where a multi-day outage wouldn't hurt anyone."
       ],
       "cena_label": "How much does it cost?",
       "cena_text": "Managed hosting from $100/mo, Standard care from $225/mo, Pro care (4h SLA) from $475/mo.",
@@ -730,5 +795,47 @@
         ] }
       ]
     }
+  },
+  "ksef_intl_page": {
+    "h1": "KSeF E-Invoicing for Foreign Companies in Poland",
+    "subtitle": "Poland's national e-invoicing system (KSeF) is now mandatory. If your company has a Polish VAT registration, branch or subsidiary, I connect your accounting system to KSeF and automate the invoice workflow around it.",
+    "service_type": "KSeF e-invoicing compliance for foreign entities",
+    "breadcrumb": "KSeF for foreign companies",
+    "who_title": "Who this is for",
+    "who": [
+      { "title": "Foreign parent companies with a Polish subsidiary or branch", "desc": "Your Polish entity issues and receives invoices under Polish law, whether or not the rest of the group operates there." },
+      { "title": "International groups centralizing finance operations", "desc": "You run invoicing and accounting from a shared services center outside Poland, and need one team to handle the Polish leg without hiring locally." },
+      { "title": "Companies running non-Polish accounting software", "desc": "SAP, NetSuite, Xero or anything else - KSeF doesn't care what you use internally, but it does require a bridge to its own API." }
+    ],
+    "requirements_title": "What KSeF compliance actually requires",
+    "requirements": [
+      "Every invoice issued to a Polish counterparty must be submitted in KSeF's fixed structured XML format (FA schema), not as a PDF or paper document.",
+      "Authentication happens via a qualified electronic signature or a NIP-based token - foreign companies need a Polish NIP to authenticate at all.",
+      "API sessions and request limits apply at volume - without monitoring, a session can silently drop mid-batch.",
+      "Invoices that still arrive by email or paper alongside KSeF need to be reconciled and deduplicated, not double-booked."
+    ],
+    "solutions_title": "What I do",
+    "solutions": [
+      "Connect KSeF's API directly to whatever accounting or ERP system your company already uses, without switching platforms.",
+      "Automate invoice submission and retrieval, so your finance team stops manually re-entering data into KSeF.",
+      "Handle deduplication between KSeF and any invoices still arriving through other channels.",
+      "Monitor API sessions and limits, with an alert before a batch fails instead of after."
+    ],
+    "case_study": {
+      "title": "German manufacturing group, Polish subsidiary",
+      "before": "The Polish subsidiary's invoices were manually re-entered into KSeF by a local bookkeeper, disconnected from the group's SAP system in Germany.",
+      "after": "Automation pushes invoices from SAP into KSeF's API directly and pulls incoming invoices back into the subsidiary's ledger.",
+      "result": "The local bookkeeper's manual KSeF workload dropped to occasional exception handling only."
+    },
+    "pricing_title": "Pricing",
+    "pricing_text": "The KSeF integration package (API connection, deduplication, monitoring) starts at $3,225. Ongoing support starts at $225/month. A typical implementation takes 2-4 weeks.",
+    "faq_title": "Frequently asked questions",
+    "faq": [
+      { "q": "Does my foreign company need to comply with KSeF?", "a": "If you have a Polish VAT registration, branch, or subsidiary issuing invoices to Polish counterparties, KSeF compliance applies to you the same way it applies to Polish companies." },
+      { "q": "Can KSeF connect to non-Polish accounting software?", "a": "Yes - KSeF exposes a REST API. I build the bridge between your existing system (SAP, NetSuite, Xero, or anything else) and KSeF, so you don't have to switch accounting platforms." },
+      { "q": "We already have a Polish bookkeeper handling this manually - is automation still worth it?", "a": "Automation doesn't replace your bookkeeper - it removes the repetitive re-entry work so they can focus on judgment calls and exceptions instead of retyping invoices." },
+      { "q": "Do you work remotely, or do you need to be on-site in Poland?", "a": "Everything I described here is done remotely - the API integration and monitoring don't require anyone on-site." }
+    ],
+    "cta": "Book a call about KSeF compliance"
   }
 }

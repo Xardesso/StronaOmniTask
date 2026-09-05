@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import { useState } from 'react'
@@ -455,7 +456,13 @@ export default function HomeClient({ articles = [] }: { articles?: any[] }) {
                 <Link key={article.id} href={`/blog/${article.slug}`} className="blog-card" title={article.title}>
                   <div className="blog-card__image">
                     {article.image ? (
-                      <img src={article.image} alt={article.image_alt || article.title} loading="lazy" />
+                      <Image
+                        src={article.image}
+                        alt={article.image_alt || article.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 380px"
+                        style={{ objectFit: 'cover' }}
+                      />
                     ) : (
                       <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, var(--color-primary), var(--color-primary-light))' }} />
                     )}

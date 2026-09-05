@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
 import { Plus_Jakarta_Sans, Rajdhani } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
@@ -7,13 +6,7 @@ import Footer from '@/components/Footer'
 import { LanguageProvider } from '@/i18n/context'
 import { CtaModalProvider } from '@/components/CtaModal'
 import { CookieConsentProvider } from '@/components/CookieConsent'
-import { buildHreflangAlternates, HREFLANG_MAP, DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n'
-import { prisma } from '@/lib/prisma'
-import { getPublicUrl } from '@/lib/gcs'
-
-// Renderujemy dynamicznie (SSR), aby ustawić poprawny <html lang> dla każdej
-// lokalizacji na podstawie nagłówka x-locale ustawianego w middleware.
-export const dynamic = 'force-dynamic'
+import { buildHreflangAlternates } from '@/lib/i18n'
 
 const bodyFont = Plus_Jakarta_Sans({
   subsets: ['latin', 'latin-ext'],
@@ -21,9 +14,13 @@ const bodyFont = Plus_Jakarta_Sans({
   display: 'swap',
 })
 
+// Rajdhani nie ma wagi 800 w Google Fonts (font-weight:800 w CSS i tak
+// renderuje się na 700). Waga 500 nigdy nie jest użyta z var(--font-heading)
+// w globals.css - zdjęcie jej zawęża liczbę preładowanych plików fontów
+// z 3 do 2 wag (audyt SEO 2026-09-02, sekcja 4) bez żadnej zmiany wizualnej.
 const headingFont = Rajdhani({
   subsets: ['latin', 'latin-ext'],
-  weight: ['500', '600', '700'],
+  weight: ['600', '700'],
   variable: '--font-heading',
   display: 'swap',
 })
@@ -93,34 +90,20 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const headerLocale = (await headers()).get('x-locale')
-  const locale: Locale = headerLocale && isLocale(headerLocale) ? headerLocale : DEFAULT_LOCALE
-
-  let footerPosts: { slug: string; title: string; image: string | null; date: string }[] = []
-  try {
-    const raw = await prisma.article.findMany({
-      where: { is_public: true },
-      orderBy: { created_at: 'desc' },
-      take: 2,
-      select: { slug: true, title: true, image: true, created_at: true, date: true },
-    }) as any[]
-    footerPosts = raw.map((a) => ({
-      slug: a.slug,
-      title: a.title?.[locale] || a.title?.pl || '',
-      image: a.image ? (a.image.startsWith('http') ? a.image : getPublicUrl(a.image)) : null,
-      date: (a.date || a.created_at).toISOString(),
-    }))
-  } catch (e) {
-    console.error('Error fetching footer posts:', e)
-  }
-
+  // Statyczne "pl" jako domyślny <html lang> - poprawiane natychmiast po
+  // hydratacji przez LanguageProvider (patrz i18n/context.tsx), które
+  // wyznacza właściwy język z URL. Dzięki temu ten layout (i strony pod nim,
+  // które same nie wymuszają dynamicznego renderowania) mogą być
+  // generowane statycznie/ISR zamiast per-request SSR - patrz audyt SEO
+  // 2026-09-02, sekcja 4 ("HTML z no-store"). Posty w stopce z tego samego
+  // powodu są teraz pobierane po stronie klienta w Footer.tsx, nie tutaj.
   return (
-    <html lang={HREFLANG_MAP[locale]} className={`${bodyFont.variable} ${headingFont.variable}`} data-scroll-behavior="smooth">
+    <html lang="pl" className={`${bodyFont.variable} ${headingFont.variable}`} data-scroll-behavior="smooth">
       <head>
         {/* Organization Schema */}
         <script
@@ -294,7 +277,7 @@ export default async function RootLayout({
             <CtaModalProvider>
               <Navbar />
               <main>{children}</main>
-              <Footer posts={footerPosts} />
+              <Footer />
             </CtaModalProvider>
           </CookieConsentProvider>
         </LanguageProvider>

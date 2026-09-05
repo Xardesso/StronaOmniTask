@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from './LocaleLink'
 import { useTranslation } from '@/i18n/context'
 import { CONTACT, FEATURE_REALIZACJE } from '@/lib/site-config'
@@ -13,9 +15,42 @@ interface FooterPost {
   date: string
 }
 
-export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
+// Pobierane po stronie klienta (nie w root layout), żeby ten mógł być
+// generowany statycznie/ISR zamiast SSR na każde żądanie (audyt SEO
+// 2026-09-02, sekcja 4). Reaguje na zmianę `locale` samo, więc nie jest już
+// potrzebny router.refresh() po zmianie języka w przełączniku.
+function useFooterPosts(locale: string): FooterPost[] {
+  const [posts, setPosts] = useState<FooterPost[]>([])
+
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/articles')
+      .then((res) => res.json())
+      .then((data: { articles?: any[] }) => {
+        if (cancelled || !data.articles) return
+        // /api/articles zwraca `image` jako już rozwiązany, pełny URL
+        // (serwer sam woła getPublicUrl) - tu tylko wybieramy tytuł po locale.
+        const top2 = data.articles.slice(0, 2).map((a) => ({
+          slug: a.slug,
+          title: a.title?.[locale] || a.title?.pl || '',
+          image: a.image || null,
+          date: a.date || a.created_at,
+        }))
+        setPosts(top2)
+      })
+      .catch(() => setPosts([]))
+    return () => {
+      cancelled = true
+    }
+  }, [locale])
+
+  return posts
+}
+
+export default function Footer() {
   const { t, locale } = useTranslation()
   const { openSettings } = useCookieConsent()
+  const posts = useFooterPosts(locale)
 
   return (
     <footer className="footer" id="main-footer">
@@ -46,6 +81,7 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
             <ul className="footer__links">
               <li><Link href="/uslugi/automatyzacja-workflow" className="footer__link" title={t('service_detail.labels.workflow')}>{t('service_detail.labels.workflow')}</Link></li>
               {locale === 'pl' && <li><Link href="/uslugi/ksef" className="footer__link" title={t('service_detail.labels.ksef')}>{t('service_detail.labels.ksef')}</Link></li>}
+              {locale === 'en' && <li><Link href="/en/services/ksef-invoicing-poland" className="footer__link" title="KSeF for foreign companies">KSeF for foreign companies</Link></li>}
               <li><Link href="/uslugi/integracja-systemow" className="footer__link" title={t('service_detail.labels.integration')}>{t('service_detail.labels.integration')}</Link></li>
               {locale === 'pl' && <li><Link href="/uslugi/szkolenia-i-doradztwo" className="footer__link" title={t('service_detail.labels.szkolenia')}>{t('service_detail.labels.szkolenia')}</Link></li>}
               <li><Link href="/uslugi/rpa" className="footer__link" title={t('service_detail.labels.rpa')}>{t('service_detail.labels.rpa')}</Link></li>
@@ -76,7 +112,7 @@ export default function Footer({ posts = [] }: { posts?: FooterPost[] }) {
                   <li key={post.slug}>
                     <Link href={`/blog/${post.slug}`} className="footer__post" title={post.title}>
                       <span className="footer__post-thumb">
-                        {post.image ? <img src={post.image} alt={post.title} loading="lazy" /> : null}
+                        {post.image ? <Image src={post.image} alt={post.title} width={56} height={56} /> : null}
                       </span>
                       <span>
                         <span className="footer__post-date">

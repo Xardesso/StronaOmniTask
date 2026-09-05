@@ -9,16 +9,20 @@ interface TitleDesc { title: string; desc: string }
 interface Faq { q: string; a: string }
 interface CaseStudy { title: string; before: string; after: string; result: string }
 
-export default function KsefContent() {
+// Strona wyłącznie dla EN (zagraniczne firmy działające w Polsce) - patrz
+// audyt SEO 2026-09-02, sekcja 7 ("Brak strony KSeF po angielsku"). Osobna
+// treść, nie tłumaczenie polskiej /uslugi/ksef, bo adresuje inny problem:
+// obowiązek KSeF dla podmiotów zagranicznych z polskim NIP, nie integrację
+// z polskim oprogramowaniem księgowym.
+export default function KsefIntlContent() {
   const { t, tRaw } = useTranslation()
-  const base = 'ksef_page'
+  const base = 'ksef_intl_page'
 
-  const problems = tRaw<TitleDesc[]>(`${base}.problems`) || []
+  const who = tRaw<TitleDesc[]>(`${base}.who`) || []
+  const requirements = tRaw<string[]>(`${base}.requirements`) || []
   const solutions = tRaw<string[]>(`${base}.solutions`) || []
   const faq = tRaw<Faq[]>(`${base}.faq`) || []
-  const nieOplaca = tRaw<string[]>(`${base}.nie_oplaca`) || []
-  const caseStudyRaw = tRaw<CaseStudy | string>(`${base}.case_study`)
-  const caseStudy = caseStudyRaw && typeof caseStudyRaw === 'object' ? caseStudyRaw : null
+  const caseStudy = tRaw<CaseStudy>(`${base}.case_study`)
 
   return (
     <>
@@ -33,26 +37,33 @@ export default function KsefContent() {
       <div className="service-detail-page">
         <div className="section__container">
           <div className="service-detail__content">
-            {problems.length > 0 && (
+            {who.length > 0 && (
               <section className="service-detail__section">
-                <h2>{t(`${base}.problems_title`)}</h2>
-                <div className="problem-grid">
-                  {problems.map((p, i) => (
-                    <div key={i} className="problem-card">
-                      <div className="problem-card__icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <circle cx="12" cy="12" r="10" />
-                          <line x1="12" y1="8" x2="12" y2="12" />
-                          <line x1="12" y1="16" x2="12.01" y2="16" />
-                        </svg>
+                <h2>{t(`${base}.who_title`)}</h2>
+                <div className="features-grid">
+                  {who.map((item, i) => (
+                    <div key={i} className="feature-card">
+                      <div className="feature-card__icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" /></svg>
                       </div>
                       <div>
-                        <h3 style={{ fontSize: '1rem', marginBottom: '0.4rem' }}>{p.title}</h3>
-                        <p>{p.desc}</p>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
+              </section>
+            )}
+
+            {requirements.length > 0 && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.requirements_title`)}</h2>
+                <ul className="service-detail__benefits">
+                  {requirements.map((r, i) => (
+                    <li key={i}>{r}</li>
+                  ))}
+                </ul>
               </section>
             )}
 
@@ -83,34 +94,6 @@ export default function KsefContent() {
                 <p className="case-study__result"><strong>{t('service_detail.case_study_result')}:</strong> {caseStudy.result}</p>
               </section>
             )}
-
-            {nieOplaca.length > 0 && (
-              <section className="service-detail__section">
-                <h2>{t(`${base}.nie_oplaca_title`)}</h2>
-                <ul className="service-detail__benefits service-detail__nie-oplaca">
-                  {nieOplaca.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            <section className="service-detail__section">
-              <h2>{t(`${base}.effects_title`)}</h2>
-              <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', marginTop: '1.5rem' }}>
-                <div className="stat-card" style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)' }}>
-                  <span className="stat-card__value" style={{ color: 'var(--color-accent-dark)' }}>{t(`${base}.effect1_value`)}</span>
-                  <span className="stat-card__label" style={{ color: 'var(--color-text-light)' }}>{t(`${base}.effect1_label`)}</span>
-                </div>
-                <div className="stat-card" style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border)' }}>
-                  <span className="stat-card__value" style={{ color: 'var(--color-accent-dark)' }}>{t(`${base}.effect2_value`)}</span>
-                  <span className="stat-card__label" style={{ color: 'var(--color-text-light)' }}>{t(`${base}.effect2_label`)}</span>
-                </div>
-              </div>
-              <p style={{ fontSize: '0.85rem', color: 'var(--color-text-light)', fontStyle: 'italic', marginTop: '1.25rem' }}>
-                {t(`${base}.effects_disclaimer`)}
-              </p>
-            </section>
 
             <section className="service-detail__section">
               <h2>{t(`${base}.pricing_title`)}</h2>
@@ -155,16 +138,16 @@ export default function KsefContent() {
             serviceType: t(`${base}.service_type`),
             provider: { '@type': 'Organization', name: 'OmniTask', '@id': `${SITE_URL}/#organization` },
             areaServed: { '@type': 'Country', name: 'PL' },
-            url: `${SITE_URL}/uslugi/ksef`,
+            url: `${SITE_URL}/en/services/ksef-invoicing-poland`,
             offers: {
               '@type': 'Offer',
-              url: `${SITE_URL}/uslugi/ksef`,
-              priceCurrency: 'PLN',
+              url: `${SITE_URL}/en/services/ksef-invoicing-poland`,
+              priceCurrency: 'USD',
               priceSpecification: {
                 '@type': 'UnitPriceSpecification',
-                price: 12900,
-                priceCurrency: 'PLN',
-                minPrice: 12900,
+                price: 3225,
+                priceCurrency: 'USD',
+                minPrice: 3225,
               },
             },
           }),

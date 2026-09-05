@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import { localeFromPathname, localizePath, isLocale, PREFIXED_LOCALES, type Locale } from '@/lib/i18n'
+import { localizePath, isLocale, PREFIXED_LOCALES, type Locale } from '@/lib/i18n'
 
 const LOCALE_COOKIE = 'omnitask_locale'
 const LOCALE_COOKIE_MAX_AGE = 60 * 60 * 24 * 365 // 1 rok
@@ -24,16 +24,21 @@ function detectLocaleFromHeader(header: string | null): Locale | null {
   return null
 }
 
-// Przekazujemy aktualną lokalizację (wyznaczoną z URL) do warstwy serwerowej
-// przez nagłówek żądania, aby root layout mógł ustawić poprawny <html lang>
-// już w SSR — dla PL, EN i UA. Dodatkowo: przy pierwszej wizycie (brak ciasteczka
-// z zapamiętanym wyborem) i braku jawnego prefiksu w adresie, dopasowujemy język
-// do przeglądarki odwiedzającego (Accept-Language) i przekierowujemy raz —
-// kolejne wizyty i ręczna zmiana języka w przełączniku respektują ciasteczko,
-// więc nie nadpisujemy świadomego wyboru użytkownika.
+// Przy pierwszej wizycie (brak ciasteczka z zapamiętanym wyborem) i braku
+// jawnego prefiksu w adresie, dopasowujemy język do przeglądarki odwiedzającego
+// (Accept-Language) i przekierowujemy raz, zapamiętując wybór w ciasteczku —
+// kolejne wizyty i ręczna zmiana języka w przełączniku (patrz i18n/context.tsx)
+// respektują ten wybór.
+//
+// Ciasteczko ustawiamy WYŁĄCZNIE w gałęzi przekierowania. Wcześniej ustawiane
+// było też przy każdym żądaniu bez ciasteczka (nawet gdy nie było przekierowania,
+// np. bezpośrednie wejście na /en/...) - to psuło cache'owalność odpowiedzi HTML
+// (Set-Cookie traktowany jest jako sygnał spersonalizowanej odpowiedzi przez
+// przeglądarki, CDN i same audyty SEO). Locale jest i tak w pełni wyznaczane
+// z URL (localeFromPathname) po stronie każdej strony, więc ciasteczko nie jest
+// do tego potrzebne - służy tylko do zapamiętania świadomego wyboru języka.
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  const pathLocale = localeFromPathname(pathname)
   const hasExplicitPrefix = PREFIXED_LOCALES.some((l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`))
   const cookieValue = request.cookies.get(LOCALE_COOKIE)?.value
   const cookieLocale = cookieValue && isLocale(cookieValue) ? cookieValue : null
@@ -49,13 +54,7 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  const requestHeaders = new Headers(request.headers)
-  requestHeaders.set('x-locale', pathLocale)
-  const response = NextResponse.next({ request: { headers: requestHeaders } })
-  if (!cookieLocale) {
-    response.cookies.set(LOCALE_COOKIE, pathLocale, { maxAge: LOCALE_COOKIE_MAX_AGE, path: '/' })
-  }
-  return response
+  return NextResponse.next()
 }
 
 export const config = {

@@ -234,7 +234,8 @@
     "no_articles": "Brak artykułów do wyświetlenia.",
     "published": "Opublikowano",
     "latest_title": "Najnowsze na blogu",
-    "see_all": "Zobacz wszystkie wpisy"
+    "see_all": "Zobacz wszystkie wpisy",
+    "related_title": "Zobacz też"
   },
   "footer": {
     "description": "OmniTask – automatyzuję powtarzalne procesy w firmach, żeby zespół przestał tracić czas na ręczne przepisywanie danych. Stała cena, wdrożenie w 2–4 tygodnie, opieka po uruchomieniu.",
@@ -278,6 +279,9 @@
   "service_detail": {
     "cta_button": "Umów rozmowę",
     "faq_label": "Najczęściej zadawane pytania",
+    "case_study_before": "Przed",
+    "case_study_after": "Po",
+    "case_study_result": "Efekt",
     "labels": {
       "rpa": "Automatyzacja zadań (RPA)",
       "workflow": "Automatyzacja workflow",
@@ -322,6 +326,12 @@
       "technologie_title": "Technologie",
       "technologie_p": "Do automatyzacji na poziomie danych i interfejsu wykorzystuję n8n, Make oraz - tam gdzie potrzeba większej precyzji - dedykowane skrypty. Dobór narzędzia zależy od Waszych systemów, nie od mojej wygody.",
       "technologie_list": ["n8n", "Make", "Python", "API"],
+      "case_study": {
+        "title": "Firma windykacyjna, 12 pracowników",
+        "before": "Trzy osoby ręcznie sprawdzały status spraw w pięciu systemach i przepisywały dane do arkusza raportowego - 3 godziny dziennie na osobę.",
+        "after": "Robot software'owy loguje się do każdego systemu, pobiera statusy i aktualizuje raport automatycznie co godzinę.",
+        "result": "9 godzin pracy dziennie odzyskane, raport zawsze aktualny zamiast raz dziennie."
+      },
       "s3_title": "Korzyści",
       "benefits": [
         "Redukcja czasu wykonania procesu nawet o 80%",
@@ -330,6 +340,12 @@
         "Zwrot z inwestycji zwykle w 3–6 miesięcy",
         "Łatwe dodawanie kolejnych procesów w miarę potrzeb",
         "Pełny log każdej wykonanej operacji"
+      ],
+      "nie_oplaca_title": "Kiedy RPA się nie opłaca",
+      "nie_oplaca": [
+        "Proces zmienia się częściej niż raz w miesiącu - robota trzeba przeprogramowywać przy każdej zmianie interfejsu.",
+        "Wolumen jest bardzo mały (kilka operacji tygodniowo) - koszt wdrożenia nie zwróci się w rozsądnym czasie.",
+        "System, na którym ma działać robot, ma już otwarte API - integracja przez API jest tańsza i stabilniejsza niż robotyzacja interfejsu."
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Automatyzacja jednego procesu zaczyna się od 5 900 zł (pakiet START). Dokładną wycenę podaję po rozmowie o Waszym procesie.",
@@ -363,7 +379,8 @@
         { "title": "Automatyzacja onboardingu", "desc": "Nowy pracownik → automatyczne tworzenie kont, dostępów i wysyłka dokumentów, zamiast 2–3 godzin ręcznej pracy działu HR." },
         { "title": "Obsługa leadów", "desc": "Formularz kontaktowy → CRM → powiadomienie handlowca → automatyczny follow-up e-mail, bez pół dnia oczekiwania klienta." },
         { "title": "Procesy zatwierdzania", "desc": "Automatyczny routing wniosków do właściwej osoby, z eskalacją, jeśli nikt nie zareaguje w ustalonym czasie." },
-        { "title": "Synchronizacja danych", "desc": "Automatyczna synchronizacja klientów i zamówień między ERP, CRM i systemem magazynowym w czasie rzeczywistym." }
+        { "title": "Synchronizacja danych", "desc": "Automatyczna synchronizacja klientów i zamówień między ERP, CRM i systemem magazynowym w czasie rzeczywistym." },
+        { "title": "Migracja z Zapier lub Make do n8n", "desc": "Rosnąca liczba operacji w Zapier czy Make potrafi wywindować miesięczny rachunek o rząd wielkości. Przenoszę istniejące automatyzacje do n8n, gdzie płacicie za serwer, nie za liczbę zadań." }
       ],
       "wdrozenie_title": "Jak wygląda wdrożenie",
       "wdrozenie": [
@@ -375,6 +392,12 @@
       "technologie_title": "Technologie",
       "technologie_p": "Pracuję głównie na n8n - open-source'owej, elastycznej alternatywie dla Zapier - oraz Make.com, budując też niestandardowe integracje przez API tam, gdzie gotowy konektor nie wystarcza. Jako n8n specjalista dobieram narzędzie do Waszych systemów, nie na odwrót.",
       "technologie_list": ["n8n", "Make", "Webhooks", "API"],
+      "case_study": {
+        "title": "Biuro księgowe, 8 osób",
+        "before": "Nowy klient = ręczne zakładanie konta w 4 systemach (CRM, fakturowanie, dysk, komunikator) - 40 minut biurowej pracy na klienta.",
+        "after": "Formularz onboardingowy uruchamia scenariusz n8n, który zakłada konta i wysyła dane dostępowe automatycznie.",
+        "result": "Onboarding klienta spadł z 40 minut do 3 minut nadzoru."
+      },
       "s3_title": "Korzyści",
       "benefits": [
         "Eliminacja ręcznego przekazywania danych między systemami",
@@ -383,13 +406,21 @@
         "Automatyczne powiadomienia i eskalacje",
         "Łatwa modyfikacja i rozbudowa przepływów w miarę wzrostu firmy"
       ],
+      "nie_oplaca_title": "Kiedy automatyzacja workflow się nie opłaca",
+      "nie_oplaca": [
+        "Proces wykonuje się rzadziej niż kilka razy w miesiącu - czas budowy automatyzacji przewyższy oszczędność.",
+        "Każdy przypadek wymaga innej, niestandardowej decyzji człowieka - trudno to sensownie zautomatyzować regułami.",
+        "Systemy, które trzeba połączyć, nie mają API ani webhooków, a dostawca nie planuje ich dodać."
+      ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Wdrożenie n8n dla pojedynczego przepływu pracy wyceniam od 5 900 zł, pakiet 2–4 procesów od 14 900 zł. Ostateczna cena wdrożenia n8n zależy od liczby integracji i złożoności reguł.",
       "faq_title": "Najczęściej zadawane pytania o wdrożenie n8n",
       "faq": [
         { "q": "Ile kosztuje wdrożenie n8n w firmie?", "a": "Cena wdrożenia n8n zależy od liczby procesów i integracji - pojedynczy przepływ pracy zaczyna się od 5 900 zł. Dokładną wycenę podaję po rozmowie o Waszych systemach." },
         { "q": "Czym n8n różni się od Zapier?", "a": "n8n to open-source'owa alternatywa dla Zapier - można go hostować samodzielnie (self-hosted), co obniża koszt przy dużej liczbie operacji i daje pełną kontrolę nad danymi." },
-        { "q": "Czy potrzebuję n8n specjalisty, czy da się to zrobić samemu?", "a": "Proste automatyzacje da się złożyć samodzielnie. Jako n8n konsultant wchodzę do gry, gdy proces obejmuje kilka systemów, wymaga obsługi błędów albo integracji bez gotowego konektora." }
+        { "q": "Czy potrzebuję n8n specjalisty, czy da się to zrobić samemu?", "a": "Proste automatyzacje da się złożyć samodzielnie. Jako n8n konsultant wchodzę do gry, gdy proces obejmuje kilka systemów, wymaga obsługi błędów albo integracji bez gotowego konektora." },
+        { "q": "Czy n8n można hostować samodzielnie (self-hosted)?", "a": "Tak - to jedna z głównych przewag n8n nad Zapier. Stawiam instancję na Waszym serwerze lub w bezpiecznej chmurze w UE i biorę na siebie utrzymanie, aktualizacje i monitoring w ramach opieki nad automatyzacją." },
+        { "q": "Przenosicie automatyzacje z Zapier, Make albo Power Automate?", "a": "Tak. Odtwarzam istniejące scenariusze w n8n krok po kroku, sprawdzam je na tych samych danych co oryginał i przełączam dopiero, gdy wyniki się zgadzają - bez przerwy w działaniu procesu." }
       ]
     },
     "integration": {
@@ -428,6 +459,12 @@
       "technologie_title": "Technologie",
       "technologie_p": "W zależności od systemów pracuję na ich natywnym API, webhookach, ETL oraz platformach integracyjnych n8n i Make.",
       "technologie_list": ["API", "ETL", "n8n", "Make"],
+      "case_study": {
+        "title": "Hurtownia B2B, 25 pracowników",
+        "before": "Zamówienia z sklepu B2B trafiały do ERP raz dziennie, ręcznie, z pliku CSV - zdarzały się błędy w cenach i brakach magazynowych.",
+        "after": "Integracja API łączy sklep, ERP i magazyn w czasie rzeczywistym - zamówienie rezerwuje towar od razu.",
+        "result": "Zero błędów cenowych od wdrożenia, czas realizacji zamówienia skrócony z 1 dnia do kilku minut."
+      },
       "s3_title": "Korzyści",
       "benefits": [
         "Eliminacja ręcznego przepisywania danych",
@@ -435,6 +472,12 @@
         "Redukcja błędów i duplikatów",
         "Szybszy przepływ informacji i decyzji",
         "Jeden spójny widok klienta dla całego zespołu"
+      ],
+      "nie_oplaca_title": "Kiedy integracja systemów się nie opłaca",
+      "nie_oplaca": [
+        "Systemy i tak planujecie zastąpić w ciągu najbliższych miesięcy - integracja przestanie być potrzebna zaraz po wdrożeniu.",
+        "Wolumen danych do synchronizacji jest tak mały, że ręczne wprowadzanie zajmuje kilka minut dziennie.",
+        "Jeden z systemów nie ma żadnego interfejsu programistycznego (API, plik, baza) - integracja wymagałaby kosztownego obejścia."
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Prosta integracja dwóch systemów mieści się w pakiecie START od 5 900 zł, integracje wielosystemowe w pakiecie CORE od 14 900 zł.",
@@ -479,8 +522,20 @@
       "technologie_title": "Technologie",
       "technologie_p": "Buduję agentów w oparciu o modele językowe (m.in. rodziny GPT i Claude) osadzone w Waszym przepływie pracy przez n8n lub dedykowaną integrację API.",
       "technologie_list": ["LLM API", "n8n", "Baza wiedzy", "RAG"],
+      "case_study": {
+        "title": "Firma serwisowa, 15 pracowników",
+        "before": "Dział obsługi klienta ręcznie czytał każdy mail z reklamacją, sprawdzał historię zlecenia i pisał odpowiedź - 15 minut na zgłoszenie.",
+        "after": "Agent AI czyta zgłoszenie, sprawdza historię w CRM i przygotowuje gotową odpowiedź do akceptacji człowieka.",
+        "result": "Czas obsługi zgłoszenia spadł do 3 minut, dział obsłużył dwa razy więcej zgłoszeń bez zatrudniania nikogo."
+      },
       "s3_title": "",
       "benefits": [],
+      "nie_oplaca_title": "Kiedy agent AI się nie opłaca",
+      "nie_oplaca": [
+        "Dane, na których miałby pracować agent, są rozproszone i niekompletne - najpierw trzeba uporządkować źródła.",
+        "Decyzje wymagają kontekstu, którego nie da się opisać regułami ani przykładami - unikalna ocena sytuacji za każdym razem.",
+        "Liczba przypadków jest zbyt mała, żeby uzasadnić koszt wdrożenia i utrzymania modelu."
+      ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Prosty agent AI wpięty w jeden proces mieści się w pakiecie CORE od 14 900 zł, pełne wdrożenie z bazą wiedzy self-hosted - w pakiecie TRANSFORMACJA od 29 000 zł.",
       "faq_title": "Najczęściej zadawane pytania o agentów AI",
@@ -525,12 +580,23 @@
       "technologie_title": "Forma szkolenia",
       "technologie_p": "Szkolenie prowadzę stacjonarnie lub online, w formie warsztatu na Waszych realnych procesach - zgodnie z zakresem zarejestrowanym w Bazie Usług Rozwojowych.",
       "technologie_list": ["BUR", "Warsztat", "Materiały szkoleniowe"],
+      "case_study": {
+        "title": "Zespół 10-osobowy, biuro rachunkowe",
+        "before": "Zespół wiedział, że \"coś trzeba zautomatyzować\", ale nikt nie potrafił wskazać, od czego zacząć ani ile to będzie kosztować.",
+        "after": "Warsztat z audytem procesów pokazał 6 konkretnych kandydatów do automatyzacji z szacowanym zwrotem czasu dla każdego.",
+        "result": "Zespół wyszedł z warsztatu z gotową listą priorytetów zamiast domysłów."
+      },
       "s3_title": "Korzyści",
       "benefits": [
         "Zespół samodzielnie rozpoznaje procesy warte automatyzacji",
         "Możliwość dofinansowania do 83% kosztu",
         "Zajęcia na Waszych realnych przykładach, nie teorii",
         "Doradztwo przy planowaniu kolejnych wdrożeń"
+      ],
+      "nie_oplaca_title": "Kiedy szkolenie się nie opłaca",
+      "nie_oplaca": [
+        "Firma już ma jasno zmapowane procesy i wie dokładnie, co i w jakiej kolejności automatyzować.",
+        "W zespole nikt nie będzie później korzystał z wiedzy ze szkolenia, bo cała automatyzacja ma być w pełni zlecona na zewnątrz."
       ],
       "cena_label": "Ile to kosztuje?",
       "cena_text": "Cena zależy od zakresu i liczby uczestników - sprawdzam ją razem z kwalifikowalnością do dofinansowania. Szczegóły na stronie /dofinansowanie.",
@@ -618,6 +684,18 @@
       "Automatyczne powiązanie faktury z dokumentem przyjęcia magazynowego.",
       "Przypisanie wydatku do osoby i budżetu od razu przy wpłynięciu faktury.",
       "Jeden punkt wejścia na skany od kontrahentów, żeby nie omijały głównego procesu."
+    ],
+    "case_study": {
+      "title": "Producent, 30 pracowników",
+      "before": "Księgowa ręcznie pobierała faktury z KSeF, sprawdzała duplikaty i wprowadzała je do systemu ERP - 2 godziny dziennie.",
+      "after": "Automatyzacja pobiera faktury z API KSeF, sprawdza duplikaty i księguje je bezpośrednio w Comarch Optima.",
+      "result": "2 godziny dziennie odzyskane, zero przeoczonych duplikatów faktur."
+    },
+    "nie_oplaca_title": "Kiedy automatyzacja KSeF się nie opłaca",
+    "nie_oplaca": [
+      "Firma wystawia i odbiera mniej niż kilkanaście faktur miesięcznie - ręczna obsługa zajmuje mniej czasu niż wdrożenie.",
+      "System księgowy nie ma żadnego API ani importu - integracja wymaga obejścia, które podnosi koszt i ryzyko.",
+      "Firma i tak planuje zmianę systemu ERP w najbliższych miesiącach - lepiej poczekać i zintegrować nowy system od razu."
     ],
     "effects_title": "Jakich efektów można się spodziewać",
     "effects_disclaimer": "Poniższe dane to widełki deklarowane przez dostawców oprogramowania księgowego dla automatyzacji obiegu faktur - nie są to nasze własne statystyki z konkretnych wdrożeń.",
@@ -804,24 +882,24 @@
     "tech_items": ["n8n", "Make", "KSeF API", "Modele językowe (LLM)", "Python"]
   },
   "meta": {
-    "uslugi": { "title": "Automatyzacja procesów w firmie – n8n, KSeF, RPA, integracje i agenci AI | OmniTask", "description": "Odzyskaj 10–20 godzin miesięcznie: automatyzuję workflow, faktury KSeF, integracje systemów i buduję agentów AI. Wdrożenie w 2–4 tygodnie, stała cena, bez niespodzianek." },
-    "rpa": { "title": "Robotyzacja procesów RPA dla firm – robot software'owy od 5 900 zł | OmniTask", "description": "Twój zespół przestaje klikać to samo po dziesięć razy dziennie. Programowy robot przejmuje powtarzalne zadania w 1–2 tygodnie. Sprawdź, czy Twój proces się do tego nadaje." },
-    "workflow": { "title": "Automatyzacja workflow w n8n dla firm – wdrożenie i integracje | OmniTask", "description": "Koniec z kopiowaniem danych między systemami i zgadywaniem, kto co już zrobił. Wdrażam automatyzacje w n8n, które łączą Wasze narzędzia w jeden przepływ. Od 5 900 zł." },
-    "integration": { "title": "Integracja systemów ERP, CRM, Comarch Optima i Baselinker | OmniTask", "description": "Sprzedaż i księgowość w końcu widzą te same liczby. Łączę ERP, CRM, Comarch Optima, Subiekt GT, Baselinker, wFirma i Fakturownię - bez comiesięcznego eksportu do Excela." },
-    "ai": { "title": "Agenci AI dla firm – automatyzacja obsługi klienta i dokumentów | OmniTask", "description": "Agent AI czyta faktury, odpowiada klientom i pilnuje danych, zanim zdążysz o to poprosić. Wdrażam sztuczną inteligencję w firmie bez budowania działu IT." },
-    "ksef": { "title": "Automatyzacja faktur KSeF – integracja z Comarch i Symfonią | OmniTask", "description": "Koniec z ręcznym pilnowaniem duplikatów faktur i limitów API KSeF. Automatyzuję obieg dokumentów i integrację z Comarch Optima, Symfonią i wFirma. Wdrożenie od 12 900 zł." },
-    "szkolenia": { "title": "Szkolenia z automatyzacji procesów z dofinansowaniem PARP do 83% | OmniTask", "description": "Nauczę Wasz zespół rozpoznawać, co faktycznie warto zautomatyzować - z dofinansowaniem pokrywającym nawet 83% kosztu. Wychodzicie z gotową listą procesów do wdrożenia." },
-    "opieka": { "title": "Hosting n8n i opieka nad automatyzacją self-hosted, zgodnie z RODO | OmniTask", "description": "Automatyzacja, której nikt nie pilnuje, po cichu się psuje. Monitoruję, naprawiam i utrzymuję serwer n8n w UE - reakcja do 48h lub 4h w wariancie Pro. Już od 390 zł/mc." },
-    "dofinansowanie": { "title": "Dofinansowanie na automatyzację i szkolenia AI z PARP i BUR | OmniTask", "description": "Nawet 81 000 zł na szkolenia i doradztwo z automatyzacji, zanim zapłacisz z własnej kieszeni. Usługa zarejestrowana w Bazie Usług Rozwojowych. Sprawdź, czy się kwalifikujesz." },
-    "cennik": { "title": "Ile kosztuje automatyzacja procesów w firmie? Cennik i kalkulator ROI | OmniTask", "description": "Ceny podane wprost, bez „zapytaj o wycenę”: wdrożenie od 5 900 zł, pakiet CORE 14 900 zł, opieka od 390 zł/mc. Policz kalkulatorem, ile realnie zaoszczędzisz." },
-    "faq": { "title": "FAQ – najczęstsze pytania o automatyzację procesów i ceny | OmniTask", "description": "Ile to trwa, ile kosztuje i czy trzeba znać się na n8n albo RPA? Odpowiadam wprost na pytania, które najczęściej słyszę przed pierwszą rozmową." },
-    "about": { "title": "O mnie – Marcin Łętowski, automatyzacja procesów w n8n dla firm | OmniTask", "description": "Sam prowadziłem biuro nieruchomości, więc znam ten chaos od środka. Dziś automatyzuję procesy w firmach 5–50 osób - jedna osoba, od rozmowy po wdrożenie." },
-    "contact": { "title": "Kontakt – umów bezpłatną rozmowę o automatyzacji procesów | OmniTask", "description": "Napisz, zadzwoń albo od razu zarezerwuj termin w kalendarzu. 30 minut rozmowy wystarczy, żeby wiedzieć, czy w Waszym procesie jest coś do zautomatyzowania." },
-    "quote": { "title": "Bezpłatna wycena automatyzacji procesów w 24 godziny | OmniTask", "description": "Opisz proces, który zjada Wam czas - ile osób go wykonuje, ile trwa, jakich systemów używacie. Odpowiem z konkretną wyceną w ciągu 24 godzin, bez zobowiązań." },
-    "blog": { "title": "Blog o automatyzacji procesów, KSeF, n8n i dofinansowaniach PARP | OmniTask", "description": "Praktyczna wiedza bez lania wody: wdrożenia n8n, obsługa KSeF, dofinansowania i realne przykłady automatyzacji z małych i średnich firm." },
-    "home": { "title": "Automatyzacja procesów w firmie – stała cena, wdrożenie w 2–4 tygodnie | OmniTask", "description": "Twoi ludzie przestają przepisywać dane między systemami. Automatyzuję procesy dla małych firm: n8n, KSeF, integracje, RPA. Wdrożenie 2–4 tygodnie, do 83% dofinansowania." },
-    "privacy": { "title": "Polityka prywatności OmniTask – ochrona danych osobowych (RODO)", "description": "Jak przetwarzamy Twoje dane, jakie masz prawa i skąd wziąć zgodę na cookies - wszystko w jednym miejscu, napisane po ludzku, zgodnie z RODO." },
-    "terms": { "title": "Regulamin OmniTask.pl – zasady świadczenia usług drogą elektroniczną", "description": "Zasady korzystania z serwisu, dane usługodawcy i warunki świadczenia usług elektronicznych - jasno spisane, zgodnie z przepisami." }
+    "uslugi": { "title": "Usługi automatyzacji procesów dla firm | OmniTask", "description": "Odzyskaj 10–20 godzin miesięcznie: automatyzuję workflow, faktury KSeF, integracje systemów i agentów AI. Wdrożenie w 2–4 tygodnie, stała cena." },
+    "rpa": { "title": "Robotyzacja procesów RPA dla firm | OmniTask", "description": "Zespół przestaje klikać to samo po dziesięć razy dziennie. Programowy robot przejmuje powtarzalne zadania w 1–2 tygodnie. Sprawdź, czy Twój proces się nadaje." },
+    "workflow": { "title": "Automatyzacja workflow w n8n dla firm | OmniTask", "description": "Koniec z kopiowaniem danych między systemami i zgadywaniem, kto co zrobił. Wdrażam automatyzacje w n8n, które łączą Wasze narzędzia w jeden przepływ." },
+    "integration": { "title": "Integracja systemów ERP, CRM i Comarch Optima | OmniTask", "description": "Sprzedaż i księgowość w końcu widzą te same liczby. Łączę ERP, CRM, Comarch Optima, Baselinker, wFirma i Fakturownię - bez comiesięcznego eksportu do Excela." },
+    "ai": { "title": "Agenci AI dla firm – automatyzacja obsługi | OmniTask", "description": "Agent AI czyta faktury, odpowiada klientom i pilnuje danych, zanim zdążysz o to poprosić. Wdrażam sztuczną inteligencję w firmie bez budowania działu IT." },
+    "ksef": { "title": "Automatyzacja faktur KSeF – integracja z Comarch | OmniTask", "description": "Koniec z ręcznym pilnowaniem duplikatów faktur i limitów API KSeF. Automatyzuję obieg dokumentów i integrację z Comarch, Symfonią i wFirma." },
+    "szkolenia": { "title": "Szkolenia z automatyzacji z dofinansowaniem PARP | OmniTask", "description": "Nauczę Wasz zespół rozpoznawać, co warto zautomatyzować - z dofinansowaniem pokrywającym nawet 83% kosztu. Wychodzicie z gotową listą procesów do wdrożenia." },
+    "opieka": { "title": "Hosting n8n i opieka nad automatyzacją | OmniTask", "description": "Automatyzacja, której nikt nie pilnuje, po cichu się psuje. Monitoruję i utrzymuję serwer n8n w UE - reakcja do 48h lub 4h w wariancie Pro. Od 390 zł/mc." },
+    "dofinansowanie": { "title": "Dofinansowanie na automatyzację z PARP i BUR | OmniTask", "description": "Nawet 81 000 zł na szkolenia i doradztwo z automatyzacji, zanim zapłacisz z własnej kieszeni. Usługa zarejestrowana w Bazie Usług Rozwojowych." },
+    "cennik": { "title": "Cennik automatyzacji procesów i kalkulator ROI | OmniTask", "description": "Ceny podane wprost, bez „zapytaj o wycenę”: wdrożenie od 5 900 zł, pakiet CORE 14 900 zł, opieka od 390 zł/mc. Policz kalkulatorem, ile zaoszczędzisz." },
+    "faq": { "title": "FAQ – pytania o automatyzację procesów i ceny | OmniTask", "description": "Ile to trwa, ile kosztuje i czy trzeba znać się na n8n albo RPA? Odpowiadam wprost na pytania, które najczęściej słyszę przed pierwszą rozmową." },
+    "about": { "title": "O mnie – Marcin Łętowski, automatyzacja procesów | OmniTask", "description": "Sam prowadziłem biuro nieruchomości, więc znam ten chaos od środka. Dziś automatyzuję procesy w firmach 5–50 osób - od rozmowy po wdrożenie." },
+    "contact": { "title": "Kontakt – bezpłatna rozmowa o automatyzacji | OmniTask", "description": "Napisz, zadzwoń albo zarezerwuj termin w kalendarzu. 30 minut rozmowy wystarczy, żeby wiedzieć, czy w Waszym procesie jest coś do zautomatyzowania." },
+    "quote": { "title": "Bezpłatna wycena automatyzacji w 24 godziny | OmniTask", "description": "Opisz proces, który zjada Wam czas - ile osób go wykonuje, ile trwa, jakich systemów używacie. Odpowiem z konkretną wyceną w ciągu 24 godzin." },
+    "blog": { "title": "Blog o automatyzacji, KSeF i dofinansowaniach | OmniTask", "description": "Praktyczna wiedza bez lania wody: wdrożenia n8n, obsługa KSeF, dofinansowania i realne przykłady automatyzacji z małych i średnich firm." },
+    "home": { "title": "Automatyzacja procesów w firmie – stała cena | OmniTask", "description": "Twoi ludzie przestają przepisywać dane między systemami. Automatyzuję procesy dla małych firm: n8n, KSeF, integracje, RPA. Do 83% dofinansowania." },
+    "privacy": { "title": "Polityka prywatności OmniTask – ochrona danych", "description": "Jak przetwarzamy Twoje dane, jakie masz prawa i skąd wziąć zgodę na cookies - wszystko w jednym miejscu, napisane po ludzku, zgodnie z RODO." },
+    "terms": { "title": "Regulamin OmniTask.pl – świadczenie usług online", "description": "Zasady korzystania z serwisu, dane usługodawcy i warunki świadczenia usług elektronicznych - jasno spisane, zgodnie z przepisami." }
   },
   "legal": {
     "contact_email": "kontakt@omnitask.pl",

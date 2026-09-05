@@ -66,6 +66,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   })
 
+  // Strona wyłącznie EN, bez odpowiednika PL/UA (audyt SEO 2026-09-02, sekcja 7:
+  // KSeF dla zagranicznych firm w Polsce) - nie pasuje do schematu plOnly/languages
+  // powyżej, więc dodana osobno.
+  const enOnlyPages: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/en/services/ksef-invoicing-poland`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
+
   // Realizacje — hub włączany dopiero po pierwszym case study (spec 4.8).
   const realizacjePages: MetadataRoute.Sitemap = FEATURE_REALIZACJE
     ? [{ url: `${SITE_URL}/realizacje`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 }]
@@ -100,5 +112,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error('Error reading blog posts for sitemap:', error)
   }
 
-  return [...staticPages, ...realizacjePages, ...blogPages]
+  return [...staticPages, ...enOnlyPages, ...realizacjePages, ...blogPages]
 }

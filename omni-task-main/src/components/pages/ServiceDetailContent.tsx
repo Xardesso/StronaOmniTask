@@ -29,6 +29,12 @@ interface Faq {
   q: string
   a: string
 }
+interface CaseStudy {
+  title: string
+  before: string
+  after: string
+  result: string
+}
 
 const SERVICES: { key: ServiceKey; slug: string }[] = [
   { key: 'rpa', slug: 'rpa' },
@@ -52,8 +58,11 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
   const technologieList = asArray<string>(tRaw(`${base}.technologie_list`))
   const benefits = asArray<string>(tRaw(`${base}.benefits`))
   const faq = asArray<Faq>(tRaw(`${base}.faq`))
+  const nieOplaca = asArray<string>(tRaw(`${base}.nie_oplaca`))
+  const caseStudyRaw = tRaw<CaseStudy | string>(`${base}.case_study`)
+  const caseStudy = caseStudyRaw && typeof caseStudyRaw === 'object' ? caseStudyRaw : null
   const slug = SERVICES.find((s) => s.key === serviceKey)!.slug
-  const related = SERVICES.filter((s) => s.key !== serviceKey && s.key !== 'szkolenia' && s.key !== 'opieka').slice(0, 3)
+  const related = SERVICES.filter((s) => s.key !== serviceKey && s.key !== 'szkolenia').slice(0, 3)
   const canonicalUrl = `${SITE_URL}${localizePath(`/uslugi/${slug}`, locale)}`
   const priceHint = SERVICE_PRICE_HINT[serviceKey]
 
@@ -135,6 +144,23 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
               </section>
             )}
 
+            {caseStudy && (
+              <section className="service-detail__section">
+                <h2>{caseStudy.title}</h2>
+                <div className="case-study">
+                  <div className="case-study__col">
+                    <strong>{t('service_detail.case_study_before')}</strong>
+                    <p>{caseStudy.before}</p>
+                  </div>
+                  <div className="case-study__col">
+                    <strong>{t('service_detail.case_study_after')}</strong>
+                    <p>{caseStudy.after}</p>
+                  </div>
+                </div>
+                <p className="case-study__result"><strong>{t('service_detail.case_study_result')}:</strong> {caseStudy.result}</p>
+              </section>
+            )}
+
             {technologieList.length > 0 && (
               <section className="service-detail__section">
                 <h2>{t(`${base}.technologie_title`)}</h2>
@@ -153,6 +179,17 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
                 <ul className="service-detail__benefits">
                   {benefits.map((b, i) => (
                     <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {nieOplaca.length > 0 && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.nie_oplaca_title`)}</h2>
+                <ul className="service-detail__benefits service-detail__nie-oplaca">
+                  {nieOplaca.map((item, i) => (
+                    <li key={i}>{item}</li>
                   ))}
                 </ul>
               </section>

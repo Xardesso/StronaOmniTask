@@ -69,6 +69,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // Zmiana języka = nawigacja do zlokalizowanego adresu bieżącej strony.
   // Ciasteczko zapamiętuje świadomy wybór, żeby middleware nie próbował
   // później "poprawiać" języka na podstawie Accept-Language przeglądarki.
+  // Nie ma tu już router.refresh() - stopka i inne miejsca zależne od locale
+  // same reagują na zmianę (patrz useFooterPosts w Footer.tsx), a wymuszanie
+  // odświeżenia całego layoutu przy każdej zmianie języka podważałoby sens
+  // statycznego/ISR renderowania stron (audyt SEO 2026-09-02, sekcja 4).
   const setLocale = useCallback(
     (newLocale: Locale) => {
       document.cookie = `omnitask_locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`
