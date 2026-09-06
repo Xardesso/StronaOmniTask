@@ -34,10 +34,10 @@
     ],
     "cta_primary": "Book a free call",
     "cta_secondary": "See pricing",
-    "diagram_before_title": "Invoice via KSeF and email",
-    "diagram_before_desc": "Someone checks by hand whether it's a duplicate",
+    "diagram_before_title": "Customer data in CRM and ERP",
+    "diagram_before_desc": "Someone manually re-types changes from one system into the other",
     "diagram_after_title": "Automation",
-    "diagram_after_desc": "Deduplication and routing to the right department, no human involved",
+    "diagram_after_desc": "Real-time sync, no manual re-typing",
     "badge_time_value": "2-4 weeks",
     "badge_time_label": "implementation",
     "badge_funding_value": "up to 83%",
@@ -421,8 +421,8 @@
       "faq": []
     },
     "ai": {
-      "h1": "AI agents for business",
-      "subtitle": "I build AI assistants that analyze documents, answer customer questions and keep an eye on your data.",
+      "h1": "n8n AI Agents for Business Automation",
+      "subtitle": "I build AI agents inside n8n that read documents, answer customer questions and keep an eye on your data - deployed and maintained for you, not a DIY node library.",
       "service_type": "AI agent implementation",
       "breadcrumb": "AI Agents",
       "related_title": "Related services",
@@ -431,13 +431,44 @@
       "s1_title": "What an AI agent actually does",
       "s1_p1": "Unlike a plain RPA robot, an AI agent understands the content of a document or question rather than just clicking predefined spots. It can read an invoice in any format, answer a customer in natural language, or summarize a long document.",
       "s1_p2": "It doesn't replace the expert in your company. It takes the first pass at a large volume of data - documents, messages, questions - and only passes forward what actually needs a human decision.",
+      "s1_p3": "I start with one well-defined task - a single document type or one category of questions. Once that runs reliably, we widen the scope.",
+      "dla_kogo_title": "Who it's for",
+      "dla_kogo": [
+        { "title": "Companies drowning in repeat questions", "desc": "Support answers the same handful of questions over and over instead of handling the harder cases. A simple query waits in the same queue as a complex one." },
+        { "title": "Companies processing a lot of documents", "desc": "Contracts, invoices and tickets arrive in every possible format, and someone has to read and classify each one by hand." },
+        { "title": "Teams already running n8n", "desc": "You have workflows in place, but the moment a step needs to understand free text rather than match a field, the automation stops and a person takes over." }
+      ],
+      "zastosowania_title": "What n8n AI agents are used for",
+      "zastosowania": [
+        { "title": "Document reading and classification", "desc": "The agent extracts data from invoices, contracts and forms in any layout - no rigid template required on the input side." },
+        { "title": "Customer-facing chatbot with real context", "desc": "A chatbot that answers from your own knowledge base and hands harder cases to a human with the full thread attached." },
+        { "title": "Email triage and routing", "desc": "Incoming mail gets read, categorised and routed to the right person or workflow instead of sitting in a shared inbox." },
+        { "title": "Summaries and monitoring", "desc": "Long documents, call transcripts or competitor pages condensed into a few sentences someone will actually read." }
+      ],
+      "wdrozenie_title": "How the build works",
+      "wdrozenie": [
+        { "title": "Pick one task", "desc": "We start with a single, well-defined job - one document type or one category of questions." },
+        { "title": "Build the agent in n8n", "desc": "I wire the agent into your existing n8n workflows, with the tools and data sources it needs." },
+        { "title": "Test on real cases", "desc": "The agent runs against your actual documents and questions, not demo examples." },
+        { "title": "Supervised rollout", "desc": "It goes live with a human in the loop and a clear threshold for when it should hand over." }
+      ],
+      "technologie_title": "The stack",
+      "technologie_p": "I build agents on n8n - self-hosted or cloud - with language models from the GPT and Claude families, connected to your own knowledge base through retrieval (RAG) wherever the agent needs company-specific context.",
+      "technologie_list": ["n8n", "LLM API", "RAG", "Vector store"],
       "case_study": {
         "title": "Field service company, 15 employees",
         "before": "Support staff manually read every complaint email, checked the job history and wrote a reply - 15 minutes per ticket.",
         "after": "An AI agent reads the ticket, checks CRM history and drafts a ready reply for a human to approve.",
         "result": "Ticket handling time dropped to 3 minutes, and the team handled twice the volume without hiring anyone."
       },
-      "benefits": [],
+      "s3_title": "Benefits",
+      "benefits": [
+        "Takes the first pass on documents and messages, around the clock",
+        "Understands free text instead of needing a fixed template",
+        "Hands over to a human when it isn't confident",
+        "Runs inside the n8n workflows you already have",
+        "Can be fully self-hosted, so your data stays on your infrastructure"
+      ],
       "nie_oplaca_title": "When an AI agent isn't worth it",
       "nie_oplaca": [
         "The data the agent would rely on is scattered and incomplete - the sources need cleaning up first.",
@@ -445,7 +476,7 @@
         "The case volume is too low to justify the cost of building and maintaining the model."
       ],
       "cena_label": "How much does it cost?",
-      "cena_text": "A simple AI agent wired into one process fits the CORE package from $3,725; a full self-hosted deployment with its own knowledge base falls under the TRANSFORMACJA package from $7,250.",
+      "cena_text": "A simple AI agent wired into one process fits the CORE package from $3,725; a full self-hosted deployment with its own knowledge base falls under the TRANSFORMATION package from $7,250.",
       "wliczone_title": "What's included in the price",
       "wliczone": [
         "Narrowing down the task where an AI agent adds the most value",
@@ -454,8 +485,13 @@
         "A supervised rollout with easy correction of its answers",
         "Two weeks of post-launch support included"
       ],
-      "faq_title": "",
-      "faq": []
+      "faq_title": "Frequently asked questions about n8n AI agents",
+      "faq": [
+        { "q": "Do I need to be on n8n already?", "a": "No. If you're not using n8n yet, I set it up as part of the project - self-hosted or cloud, whichever fits your data policy." },
+        { "q": "How is this different from just using the AI Agent node in n8n?", "a": "The node is the building block. The work is everything around it: choosing a task worth automating, wiring in the right tools and data, handling errors, and testing against real cases so it behaves predictably in production." },
+        { "q": "Can the agent run entirely on our own infrastructure?", "a": "Yes. With a self-hosted n8n instance and a model you control, no data leaves your environment - this is the usual setup where GDPR or client contracts require it." },
+        { "q": "How long does it take?", "a": "A simple agent wired into one process is ready in 2-3 weeks. A deployment with its own knowledge base and several integrations takes 4-6 weeks." }
+      ]
     },
     "opieka": {
       "h1": "n8n care & hosting – automation under continuous oversight",
@@ -491,6 +527,9 @@
       "technologie_title": "Environment",
       "technologie_p": "I usually run automations on my own self-hosted n8n server in the EU, GDPR-compliant, with regular backups.",
       "technologie_list": ["n8n", "Self-hosted", "GDPR", "Backup"],
+      "selfhost_title": "Self-hosted n8n: VPS, Docker and what it actually costs",
+      "selfhost_p1": "n8n Community Edition is free, and it runs happily on a small VPS - usually €5-20/month for the server itself. With the official Docker image and docker-compose you can have an instance up in an afternoon. That part is genuinely cheap and well documented, and if you enjoy running it yourself, you should.",
+      "selfhost_p2": "The cost shows up later: an upgrade that changes how a node behaves, an expired TLS certificate, a container that came back up with an empty queue, a workflow that stopped silently after a vendor changed their API. On a self-managed box you find out when someone notices the data is missing. That is the part I take over - the server can stay yours, but somebody is actually watching it.",
       "case_study": {
         "title": "Logistics company, self-hosted n8n",
         "before": "Automations ran on a server nobody monitored - a carrier integration failure went unnoticed for 3 days.",
@@ -524,7 +563,11 @@
         { "q": "Do you have to have built the automation to take over its care?", "a": "No. I also take over care for automations built earlier by someone else, after reviewing them first." },
         { "q": "What happens if I cancel the care plan?", "a": "The automation keeps running, but nobody responds when something breaks after a change in one of the connected systems." },
         { "q": "What's the difference between Standard and Pro care?", "a": "Standard means monitoring with a response time of up to 48h. Pro means a 4h SLA, priority in the queue, and a monthly report." },
-        { "q": "Is n8n hosting GDPR-compliant?", "a": "Yes - I run automations on a self-hosted server in the EU, without passing data to any party outside the agreed processing chain." }
+        { "q": "Is n8n hosting GDPR-compliant?", "a": "Yes - I run automations on a self-hosted server in the EU, without passing data to any party outside the agreed processing chain." },
+        { "q": "What's the best VPS for n8n?", "a": "For most 5-50 person companies a 2 vCPU / 4 GB VPS in the EU handles n8n plus its Postgres database, with headroom for queue mode later. What matters more than the provider is backups, monitoring and a restore you have actually tested - which is usually what's missing on a DIY box." },
+        { "q": "Can I just run n8n on Docker myself?", "a": "Yes - n8n ships official Docker images and a docker-compose setup, and for a personal instance that's perfectly fine. It becomes a problem once the automation carries real business processes and nobody's job is to notice that it stopped." },
+        { "q": "Is n8n Community Edition enough, or do I need a paid plan?", "a": "For most of the implementations I do, self-hosted Community Edition is enough. Paid tiers matter mainly for SSO, granular permissions and multi-environment setups - I'll tell you plainly if your case actually needs them." },
+        { "q": "What does n8n hosting cost in total?", "a": "The server itself is typically €5-20/month. Managed hosting with monitoring and updates starts at $100/month, and full care with an SLA from $225/month - the difference is who is responsible when it breaks at 7am." }
       ]
     }
   },
@@ -620,10 +663,10 @@
   "meta": {
     "uslugi": { "title": "Process automation for 5–50 person companies | OmniTask", "description": "Workflow automation, document processing, system integration, AI agents. Implementation in 2–4 weeks, fixed price." },
     "rpa": { "title": "Task automation (RPA) for companies | OmniTask", "description": "A software robot takes over repetitive tasks in your systems. Implementation from 1–2 weeks. Free call." },
-    "opieka": { "title": "n8n hosting & automation care – self-hosted, GDPR", "description": "Managed n8n hosting on an EU server, GDPR-compliant. Monitoring, automation fixes and care from $100/month. Response within 48h, or 4h on the Pro plan." },
+    "opieka": { "title": "n8n hosting & care – self-hosted VPS, Docker, GDPR", "description": "Managed n8n hosting on an EU VPS: Docker setup, monitoring, updates and fixes from $100/month. Response within 48h, or 4h on the Pro plan." },
     "workflow": { "title": "Workflow automation – no more manual handoffs", "description": "I connect systems, apps and people into one automated process. Free call about your process." },
     "integration": { "title": "System integration – ERP, CRM, API and databases", "description": "I connect ERP, CRM, email and warehouse into one ecosystem with automatic data exchange. Free call." },
-    "ai": { "title": "AI agents for business – document analysis & support", "description": "I build AI agents that analyze documents, answer customers and monitor data. Free call." },
+    "ai": { "title": "n8n AI Agents for Business Automation | OmniTask", "description": "I build n8n AI agents that read documents, answer customers and monitor your data - deployed and maintained for you. Free call." },
     "cennik": { "title": "Automation pricing – clear, upfront rates | OmniTask", "description": "Prices stated upfront, no hidden costs. See implementation and care-plan pricing plus an ROI calculator." },
     "about": { "title": "About – OmniTask process automation", "description": "I used to run a small business myself, today I automate processes for companies like the one I ran. Meet my approach to work." },
     "contact": { "title": "Contact – process automation for companies", "description": "Get in touch to discuss process automation for your company. Phone, email, form and a booking calendar." },

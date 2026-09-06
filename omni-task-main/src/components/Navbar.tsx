@@ -14,8 +14,11 @@ export default function Navbar() {
   const { t, locale } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  // Klucz aktualnie otwartego dropdownu ('uslugi' | 'branze' | null) - jeden
+  // stan zamiast osobnego boolowa na każdy dropdown, żeby dodawanie kolejnych
+  // (np. przyszłych kategorii nawigacji) nie wymagało powielania logiki.
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null)
   const pathname = usePathname()
   const cleanPath = stripLocale(pathname)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -28,14 +31,14 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false)
-    setServicesOpen(false)
-    setMobileServicesOpen(false)
+    setOpenDropdown(null)
+    setMobileOpenDropdown(null)
   }, [pathname])
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setServicesOpen(false)
+      if (!(e.target as HTMLElement).closest('.navbar__dropdown')) {
+        setOpenDropdown(null)
       }
     }
     document.addEventListener('click', handleClickOutside)
@@ -54,8 +57,16 @@ export default function Navbar() {
   // KSeF, szkolenia i opieka nie mają sensu po angielsku/ukraińsku — brak realnego odbiorcy (spec 2.2).
   const serviceLinks = allServiceLinks.filter((s) => !s.plOnly || locale === 'pl')
 
+  // Branże istnieją na razie tylko po polsku - kolejne dochodzą wraz z nowymi stronami.
+  const industryLinks = [
+    { href: '/branze/biura-nieruchomosci', slug: 'biura-nieruchomosci', label: t('branze_page.nieruchomosci_title') },
+    { href: '/branze/biura-rachunkowe', slug: 'biura-rachunkowe', label: t('branze_page.rachunkowe_title') },
+    { href: '/branze/handel-i-ecommerce', slug: 'handel-i-ecommerce', label: t('branze_page.ecommerce_title') },
+  ]
+
   const navLinks = [
-    { href: '/uslugi', label: t('nav.services'), dropdown: true },
+    { key: 'uslugi', href: '/uslugi', label: t('nav.services'), dropdown: true, items: serviceLinks, allHref: '/uslugi', allLabel: t('nav.all_services') },
+    ...(locale === 'pl' ? [{ key: 'branze', href: '/branze', label: t('nav.industries'), dropdown: true, items: industryLinks, allHref: '/branze', allLabel: t('nav.all_industries') }] : []),
     ...(FEATURE_BUR && locale === 'pl' ? [{ href: '/dofinansowanie', label: t('nav.funding') }] : []),
     { href: '/cennik', label: t('nav.pricing') },
     ...(FEATURE_REALIZACJE && locale === 'pl' ? [{ href: '/realizacje', label: t('nav.projects') }] : []),
@@ -80,11 +91,11 @@ export default function Navbar() {
         <nav className="navbar__nav" id="desktop-nav">
           {navLinks.map((link) => (
             link.dropdown ? (
-              <div key={link.href} className="navbar__dropdown" ref={dropdownRef}>
+              <div key={link.key} className="navbar__dropdown" ref={dropdownRef}>
                 <button
-                  className={`navbar__link navbar__link--dropdown ${cleanPath.startsWith('/uslugi') ? 'navbar__link--active' : ''}`}
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  aria-expanded={servicesOpen}
+                  className={`navbar__link navbar__link--dropdown ${cleanPath.startsWith(link.href) ? 'navbar__link--active' : ''}`}
+                  onClick={() => setOpenDropdown(openDropdown === link.key ? null : link.key)}
+                  aria-expanded={openDropdown === link.key}
                   title={link.label}
                 >
                   {link.label}
@@ -92,21 +103,21 @@ export default function Navbar() {
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </button>
-                {servicesOpen && (
+                {openDropdown === link.key && (
                   <div className="navbar__dropdown-menu navbar__dropdown-menu--wide">
-                    {serviceLinks.map((svc) => (
+                    {link.items.map((item) => (
                       <Link
-                        key={svc.href}
-                        href={svc.href}
-                        className={`navbar__dropdown-item ${svc.highlight ? 'navbar__dropdown-item--highlight' : ''}`}
-                        title={svc.label}
+                        key={item.href}
+                        href={item.href}
+                        className={`navbar__dropdown-item ${'highlight' in item && item.highlight ? 'navbar__dropdown-item--highlight' : ''}`}
+                        title={item.label}
                       >
-                        <span className="navbar__dropdown-item-icon"><ServiceIcon slug={svc.slug} size={18} /></span>
-                        {svc.label}
+                        <span className="navbar__dropdown-item-icon"><ServiceIcon slug={item.slug} size={18} /></span>
+                        {item.label}
                       </Link>
                     ))}
-                    <Link href="/uslugi" className="navbar__dropdown-item navbar__dropdown-item--all" title={t('nav.services')}>
-                      {t('nav.all_services')} →
+                    <Link href={link.allHref} className="navbar__dropdown-item navbar__dropdown-item--all" title={link.label}>
+                      {link.allLabel} →
                     </Link>
                   </div>
                 )}
@@ -148,13 +159,13 @@ export default function Navbar() {
         <nav className="navbar__mobile-nav">
           {navLinks.map((link) => (
             link.dropdown ? (
-              <div key={link.href}>
+              <div key={link.key}>
                 <button
                   type="button"
-                  className={`navbar__mobile-link navbar__mobile-link--toggle ${cleanPath.startsWith('/uslugi') ? 'navbar__mobile-link--active' : ''}`}
-                  onClick={() => setMobileServicesOpen((v) => !v)}
-                  aria-expanded={mobileServicesOpen}
-                  aria-controls="mobile-services-submenu"
+                  className={`navbar__mobile-link navbar__mobile-link--toggle ${cleanPath.startsWith(link.href) ? 'navbar__mobile-link--active' : ''}`}
+                  onClick={() => setMobileOpenDropdown((v) => (v === link.key ? null : link.key))}
+                  aria-expanded={mobileOpenDropdown === link.key}
+                  aria-controls={`mobile-${link.key}-submenu`}
                 >
                   <span>{link.label}</span>
                   <svg
@@ -166,30 +177,30 @@ export default function Navbar() {
                     strokeWidth="2"
                     style={{
                       transition: 'transform 0.2s',
-                      transform: mobileServicesOpen ? 'rotate(180deg)' : 'rotate(0)',
+                      transform: mobileOpenDropdown === link.key ? 'rotate(180deg)' : 'rotate(0)',
                     }}
                     aria-hidden="true"
                   >
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </button>
-                {mobileServicesOpen && (
-                  <div id="mobile-services-submenu" className="navbar__mobile-submenu">
-                    {serviceLinks.map((svc) => (
+                {mobileOpenDropdown === link.key && (
+                  <div id={`mobile-${link.key}-submenu`} className="navbar__mobile-submenu">
+                    {link.items.map((item) => (
                       <Link
-                        key={svc.href}
-                        href={svc.href}
-                        className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === svc.href ? 'navbar__mobile-link--active' : ''}`}
-                        title={svc.label}
+                        key={item.href}
+                        href={item.href}
+                        className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === item.href ? 'navbar__mobile-link--active' : ''}`}
+                        title={item.label}
                       >
-                        {svc.label}
+                        {item.label}
                       </Link>
                     ))}
                     <Link
-                      href="/uslugi"
-                      className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === '/uslugi' ? 'navbar__mobile-link--active' : ''}`}
-                      title={t('nav.services')}
-                    >{t('nav.all_services')}</Link>
+                      href={link.allHref}
+                      className={`navbar__mobile-link navbar__mobile-link--sub ${cleanPath === link.allHref ? 'navbar__mobile-link--active' : ''}`}
+                      title={link.label}
+                    >{link.allLabel}</Link>
                   </div>
                 )}
               </div>

@@ -1,71 +1,41 @@
 'use client'
 
-import LocaleLink from '@/components/LocaleLink'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import LocaleLink from '@/components/LocaleLink'
 import { useTranslation } from '@/i18n/context'
-import { SITE_URL, localizePath } from '@/lib/i18n'
-import { convertPlnToUsd } from '@/lib/currency'
+import { SITE_URL } from '@/lib/i18n'
 import CtaButton from '@/components/CtaButton'
+import type { ServiceKey } from '@/components/pages/ServiceDetailContent'
 
-export type ServiceKey = 'rpa' | 'workflow' | 'integration' | 'ai' | 'ksef' | 'szkolenia' | 'opieka'
+interface TitleDesc { title: string; desc: string }
+interface Faq { q: string; a: string }
 
-// Cena startowa do danych strukturalnych (Offer) - dopasowana do faktycznego
-// pakietu z cennika, nie wymyślona. "szkolenia" nie ma ceny jednostkowej
-// (usługa z dofinansowaniem PARP), więc celowo bez wpisu - Offer jest wtedy pomijany.
-const SERVICE_PRICE_HINT: Partial<Record<ServiceKey, { priceValue: number; isFrom: boolean; monthly?: boolean }>> = {
-  rpa: { priceValue: 5900, isFrom: true },
-  workflow: { priceValue: 5900, isFrom: true },
-  integration: { priceValue: 5900, isFrom: true },
-  ai: { priceValue: 14900, isFrom: true },
-  ksef: { priceValue: 12900, isFrom: false },
-  opieka: { priceValue: 390, isFrom: true, monthly: true },
+interface BranzaContentProps {
+  // Klucz przestrzeni tłumaczeń, np. "branze_nieruchomosci".
+  base: string
+  // Slug strony w /branze/<slug> - używany w canonical i schema.
+  slug: string
+  // Powiązane usługi pokazywane na dole strony (reguła #3 linkowania
+  // wewnętrznego z briefu: strona branżowa linkuje do właściwych /uslugi/*).
+  relatedServices: { key: ServiceKey; slug: string }[]
 }
 
-interface TitleDesc {
-  title: string
-  desc: string
-}
-interface Faq {
-  q: string
-  a: string
-}
-interface CaseStudy {
-  title: string
-  before: string
-  after: string
-  result: string
-}
+// Wspólny szablon stron branżowych (/branze/*). Sekcje opcjonalne renderują
+// się tylko wtedy, gdy dana branża ma dla nich treść - dzięki temu kolejne
+// branże dokłada się samym plikiem tłumaczeń, bez nowego komponentu.
+// Case study świadomie nie ma tu miejsca: zgodnie z briefem opisy realnych
+// wdrożeń i liczby pisze Marcin, nie deweloper.
+export default function BranzaContent({ base, slug, relatedServices }: BranzaContentProps) {
+  const { t, tRaw } = useTranslation()
 
-const SERVICES: { key: ServiceKey; slug: string }[] = [
-  { key: 'rpa', slug: 'rpa' },
-  { key: 'workflow', slug: 'automatyzacja-workflow' },
-  { key: 'integration', slug: 'integracja-systemow' },
-  { key: 'ai', slug: 'agenci-ai' },
-  { key: 'ksef', slug: 'ksef' },
-  { key: 'szkolenia', slug: 'szkolenia-i-doradztwo' },
-  { key: 'opieka', slug: 'opieka-i-hosting' },
-]
-
-export default function ServiceDetailContent({ serviceKey }: { serviceKey: ServiceKey }) {
-  const { t, tRaw, locale } = useTranslation()
-  const base = `service_detail.${serviceKey}`
-
-  const asArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : [])
-
-  const dlaKogo = asArray<TitleDesc>(tRaw(`${base}.dla_kogo`))
-  const zastosowania = asArray<TitleDesc>(tRaw(`${base}.zastosowania`))
-  const wdrozenie = asArray<TitleDesc>(tRaw(`${base}.wdrozenie`))
-  const technologieList = asArray<string>(tRaw(`${base}.technologie_list`))
-  const benefits = asArray<string>(tRaw(`${base}.benefits`))
-  const faq = asArray<Faq>(tRaw(`${base}.faq`))
-  const nieOplaca = asArray<string>(tRaw(`${base}.nie_oplaca`))
-  const wliczone = asArray<string>(tRaw(`${base}.wliczone`))
-  const caseStudyRaw = tRaw<CaseStudy | string>(`${base}.case_study`)
-  const caseStudy = caseStudyRaw && typeof caseStudyRaw === 'object' ? caseStudyRaw : null
-  const slug = SERVICES.find((s) => s.key === serviceKey)!.slug
-  const related = SERVICES.filter((s) => s.key !== serviceKey && s.key !== 'szkolenia').slice(0, 3)
-  const canonicalUrl = `${SITE_URL}${localizePath(`/uslugi/${slug}`, locale)}`
-  const priceHint = SERVICE_PRICE_HINT[serviceKey]
+  const dlaKogo = tRaw<TitleDesc[]>(`${base}.dla_kogo`) || []
+  const processes = tRaw<TitleDesc[]>(`${base}.processes`) || []
+  const wdrozenie = tRaw<TitleDesc[]>(`${base}.wdrozenie`) || []
+  const nieOplaca = tRaw<string[]>(`${base}.nie_oplaca`) || []
+  const wliczone = tRaw<string[]>(`${base}.wliczone`) || []
+  const faq = tRaw<Faq[]>(`${base}.faq`) || []
+  const canonicalUrl = `${SITE_URL}/branze/${slug}`
+  const hasSystemSection = t(`${base}.system_title`) !== `${base}.system_title`
 
   return (
     <>
@@ -75,21 +45,15 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
         <p>{t(`${base}.subtitle`)}</p>
       </div>
 
-      <Breadcrumbs
-        items={[
-          { label: t('nav.services'), href: '/uslugi' },
-          { label: t(`${base}.breadcrumb`) },
-        ]}
-      />
+      <Breadcrumbs items={[{ label: t('nav.industries'), href: '/branze' }, { label: t(`${base}.breadcrumb`) }]} />
 
       <div className="service-detail-page">
         <div className="section__container">
           <div className="service-detail__content">
             <section className="service-detail__section">
-              <h2>{t(`${base}.s1_title`)}</h2>
-              <p>{t(`${base}.s1_p1`)}</p>
-              <p>{t(`${base}.s1_p2`)}</p>
-              {t(`${base}.s1_p3`) !== `${base}.s1_p3` && <p>{t(`${base}.s1_p3`)}</p>}
+              <h2>{t(`${base}.problem_title`)}</h2>
+              <p>{t(`${base}.problem_p1`)}</p>
+              <p>{t(`${base}.problem_p2`)}</p>
             </section>
 
             {dlaKogo.length > 0 && (
@@ -111,11 +75,11 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
               </section>
             )}
 
-            {zastosowania.length > 0 && (
+            {processes.length > 0 && (
               <section className="service-detail__section">
-                <h2>{t(`${base}.zastosowania_title`)}</h2>
+                <h2>{t(`${base}.processes_title`)}</h2>
                 <div className="features-grid">
-                  {zastosowania.map((item, i) => (
+                  {processes.map((item, i) => (
                     <div key={i} className="feature-card">
                       <div className="feature-card__icon">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
@@ -127,6 +91,14 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
                     </div>
                   ))}
                 </div>
+              </section>
+            )}
+
+            {hasSystemSection && (
+              <section className="service-detail__section">
+                <h2>{t(`${base}.system_title`)}</h2>
+                <p>{t(`${base}.system_p1`)}</p>
+                <p>{t(`${base}.system_p2`)}</p>
               </section>
             )}
 
@@ -143,57 +115,6 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
                     </div>
                   ))}
                 </div>
-              </section>
-            )}
-
-            {caseStudy && (
-              <section className="service-detail__section">
-                <h2>{caseStudy.title}</h2>
-                <div className="case-study">
-                  <div className="case-study__col">
-                    <strong>{t('service_detail.case_study_before')}</strong>
-                    <p>{caseStudy.before}</p>
-                  </div>
-                  <div className="case-study__col">
-                    <strong>{t('service_detail.case_study_after')}</strong>
-                    <p>{caseStudy.after}</p>
-                  </div>
-                </div>
-                <p className="case-study__result"><strong>{t('service_detail.case_study_result')}:</strong> {caseStudy.result}</p>
-              </section>
-            )}
-
-            {technologieList.length > 0 && (
-              <section className="service-detail__section">
-                <h2>{t(`${base}.technologie_title`)}</h2>
-                <p>{t(`${base}.technologie_p`)}</p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginTop: '1rem' }}>
-                  {technologieList.map((tech, i) => (
-                    <span key={i} className="badge badge--accent">{tech}</span>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Sekcja opcjonalna - renderuje się tylko tam, gdzie klucz istnieje
-                (dziś: hosting n8n po angielsku, pod frazy typu "best vps for n8n",
-                "n8n docker", "self hosted n8n" - patrz brief, Etap 3.2). */}
-            {t(`${base}.selfhost_title`) !== `${base}.selfhost_title` && (
-              <section className="service-detail__section">
-                <h2>{t(`${base}.selfhost_title`)}</h2>
-                <p>{t(`${base}.selfhost_p1`)}</p>
-                <p>{t(`${base}.selfhost_p2`)}</p>
-              </section>
-            )}
-
-            {benefits.length > 0 && (
-              <section className="service-detail__section">
-                <h2>{t(`${base}.s3_title`)}</h2>
-                <ul className="service-detail__benefits">
-                  {benefits.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
               </section>
             )}
 
@@ -243,21 +164,21 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
             <section className="service-detail__cta">
               <h2>{t(`${base}.cta_title`)}</h2>
               <p>{t(`${base}.cta_subtitle`)}</p>
-              <CtaButton className="btn btn--primary btn--lg" title={t('service_detail.cta_button')}>
-                {t('service_detail.cta_button')}
+              <CtaButton className="btn btn--primary btn--lg" title={t(`${base}.cta_title`)}>
+                {t(`${base}.cta_title`)}
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </CtaButton>
             </section>
 
-            {related.length > 0 && (
+            {relatedServices.length > 0 && (
               <section className="service-detail__related">
                 <h3>{t(`${base}.related_title`)}</h3>
                 <div className="service-detail__related-grid">
-                  {related.map((s) => (
+                  {relatedServices.map((s) => (
                     <LocaleLink
-                      key={s.key}
+                      key={s.slug}
                       href={`/uslugi/${s.slug}`}
                       className="service-detail__related-card"
                       title={t(`service_detail.labels.${s.key}`)}
@@ -284,24 +205,20 @@ export default function ServiceDetailContent({ serviceKey }: { serviceKey: Servi
             provider: { '@type': 'Organization', name: 'OmniTask', '@id': `${SITE_URL}/#organization` },
             areaServed: { '@type': 'Country', name: 'PL' },
             url: canonicalUrl,
-            ...(priceHint ? {
-              offers: {
-                '@type': 'Offer',
-                url: canonicalUrl,
-                priceCurrency: locale === 'pl' ? 'PLN' : 'USD',
-                priceSpecification: {
-                  '@type': 'UnitPriceSpecification',
-                  price: locale === 'pl' ? priceHint.priceValue : convertPlnToUsd(priceHint.priceValue),
-                  priceCurrency: locale === 'pl' ? 'PLN' : 'USD',
-                  ...(priceHint.isFrom ? { minPrice: locale === 'pl' ? priceHint.priceValue : convertPlnToUsd(priceHint.priceValue) } : {}),
-                  ...(priceHint.monthly ? { unitCode: 'MON' } : {}),
-                },
+            offers: {
+              '@type': 'Offer',
+              url: canonicalUrl,
+              priceCurrency: 'PLN',
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: 5900,
+                priceCurrency: 'PLN',
+                minPrice: 5900,
               },
-            } : {}),
+            },
           }),
         }}
       />
-
       {faq.length > 0 && (
         <script
           type="application/ld+json"

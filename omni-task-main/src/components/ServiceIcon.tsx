@@ -52,6 +52,26 @@ const PATHS: Record<string, React.ReactNode> = {
       <circle cx="12" cy="12" r="4" />
     </>
   ),
+  'biura-nieruchomosci': (
+    <>
+      <path d="M3 11l9-7 9 7" />
+      <path d="M5 9.5V20a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V9.5" />
+    </>
+  ),
+  'biura-rachunkowe': (
+    <>
+      <rect x="4" y="2.5" width="16" height="19" rx="2" />
+      <path d="M8 7h8" />
+      <path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01" />
+    </>
+  ),
+  'handel-i-ecommerce': (
+    <>
+      <path d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.5a2 2 0 002-1.6L20.5 8H7" />
+      <circle cx="10" cy="20" r="1.3" />
+      <circle cx="17" cy="20" r="1.3" />
+    </>
+  ),
 }
 
 export default function ServiceIcon({ slug, size = 24 }: { slug: string; size?: number }) {

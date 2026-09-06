@@ -11,6 +11,8 @@
     "about": "Poznaj mnie",
     "faq": "FAQ",
     "all_services": "Wszystkie usługi",
+    "industries": "Branże",
+    "all_industries": "Wszystkie branże",
     "book_call": "Umów rozmowę"
   },
   "eyebrow": {
@@ -34,10 +36,10 @@
     ],
     "cta_primary": "Umów bezpłatną rozmowę",
     "cta_secondary": "Zobacz cennik",
-    "diagram_before_title": "Faktura z KSeF i mailem",
-    "diagram_before_desc": "Ktoś ręcznie sprawdza, czy to nie duplikat",
+    "diagram_before_title": "Dane klienta w CRM i ERP",
+    "diagram_before_desc": "Ktoś ręcznie przepisuje zmiany z jednego systemu do drugiego",
     "diagram_after_title": "Automatyzacja",
-    "diagram_after_desc": "Deduplikacja i routing do oddziału bez udziału człowieka",
+    "diagram_after_desc": "Synchronizacja w czasie rzeczywistym, bez ręcznego przepisywania",
     "badge_time_value": "2–4 tyg.",
     "badge_time_label": "wdrożenie",
     "badge_funding_value": "do 83%",
@@ -371,8 +373,8 @@
       ]
     },
     "workflow": {
-      "h1": "Automatyzacja workflow z n8n i Make – wdrożenie bez ręcznego przepisywania",
-      "subtitle": "Jako n8n specjalista i konsultant Make.com łączę systemy, aplikacje i ludzi w jeden spójny, zautomatyzowany proces biznesowy.",
+      "h1": "Automatyzacja no code dla firm – bez programowania, z n8n i Make",
+      "subtitle": "Buduję automatyzacje no-code, które łączą Wasze systemy, aplikacje i zespoły w jeden proces - bez pisania kodu i bez etatu programisty.",
       "service_type": "Automatyzacja workflow z n8n i Make.com",
       "breadcrumb": "Automatyzacja workflow",
       "related_title": "Powiązane usługi",
@@ -741,6 +743,8 @@
     "subtitle": "Automatyzuję obieg faktur i integrację KSeF z systemem księgowym (Comarch Optima, Symfonia, wFirma) - deduplikacja, routing do oddziałów i centrów kosztów, kontrola limitów API.",
     "service_type": "Automatyzacja obiegu faktur KSeF",
     "breadcrumb": "Obsługa KSeF",
+    "deadline_title": "Termin, o którym warto pamiętać:",
+    "deadline_text": "okres przejściowy KSeF (limit 10 000 zł miesięcznie poza systemem) kończy się 31 grudnia 2026, a od 1 stycznia 2027 obowiązują kary za brak wystawiania faktur w KSeF. Jeśli działacie dziś na prowizorce, zostało około 4 miesięcy na uporządkowanie procesu.",
     "problems_title": "KSeF problemy: gdzie najczęściej się psuje",
     "problems": [
       { "title": "Duplikaty faktur i podwójne księgowanie", "desc": "Ta sama faktura przychodzi z KSeF i z maila - bez kontroli łatwo o podwójne zaksięgowanie i zawyżony VAT." },
@@ -961,7 +965,7 @@
   "meta": {
     "uslugi": { "title": "Usługi automatyzacji procesów dla firm | OmniTask", "description": "Odzyskaj 10–20 godzin miesięcznie: automatyzuję workflow, faktury KSeF, integracje systemów i agentów AI. Wdrożenie w 2–4 tygodnie, stała cena." },
     "rpa": { "title": "Robotyzacja procesów RPA dla firm | OmniTask", "description": "Zespół przestaje klikać to samo po dziesięć razy dziennie. Programowy robot przejmuje powtarzalne zadania w 1–2 tygodnie. Sprawdź, czy Twój proces się nadaje." },
-    "workflow": { "title": "Automatyzacja workflow w n8n dla firm | OmniTask", "description": "Koniec z kopiowaniem danych między systemami i zgadywaniem, kto co zrobił. Wdrażam automatyzacje w n8n, które łączą Wasze narzędzia w jeden przepływ." },
+    "workflow": { "title": "Automatyzacja no code dla firm | OmniTask", "description": "Automatyzuję procesy bez programowania - w n8n, Make.com lub jako alternatywa dla Zapier. Wdrożenie w 2-4 tygodnie, stała cena, pełna kontrola nad danymi." },
     "integration": { "title": "Integracja systemów ERP, CRM i Comarch Optima | OmniTask", "description": "Sprzedaż i księgowość w końcu widzą te same liczby. Łączę ERP, CRM, Comarch Optima, Baselinker, wFirma i Fakturownię - bez comiesięcznego eksportu do Excela." },
     "ai": { "title": "Agenci AI dla firm – automatyzacja obsługi | OmniTask", "description": "Agent AI czyta faktury, odpowiada klientom i pilnuje danych, zanim zdążysz o to poprosić. Wdrażam sztuczną inteligencję w firmie bez budowania działu IT." },
     "ksef": { "title": "Automatyzacja faktur KSeF – integracja z Comarch | OmniTask", "description": "Koniec z ręcznym pilnowaniem duplikatów faktur i limitów API KSeF. Automatyzuję obieg dokumentów i integrację z Comarch, Symfonią i wFirma." },
@@ -974,9 +978,13 @@
     "contact": { "title": "Kontakt – bezpłatna rozmowa o automatyzacji | OmniTask", "description": "Napisz, zadzwoń albo zarezerwuj termin w kalendarzu. 30 minut rozmowy wystarczy, żeby wiedzieć, czy w Waszym procesie jest coś do zautomatyzowania." },
     "quote": { "title": "Bezpłatna wycena automatyzacji w 24 godziny | OmniTask", "description": "Opisz proces, który zjada Wam czas - ile osób go wykonuje, ile trwa, jakich systemów używacie. Odpowiem z konkretną wyceną w ciągu 24 godzin." },
     "blog": { "title": "Blog o automatyzacji, KSeF i dofinansowaniach | OmniTask", "description": "Praktyczna wiedza bez lania wody: wdrożenia n8n, obsługa KSeF, dofinansowania i realne przykłady automatyzacji z małych i średnich firm." },
-    "home": { "title": "Automatyzacja procesów w firmie – stała cena | OmniTask", "description": "Twoi ludzie przestają przepisywać dane między systemami. Automatyzuję procesy dla małych firm: n8n, KSeF, integracje, RPA. Do 83% dofinansowania." },
+    "home": { "title": "Automatyzacja procesów w firmie - 2-4 tygodnie | OmniTask", "description": "Automatyzacja procesów dla firm 5-50 osób. Stała cena, wdrożenie w 2-4 tygodnie, do 83% kosztu z dofinansowania PARP. Bezpłatna konsultacja." },
     "privacy": { "title": "Polityka prywatności OmniTask – ochrona danych", "description": "Jak przetwarzamy Twoje dane, jakie masz prawa i skąd wziąć zgodę na cookies - wszystko w jednym miejscu, napisane po ludzku, zgodnie z RODO." },
-    "terms": { "title": "Regulamin OmniTask.pl – świadczenie usług online", "description": "Zasady korzystania z serwisu, dane usługodawcy i warunki świadczenia usług elektronicznych - jasno spisane, zgodnie z przepisami." }
+    "terms": { "title": "Regulamin OmniTask.pl – świadczenie usług online", "description": "Zasady korzystania z serwisu, dane usługodawcy i warunki świadczenia usług elektronicznych - jasno spisane, zgodnie z przepisami." },
+    "branze_nieruchomosci": { "title": "Automatyzacja biura nieruchomości | OmniTask", "description": "Automatyzuję pracę biur nieruchomości: leady z Otodomu i OLX do CRM, przypisywanie do agenta, dokumenty. Stała cena, wdrożenie w 2-4 tygodnie." },
+    "branze": { "title": "Automatyzacja procesów w Twojej branży | OmniTask", "description": "Konkretne procesy do automatyzacji, dopasowane do specyfiki branży: nieruchomości, biura rachunkowe, e-commerce. Wdrożenie w 2-4 tygodnie." },
+    "branze_rachunkowe": { "title": "Automatyzacja biura rachunkowego | OmniTask", "description": "Automatyzuję pracę biur rachunkowych: zbieranie dokumentów od klientów, KSeF dla wielu NIP-ów, zestawienia. Stała cena, wdrożenie w 2-4 tygodnie." },
+    "branze_ecommerce": { "title": "Automatyzacja sklepu internetowego | OmniTask", "description": "Automatyzuję e-commerce: zamówienia ze sklepu do ERP, stany magazynowe, Baselinker, faktury. Stała cena, wdrożenie w 2-4 tygodnie." }
   },
   "legal": {
     "contact_email": "kontakt@omnitask.pl",
@@ -1180,5 +1188,194 @@
         ] }
       ]
     }
+  },
+  "branze_nieruchomosci": {
+    "h1": "Automatyzacja biura nieruchomości – od leada do podpisanej umowy",
+    "subtitle": "Automatyzuję pracę biur nieruchomości: powiadomienia, raporty dla klientów i połączenie CRM z resztą narzędzi biura.",
+    "service_type": "Automatyzacja procesów dla biur nieruchomości",
+    "breadcrumb": "Biura nieruchomości",
+    "related_title": "Powiązane usługi",
+    "problem_title": "Gdzie biura nieruchomości tracą czas",
+    "problem_p1": "Właściciel mieszkania dzwoni z pytaniem, co się dzieje z jego ofertą. Agent przerywa to, co robił, wchodzi do systemu, sprawdza statystyki ogłoszenia, liczbę zapytań i odbyte prezentacje, po czym składa z tego odpowiedź. Kilkanaście minut na jedną rozmowę - a takich rozmów jest tyle, ile obsługiwanych nieruchomości.",
+    "problem_p2": "W drugą stronę działa to tak samo wolno. Klient dowiaduje się o zmianie w swojej sprawie dopiero wtedy, gdy ktoś z biura znajdzie chwilę, żeby o tym napisać. Nie dlatego, że komuś się nie chce - po prostu nikt tego nie pilnuje automatycznie.",
+    "dla_kogo_title": "Dla kogo",
+    "dla_kogo": [
+      { "title": "Biura z kilkoma agentami", "desc": "Informacja o zmianie statusu sprawy czy oferty nie zawsze trafia do wszystkich zainteresowanych - klienta, agenta, czasem obu naraz - bez kogoś, kto o tym pamięta." },
+      { "title": "Biura raportujące klientom wyniki ogłoszeń", "desc": "Właściciel nieruchomości pyta, jak radzi sobie jego ogłoszenie - dziś to ręczne zbieranie danych i składanie zestawienia przed każdą taką rozmową." }
+    ],
+    "processes_title": "Co automatyzuję w biurze nieruchomości",
+    "processes": [
+      { "title": "Powiadomienia o statusie sprawy", "desc": "Automatyczne powiadomienie do klienta lub agenta, gdy zmienia się status oferty czy sprawy - zamiast czekania, aż ktoś sam sprawdzi albo zadzwoni z pytaniem." },
+      { "title": "Raporty statystyk ogłoszeń dla klientów", "desc": "Cykliczne, automatyczne zestawienie dla właściciela nieruchomości - ile odsłon, zapytań czy zapisań miało jego ogłoszenie w danym okresie - zamiast ręcznego zbierania tych danych przed każdym telefonem." },
+      { "title": "Follow-up, gdy klient nie odpowiada", "desc": "Automatyczna wiadomość mailowa lub SMS, jeśli agent nie skontaktuje się z klientem w ustalonym czasie." },
+      { "title": "Raport aktywności agentów", "desc": "Automatyczne zestawienie, ile kontaktów trafiło do każdego agenta i jak szybko na nie zareagował." }
+    ],
+    "system_title": "Integracja i automatyzacja wokół Galactica Virgo",
+    "system_p1": "Galactica Virgo trzyma w jednym miejscu oferty, kontakty, kalendarz i dokumenty - i robi to dobrze. Dane w nim już są. Problem zaczyna się tam, gdzie ktoś musi je stamtąd ręcznie wyjąć: przygotować zestawienie dla właściciela nieruchomości, wysłać wiadomość o zmianie statusu, przepisać coś do arkusza albo do maila.",
+    "system_p2": "Nie zastępuję Waszego CRM-a. Buduję automatyzacje, które działają wokół niego, na danych, które już w nim macie.",
+    "wdrozenie_title": "Jak wygląda wdrożenie",
+    "wdrozenie": [
+      { "title": "Mapowanie obecnego procesu", "desc": "Sprawdzam, jak dziś wygląda obsługa klienta i przepływ informacji w biurze, zanim zaprojektuję automatyzację." },
+      { "title": "Projekt automatyzacji", "desc": "Ustalamy, które powiadomienia i raporty mają sens i jak mają wyglądać, dopasowane do Waszego CRM i zespołu." },
+      { "title": "Budowa i testy", "desc": "Konfiguruję automatyzację i sprawdzam ją na rzeczywistych danych, zanim trafi na produkcję." },
+      { "title": "Wdrożenie i szkolenie zespołu", "desc": "Uruchamiam proces produkcyjnie i pokazuję zespołowi, jak z nim pracować." }
+    ],
+    "nie_oplaca_title": "Kiedy automatyzacja się nie opłaca",
+    "nie_oplaca": [
+      "Biuro obsługuje bardzo mało spraw miesięcznie - ręczne przygotowanie raportu czy powiadomienia zajmuje mniej czasu niż wdrożenie automatyzacji.",
+      "W biurze pracuje jeden agent, który i tak na bieżąco wie, co się dzieje z każdą sprawą - nie ma tu wąskiego gardła do rozwiązania.",
+      "CRM, z którego korzystacie, nie ma żadnego API ani eksportu danych - integracja wymaga obejścia, które podnosi koszt."
+    ],
+    "cena_label": "Ile to kosztuje?",
+    "cena_text": "Automatyzacja pojedynczego procesu (np. powiadomień albo raportów dla klientów) zaczyna się od 5 900 zł (pakiet START), pakiet kilku procesów od 14 900 zł (pakiet CORE). Wdrożenie zajmuje standardowo 2-4 tygodnie.",
+    "wliczone_title": "Co jest wliczone w wycenę",
+    "wliczone": [
+      "Mapowanie obecnego procesu i projekt automatyzacji",
+      "Konfiguracja automatyzacji połączonej z Waszym CRM",
+      "Testy na rzeczywistych danych przed uruchomieniem produkcyjnym",
+      "Szkolenie zespołu z korzystania z nowego procesu",
+      "Dwa tygodnie wsparcia powdrożeniowego w cenie"
+    ],
+    "faq_title": "Najczęściej zadawane pytania",
+    "faq": [
+      { "q": "Czy trzeba zmieniać obecny CRM (np. Galactica Virgo)?", "a": "Nie. Automatyzacja działa wokół systemu, który już macie - podłączam się do niego, zamiast go zastępować." },
+      { "q": "Skąd biorą się dane do raportu dla klienta?", "a": "Z tego, co Wasz CRM lub portal ogłoszeniowy już udostępnia - automatyzacja tylko zbiera te dane w jednym miejscu i składa w gotowe zestawienie." },
+      { "q": "Ile trwa wdrożenie?", "a": "Pojedynczy proces, np. powiadomienia albo raport dla klientów, wdrażam w 2-4 tygodnie." },
+      { "q": "Czy automatyzacja działa też dla biur z jednym agentem?", "a": "Tak - raporty dla klientów i powiadomienia mają sens niezależnie od liczby agentów w biurze." }
+    ],
+    "cta_title": "Sprawdźmy, gdzie dziś tracicie najwięcej czasu",
+    "cta_subtitle": "30 minut rozmowy o tym, jak dziś wygląda praca w Waszym biurze - bez zobowiązań."
+  },
+  "branze_rachunkowe": {
+    "h1": "Automatyzacja biura rachunkowego – mniej przepisywania, więcej księgowania",
+    "subtitle": "Automatyzuję powtarzalną część pracy biura: zbieranie dokumentów od klientów, obsługę KSeF dla wielu NIP-ów i przygotowywanie zestawień.",
+    "service_type": "Automatyzacja procesów dla biur rachunkowych",
+    "breadcrumb": "Biura rachunkowe",
+    "related_title": "Powiązane usługi",
+    "problem_title": "Gdzie biura rachunkowe tracą czas",
+    "problem_p1": "Każdy miesiąc wygląda tak samo: część klientów przysyła komplet dokumentów w terminie, część po monicie, a reszta dopiero wtedy, gdy ktoś z zespołu zadzwoni po raz trzeci. Samo pilnowanie, kto czego jeszcze nie dosłał, potrafi zająć więcej czasu niż zaksięgowanie tych dokumentów.",
+    "problem_p2": "Do tego dochodzi przepisywanie. Jeden klient przysyła PDF-y mailem, drugi eksport ze swojego systemu, trzeci zdjęcia z telefonu. Ktoś w biurze siedzi i przenosi to wszystko do systemu księgowego, pozycja po pozycji.",
+    "dla_kogo_title": "Dla kogo",
+    "dla_kogo": [
+      { "title": "Biura obsługujące kilkudziesięciu klientów", "desc": "Każdy klient to osobny NIP, osobne konto w KSeF i osobny zestaw przyzwyczajeń przy przesyłaniu dokumentów. To, co przy dziesięciu klientach dawało się ogarnąć ręcznie, przy pięćdziesięciu przestaje działać." },
+      { "title": "Biura, w których koniec miesiąca oznacza nadgodziny", "desc": "Praca kumuluje się w kilku dniach, bo dokumenty spływają nierówno. Automatyzacja nie zmieni terminów ustawowych, ale może zdjąć z zespołu tę część, która nie wymaga księgowego." },
+      { "title": "Biura rosnące szybciej niż zespół", "desc": "Nowy klient oznacza dziś kolejne godziny ręcznej roboty. Bez automatyzacji jedynym sposobem na obsługę większej liczby klientów jest kolejny etat." }
+    ],
+    "processes_title": "Co automatyzuję w biurze rachunkowym",
+    "processes": [
+      { "title": "Zbieranie dokumentów od klientów", "desc": "Automatyczne przypomnienia do klientów, którzy nie dosłali kompletu w terminie - z listą tego, czego konkretnie brakuje, zamiast ogólnego monitu." },
+      { "title": "Obsługa KSeF dla wielu NIP-ów", "desc": "Automatyczne pobieranie faktur z KSeF dla wszystkich obsługiwanych firm naraz, bez ręcznego przełączania się między kontami klientów." },
+      { "title": "Odczyt i wprowadzanie faktur", "desc": "Wyciągnięcie danych z faktury w dowolnym formacie - PDF, skan, zdjęcie - i wprowadzenie ich do systemu księgowego zamiast ręcznego przepisywania." },
+      { "title": "Kontrola duplikatów", "desc": "Ta sama faktura z KSeF i z maila zostaje rozpoznana i zaksięgowana raz, zamiast dwa razy powiększać koszty i VAT." },
+      { "title": "Zestawienia dla klientów biura", "desc": "Cykliczny raport dla klienta - co zaksięgowano, czego brakuje, jakie terminy się zbliżają - wysyłany automatycznie zamiast składany ręcznie." },
+      { "title": "Wymiana danych z systemem klienta", "desc": "Automatyczne przekazywanie danych między Waszym systemem księgowym a systemem, na którym pracuje klient." }
+    ],
+    "system_title": "Automatyzacja wokół Comarch Optima, Symfonii i wFirma",
+    "system_p1": "Wasz system księgowy zostaje tam, gdzie jest. Optima, Symfonia czy wFirma robią to, do czego zostały stworzone: księgują, liczą VAT, generują JPK. Nie zajmują się natomiast tym, co dzieje się wcześniej - zbieraniem dokumentów od kilkudziesięciu klientów, wyciąganiem danych z pliku przysłanego w dowolnym formacie ani pilnowaniem, kto czego jeszcze nie oddał.",
+    "system_p2": "To właśnie ten kawałek automatyzuję - żeby do systemu księgowego trafiały dane gotowe do zaksięgowania, a nie stos plików do ręcznego przepisania.",
+    "wdrozenie_title": "Jak wygląda wdrożenie",
+    "wdrozenie": [
+      { "title": "Przegląd obiegu dokumentów", "desc": "Sprawdzam, jak dziś dokumenty trafiają od klientów do systemu i w którym miejscu proces się zatrzymuje." },
+      { "title": "Wybór pierwszego procesu", "desc": "Zaczynamy od jednego, najbardziej czasochłonnego kawałka - zwykle zbierania dokumentów albo obsługi KSeF." },
+      { "title": "Budowa i testy na Waszych danych", "desc": "Automatyzację sprawdzam na realnych dokumentach z zeszłego miesiąca, zanim trafi na produkcję." },
+      { "title": "Wdrożenie i szkolenie zespołu", "desc": "Uruchamiam proces i pokazuję zespołowi, jak go kontrolować oraz co robić z wyjątkami." }
+    ],
+    "nie_oplaca_title": "Kiedy automatyzacja się nie opłaca",
+    "nie_oplaca": [
+      "Biuro obsługuje kilku klientów i wszystkie dokumenty spływają jednym kanałem - ręczna obsługa jest wtedy szybsza niż wdrożenie.",
+      "System księgowy nie ma API ani sensownego importu, a jego zmiana nie wchodzi w grę - obejście podnosi koszt i ryzyko.",
+      "Obieg dokumentów w biurze nie jest ustalony i każdy prowadzi go po swojemu - najpierw trzeba go uporządkować, dopiero potem automatyzować."
+    ],
+    "cena_label": "Ile to kosztuje?",
+    "cena_text": "Automatyzacja pojedynczego procesu (np. zbierania dokumentów od klientów) zaczyna się od 5 900 zł (pakiet START), pakiet kilku procesów od 14 900 zł (pakiet CORE). Wdrożenie zajmuje standardowo 2-4 tygodnie.",
+    "wliczone_title": "Co jest wliczone w wycenę",
+    "wliczone": [
+      "Przegląd obiegu dokumentów i projekt automatyzacji",
+      "Konfiguracja automatyzacji połączonej z Waszym systemem księgowym",
+      "Testy na realnych dokumentach przed uruchomieniem produkcyjnym",
+      "Szkolenie zespołu z obsługi nowego procesu",
+      "Dwa tygodnie wsparcia powdrożeniowego w cenie"
+    ],
+    "faq_title": "Najczęściej zadawane pytania",
+    "faq": [
+      { "q": "Czy trzeba zmieniać system księgowy?", "a": "Nie. Automatyzacja pracuje wokół systemu, który już macie - Comarch Optima, Symfonii, wFirma czy innego." },
+      { "q": "Czy to obsłuży wszystkich naszych klientów naraz?", "a": "Tak, to jeden z głównych scenariuszy - automatyzacja działa dla wielu NIP-ów jednocześnie, bez ręcznego przełączania kont w KSeF." },
+      { "q": "Co z klientami, którzy przysyłają zdjęcia dokumentów z telefonu?", "a": "To też da się obsłużyć - odczyt działa na skanach i zdjęciach. Im gorsza jakość, tym więcej przypadków trafi do ręcznej weryfikacji, i tak to ustawiamy: niepewne dokumenty idą do człowieka, nie na ślepo do księgowania." },
+      { "q": "Ile trwa wdrożenie?", "a": "Pojedynczy proces wdrażam w 2-4 tygodnie, zależnie od liczby klientów i formatów dokumentów." }
+    ],
+    "cta_title": "Sprawdźmy, ile czasu zjada Wam zbieranie dokumentów",
+    "cta_subtitle": "30 minut rozmowy o tym, jak wygląda koniec miesiąca w Waszym biurze - bez zobowiązań."
+  },
+  "branze_ecommerce": {
+    "h1": "Automatyzacja sklepu internetowego – zamówienia, magazyn, faktury",
+    "subtitle": "Automatyzuję obsługę zamówień w e-commerce: przepływ między sklepem, magazynem i księgowością, bez ręcznego przepisywania i eksportów do Excela.",
+    "service_type": "Automatyzacja procesów dla e-commerce",
+    "breadcrumb": "Handel i e-commerce",
+    "related_title": "Powiązane usługi",
+    "problem_title": "Gdzie sklepy internetowe tracą czas i pieniądze",
+    "problem_p1": "Zamówienie wpada do sklepu, ale żeby zostało zrealizowane, ktoś musi je przenieść dalej: do systemu magazynowego, do kuriera, do faktury. Przy kilkunastu zamówieniach dziennie da się to robić ręcznie. Przy stu robi się z tego pełny etat, a przy dwustu - etat plus pomyłki.",
+    "problem_p2": "Drugi koszt jest mniej widoczny: stany magazynowe rozjeżdżają się między sklepem a magazynem. Sprzedajecie towar, którego już nie ma, albo blokujecie klientom coś, co realnie leży na półce.",
+    "dla_kogo_title": "Dla kogo",
+    "dla_kogo": [
+      { "title": "Sklepy sprzedające w kilku kanałach", "desc": "Własny sklep, Allegro i inne marketplace'y to kilka źródeł zamówień, które trzeba pogodzić z jednym stanem magazynowym." },
+      { "title": "Sklepy z rosnącą liczbą zamówień", "desc": "Liczba zamówień rośnie szybciej niż zespół. Bez automatyzacji jedyną odpowiedzią na wzrost sprzedaży jest kolejna osoba do ich obsługi." },
+      { "title": "Firmy z osobnym systemem magazynowym i księgowym", "desc": "Dane o tym samym zamówieniu żyją w trzech miejscach naraz i ktoś musi je regularnie uzgadniać." }
+    ],
+    "processes_title": "Co automatyzuję w e-commerce",
+    "processes": [
+      { "title": "Zamówienia ze sklepu do systemu", "desc": "Zamówienie trafia do ERP lub systemu magazynowego zaraz po złożeniu, bez ręcznego przenoszenia i eksportu CSV." },
+      { "title": "Synchronizacja stanów magazynowych", "desc": "Stan towaru aktualizuje się między magazynem, sklepem i marketplace'ami, żeby nie sprzedawać czegoś, czego już nie ma." },
+      { "title": "Automatyzacja Baselinkera", "desc": "Połączenie Baselinkera z resztą Waszych systemów - księgowością, magazynem i narzędziami do wysyłek." },
+      { "title": "Faktury i dokumenty sprzedaży", "desc": "Faktura powstaje automatycznie po opłaceniu zamówienia i trafia do systemu księgowego oraz do klienta." },
+      { "title": "Statusy wysyłek i powiadomienia", "desc": "Zmiana statusu przesyłki aktualizuje zamówienie i uruchamia powiadomienie do klienta, bez ręcznego sprawdzania u kuriera." },
+      { "title": "Obsługa zwrotów", "desc": "Zgłoszenie zwrotu uruchamia za każdym razem ten sam proces: przyjęcie na magazyn, korekta, zwrot płatności." }
+    ],
+    "system_title": "Integracja wokół Baselinkera i Waszego sklepu",
+    "system_p1": "Baselinker, Shoper, WooCommerce czy PrestaShop robią swoją część dobrze - przyjmują zamówienia i pozwalają nimi zarządzać. Problem zaczyna się na styku z resztą firmy: magazynem, księgowością, kurierami i arkuszami, w których ktoś to wszystko uzgadnia.",
+    "system_p2": "Nie zastępuję żadnego z tych systemów. Buduję połączenia między nimi, żeby dane o zamówieniu szły dalej same, w tej samej chwili, w której się pojawiły.",
+    "wdrozenie_title": "Jak wygląda wdrożenie",
+    "wdrozenie": [
+      { "title": "Mapowanie drogi zamówienia", "desc": "Sprawdzam, przez ile rąk i systemów przechodzi dziś jedno zamówienie od złożenia do wysyłki." },
+      { "title": "Projekt integracji", "desc": "Ustalamy, które systemy mają wymieniać dane, w którą stronę i co ma się dziać przy wyjątkach." },
+      { "title": "Budowa i testy na kopii danych", "desc": "Integrację testuję na kopii Waszych danych i na realnych zamówieniach, zanim trafi na produkcję." },
+      { "title": "Wdrożenie i monitoring", "desc": "Uruchamiam integrację produkcyjnie i obserwuję pierwsze cykle synchronizacji." }
+    ],
+    "nie_oplaca_title": "Kiedy automatyzacja się nie opłaca",
+    "nie_oplaca": [
+      "Sklep realizuje kilka zamówień dziennie - ręczna obsługa zajmuje mniej czasu niż wdrożenie automatyzacji.",
+      "Planujecie zmianę platformy sklepowej w najbliższych miesiącach - lepiej zintegrować od razu nową.",
+      "Procesy magazynowe nie są ustalone i każde zamówienie obsługiwane jest trochę inaczej - najpierw standard, potem automatyzacja."
+    ],
+    "cena_label": "Ile to kosztuje?",
+    "cena_text": "Integracja dwóch systemów (np. sklep i magazyn) zaczyna się od 5 900 zł (pakiet START), pełny obieg zamówienia przez kilka systemów od 14 900 zł (pakiet CORE). Wdrożenie zajmuje standardowo 2-4 tygodnie.",
+    "wliczone_title": "Co jest wliczone w wycenę",
+    "wliczone": [
+      "Mapowanie drogi zamówienia i projekt integracji",
+      "Budowa połączeń między sklepem, magazynem i księgowością",
+      "Testy na kopii Waszych danych przed uruchomieniem produkcyjnym",
+      "Monitoring pierwszych cykli synchronizacji po wdrożeniu",
+      "Dwa tygodnie wsparcia powdrożeniowego w cenie"
+    ],
+    "faq_title": "Najczęściej zadawane pytania",
+    "faq": [
+      { "q": "Czy trzeba zmieniać platformę sklepową?", "a": "Nie. Integracja działa wokół tego, co już macie - Shopera, WooCommerce, PrestaShop czy Baselinkera." },
+      { "q": "Czy obsłużycie sprzedaż na Allegro i we własnym sklepie jednocześnie?", "a": "Tak - to typowy scenariusz. Zamówienia z kilku kanałów trafiają do jednego procesu i jednego stanu magazynowego." },
+      { "q": "Co się dzieje, gdy integracja przestanie działać?", "a": "Zamówienia nie znikają - zatrzymują się w kolejce, a Wy dostajecie powiadomienie. W ramach opieki reaguję, zanim to urośnie w problem z realizacją." },
+      { "q": "Ile trwa wdrożenie?", "a": "Integracja dwóch systemów to zwykle 1-2 tygodnie. Pełny obieg zamówienia przez sklep, magazyn i księgowość - 3-4 tygodnie." }
+    ],
+    "cta_title": "Policzmy, ile kosztuje Was ręczna obsługa zamówień",
+    "cta_subtitle": "30 minut rozmowy o tym, jak dziś wygląda droga zamówienia w Waszej firmie - bez zobowiązań."
+  },
+  "branze_page": {
+    "h1": "Automatyzacja procesów w Twojej branży",
+    "subtitle": "Konkretne procesy do automatyzacji, dopasowane do specyfiki branży - nie ogólnikowa oferta.",
+    "nieruchomosci_title": "Biura nieruchomości",
+    "nieruchomosci_desc": "Powiadomienia o statusie sprawy i raporty ze statystyk ogłoszeń dla klientów.",
+    "rachunkowe_title": "Biura rachunkowe",
+    "rachunkowe_desc": "Zbieranie dokumentów od klientów, KSeF dla wielu NIP-ów, zestawienia.",
+    "ecommerce_title": "Handel i e-commerce",
+    "ecommerce_desc": "Zamówienia ze sklepu do ERP, stany magazynowe, Baselinker, faktury.",
+    "cta_title": "Nie widzisz swojej branży?",
+    "cta_subtitle": "Zajmuję się automatyzacją niezależnie od branży - opowiedz mi o swoim procesie, a sprawdzimy, co da się zautomatyzować."
   }
 }

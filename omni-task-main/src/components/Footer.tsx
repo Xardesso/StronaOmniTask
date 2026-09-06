@@ -87,6 +87,7 @@ export default function Footer() {
               <li><Link href="/uslugi/rpa" className="footer__link" title={t('service_detail.labels.rpa')}>{t('service_detail.labels.rpa')}</Link></li>
               <li><Link href="/uslugi/opieka-i-hosting" className="footer__link" title={t('service_detail.labels.opieka')}>{t('service_detail.labels.opieka')}</Link></li>
               <li><Link href="/uslugi/agenci-ai" className="footer__link" title={t('service_detail.labels.ai')}>{t('service_detail.labels.ai')}</Link></li>
+              {locale === 'pl' && <li><Link href="/branze" className="footer__link" title={t('nav.industries')}>{t('nav.industries')}</Link></li>}
             </ul>
           </div>
 
